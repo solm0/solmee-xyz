@@ -1,8 +1,7 @@
 ---
-layout: ../../layouts/MdLayout.astro
+layout: ../../layouts/NotesLayout.astro
 title: 'Theme.css and Markdown'
 pubDate: 2024-11-02
-description: 'test test'
 tags: ["markdown", "obsidian", "css"]
 ---
 
@@ -12,7 +11,7 @@ tags: ["markdown", "obsidian", "css"]
 콜아웃 등의 서식을 마크다운을 입력하지 않고 검색해 사용할 수 있는 노션과 달리 옵시디언은 마크다운**으로만** 작성한다. 로컬에 저장된 마크다운 파일은 HTML로 변환되어 렌더링되기 때문에 [[dhodksehlwl(css)]]로 스타일할 수 있다.
 
 옵시디언은 사용자들이 자유롭게 자신의 CSS를 작성해 덮어쓰기할 수 있도록 해놨는데, 크게 두 가지 방법이 있다.
-1.  `Settings`>`Appearance`>`CSS snippets`에 작성
+1.  `Settings`>`Appearance`>`CSS snippets`에 작성
 2.  `theme.css`에 작성
 		세부 방법은 [이곳](https://docs.obsidian.md/Themes/App+themes/Build+a+theme)에서 볼 수 있다.
 

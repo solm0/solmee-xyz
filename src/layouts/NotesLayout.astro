@@ -1,0 +1,11 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import TagButton from "../components/Tagbutton.astro";
+const {frontmatter} = Astro.props;
+---
+<BaseLayout pageTitle = {frontmatter.title}>
+    <p>created on {frontmatter.pubDate.toString().slice(0,10)}</p>
+    <p>{frontmatter.tags.map((tag) => <TagButton tag={tag} url={`/tags/${tag}`}/>)}</p>
+    <hr>
+    <slot />
+</BaseLayout>

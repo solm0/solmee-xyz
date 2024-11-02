@@ -1,0 +1,8 @@
+---
+const { tag, url } = Astro.props;
+import '../styles/global.css'
+---
+
+<div class="tag-button">
+    <a href={url}>{tag}</a>
+</div>

@@ -36,3 +36,19 @@ body {
 .nav-links a:focus {
     background-color: #ff9776;
 }
+
+.tag-button {
+    border: 1px solid black;
+    display: inline;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 0.5rem;
+}
+.tag-button:hover,
+.tag-button:focus {
+    background-color: bisque;
+}
+.tag-button a { 
+    text-align: center;
+    text-decoration: none;
+}

@@ -1,8 +1,7 @@
 ---
-layout: ../../layouts/MdLayout.astro
+layout: ../../layouts/NotesLayout.astro
 title: 'Markdown pipeline for my blog'
 pubDate: 2024-11-02
-description: 'test test'
 tags: ["markdown", "graph"]
 ---
 
