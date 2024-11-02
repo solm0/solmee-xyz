@@ -15,27 +15,32 @@ body {
     box-sizing: border-box;
 }
 
-.nav-links {
-    margin-left: 5em;
-    display: block;
-    position: static;
-    width: auto;
-    background: none;
+/* nav */
+
+.side {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 10px;
+    top: 300px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
 }
 
 .nav-links a {
-    display: inline-block;
-    padding: 15px 20px;
     text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-size: 0.8rem;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-    background-color: #ff9776;
+    background-color: rgb(232, 232, 232);
 }
+
+/* tag */
 
 .tag-button {
     border: 1px solid black;

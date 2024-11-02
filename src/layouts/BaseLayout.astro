@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import Side from "../components/Side.astro";
 const { pageTitle } = Astro.props
 import '../styles/global.css'
 ---
@@ -12,6 +13,7 @@ import '../styles/global.css'
 </head>
 <body>
     <Header />
+    <Side />
     <h1>{pageTitle}</h1>
     <slot />
 </body>
