@@ -2,9 +2,9 @@
 import BaseLayout from "../layouts/BaseLayout.astro"
 import Blogpost from "../components/BlogPost.astro";
 const pageTitle = 'Notes'
-const allPosts = await Astro.glob('./posts/*.md');
+const allPosts = await Astro.glob('./markdowns/*.md');
 
-const filteredPosts = allPosts.filter(post => post.frontmatter.category === 'notes')
+const filteredPosts = allPosts.filter(post => post.frontmatter.type === 'notes')
 ---
 
 <BaseLayout pageTitle={ pageTitle }>
