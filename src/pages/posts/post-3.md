@@ -2,7 +2,7 @@
 title: 'Macro typography in Obsidian'
 layout: ../../layouts/WorksLayout.astro
 category: "works"
-pubDate: 2024-11-02
+date: 2024-11-02
 tags: ["markdown", "obsidian", "customization"]
 ---
 단주, 첨자, 각주, 문장부호를 꾸며보자.

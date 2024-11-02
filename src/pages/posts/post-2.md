@@ -2,7 +2,7 @@
 title: 'Markdown pipeline for my blog'
 layout: ../../layouts/LogbooksLayout.astro
 category: "logbooks"
-pubDate: 2024-11-02
+date: 2024-11-02
 tags: ["markdown", "graph"]
 ---
 

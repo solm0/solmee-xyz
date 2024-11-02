@@ -2,7 +2,7 @@
 title: 'Theme.css and Markdown'
 layout: ../../layouts/NotesLayout.astro
 category: "notes"
-pubDate: 2024-11-02
+date: 2024-11-02
 tags: ["markdown", "obsidian", "css"]
 ---
 
