@@ -18,5 +18,5 @@ dashboard: true
 
 나는 옵시디언, 마크다운, 정적 사이트 생성, 배포 이 모든게 낯설기 때문에 Digital Garden을 이용할 것이다. 하지만 언젠가는 모든걸 자동으로 편리하게 해주는 플러그인에서 벗어나 수동으로 조작하는 범위를 넓히고 싶다. 물론 그게 플러그인을 사용하는 것보다 더 효율적일 정도로 내가 기술에 익숙해진다면 말이다.
 
-[[01. Initial publish with Vercel]]  
-[[02. 제목에 문자 주의]]  
+[[01-initial-publish-with-vercel]]  
+[[02-slug-error]]  

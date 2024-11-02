@@ -42,4 +42,4 @@ Vercel command-line interface는 명령줄로 프로젝트를 관리할 수 있�
 
 
 본격적으로 인터페이스 짜기 시작!
-[[07. React Home]]
+[[07-react-home]]

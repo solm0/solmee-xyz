@@ -9,5 +9,5 @@ thumbnail:
 	alt: 'porkbun logo'
 dashboard: true
 ---
-[[01. Porkbun 도메인, cloudflare DNS, Vercel 호스팅]]  
-[[02. Create astro, Git push]]
+[[01-porkbun-cloudflaredns-vercel]]  
+[[02-create-astro-git-push]]

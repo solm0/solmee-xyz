@@ -1,5 +1,5 @@
 ---
-title: "01. Hello, theme.css"
+title: "01. Hello, theme.css!"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-07-01

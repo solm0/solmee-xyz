@@ -25,7 +25,7 @@ Firebase를 사용해보자.
 Firebase CLI: 하긴 했는데 뭔지 모르겠음  
 Firebase Console에서 데이터베이스 조작  
 Realtime Database: 데이터베이스에서 데이터를 가져오고 필터링하는 방법을 알아본다.  
-→ [[뼈대짜고 더미데이터 넣음]]  
+→ [[use-firebase]]  
 
 
 ##### 이미지 포함하기
@@ -50,7 +50,7 @@ firebase storage라는 서비스가 있다고 해서 그것을 쓰려고 했으�
 근데!!!!!! 유료다.
 
 다른 동적웹 무료 호스팅 서비스를 찾아보니 Netlify, Heroku, Vercel 등이 된다고 한다. 디지털가든에서 쓰고있는 Vercel로 하자.
-→ [[06. Dynamic Website Hosting with Vercel]]
+→ [[06-dynamic-website-hosting-with-vercel]]
 
 
 

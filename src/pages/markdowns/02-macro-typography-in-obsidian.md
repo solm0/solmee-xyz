@@ -47,8 +47,8 @@ for (int i = 0; i < 3; i++){}
 	- ㄹㅇㄹ
 
 이것은 [외부 링크](https://www.reddit.com/r/ObsidianMD/comments/v7tts9/change_color_of_equations_in_obsidian/)입니다
-이것은 내부 링크 [[00. Build a Theme]]입니다.
-이것도 내부 링크[[00. Build a Theme#사용한 플러그인]]입니다.
+이것은 내부 링크 [[00-build-a-theme]]입니다.
+이것도 내부 링크[[00-build-a-theme#사용한 플러그인]]입니다.
 이것은 [[unresolved Link]]입니다.
 
 이것은 #Tag 입니다

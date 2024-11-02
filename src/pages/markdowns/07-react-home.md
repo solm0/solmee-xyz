@@ -21,4 +21,4 @@ dashboard: false
 | tags      | 태그         | *   | 필터링 대상                 |
 
 ##### 진행
-[[뼈대짜고 더미데이터 넣음]]
+[[use-firebase]]
