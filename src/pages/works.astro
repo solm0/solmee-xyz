@@ -1,8 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
+import Blogpost from "../components/BlogPost.astro";
 const pageTitle = 'Works'
+const allPosts = await Astro.glob('./posts/*.md');
+
+const filteredPosts = allPosts.filter(post => post.frontmatter.category === 'works')
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-	<p>hello</p>
+<BaseLayout pageTitle={ pageTitle }>
+    <ul>
+        {filteredPosts.map((post) => <Blogpost url={post.url} title={post.frontmatter.title}/>)}
+    </ul>
 </BaseLayout>

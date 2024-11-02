@@ -1,6 +1,7 @@
 ---
-layout: ../../layouts/NotesLayout.astro
 title: 'Macro typography in Obsidian'
+layout: ../../layouts/WorksLayout.astro
+category: "works"
 pubDate: 2024-11-02
 tags: ["markdown", "obsidian", "customization"]
 ---
