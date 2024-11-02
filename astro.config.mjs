@@ -1,4 +1,18 @@
 import { defineConfig } from 'astro/config';
+import wikiLink from 'remark-wiki-link';
 
-// https://astro.build/config
-export default defineConfig({});
+const pageUrlPathPrefix = 'markdowns/';
+
+export default defineConfig({
+    markdown: {
+      remarkPlugins: [
+        [
+          wikiLink,
+          {
+            hrefTemplate: (permalink) => `/${pageUrlPathPrefix}${permalink}`,
+            pageResolver: (name) => [name.replace(/ /g, '-').toLowerCase()],
+          },
+        ],
+      ],
+    },
+  });
