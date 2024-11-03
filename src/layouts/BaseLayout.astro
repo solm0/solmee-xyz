@@ -23,12 +23,19 @@ import '../styles/global.css'
         if (links[i].hostname !== window.location.hostname) {
             links[i].classList.add("external-link");
             links[i].textContent += ' ↗';
-            links[i].target = "_blank";
-            links[i].rel = "noopener noreferrer";
+
+            links[i].addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+
+            window.open(
+                this.href,
+                'popupWindow',
+                'width=800,height=600,scrollbars=yes,resizable=yes'
+            );
+        });
     }}
 
     const body = document.body;
-    const header = document.querySelector("header");
     const scrollUp = "scroll-up";
     const scrollDown = "scroll-down";
     let lastScroll = 0;
