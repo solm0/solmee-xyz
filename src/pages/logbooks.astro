@@ -4,7 +4,9 @@ import BlogCard from "../components/BlogCard.astro";
 const pageTitle = 'Logbooks'
 const allPosts = await Astro.glob('./markdowns/*.md');
 
-const filteredPosts = allPosts.filter(post => post.frontmatter.type === 'logbooks' && post.frontmatter.dashboard === true)
+const filteredPosts = allPosts
+    .filter(post => post.frontmatter.type === 'logbooks' && post.frontmatter.dashboard === true)
+    .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
 ---
 
 <BaseLayout pageTitle={ pageTitle }>

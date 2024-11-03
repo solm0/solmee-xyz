@@ -3,7 +3,7 @@ title: "00. Build a Theme"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-06-30
-tags: ["web"]
+tags: ["web", "Obsidian", "css"]
 thumbnail:
 	url: '/img-00.png'
 	alt: 'a screenshot of agate'

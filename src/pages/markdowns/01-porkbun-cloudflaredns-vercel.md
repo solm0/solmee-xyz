@@ -3,7 +3,7 @@ title: "01. Porkbun 도메인, cloudflare DNS, Vercel 호스팅"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-10-03
-tags: ["web"]
+tags: ["web", "vercel", "porkbun", "cloudflare", "domain"]
 thumbnail:
 	url:
 	alt:

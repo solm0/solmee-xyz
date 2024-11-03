@@ -4,6 +4,7 @@ import wikiLink from 'remark-wiki-link';
 const pageUrlPathPrefix = 'markdowns/';
 
 export default defineConfig({
+    site: "https://www.solmee.xyz/",
     markdown: {
       remarkPlugins: [
         [

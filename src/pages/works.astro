@@ -4,7 +4,9 @@ import BlogCard from "../components/BlogCard.astro";
 const pageTitle = 'Works'
 const allPosts = await Astro.glob('./markdowns/*.md');
 
-const filteredPosts = allPosts.filter(post => post.frontmatter.type === 'works')
+let filteredPosts = allPosts
+    .filter(post => post.frontmatter.type === 'works')
+    .sort((a, b) => b.frontmatter.year - a.frontmatter.year);
 ---
 
 <BaseLayout pageTitle={ pageTitle }>

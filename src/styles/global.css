@@ -25,6 +25,7 @@ ol, ul {
 }
 li {
     padding-left: 1rem;
+    line-height: 1.8rem;
 }
 
 a {
@@ -36,10 +37,18 @@ a {
 }
 a:hover {
     color: #212121;
-    background-color: #00ffbf45;
 }
 a.external-link:hover {
-    background-color: #bdbdbd45;
+    background-color: #d7d7cd;
+}
+a.notes-link:hover {
+    background-color: #b1cd0045;
+}
+a.logbooks-link:hover {
+    background-color: #00ffbf45;
+}
+a.works-link:hover {
+    background-color: #007ab345;
 }
 
 :root {
@@ -65,13 +74,13 @@ h2, h3, h4, h5, h6 {
 }
 p {
     font-size: var(--step--1);
-    margin-bottom: 0;
-    margin-top: 1.8rem;
+    margin-bottom: 1.8rem;
+    margin-top: 0;
 }
 
 p::selection, li::selection, a::selection, u::selection,
 h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection {
-    background-color: #e4e9e1;;
+    background-color: #e4e9e1;
 }
 
 u {
@@ -104,8 +113,9 @@ h1 {
 }
 
 .nav-links a:hover,
-.nav-links a:focus {
-    background-color: rgb(232, 232, 232);
+.nav-links a:focus,
+.nav-links a.current {
+    background-color: #e4e9e1;
 }
 
 /* tag */
@@ -114,14 +124,27 @@ h1 {
     position: relative;
     display: inline;
     background-color:  #e4e9e1;
-    padding: 3px;
+    padding: 0 8px;
+    font-size: var(--step--2);
+    text-wrap: nowrap;
+    transition: 0.3s ease-in-out;
+}
+.tag-button:hover {
+    background-color: #d7d7cd;
 }
 .tag-button a { 
     text-align: center;
     text-decoration: none;
 }
+.tag-button a:hover { 
+    background-color: #ffffff00;
+}
 
 .tag-button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
     margin: 5px 0;
 }
 
@@ -208,7 +231,6 @@ hr.blog-post {
 ul.blog-post {
     margin-top: 100px;
     padding: 0;
-    width: 70vw; /* 수정 요*/
 }
 div.blog-post {
     display: flex;
@@ -225,7 +247,6 @@ p.blog-post {
 /* blogCard */
 ul.blog-card {
     margin-top: 100px;
-    width: 70vw; /* 수정 요*/
     padding: 0;
     display: flex;
     flex-flow: row wrap;
@@ -241,4 +262,9 @@ div.blog-card {
     width: 200px;
     height: auto;
 
+}
+
+p.description {
+    margin-top: 1rem;
+    line-height: 1.5rem;
 }

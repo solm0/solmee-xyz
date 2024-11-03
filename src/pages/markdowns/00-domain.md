@@ -3,7 +3,7 @@ title: "00. Domain"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-10-03
-tags: ["web"]
+tags: ["web", "domain"]
 thumbnail:
 	url: '/porkbun-logo.png'
 	alt: 'porkbun logo'

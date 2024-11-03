@@ -1,8 +1,24 @@
 ---
+import '../styles/global.css'
 import Header from "../components/Header.astro";
 import Side from "../components/Side.astro";
-const { pageTitle } = Astro.props
-import '../styles/global.css'
+const { pageTitle, linkType } = Astro.props
+
+let linkClass;
+
+switch (linkType) {
+    case "notes":
+        linkClass = "notes-link";
+        break;
+    case "logbooks":
+        linkClass = "logbooks-link";
+        break;
+    case "works":
+        linkClass = "works-link";
+        break;
+    default:
+        break;
+}
 ---
 
 <html lang="en">
@@ -17,7 +33,8 @@ import '../styles/global.css'
     <h1>{pageTitle}</h1>
     <slot />
 </body>
-<script>
+
+<script define:vars={{linkClass}}>
     var links = document.links;
     for (var i = 0; i < links.length; i++) {
         if (links[i].hostname !== window.location.hostname) {
@@ -25,15 +42,16 @@ import '../styles/global.css'
             links[i].textContent += ' ↗';
 
             links[i].addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default link behavior
+                event.preventDefault(); // Prevent default link behavior
 
-            window.open(
-                this.href,
-                'popupWindow',
-                'width=800,height=600,scrollbars=yes,resizable=yes'
-            );
-        });
-    }}
+                window.open(
+                    this.href,
+                    'popupWindow',
+                    'width=800,height=600,scrollbars=yes,resizable=yes'
+                );
+            });
+        } else links[i].classList.add(linkClass);
+    }
 
     const body = document.body;
     const scrollUp = "scroll-up";
@@ -54,6 +72,16 @@ import '../styles/global.css'
             body.classList.add(scrollUp);
         }
         lastScroll = currentScroll;
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === window.location.pathname) {
+                link.classList.add("current");
+            }
+        });
     });
 
 </script>

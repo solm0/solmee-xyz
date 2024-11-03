@@ -3,7 +3,7 @@ title: "Publish Obsidian note"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-07-02
-tags: ["web"]
+tags: ["web", "Obsidian"]
 thumbnail:
 	url: '/obsidian-dg-logo.png'
 	alt: 'digital garden plugin logo'

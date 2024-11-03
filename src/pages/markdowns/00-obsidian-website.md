@@ -3,7 +3,7 @@ title: "Obsidian Website"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-07-07
-tags: ["web"]
+tags: ["web", "Obsidian", "firebase"]
 thumbnail:
 	url: '/obsidian-website.png'
 	alt: 'screenshot of the website'
