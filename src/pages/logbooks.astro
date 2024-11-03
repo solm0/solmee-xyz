@@ -8,7 +8,7 @@ const filteredPosts = allPosts.filter(post => post.frontmatter.type === 'logbook
 ---
 
 <BaseLayout pageTitle={ pageTitle }>
-    <ul>
-        {filteredPosts.map((post) => <Blogpost url={post.url} title={post.frontmatter.title}/>)}
+    <ul class="blog-post">
+        {filteredPosts.map((post) => <Blogpost url={post.url} title={post.frontmatter.title} tags={post.frontmatter.tags}, date={post.frontmatter.date.toString().slice(0,10)}/>)}
     </ul>
 </BaseLayout>
