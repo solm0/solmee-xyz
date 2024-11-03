@@ -1,5 +1,5 @@
 ---
-title: "1-02. Setting up the Markdown Pipeline"
+title: "02. Setting up the Markdown Pipeline"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-08-07

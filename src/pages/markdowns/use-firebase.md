@@ -10,7 +10,7 @@ thumbnail:
 dashboard: false
 ---
 >[!success]
->firebase [[Realtime Database]]의 json데이터를 편집하는 법을 알게 되었고, 프로젝트에 데이터를 갖다쓰는 법을 알게 되었다. 편하다. 매우 만족.
+>firebase Realtime Database의 json데이터를 편집하는 법을 알게 되었고, 프로젝트에 데이터를 갖다쓰는 법을 알게 되었다. 편하다. 매우 만족.
 >>[!caution]
 >디자인 보기싫다. 테마 갈아엎어야 하는데 어느 세월에 다 하냐…
 
