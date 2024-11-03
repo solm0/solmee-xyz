@@ -5,7 +5,7 @@ type: "logbooks"
 date: 2024-06-30
 tags: ["web"]
 thumbnail:
-	url: '../../images/img-00.png'
+	url: '/img-00.png'
 	alt: 'a screenshot of agate'
 dashboard: true
 ---

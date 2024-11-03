@@ -5,7 +5,7 @@ type: "logbooks"
 date: 2024-10-03
 tags: ["web"]
 thumbnail:
-	url: '../../images/porkbun-logo.png'
+	url: '/porkbun-logo.png'
 	alt: 'porkbun logo'
 dashboard: true
 ---

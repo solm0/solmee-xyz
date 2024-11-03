@@ -5,7 +5,7 @@ type: "logbooks"
 date: 2024-07-07
 tags: ["web"]
 thumbnail:
-	url: '../../images/obsidian-website.png'
+	url: '/obsidian-website.png'
 	alt: 'screenshot of the website'
 dashboard: true
 ---

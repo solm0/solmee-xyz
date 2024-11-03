@@ -1,14 +1,23 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
-import Blogpost from "../components/BlogPost.astro";
+import BlogCard from "../components/BlogCard.astro";
 const pageTitle = 'Logbooks'
 const allPosts = await Astro.glob('./markdowns/*.md');
 
-const filteredPosts = allPosts.filter(post => post.frontmatter.type === 'logbooks')
+const filteredPosts = allPosts.filter(post => post.frontmatter.type === 'logbooks' && post.frontmatter.dashboard === true)
 ---
 
 <BaseLayout pageTitle={ pageTitle }>
-    <ul class="blog-post">
-        {filteredPosts.map((post) => <Blogpost url={post.url} title={post.frontmatter.title} tags={post.frontmatter.tags}, date={post.frontmatter.date.toString().slice(0,10)}/>)}
+    <ul class="blog-card">
+        {filteredPosts.map((post) =>
+            <BlogCard
+                url={post.url}
+                title={post.frontmatter.title}
+                tags={post.frontmatter.tags}
+                date={post.frontmatter.date.toString().slice(0,10)}
+                thumbnailUrl={post.frontmatter.url}
+                alt={post.frontmatter.alt}
+            />
+        )}
     </ul>
 </BaseLayout>

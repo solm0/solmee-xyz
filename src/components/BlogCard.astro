@@ -1,0 +1,18 @@
+---
+const { url, title, tags, date, thumbnailUrl, alt } = Astro.props;
+import TagButton from "./TagButton.astro";
+---
+
+<div class="blog-card">
+    <a class="blog-post" href={url}>
+        {thumbnailUrl && <img class="blog-card" src={thumbnailUrl} alt={alt} />}
+        {title}
+    </a>
+        {tags &&
+            <div class="tag-button-container">
+                {tags.map((tag) => <TagButton tag={tag} url={`/tags/${tag}`}/>)}
+            </div>
+        }
+        <p class="frontmatter" class="blog-post">{date}</p>
+
+</div>

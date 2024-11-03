@@ -6,6 +6,6 @@ const {frontmatter} = Astro.props;
 <BaseLayout pageTitle = {frontmatter.title}>
     <div class="tag-button-container">{frontmatter.tags.map((tag) => <TagButton tag={tag} url={`/tags/${tag}`}/>)}</div>
     <p class="frontmatter">type: {frontmatter.type}</p>
-    <p class="frontmatter">created on {frontmatter.date.toString().slice(0,10)}</p>
+    <p class="frontmatter">created on: {frontmatter.date.toString().slice(0,10)}</p>
     <slot />
 </BaseLayout>

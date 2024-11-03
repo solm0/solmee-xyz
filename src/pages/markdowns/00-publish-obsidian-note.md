@@ -5,7 +5,7 @@ type: "logbooks"
 date: 2024-07-02
 tags: ["web"]
 thumbnail:
-	url: '../../images/obsidian-dg-logo.png'
+	url: '/obsidian-dg-logo.png'
 	alt: 'digital garden plugin logo'
 dashboard: true
 ---

@@ -208,7 +208,7 @@ hr.blog-post {
 ul.blog-post {
     margin-top: 100px;
     padding: 0;
-    width: 100%;
+    width: 70vw; /* 수정 요*/
 }
 div.blog-post {
     display: flex;
@@ -220,4 +220,25 @@ div.blog-post > div {
 }
 p.blog-post {
     margin: 0;
+}
+
+/* blogCard */
+ul.blog-card {
+    margin-top: 100px;
+    width: 70vw; /* 수정 요*/
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: end; 
+    gap: 1rem;
+}
+img.blog-card {
+    filter: none;
+    width: 100%;
+    top: 0;
+}
+div.blog-card {
+    width: 200px;
+    height: auto;
+
 }
