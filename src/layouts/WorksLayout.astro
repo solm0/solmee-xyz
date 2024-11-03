@@ -4,7 +4,7 @@ import TagButton from "../components/TagButton.astro";
 const {frontmatter} = Astro.props;
 
 ---
-<BaseLayout pageTitle = {frontmatter.title} linkType={frontmatter.type}>
+<BaseLayout pageTitle = {frontmatter.title}>
     <div class="tag-button-container">{frontmatter.tags.map((tag) => <TagButton tag={tag} url={`/tags/${tag}`}/>)}</div>
     <p class="frontmatter">year: {frontmatter.year}</p>
     <p class="description">{frontmatter.description}</p>

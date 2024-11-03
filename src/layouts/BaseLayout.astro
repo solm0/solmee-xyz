@@ -3,22 +3,7 @@ import '../styles/global.css'
 import Header from "../components/Header.astro";
 import Side from "../components/Side.astro";
 const { pageTitle, linkType } = Astro.props
-
-let linkClass;
-
-switch (linkType) {
-    case "notes":
-        linkClass = "notes-link";
-        break;
-    case "logbooks":
-        linkClass = "logbooks-link";
-        break;
-    case "works":
-        linkClass = "works-link";
-        break;
-    default:
-        break;
-}
+const linkClass = linkType === "logbooks" ? "logbooks-link" : "default-link";
 ---
 
 <html lang="en">

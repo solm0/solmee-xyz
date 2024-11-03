@@ -4,7 +4,9 @@ import Blogpost from "../components/BlogPost.astro";
 const pageTitle = 'Notes'
 const allPosts = await Astro.glob('./markdowns/*.md');
 
-const filteredPosts = allPosts.filter(post => post.frontmatter.type === 'notes')
+const filteredPosts = allPosts
+    .filter(post => post.frontmatter.type === 'notes')
+    .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
 ---
 
 <BaseLayout pageTitle={ pageTitle }>
