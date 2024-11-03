@@ -28,6 +28,22 @@ li {
     line-height: 1.8rem;
 }
 
+.contains-task-list {
+    position: relative;
+    list-style-type: none;
+    left: -1.3rem;
+}
+
+.contains-task-list li {
+    padding: 0;
+}
+
+.task-list-item input {
+    margin-right: 1rem;
+}
+
+
+
 a {
     color: #212121b0;
     text-decoration-style: dotted;
@@ -37,18 +53,10 @@ a {
 }
 a:hover {
     color: #212121;
+    background-color: #00ffbf45;
 }
 a.external-link:hover {
     background-color: #d7d7cd;
-}
-a.notes-link:hover {
-    background-color: #b1cd0045;
-}
-a.logbooks-link:hover {
-    background-color: #00ffbf45;
-}
-a.works-link:hover {
-    background-color: #007ab345;
 }
 
 :root {

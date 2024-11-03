@@ -1,0 +1,6 @@
+---
+import Search from './Search';
+const allPosts = await Astro.glob('../pages/markdowns/*.md');
+---
+
+<Search client:load searchList={allPosts} />
