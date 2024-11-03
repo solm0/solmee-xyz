@@ -1,0 +1,11 @@
+---
+const {id, open} = Astro.props;
+---
+
+<button onclick={`window.${id}.showModal(); console.log('ye');`}>{open}</button>
+<dialog id={id}>
+    <slot name="main" />
+    <form method="dialog">
+        <slot name="close" />
+    </form>
+</dialog>

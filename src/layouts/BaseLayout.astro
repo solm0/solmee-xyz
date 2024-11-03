@@ -2,6 +2,7 @@
 import '../styles/global.css'
 import Header from "../components/Header.astro";
 import Side from "../components/Side.astro";
+
 const { pageTitle, linkType } = Astro.props
 const linkClass = linkType === "logbooks" ? "logbooks-link" : "default-link";
 ---

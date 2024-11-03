@@ -31,23 +31,26 @@ function Search({ searchList }) {
     return (
         <>
             <input type="text" value={query} onChange={handleOnSearch} placeholder="Search posts" />
-            {query.length > 1 && (
-                <p>
-                    Found {posts.length} {posts.length === 1 ? 'result' : 'results'} for '{query}'
-                </p>
-            )}
-            <ul>
-                {posts &&
-                    posts.map((post) => (
-                        <BlogPostWrapper
-                            key={post.url}
-                            url={post.url}
-                            title={post.frontmatter.title}
-                            tags={post.frontmatter.tags}
-                            date={post.frontmatter.date}
-                        />
-                    ))}
-            </ul>
+            <div className='search-result-container'>
+                {query.length > 1 && (
+                    <p>
+                        Found {posts.length} {posts.length === 1 ? 'result' : 'results'} for '{query}'
+                    </p>
+                )}
+                <ul>
+                    {posts &&
+                        posts.map((post) => (
+                            <BlogPostWrapper
+                                key={post.url}
+                                url={post.url}
+                                title={post.frontmatter.title}
+                                tags={post.frontmatter.tags}
+                                date={post.frontmatter.date}
+                            />
+                        ))}
+                </ul>
+            </div>
+            
         </>
     );
 }
