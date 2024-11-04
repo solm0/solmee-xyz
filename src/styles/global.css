@@ -43,22 +43,6 @@ li {
 }
 
 
-
-a {
-    color: #212121b0;
-    text-decoration-style: dotted;
-    text-decoration-color: #212121;
-    text-decoration-thickness: 1.2px;
-    transition: 0.2s ease-in-out;
-}
-a:hover {
-    color: #212121;
-    background-color: #00ffbf45;
-}
-a.external-link:hover {
-    background-color: #d7d7cd;
-}
-
 :root {
     font-size: 16px;
     color: #212121;
@@ -222,36 +206,6 @@ blockquote p {
     margin: 0;
 }
 
-/* blogpost */
-a.blog-post {
-    text-decoration: none;
-    color: #212121;
-    font-size: var(--step-0);
-    display: inline;
-}
-a.blog-post:hover {
-    background-color: #e4e9e100;
-    opacity: 0.5;
-}
-hr.blog-post {
-    border: 0.5px solid #212121;
-}
-ul.blog-post {
-    margin-top: 100px;
-    padding: 0;
-}
-div.blog-post {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-div.blog-post > div {
-    width: 200px;
-}
-p.blog-post {
-    margin: 0;
-}
-
 /* blogCard */
 ul.blog-card {
     margin-top: 100px;
@@ -350,8 +304,147 @@ input[type="text"]:focus {
 .close-button:hover {
     background-color: #d7d7cd;
 }
+.pagefind-ui__search-clear {
+    position: absolute;
+    bottom: 1rem;
+    right: 8rem;
+    background-color: #f8fbf8;
+    padding: 3px 20px;
+}
+.pagefind-ui__search-clear:hover {
+    background-color: #e4e9e4;
+}
 
 /* frontmatter */
 .frontmatter-container {
     padding-bottom: 20px;
+}
+
+
+/*
+pagefind modal
+
+Button pagefind-ui__search-clear
+Div pagefind-ui__drawer
+Div pagefind-ui__results-area
+P pagefind-ui__message 5 results for hello
+Ol pagefind-ui__results
+Li pagefind-ui__result
+Div pagefind-ui__result-thumb 썸네일
+Div pagefind-ui__result-inner 각 목록
+	p pagefind-ui__result-title 글제목
+		a pagefind-ui__result-link 링크
+	p pagefind-ui__result-excerpt 그 섹션 보여주는거
+	mark 하이라이트
+*/
+
+.pagefind-ui__drawer {
+    margin-top: 5px;
+    width: 100%;
+    height: 320px;
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+}
+.pagefind-ui ol,
+.pagefind-ui li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagefind-ui li {
+    display: block;
+    padding: 1rem 0;
+    border-bottom: 1px solid #212121;
+}
+.pagefind-ui__result-thumb {
+    display: none;
+}
+p.pagefind-ui__message {
+    margin: 0;
+}
+ol.pagefind-ui__results {
+    padding: 0 2rem;
+}
+li.pagefind-ui__results {
+    padding: 0;
+}
+p.pagefind-ui__result-title {
+    margin-bottom: 1rem;
+}
+.pagefind-ui__result-nested .pagefind-ui__result-title {
+    margin: 0;
+}
+.pagefind-ui__result-nested .pagefind-ui__result-title a {
+    position: relative;
+    margin-left: 2em;
+    top: -0rem;
+}
+
+p.pagefind-ui__result-excerpt {
+    font-size: var(--step-0);
+    word-break: keep-all;
+    margin-bottom: 0.5rem;
+}
+.nav-links .pagefind-ui__result-link {
+    text-decoration: none;
+    color: #212121;
+    font-size: var(--step--1);
+    display: inline;
+    padding: 0;
+}
+.pagefind-ui__result-inner mark {
+    background-color: #00ffbfbd;
+}
+
+
+
+/* blogpost */
+a.blog-post {
+    text-decoration: none;
+    color: #212121;
+    font-size: var(--step-0);
+    display: inline;
+    padding: 0;
+}
+a.blog-post:hover {
+    background-color: #e4e9e100;
+    opacity: 0.5;
+}
+hr.blog-post {
+    border: 0.5px solid #212121;
+}
+ul.blog-post {
+    margin-top: 100px;
+    padding: 0;
+}
+div.blog-post {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+div.blog-post > div {
+    width: 200px;
+}
+p.blog-post {
+    margin: 0;
+}
+
+
+/* links */
+a,
+.nav-links .pagefind-ui__result-link {
+    color: #212121b0;
+    text-decoration: underline dotted #212121;
+    text-decoration-thickness: 1.2px;
+    transition: 0.2s ease-in-out;
+}
+
+a:hover,
+.nav-links .pagefind-ui__result-link:hover {
+    color: #212121;
+    background-color: #00ffbf45;
+}
+a.external-link:hover {
+    background-color: #d7d7cd;
 }
