@@ -1,7 +1,17 @@
 import TagButton from "./TagButton";
 
 function BlogPost({ url, title, tags, date }) {
-    const formattedDate = new Date(date).toISOString().slice(0, 10);
+    console.log("Date received:", date);
+    
+    let formattedDate;
+
+    if (/\d{4}-\d{2}-\d{2}/.test(date)) {
+        formattedDate = new Date(date).toISOString().slice(0, 10);
+    } else if (/\d{4}/.test(date)) {
+        formattedDate = date;
+    } else {
+        formattedDate = "Unknown Date";
+    }
 
     return (
         <>

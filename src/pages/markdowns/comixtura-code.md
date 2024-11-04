@@ -6,7 +6,7 @@ tags: ["typeface"]
 thumbnails:
 	url: '/comixtura.png'
 	alt: 'comixtura'
-year: 2000
+date: 2000
 description: 'this is a font.'
 ---
 
