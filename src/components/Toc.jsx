@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 const TOC = () => {
     const [tocItems, setTocItems] = useState([]);
@@ -12,28 +12,45 @@ const TOC = () => {
         return {
             id,
             text: heading.innerText,
-            offsetTop: heading.offsetTop,
         };
       });
       setTocItems(items);
     }, []);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollPosition = window.scrollY + window.innerHeight / 4;
-            
-            const current = tocItems.find((item) => {
-                const element = document.getElementById(item.id);
-                return element && scrollPosition >= element.offsetTop;
+    const useIntersectionObserver = () => {
+        const headingElementsRef = useRef({});
+
+        useEffect(() => {
+            const headingElements = Array.from(document.querySelectorAll("h2, h3"));
+            const callback = (entries) => {
+                headingElementsRef.current = entries.reduce((map, entry) => {
+                    map[entry.target.id] = entry;
+                    return map;
+                }, headingElementsRef.current);
+
+                const visibleHeadings = entries.filter((entry) => entry.isIntersecting);
+
+                if (visibleHeadings.length === 1) {
+                    setActiveId(visibleHeadings[0].target.id);
+                } else if (visibleHeadings.length > 1) {
+                    const sortedVisibleHeadings = visibleHeadings.sort(
+                        (a, b) => getIndexFromId(a.target.id) > getIndexFromId(b.target.id)
+                    );
+                    setActiveId(sortedVisibleHeadings[0].target.id);
+                }
+            };
+
+            const observer = new IntersectionObserver(callback, {
+                rootMargin: '0px 0px -40% 0px',
             });
 
-            if (current) setActiveId(current.id);
-        };
+            headingElements.forEach((element) => observer.observe(element));
+        
+            return () => observer.disconnect();
+        }, []);
+    };
 
-        window.addEventListener('scroll', handleScroll);
-        console.log('scroll');
-
-    }, [tocItems]);
+    useIntersectionObserver();
     
     return (
         <aside>

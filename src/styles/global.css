@@ -454,10 +454,11 @@ a.external-link:hover {
 /* toc */
 .toc-link {
     line-height: 1.8rem;
+    color: #aaaaa0;
 }
 
 .active-toc-link {
-    background-color: rebeccapurple;
+    color: #212121;
 }
 
 .right {
