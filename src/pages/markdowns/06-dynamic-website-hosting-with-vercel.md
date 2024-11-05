@@ -9,7 +9,7 @@ thumbnail:
 	alt:
 dashboard: false
 ---
-##### Create React App and deploy to Vercel
+## Create React App and deploy to Vercel
 Git repository를 생성하고 거기에 push할 때마다 Vercel에 자동 deploy될 것이다. [여기](https://vercel.com/guides/deploying-react-with-vercel#start-from-a-template)에서 Git repository 생성과 동시에 create-react-app을 할 수 있다. 그리고 그 리포지토리를 깃헙데스크탑에서 클론해 vscode로 작성하면 된다.
 
 >[!bug]
@@ -27,7 +27,7 @@ pnpm이라는 npm과 비슷한 패키지 매니저를 설치해야 하는 거였
 
 (엥 근데 이제 npm start도 되네? npm/pnpm/yarn 헷갈려..)
 
-##### Vercel CLI
+## Vercel CLI
 Vercel command-line interface는 명령줄로 프로젝트를 관리할 수 있게 한다.
 
 > With the command-line interface (CLI) you can interact with the Vercel platform using a terminal, or through an automated system, enabling you to [retrieve logs](https://vercel.com/docs/cli/logs), manage [certificates](https://vercel.com/docs/cli/certs), replicate your deployment environment [locally](https://vercel.com/docs/cli/dev), manage Domain Name System (DNS) [records](https://vercel.com/docs/cli/dns), and more.

@@ -27,8 +27,6 @@ function Search({ searchList }) {
         setQuery(value);
     }
 
-    {console.log("searchList:", searchList);}
-
     return (
         <>
             <input type="text" value={query} onChange={handleOnSearch} placeholder="Search posts" />

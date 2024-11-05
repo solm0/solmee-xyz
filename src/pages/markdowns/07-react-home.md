@@ -20,5 +20,5 @@ dashboard: false
 | note_link | 하위 링크      |     | 제목과 갯수, 순서 일치          |
 | tags      | 태그         | *   | 필터링 대상                 |
 
-##### 진행
+## 진행
 [[use-firebase]]

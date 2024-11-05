@@ -9,10 +9,10 @@ thumbnail:
 	alt:
 dashboard: false
 ---
-#### Smart Typography
+## Smart Typography
 → ≥ ≤ ≠
 노션에서 쓰던 자동 Ligature
-#### Wrap with shortcuts
+## Wrap with shortcuts
 이미 옵시디언에서 제공하는 기능이 엄청 많긴 한데 내가 만든 요소를 더 넣고 싶다면 HTML Tags|HTML 시멘틱 태그로 선택한 텍스트를 감싸주는 Hotkey를 생성할 수 있다. 당연히 태그 자체도 theme.css에서 엿장수 맘대로 커스터마이징할 수 있다.
 - Underline `<u></u>`
 - ~~Indent `<p class=”indented”></P>`~~

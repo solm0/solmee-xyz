@@ -9,18 +9,15 @@ thumbnail:
 	alt:
 dashboard: false
 ---
->[!success]
 >firebase Realtime Database의 json데이터를 편집하는 법을 알게 되었고, 프로젝트에 데이터를 갖다쓰는 법을 알게 되었다. 편하다. 매우 만족.
->>[!caution]
->디자인 보기싫다. 테마 갈아엎어야 하는데 어느 세월에 다 하냐…
 
 아래는 미래의 나를 위해 어떻게했는지 적어놓음
 
-##### firebase.js
+## firebase.js
 - firebase를 초기화한다. `initializeApp()`
 - 데이터베이스에 접근한다. `getDatabase()` → export
 
-##### databaseService.js
+## databaseService.js
 - 접근한 데이터베이스에 `ref()` 함수 사용해 레퍼런스를 얻는다.
 - `getTagData()`, `getCardData()` 함수를 정의한다. → export
 	```js
@@ -40,7 +37,7 @@ dashboard: false
 	};
 	```
 
-##### App.js
+## App.js
 - `getTagData()`, `getCardData()` 함수를 사용하여 tagData와 cardData를 set한다.
 	```js
 	useEffect(() => {
@@ -84,7 +81,7 @@ dashboard: false
 	</section>
 	```
 
-##### Cards.js
+## Cards.js
 - 매개변수를 중괄호 쳐서 객체로 받는다. 받은 객체를 분해하여 각 변수에 할당한다.
 	```js
 	function Cards({cardData}) {

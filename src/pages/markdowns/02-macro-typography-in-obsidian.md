@@ -11,7 +11,7 @@ dashboard: false
 ---
 단주, 첨자, 각주, 문장부호를 꾸며보자.
 
-### formatting 종류와 단축키 커스터마이징
+## formatting 종류와 단축키 커스터마이징
 1.  기본 Syntax, Hotkey 이용하기
 	→ 부족해!
 2.  `Settings`>`Hotkeys`에서 단축키 생성, 편집하기
@@ -19,7 +19,7 @@ dashboard: false
 3. [[obsidian-plugins-i-used:플러그인]]을 이용해 HTML 태그로 감싸주는 단축키 생성, 편집하기
 	→ 이정도 툴을 보유했다면 옵시디언 내에 넣지 못할 요소는 없다고 보면 된다.
 
-### formatting 스타일 커스터마이징
+## formatting 스타일 커스터마이징
 이것은 **bold**입니다.  
 이것은 *italic*입니다.  
 ~~이것은 strike-through입니다~~  

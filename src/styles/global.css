@@ -63,6 +63,7 @@ h2, h3, h4, h5, h6 {
     font-weight: 700;
     margin-bottom: 0;
     margin-top: 1.8em;
+    scroll-margin-top: 16px;
 }
 p {
     font-size: var(--step--1);
@@ -447,4 +448,18 @@ a:hover,
 }
 a.external-link:hover {
     background-color: #d7d7cd;
+}
+
+
+/* toc */
+.toc-link {
+    line-height: 1.8rem;
+}
+
+.active-toc-link {
+    background-color: rebeccapurple;
+}
+
+.right {
+    left: calc(100vw - 300px);
 }

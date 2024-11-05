@@ -11,7 +11,7 @@ dashboard: false
 ---
 (아직 웹사이트 만들기도 전이지만) 도메인이라는 것을 사보자!
 
-### 정보 얻은 방법
+## 정보 얻은 방법
 1. [생활코딩 도메인 강의](https://www.inflearn.com/course/%EC%9D%B8%ED%84%B0%EB%84%B7-%EA%B8%B0%EB%B3%B8-%EB%8F%84%EB%A9%94%EC%9D%B8-%ED%98%B8%EC%8A%A4%ED%8A%B8-%ED%8F%AC%EC%9B%8C%EB%94%A9-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0?srsltid=AfmBOoqeouKDI0tDz9vjqYTsc_zwd21a2H8K5v1YKmKfF1_uoZLvnepz "https://www.inflearn.com/course/%EC%9D%B8%ED%84%B0%EB%84%B7-%EA%B8%B0%EB%B3%B8-%EB%8F%84%EB%A9%94%EC%9D%B8-%ED%98%B8%EC%8A%A4%ED%8A%B8-%ED%8F%AC%EC%9B%8C%EB%94%A9-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0?srsltid=AfmBOoqeouKDI0tDz9vjqYTsc_zwd21a2H8K5v1YKmKfF1_uoZLvnepz")
 	- 무려 2012년의 것이지만 무엇을 해야하는지 대략적으로 감 잡을 수는 있다.
 2. 레딧 r/webhosting, r/webdev에서 검색하면 도메인 provider들에 대해 이러쿵저러쿵 떠드는 사람들이 있다.
@@ -21,17 +21,17 @@ dashboard: false
 	- 경험에서 우러나오는 꿀팁?들도 볼 수 있다. Domain registration과 DNS Management, Web hosting 서비스를 한 기업에서 제공하기도 하지만 가능하면 분리하라고 한다. [https://www.wiki.balug.org/wiki/doku.php?id=system:registrars](https://www.wiki.balug.org/wiki/doku.php?id=system:registrars)
 3. chatGPT와의 1:1 맞춤 상담
 
-### 최종 선택
+## 최종 선택
 - Domain Registration(도메인을 산다): Porkbun
 - DNS Management(그 도메인을 도메인 이름 시스템에 올린다): Cloudflare
 - Web Hosting(그 도메인을 내 웹사이트에 달아서 퍼블리시한다): Vercel
 
-### 구매한 도메인
+## 구매한 도메인
 - solmee.xyz
 	- 2달러에 샀고 Renewal은 12달러로 가장 저렴했다.
 	- .xyz에 대한 여론을 살펴보니 스팸사이트 같다는 말이 많았지만 뭐 회사 웹사이트도 아니니 상관없다.
 
-### 과정 기억나는대로
+## 과정 기억나는대로
 1. Domain Registration: Porkbun
 	- porkbun 계정 만들기
 	- 원하는 도메인 구매하기

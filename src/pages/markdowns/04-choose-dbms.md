@@ -19,7 +19,7 @@ RDBMS는 탈락이다. 왜냐면 key-value에 접근이 매우 편해보이는 j
 - firebase
 - mongodb
 
-##### Firebase
+## Firebase
 Firebase를 선택하기로 했다.
 - realtime database
 	지금 프로젝트에는 크게 필요없는 기능인데 기자재실웹 만들때 이게 안돼서 장바구니기능에 로컬스토리지 썼었지… 그거야말로 firebase로 바꿔야겠다.

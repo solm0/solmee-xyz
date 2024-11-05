@@ -15,7 +15,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 -  `--` prefix
 - @property
 
-##### 정의, 참조해보기
+## 정의, 참조해보기
 사용자가 지정한 한 가지의 색이 여러 군데에 다양한 알파값으로 적용되게 하는 것을 목적으로 --accent-color 커스텀 변수를 정의했다.
 ```css
 /* accent color */
