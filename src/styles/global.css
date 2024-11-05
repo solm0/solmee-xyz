@@ -168,6 +168,9 @@ header {
     top: 0;
     left: 0;
     transition: opacity 0.3s ease-in-out, transform 0.4s;
+    backdrop-filter: blur(3px);
+    background-color: #f8fbf878;
+    z-index: 1;
 }
 
 .header {
