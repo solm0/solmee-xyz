@@ -30,3 +30,54 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+/* link popup */
+document.querySelectorAll('a:not(.nav-links a):not(.tag-button a):not(.blog-card):not(.blog-post)').forEach((link) => {
+    let previewIframe;
+    let hoverTimeout;
+    let hideTimeout;
+    let isMouseInside = false;
+
+    const showPreview = (e) => {
+        if (!previewIframe) {
+            previewIframe = document.createElement('iframe');
+            previewIframe.src = link.href;
+            previewIframe.classList.add('link-popup');
+            previewIframe.style.left = `${e.pageX + 10}px`;
+            previewIframe.style.top = `${e.pageY + 10}px`;
+            document.body.appendChild(previewIframe);
+
+            previewIframe.addEventListener('mouseenter', () => {
+                isMouseInside = true;
+                clearTimeout(hideTimeout);
+            });
+            previewIframe.addEventListener('mouseleave', hidePreview);
+        }
+    };
+
+    const hidePreview = () => {
+        isMouseInside = false;
+        hideTimeout = setTimeout(() => {
+            if (!isMouseInside && previewIframe) {
+                previewIframe.remove();
+                previewIframe = null;
+            }
+        }, 100); // Delay for mouse transition
+    };
+
+    link.addEventListener('mouseenter', (e) => {
+        isMouseInside = true;
+        hoverTimeout = setTimeout(() => {
+            if (isMouseInside) { // Only show if still hovering after 500 ms
+                showPreview(e);
+            }
+        }, 500);
+    });
+
+    // Clear timeout on mouseleave to prevent delayed iframe opening
+    link.addEventListener('mouseleave', () => {
+        isMouseInside = false;
+        clearTimeout(hoverTimeout); // Cancel the opening if mouse leaves early
+        hidePreview();
+    });
+});

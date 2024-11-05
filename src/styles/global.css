@@ -464,3 +464,13 @@ a.external-link:hover {
 .right {
     left: calc(100vw - 300px);
 }
+
+/* link popup */
+.link-popup {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    border: 1px solid #ddd;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+}
