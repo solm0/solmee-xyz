@@ -4,10 +4,7 @@ layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-10-03
 tags: ["web", "vercel", "porkbun", "cloudflare", "domain"]
-thumbnail:
-	url:
-	alt:
-dashboard: false
+overview: false
 ---
 (아직 웹사이트 만들기도 전이지만) 도메인이라는 것을 사보자!
 

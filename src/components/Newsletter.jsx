@@ -23,8 +23,6 @@ export default function TextInput() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        
-
         // Sign in anonymously, then submit email
         try {
             await signInAnonymously(auth); // Authenticate anonymously

@@ -3,9 +3,7 @@ title: "comixtura code"
 layout: ../../layouts/WorksLayout.astro
 type: "works"
 tags: ["typeface"]
-thumbnails:
-	url: '/comixtura.png'
-	alt: 'comixtura'
+thumbnail: '/comixtura.png'
 date: 2000
 description: 'this is a font.'
 ---

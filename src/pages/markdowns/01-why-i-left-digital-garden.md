@@ -4,10 +4,7 @@ layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-08-07
 tags: ["web"]
-thumbnail:
-	url:
-	alt:
-dashboard: false
+overview: false
 ---
 Digital Garden도 아직 제대로 안 써봤는데 갑자기 옮기고 싶어진 이유는?
 

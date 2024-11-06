@@ -1,12 +1,14 @@
 ---
+import { loadNotes } from '../scripts/loadNotes'
 import BaseLayout from "../layouts/BaseLayout.astro"
 import BlogCard from "../components/BlogCard.astro";
-const pageTitle = 'Works'
-const allPosts = await Astro.glob('./markdowns/*.md');
 
-let filteredPosts = allPosts
-    .filter(post => post.frontmatter.type === 'works')
-    .sort((a, b) => b.frontmatter.year - a.frontmatter.year);
+const pageTitle = 'Works'
+const allPosts = loadNotes();
+
+const filteredPosts = allPosts
+    .filter(post => post.type === 'works')
+    .sort((a, b) => b.year - a.year);
 ---
 
 <BaseLayout pageTitle={ pageTitle }>
@@ -14,11 +16,11 @@ let filteredPosts = allPosts
         {filteredPosts.map((post) =>
             <BlogCard
                 url={post.url}
-                title={post.frontmatter.title}
-                tags={post.frontmatter.tags}
-                date={post.frontmatter.year}
-                thumbnailUrl={post.frontmatter.url}
-                alt={post.frontmatter.alt}
+                title={post.title}
+                tags={post.tags}
+                date={post.year}
+                thumbnailUrl={post.thumbnail}
+                alt={post.alt || "Default alt text"}
             />
         )}
     </div>

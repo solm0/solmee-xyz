@@ -43,8 +43,16 @@ document.querySelectorAll('a:not(.nav-links a):not(.tag-button a):not(.blog-card
             previewIframe = document.createElement('iframe');
             previewIframe.src = link.href;
             previewIframe.classList.add('link-popup');
+
+            if ((window.innerHeight - e.pageY) < 400) {
+                previewIframe.style.bottom = `${window.innerHeight - e.pageY + 15}px`;
+                previewIframe.style.top = '';
+            } else {
+                previewIframe.style.top = `${e.pageY + 10}px`;
+                previewIframe.style.bottom = ''; // Reset bottom
+            }
+
             previewIframe.style.left = `${e.pageX + 10}px`;
-            previewIframe.style.top = `${e.pageY + 10}px`;
             document.body.appendChild(previewIframe);
 
             previewIframe.addEventListener('mouseenter', () => {

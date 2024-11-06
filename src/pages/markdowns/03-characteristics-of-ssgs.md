@@ -4,10 +4,7 @@ layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-08-08
 tags: ["web"]
-thumbnail:
-	url:
-	alt:
-dashboard: false
+overview: false
 ---
 >[!note] SSG(Static Site Generator, 정적 사이트 생성기)란?
 >HTML을 정해진 템플릿에 맞춰 찍어내는 웹개발 도구이다.

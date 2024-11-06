@@ -1,12 +1,14 @@
 ---
+import { loadNotes } from '../scripts/loadNotes'
 import BaseLayout from "../layouts/BaseLayout.astro"
 import Blogpost from "../components/BlogPost.astro";
+
 const pageTitle = 'Notes'
-const allPosts = await Astro.glob('./markdowns/*.md');
+const allPosts = loadNotes();
 
 const filteredPosts = allPosts
-    .filter(post => post.frontmatter.type === 'notes')
-    .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
+    .filter(post => post.type === 'notes')
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 ---
 
 <BaseLayout pageTitle={ pageTitle }>
@@ -14,9 +16,9 @@ const filteredPosts = allPosts
         {filteredPosts.map((post) =>
             <Blogpost
                 url={post.url}
-                title={post.frontmatter.title}
-                tags={post.frontmatter.tags}
-                date={post.frontmatter.date.toString().slice(0,10)}
+                title={post.title}
+                tags={post.tags}
+                date={post.date.toString().slice(0,10)}
             />
         )}
     </div>

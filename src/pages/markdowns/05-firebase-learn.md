@@ -4,10 +4,7 @@ layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-07-07
 tags: ["web"]
-thumbnail:
-	url:
-	alt:
-dashboard: false
+overview: false
 ---
 Firebase를 사용해보자.
 ## Getting Started

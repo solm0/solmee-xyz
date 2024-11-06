@@ -4,10 +4,8 @@ layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-07-02
 tags: ["web", "Obsidian"]
-thumbnail:
-	url: '/obsidian-dg-logo.png'
-	alt: 'digital garden plugin logo'
-dashboard: true
+thumbnail: '/obsidian-dg-logo.png'
+overview: true
 ---
 작성한 노트를 인터넷에 웹사이트처럼 배포하는 것은 내가 옵시디언을 시작한 가장 큰 이유 중 하나였다.
 

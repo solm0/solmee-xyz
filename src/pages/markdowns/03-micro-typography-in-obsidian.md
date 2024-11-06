@@ -4,10 +4,7 @@ layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-07-01
 tags: ["web"]
-thumbnail:
-	url:
-	alt:
-dashboard: false
+overview: false
 ---
 본문 타입세팅을 해보자.
 ## 레퍼런스

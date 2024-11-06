@@ -4,10 +4,7 @@ layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-08-07
 tags: ["web"]
-thumbnail:
-	url:
-	alt:
-dashboard: false
+overview: false
 ---
 [nicole van der hoeven의 영상](https://youtu.be/6s6DT1yN4dw?t=128)에서 옵시디언 노트의 퍼블리시하는 파이프라인을 보았다.
 

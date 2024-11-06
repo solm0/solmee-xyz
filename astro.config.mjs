@@ -15,6 +15,7 @@ export default defineConfig({
         {
           hrefTemplate: (permalink) => `/${pageUrlPathPrefix}${permalink}`,
           pageResolver: (name) => [name.replace(/ /g, '-').toLowerCase()],
+          aliasDivider: '|',
         },
       ],
     ],

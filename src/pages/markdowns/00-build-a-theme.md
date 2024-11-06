@@ -4,10 +4,8 @@ layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-06-30
 tags: ["web", "Obsidian", "css"]
-thumbnail:
-	url: '/img-00.png'
-	alt: 'a screenshot of agate'
-dashboard: true
+thumbnail: '/img-00.png'
+overview: true
 ---
 옵시디언 테마를 내맘대로 뜯어고치자.![](../../images/img-00.png)
 

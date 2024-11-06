@@ -4,10 +4,7 @@ layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-07-02
 tags: ["web"]
-thumbnail:
-	url:
-	alt:
-dashboard: false
+overview: false
 ---
 완성한 테마를 커뮤니티 플러그인에 업로드해보자. 옵시디언 팀의 리뷰를 통과하면 다른 사용자들이 나의 테마를 다운로드받을 수 있게 되고, Digital Garden에서도 사용할 수 있게 된다.
 

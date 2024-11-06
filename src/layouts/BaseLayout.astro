@@ -26,7 +26,9 @@ const linkClass = linkType === "logbooks" ? "logbooks-link" : "default-link";
 
 <script define:vars={{linkClass}}>
     /* external link */
+
     var links = document.links;
+    
     for (var i = 0; i < links.length; i++) {
         if (links[i].hostname !== window.location.hostname) {
             links[i].classList.add("external-link");

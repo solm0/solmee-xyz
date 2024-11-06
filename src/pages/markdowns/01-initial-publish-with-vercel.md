@@ -4,10 +4,7 @@ layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-07-04
 tags: ["web", "vercel"]
-thumbnail:
-	url:
-	alt:
-dashboard: false
+overview: false
 ---
 Digital Garden 플러그인을 설치 후 다음 과정을 따르면 최초 배포를 할 수 있다.
 [Getting Started](https://dg-docs.ole.dev/getting-started/01-getting-started/)
