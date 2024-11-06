@@ -20,12 +20,16 @@ window.addEventListener("DOMContentLoaded", () => {
         input.value = query;
         input.dispatchEvent(new Event("input", { bubbles: true }));
     }
-    input?.addEventListener("input", (e) => {
-        const input = e.target;
-        const url = new URL(window.location.href);
-        const params = new URLSearchParams(url.search);
-        params.set("q", input.value);
-        window.history.replaceState({}, "", `${url.pathname}?${params}`);
+    document.addEventListener("DOMContentLoaded", () => {
+        const input = document.querySelector("input[type='text']");
+        console.log(input); // Check if the element is found
+        input?.addEventListener("input", (e) => {
+            const inputElement = e.target;
+            const url = new URL(window.location.href);
+            const params = new URLSearchParams(url.search);
+            params.set("q", inputElement.value);
+            window.history.replaceState({}, "", `${url.pathname}?${params}`);
+        });
     });
     clearButton?.addEventListener("click", () => {
         const url = new URL(window.location.href);
