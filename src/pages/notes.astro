@@ -10,7 +10,7 @@ const filteredPosts = allPosts
 ---
 
 <BaseLayout pageTitle={ pageTitle }>
-    <ul class="blog-post">
+    <div class="blog-post-container">
         {filteredPosts.map((post) =>
             <Blogpost
                 url={post.url}
@@ -19,5 +19,5 @@ const filteredPosts = allPosts
                 date={post.frontmatter.date.toString().slice(0,10)}
             />
         )}
-    </ul>
+    </div>
 </BaseLayout>

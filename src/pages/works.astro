@@ -10,7 +10,7 @@ let filteredPosts = allPosts
 ---
 
 <BaseLayout pageTitle={ pageTitle }>
-    <ul class="blog-card">
+    <div class="blog-card-container">
         {filteredPosts.map((post) =>
             <BlogCard
                 url={post.url}
@@ -21,5 +21,5 @@ let filteredPosts = allPosts
                 alt={post.frontmatter.alt}
             />
         )}
-    </ul>
+    </div>
 </BaseLayout>

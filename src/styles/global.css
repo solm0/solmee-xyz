@@ -211,7 +211,7 @@ blockquote p {
 }
 
 /* blogCard */
-ul.blog-card {
+div.blog-card-container {
     margin-top: 100px;
     padding: 0;
     display: flex;
@@ -418,7 +418,7 @@ a.blog-post:hover {
 hr.blog-post {
     border: 0.5px solid #212121;
 }
-ul.blog-post {
+div.blog-post-container {
     margin-top: 100px;
     padding: 0;
 }
