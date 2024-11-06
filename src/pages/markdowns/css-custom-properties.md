@@ -4,7 +4,10 @@ layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-07-03
 tags: ["web"]
+
 overview: false
+projectId: "obsidian-theme-agate"
+sequence:
 ---
 https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 > Custom properties allow a value to be defined in one place, then referenced in multiple other places so that it's easier to work with.
