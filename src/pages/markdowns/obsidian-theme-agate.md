@@ -1,5 +1,5 @@
 ---
-title: "Build a Theme"
+title: "Obsidian theme Agate"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-06-30

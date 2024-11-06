@@ -15,19 +15,18 @@ const afterNote = projectNotes[currentIndex + 1];
 ---
 
 <div class="sequenceNav-container">
-    {console.log("Project ID from props:", projectId, "Filtered Project IDs:", filteredPosts.map(note => note.projectId), "Filtered Project Notes:", projectNotes)}
     {beforeNote &&
-            <p>Previous</p>
             <a href={beforeNote.url}>
                 <div class="sequenceNav-button prev">
+                    <b>Previous</b>
                     <p>{beforeNote.title}</p>
                 </div>
             </a>
     }
     {afterNote &&
-        <p>Next</p>
         <a href={afterNote.url}>
             <div class="sequenceNav-button next">
+                <b>Next</b>
                 <p>{afterNote.title}</p>
             </div>
         </a>

@@ -1,5 +1,5 @@
 ---
-title: "Domain"
+title: "Buy a domain"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-10-03

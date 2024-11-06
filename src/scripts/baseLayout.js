@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* link popup */
-document.querySelectorAll('a:not(.nav-links a):not(.tag-button a):not(.blog-card):not(.blog-post)').forEach((link) => {
+document.querySelectorAll('a:not(.nav-links a):not(.tag-button a):not(.blog-card):not(.blog-post):not(.sequenceNav-container a)').forEach((link) => {
     let previewIframe;
     let hoverTimeout;
     let hideTimeout;
@@ -45,9 +45,11 @@ document.querySelectorAll('a:not(.nav-links a):not(.tag-button a):not(.blog-card
             previewIframe.classList.add('link-popup');
 
             if ((window.innerHeight - e.pageY) < 400) {
+                {console.log(window.innerHeight, e.pageY, window.innerHeight - e.pageY, 'up')}
                 previewIframe.style.bottom = `${window.innerHeight - e.pageY + 15}px`;
                 previewIframe.style.top = '';
             } else {
+                {console.log(window.innerHeight, e.pageY, window.innerHeight - e.pageY, 'down')}
                 previewIframe.style.top = `${e.pageY + 10}px`;
                 previewIframe.style.bottom = ''; // Reset bottom
             }

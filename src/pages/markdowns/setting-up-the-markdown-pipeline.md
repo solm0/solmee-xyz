@@ -11,7 +11,7 @@ sequence: 2
 ---
 [nicole van der hoeven의 영상](https://youtu.be/6s6DT1yN4dw?t=128)에서 옵시디언 노트의 퍼블리시하는 파이프라인을 보았다.
 
-## How to publish [plain text](https://en.wikipedia.org/wiki/Plain_text) notes online
+## How to publish plain text notes online
 1. Obsidian: markdown 생성
 2. __ __ : markdown -> HTML (SSG)
 3. Vercel: HTML 호스팅

@@ -40,7 +40,7 @@ for (int i = 0; i < 3; i++){}
 	- ㄹㅇㄹ
 
 이것은 [외부 링크](https://www.reddit.com/r/ObsidianMD/comments/v7tts9/change_color_of_equations_in_obsidian/)입니다  
-이것은 내부 링크 [[build-a-theme]]입니다.  
+이것은 내부 링크 [[obsidian-theme-agate]]입니다.  
 이것은 [[unresolved Link]]입니다.
 
 > 이것은 blockquote입니다

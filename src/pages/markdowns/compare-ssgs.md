@@ -18,7 +18,7 @@ sequence: 4
 | Markdown<br>→<br>HTML | 곧바로.              | interactive<br>한 컴포넌트와<br>함께 configure<br>가능. | 많은 옵션.         | next-mdx같은<br>플러그인 사용                                                                 |
 
 ## is Automatic Rebuilding and Deployment achieveable?
-옵시디언으로 작성해 로컬디렉토리에 저장돼있는 markdown파일의 변경을 감지하고 자동으로 rebuild, Vercel에 deploy하게 할 수 있을까?
+옵시디언으로 작성해 로컬디렉토리에 저장돼있는 markdown파일의 변경을 감지하고 자동으로 rebuild, Vercel에 deploy하게 할 수 있을까?  
 → 대부분의 SSG가 가능하다.
 
 - 예를 들자면 Eleventy의 경우

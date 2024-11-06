@@ -14,7 +14,7 @@ sequence: 4
 당시에는 React와 Gatsby를 사용하여 전체 웹사이트를 짓고, 그것의 일부로서 디지털 가든을 삽입하려 했으나…
 
 한 주 동안
-- [[build-a-theme]]
+- [[obsidian-theme-agate]]
 - [[publish-obsidian-note]]
 
 를 하면서 Obsidian과 Obsidian Digital Garden에 대해 알면 알수록 너무 만능이고 너무 친절하다는 것을 알게 되었다.

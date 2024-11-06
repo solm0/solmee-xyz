@@ -4,6 +4,12 @@ const TOC = () => {
     const [tocItems, setTocItems] = useState([]);
     const [activeId, setActiveId] = useState(null);
   
+    // Helper function to extract index from an ID string like "heading-2"
+    const getIndexFromId = (id) => {
+        const match = id.match(/heading-(\d+)/); // Extract the index from the ID
+        return match ? parseInt(match[1], 10) : -1; // Return -1 if no match is found
+    };
+    
     useEffect(() => {
       const headings = document.querySelectorAll('h2');
       const items = Array.from(headings).map((heading, index) => {
