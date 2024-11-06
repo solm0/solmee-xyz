@@ -1,10 +1,13 @@
 ---
-title: "06. Dynamic Website Hosting with Vercel"
+title: Dynamic Website Hosting with Vercel
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-07-07
-tags: ["web"]
+tags:
+  - web
 overview: false
+projectId: "obsidian-digital-garden"
+sequence: 8
 ---
 ## Create React App and deploy to Vercel
 Git repository를 생성하고 거기에 push할 때마다 Vercel에 자동 deploy될 것이다. [여기](https://vercel.com/guides/deploying-react-with-vercel#start-from-a-template)에서 Git repository 생성과 동시에 create-react-app을 할 수 있다. 그리고 그 리포지토리를 깃헙데스크탑에서 클론해 vscode로 작성하면 된다.
@@ -39,4 +42,4 @@ Vercel command-line interface는 명령줄로 프로젝트를 관리할 수 있�
 
 
 본격적으로 인터페이스 짜기 시작!
-[[07-react-home]]
+[[react-home]]

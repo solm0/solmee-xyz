@@ -1,10 +1,13 @@
 ---
-title: "02. 제목에 문자 주의"
+title: 제목에 문자 주의
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-07-05
-tags: ["web"]
+tags:
+  - web
 overview: false
+projectId: "obsidian-digital-garden"
+sequence: 2
 ---
 > 싱글페이지를 퍼블리시한 이후 Publication Center에서 일괄 퍼블리시 하려하면 자꾸 `11ty Original error stack trace: (Repeated output has been truncated…)` 에러 뜨면서 안됐다.
 

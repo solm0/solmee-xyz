@@ -1,10 +1,13 @@
 ---
-title: "05. Firebase 사용법 익히기"
+title: Firebase 사용법 익히기
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-07-07
-tags: ["web"]
+tags:
+  - web
 overview: false
+projectId: "obsidian-digital-garden"
+sequence: 7
 ---
 Firebase를 사용해보자.
 ## Getting Started
@@ -47,7 +50,7 @@ firebase storage라는 서비스가 있다고 해서 그것을 쓰려고 했으�
 근데!!!!!! 유료다.
 
 다른 동적웹 무료 호스팅 서비스를 찾아보니 Netlify, Heroku, Vercel 등이 된다고 한다. 디지털가든에서 쓰고있는 Vercel로 하자.
-→ [[06-dynamic-website-hosting-with-vercel]]
+→ [[dynamic-website-hosting-with-vercel]]
 
 
 

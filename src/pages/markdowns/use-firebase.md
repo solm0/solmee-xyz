@@ -1,10 +1,13 @@
 ---
-title: "뼈대짜고 더미데이터 넣음"
+title: 뼈대짜고 더미데이터 넣음
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-07-08
-tags: ["web"]
+tags:
+  - web
 overview: false
+projectId: "obsidian-digital-garden"
+sequence: 10
 ---
 >firebase Realtime Database의 json데이터를 편집하는 법을 알게 되었고, 프로젝트에 데이터를 갖다쓰는 법을 알게 되었다. 편하다. 매우 만족.
 

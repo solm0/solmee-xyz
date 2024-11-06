@@ -1,13 +1,14 @@
 ---
-title: "02. Create astro, Git push"
+title: "Create astro, Git push"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-10-03
 tags: ["web"]
-overview: false
----
-도메인 연결해놓은 vercel 프로젝트는 일단 제쳐두고, 개발할때는 github repo 따로 파서 로컬호스팅하면서 해야겠다.
 
+overview: false
+projectId: "buy-a-domain"
+sequence: 2
+---
 주의사항
 - 중복된 명령하지 않도록 조심
 - 현재 디렉터리 잘 보기

@@ -1,10 +1,13 @@
 ---
-title: "04. DBMS 고르기"
+title: DBMS 고르기
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-07-07
-tags: ["web"]
+tags:
+  - web
 overview: false
+projectId: "obsidian-digital-garden"
+sequence: 6
 ---
 
 카드 구성 데이터를 동적으로 가져와 렌더링하기 위해 데이터를 저장하고 있을 DBMS가 필요하다. 이때 적절한 DBMS의 요건은 다음과 같다.
@@ -41,4 +44,4 @@ Realtime Database 제한
 	- index불필요
 - write, transaction 이런건 생략함. 난 필터링만 필요하니까
 
-firebase로 어떻게 데이터와 이미지를 갖다쓰고 필터링할 수 있는지 알아보자. [[05-firebase-learn]]
+firebase로 어떻게 데이터와 이미지를 갖다쓰고 필터링할 수 있는지 알아보자. [[firebase-learn]]

@@ -1,10 +1,13 @@
 ---
-title: "01. Porkbun 도메인, cloudflare DNS, Vercel 호스팅"
+title: "Porkbun 도메인, cloudflare DNS, Vercel 호스팅"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-10-03
 tags: ["web", "vercel", "porkbun", "cloudflare", "domain"]
+
 overview: false
+projectId: "buy-a-domain"
+sequence: 1
 ---
 (아직 웹사이트 만들기도 전이지만) 도메인이라는 것을 사보자!
 

@@ -1,0 +1,35 @@
+---
+import { loadNotes } from '../scripts/loadNotes'
+const { projectId, sequence } = Astro.props;
+
+const allPosts = loadNotes();
+const filteredPosts = allPosts
+    .filter(post => post.type === 'logbooks');
+
+const projectNotes = filteredPosts.filter(note => note.projectId?.toLowerCase() === projectId.toLowerCase());
+projectNotes.sort((a, b) => a.sequence - b.sequence);
+
+const currentIndex = projectNotes.findIndex(note => note.sequence === sequence);
+const beforeNote = projectNotes[currentIndex - 1];
+const afterNote = projectNotes[currentIndex + 1];
+---
+
+<div class="sequenceNav-container">
+    {console.log("Project ID from props:", projectId, "Filtered Project IDs:", filteredPosts.map(note => note.projectId), "Filtered Project Notes:", projectNotes)}
+    {beforeNote &&
+            <p>Previous</p>
+            <a href={beforeNote.url}>
+                <div class="sequenceNav-button prev">
+                    <p>{beforeNote.title}</p>
+                </div>
+            </a>
+    }
+    {afterNote &&
+        <p>Next</p>
+        <a href={afterNote.url}>
+            <div class="sequenceNav-button next">
+                <p>{afterNote.title}</p>
+            </div>
+        </a>
+    }
+</div>

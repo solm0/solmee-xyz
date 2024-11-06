@@ -1,22 +1,25 @@
 ---
-title: "00. Build a Theme"
+title: "Build a Theme"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-06-30
 tags: ["web", "Obsidian", "css"]
 thumbnail: '/img-00.png'
+
 overview: true
+projectId: "obsidian-theme-agate"
+sequence: 0
 ---
 옵시디언 테마를 내맘대로 뜯어고치자.![](../../images/img-00.png)
 
 ## 시작하기
-[[01-hello-theme-css]]
+[[hello-theme-css]]
 ## 디자인하기
-[[03-micro-typography-in-obsidian]]  
-[[02-macro-typography-in-obsidian]]  
+[[micro-typography-in-obsidian]]  
+[[macro-typography-in-obsidian]]  
 →  [[obsidian-plugins-i-used]]
 ## 제출하기
-[[04-submit-your-theme]]
+[[submit-your-theme]]
 
 ## 추가 하고싶은것
 - 내부링크 달 때 뜨는 창이 투명한거 고치기

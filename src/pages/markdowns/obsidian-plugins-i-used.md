@@ -4,7 +4,10 @@ layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-07-01
 tags: ["web"]
+
 overview: false
+projectId: "obsidian-theme-agate"
+sequence: 4
 ---
 ## Smart Typography
 → ≥ ≤ ≠

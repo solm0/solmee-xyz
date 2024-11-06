@@ -1,10 +1,13 @@
 ---
-title: "03. 정적 웹 속 동적 웹"
+title: 정적 웹 속 동적 웹
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-07-06
-tags: ["web"]
+tags:
+  - web
 overview: false
+projectId: "obsidian-digital-garden"
+sequence: 5
 ---
 ## 동적웹과 정적웹 접붙이기
 아직 SSR과 CSR에 대해서 완벽히는 모르겠다. 하지만 대부분의 웹에서 둘의 장점이 모두 필요하고, 그래서 적절하게 섞어 써야 한다는 건 알겠다.
@@ -22,4 +25,4 @@ overview: false
 
 그 문이 하나의 컴포넌트다. 앞으로 ‘카드’라고 부를 것이다. 카드에는 두가지 종류가 있다. 포트폴리오인 문서의 카드와 포트폴리오가 아닌 문서의 카드. 전자의 카드 구성내용은 썸네일, 제목, 태그다. 후자의 카드 구성내용은 제목, 내부 항목들, 태그다.
 
-그 구성내용을 저장할 DBMS를 선정해야 한다. [[04-choose-dbms]]
+그 구성내용을 저장할 DBMS를 선정해야 한다. [[choose-dbms]]

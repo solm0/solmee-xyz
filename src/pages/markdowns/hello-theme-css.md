@@ -1,10 +1,13 @@
 ---
-title: "01. Hello, theme.css!"
+title: "Hello, theme.css!"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-07-01
 tags: ["web", "css"]
 overview: false
+
+projectId: "obsidian-theme-agate"
+sequence: 1
 ---
 ## CSS로 스타일링 가능한 원리
 [마크업 언어](https://en.wikipedia.org/wiki/Markup_language)는 태그를 이용해 문서의 구조를 나타내는 것으로 HTML이 그 예시다. 마크업 언어의 일종인 [마크다운](https://en.wikipedia.org/wiki/Markdown)은 훨씬 더 단순한 문법으로 서식을 표현한다. 노션 등 많은 문서 생성 프로그램에서 지원한다.
