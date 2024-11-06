@@ -250,8 +250,7 @@ button {
     padding: 0;
 }
 
-button:hover,
-button:focus {
+button:hover {
     color: #212121;
     background-color: #e4e9e1;
 }
@@ -476,4 +475,10 @@ a.external-link:hover {
     border: 1px solid #ddd;
     overflow-x: hidden;
     overscroll-behavior: contain;
+}
+
+.sendbutton {
+    position: absolute;
+    z-index: 10;
+    pointer-events: all;
 }
