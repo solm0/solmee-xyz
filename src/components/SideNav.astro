@@ -1,6 +1,5 @@
 ---
 import Modal from "./Modal.astro"
-import SearchBar from "./SearchBar.astro"
 ---
 
 <div class="nav-links side">
@@ -8,17 +7,6 @@ import SearchBar from "./SearchBar.astro"
     <a class="logbooks" href="/logbooks/">Logbooks</a>
     <a class="works" href="/works/">Works</a>
     <br>
-    <a href="/cv/">CV</a>
-    <br>
-    <a href="/tags/">tags</a>
-    <a href="/rss.xml" title="RSS Feed" target="_blank" rel="noopener noreferrer">RSS</a>
-    
-    <Modal id="dialog" open="Search">
-        <main class="dialog-main" slot="main">
-            <SearchBar />
-        </main>
-        <button class="close-button" slot="close">Close</button>
-    </Modal>
     
     <Modal id="pagefind" open="Search2">
         <main class="dialog-main" slot="main">
