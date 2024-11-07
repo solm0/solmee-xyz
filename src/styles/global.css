@@ -65,7 +65,8 @@ li {
     --node-notes-color: #b9cc42;
     --node-logbooks-color: #00b486;
     --note-works-color: #027bb4;
-    --accent-color: #00ffbf85;
+    --accent-color: #00ffbfd1;
+    --accent-color-opacity: #00ffbf54;
 }
 
 
@@ -449,7 +450,7 @@ a,
 a:hover,
 .nav-links .pagefind-ui__result-link:hover {
     color: var(--text-color);
-    background-color: var(--accent-color);
+    background-color: var(--accent-color-opacity);
 }
 a.external-link:hover {
     background-color: var(--gray-color-2);
@@ -484,19 +485,26 @@ a.external-link:hover {
 .sequenceNav-container {
     position: relative;
     width: 100%;
-    height: auto;
     overflow: visible;
     padding: 1rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .sequenceNav-container a {
     text-decoration: none;
+    height: auto;
+    display: inline-flex;
+    width: 49%;
+}
+
+.sequenceNav-container a:hover {
+    background-color: transparent;
 }
 
 .sequenceNav-button {
-    width: 49%;
+    width: 100%;
     min-height: 75px;
-    height: auto;
     border: 1px solid var(--gray-color-2);
     border-radius: 10px;
     padding: 0.5rem 1rem;
@@ -507,6 +515,7 @@ a.external-link:hover {
 }
 .sequenceNav-button:hover {
     border: 1px solid var(--gray-color-3);
+    background-color: transparent;
 }
 
 .sequenceNav-button p {
@@ -514,13 +523,25 @@ a.external-link:hover {
 }
 
 .prev {
-    position: absolute;
     text-align: left;
     left: 0;
 }
 
 .next {
-    position: absolute;
     text-align: right;
     right: 0;
+}
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    position: relative;
+    font-size: var(--step--2);
+}
+.copyright::before {
+    content: "© \00a0";
 }

@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* link popup */
-document.querySelectorAll('a:not(.nav-links a):not(.tag-button a):not(.blog-card):not(.blog-post):not(.sequenceNav-container a)').forEach((link) => {
+document.querySelectorAll('a:not(.nav-links a):not(.tag-button a):not(.blog-card):not(.blog-post):not(.sequenceNav-container a):not(footer a)').forEach((link) => {
     let previewIframe;
     let hoverTimeout;
     let hideTimeout;
