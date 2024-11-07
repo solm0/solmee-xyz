@@ -13,6 +13,7 @@ sequence: 0
 > 2024년 7월 초, 옵시디언 Digital Garden 이라는 플러그인으로 개인웹사이트를 만들려 했던 기록을 담은 문서이다. 만들다 만 웹사이트 [보러가기](https://my-digital-garden-j85qme5ny-solmis-projects-683e2410.vercel.app/). 도중에 Digital Garden을 버리게 되어서 다시 만들기 시작했다. [[why-i-left-digital-garden]]
 
 ## 개발 과정 관련 문서들
+[[publish-obsidian-note]]
 [[initial-publish-with-vercel]]  
 [[slug-error]]  
 

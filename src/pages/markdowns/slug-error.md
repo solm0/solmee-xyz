@@ -6,8 +6,8 @@ date: 2024-07-05
 tags:
   - web
 overview: false
-projectId: "obsidian-digital-garden"
-sequence: 2
+projectId: obsidian-digital-garden
+sequence: 3
 ---
 > 싱글페이지를 퍼블리시한 이후 Publication Center에서 일괄 퍼블리시 하려하면 자꾸 `11ty Original error stack trace: (Repeated output has been truncated…)` 에러 뜨면서 안됐다.
 

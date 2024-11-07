@@ -6,8 +6,8 @@ date: 2024-07-07
 tags:
   - web
 overview: false
-projectId: "obsidian-digital-garden"
-sequence: 7
+projectId: obsidian-digital-garden
+sequence: 8
 ---
 Firebase를 사용해보자.
 ## Getting Started

@@ -6,8 +6,8 @@ date: 2024-07-06
 tags:
   - web
 overview: false
-projectId: "obsidian-digital-garden"
-sequence: 5
+projectId: obsidian-digital-garden
+sequence: 6
 ---
 ## 동적웹과 정적웹 접붙이기
 아직 SSR과 CSR에 대해서 완벽히는 모르겠다. 하지만 대부분의 웹에서 둘의 장점이 모두 필요하고, 그래서 적절하게 섞어 써야 한다는 건 알겠다.

@@ -6,8 +6,8 @@ date: 2024-07-07
 tags:
   - web
 overview: false
-projectId: "obsidian-digital-garden"
-sequence: 4
+projectId: obsidian-digital-garden
+sequence: 5
 ---
 [[static-web]]에서 말했듯이 리액트와 서버로 만드는 신세계 같은 동적웹을 갓 배우고 정적웹생성기에 대해 전혀 모를때는 챗지피티가 아무리 Jekyl, Gatsby, Hugo(왜 다 사람이름인건데. 이것부터 신뢰감이 안들잖아…) 추천해줘도 의심이 가득했다. 그러다가 CSR, SSR의 차이점을 알게되고 블로그 만드는 사람들이 다 정적웹기술에 대해 말하는 걸 보면서 차츰 편견이 허물어져 나름의 기준을 갖고 JAMstack을 참고하며 기술스택을 설계해 보았었다. 물론 진행하면서 다 바뀌었지만 말이다.
 

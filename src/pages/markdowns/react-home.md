@@ -6,8 +6,8 @@ date: 2024-07-07
 tags:
   - web
 overview: false
-projectId: "obsidian-digital-garden"
-sequence: 9
+projectId: obsidian-digital-garden
+sequence: 10
 ---
 
 | key       | value      | 필수  | 비고                     |

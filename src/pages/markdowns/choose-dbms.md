@@ -6,8 +6,8 @@ date: 2024-07-07
 tags:
   - web
 overview: false
-projectId: "obsidian-digital-garden"
-sequence: 6
+projectId: obsidian-digital-garden
+sequence: 7
 ---
 
 카드 구성 데이터를 동적으로 가져와 렌더링하기 위해 데이터를 저장하고 있을 DBMS가 필요하다. 이때 적절한 DBMS의 요건은 다음과 같다.
