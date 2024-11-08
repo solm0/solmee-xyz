@@ -15,45 +15,52 @@ fs.mkdirSync(outputDir, { recursive: true });
 const files = fs.readdirSync(inputDir).filter(file => file.endsWith('.md'));
 
 files.forEach(file => {
-  const filePath = path.join(inputDir, file);
-  const content = fs.readFileSync(filePath, 'utf8');
-  const { data } = matter(content);
+    const filePath = path.join(inputDir, file);
+    const content = fs.readFileSync(filePath, 'utf8');
+    const { data } = matter(content);
 
-  const id = file.replace('.md', '').toLowerCase(); // Normalize case for ID
-  const type = data.type || 'default';
-  const nodeColor = type === 'default' ? '#ccc' : type === 'note' ? '#ff6347' : '#4682b4';
+    const id = file.replace('.md', '').toLowerCase();
+    const type = data.type || 'default';
+    const typeColors = {
+        notes: '#b9cc42',
+        logbooks: '#00b486',
+        works: '#027bb4',
+        default: '#d7d7cd'
+    };
+    
+    const nodeColor = typeColors[type] || typeColors.default;
 
   // Add node if it doesn't already exist
-  if (!nodeMap.has(id)) {
-    const node = { id, name: data.title || id, color: nodeColor, val: 1 };
-    graphData.nodes.push(node);
-    nodeMap.set(id, node);
-    console.log(`Created node: ${id} from file ${file}`);
-  }
+    if (!nodeMap.has(id)) {
+        const node = { id, name: data.title || id, color: nodeColor, val: 1 };
+        graphData.nodes.push(node);
+        nodeMap.set(id, node);
+        console.log(`Created node: ${id} from file ${file}`);
+    }
 });
 
 // Second pass: Add links based on the parsed links in each file
 files.forEach(file => {
-  const filePath = path.join(inputDir, file);
-  const content = fs.readFileSync(filePath, 'utf8');
-  const { content: markdownContent } = matter(content);
+    const filePath = path.join(inputDir, file);
+    const content = fs.readFileSync(filePath, 'utf8');
+    const { content: markdownContent } = matter(content);
 
-  const sourceId = file.replace('.md', '').toLowerCase();
-  const linkRegex = /\[\[([^\|\]]+)\]\]/g;
-  let match;
+    const sourceId = file.replace('.md', '').toLowerCase();
+    const linkRegex = /\[\[([^\|\]]+)\]\]/g;
+    let match;
 
-  while ((match = linkRegex.exec(markdownContent)) !== null) {
-    const targetId = match[1].trim().toLowerCase();
+    while ((match = linkRegex.exec(markdownContent)) !== null) {
+        const targetId = match[1].trim().toLowerCase();
 
-    // Add link only if the target node exists in nodeMap
-    if (nodeMap.has(targetId)) {
-      graphData.links.push({ source: sourceId, target: targetId });
-      nodeMap.get(sourceId).val += 1;
-      console.log(`Link created: ${sourceId} -> ${targetId}`);
-    } else {
-      console.log(`Unresolved link target: '${targetId}' in file: ${file}`);
+        // Add link only if the target node exists in nodeMap
+        if (nodeMap.has(targetId)) {
+            graphData.links.push({ source: sourceId, target: targetId });
+            nodeMap.get(sourceId).val += 1;
+            console.log(`Link created: ${sourceId} -> ${targetId}`);
+        } else {
+            console.log(`Unresolved link target: '${targetId}' in file: ${file}`);
+        }
     }
-  }
 });
 
 fs.writeFileSync(outputFile, JSON.stringify(graphData, null, 2));

@@ -17,14 +17,14 @@ function MyGraphComponent() {
       nodeCanvasObject={(node, ctx, globalScale) => {
 
         const size = Math.sqrt(node.val) * 5;
-        ctx.fillStyle = node.color || 'blue';
+        ctx.fillStyle = node.color;
         ctx.beginPath();
         ctx.arc(node.x, node.y, size, 0, 2 * Math.PI, false);
         ctx.fill();
 
         const fontSize = 12 / globalScale;
         ctx.font = `${fontSize}px Sans-Serif`;
-        ctx.fillStyle = 'black';
+        ctx.fillStyle = 'transparent';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillText(node.name, node.x, node.y + size + fontSize); // Adjust Y for center-align below node
