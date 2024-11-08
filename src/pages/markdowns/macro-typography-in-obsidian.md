@@ -16,7 +16,7 @@ sequence: 3
 	→ 부족해!
 2.  `Settings`>`Hotkeys`에서 단축키 생성, 편집하기
 	→ 아직도 부족해!
-3. [[obsidian-plugins-i-used:플러그인]]을 이용해 HTML 태그로 감싸주는 단축키 생성, 편집하기
+3. [[obsidian-plugins-i-used]]을 이용해 HTML 태그로 감싸주는 단축키 생성, 편집하기
 	→ 이정도 툴을 보유했다면 옵시디언 내에 넣지 못할 요소는 없다고 보면 된다.
 
 ## formatting 스타일 커스터마이징
@@ -41,7 +41,6 @@ for (int i = 0; i < 3; i++){}
 
 이것은 [외부 링크](https://www.reddit.com/r/ObsidianMD/comments/v7tts9/change_color_of_equations_in_obsidian/)입니다  
 이것은 내부 링크 [[obsidian-theme-agate]]입니다.  
-이것은 [[unresolved Link]]입니다.
 
 > 이것은 blockquote입니다
 

@@ -3,7 +3,8 @@
         { 
           "id": "id1",
           "name": "name1",
-          "val": 1 
+          "val": 1,
+          "color" : "red"
         },
         { 
           "id": "id2",
