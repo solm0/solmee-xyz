@@ -486,12 +486,13 @@ a.external-link:hover {
     position: relative;
     width: 100%;
     overflow: visible;
-    padding: 1rem;
+    padding: 4rem 0;
     display: flex;
     justify-content: space-between;
 }
 
 .sequenceNav-container a {
+    position: relative;
     text-decoration: none;
     height: auto;
     display: inline-flex;
@@ -512,6 +513,7 @@ a.external-link:hover {
     flex-direction: column;
     justify-content: center;
     transition: 0.3s ease-in-out;
+    position: relative;
 }
 .sequenceNav-button:hover {
     border: 1px solid var(--gray-color-3);
@@ -541,6 +543,7 @@ footer {
     width: 100%;
     position: relative;
     font-size: var(--step--2);
+    margin-top: 3rem;
 }
 .copyright::before {
     content: "© \00a0";
