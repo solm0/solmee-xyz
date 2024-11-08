@@ -65,8 +65,8 @@ li {
     --node-notes-color: #b9cc42;
     --node-logbooks-color: #00b486;
     --note-works-color: #027bb4;
-    --accent-color: #00ffbfd1;
-    --accent-color-opacity: #00ffbf54;
+    --accent-color: #fff700;
+    --accent-color-opacity: #fff70054;
 }
 
 
@@ -162,12 +162,13 @@ img:hover {
     filter: none;
 }
 
-p.frontmatter {
+p.frontmatter,
+.sequenceNav-container>p {
     font-family: monospace;
     font-size: var(--step--2);
-    margin: 0;
     line-height: 1.2rem;
-    opacity: 50%;
+    color: var(--gray-color-3);
+    margin: 0;
 }
 
 /* header */
@@ -485,13 +486,23 @@ a.external-link:hover {
 .sequenceNav-container {
     position: relative;
     width: 100%;
-    overflow: visible;
     padding: 4rem 0;
+}
+
+.sequenceNav-container a,
+.sequenceNav-container>p{
+    margin: 0;
+}
+
+.sequenceNav-button-container {
+    position: relative;
+    margin: 1rem 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.sequenceNav-container a {
+.sequenceNav-button-container a {
     position: relative;
     text-decoration: none;
     height: auto;
@@ -499,7 +510,7 @@ a.external-link:hover {
     width: 49%;
 }
 
-.sequenceNav-container a:hover {
+.sequenceNav-button-container a:hover {
     background-color: transparent;
 }
 
@@ -517,7 +528,6 @@ a.external-link:hover {
 }
 .sequenceNav-button:hover {
     border: 1px solid var(--gray-color-3);
-    background-color: transparent;
 }
 
 .sequenceNav-button p {

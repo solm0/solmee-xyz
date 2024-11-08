@@ -10,7 +10,6 @@ const {frontmatter} = Astro.props;
         <div class="tag-button-container">{frontmatter.tags.map((tag) => <TagButton tag={tag} url={`/tags/${tag}`}/>)}</div>
         <p class="frontmatter">type: {frontmatter.type}</p>
         <p class="frontmatter">created on: {frontmatter.date.toString().slice(0,10)}</p>
-        <p class="frontmatter">project: {frontmatter.projectId}, {frontmatter.sequence}</p>
     </div>
     <slot />
     <SequenceNav projectId={frontmatter.projectId} sequence={frontmatter.sequence} />

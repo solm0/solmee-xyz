@@ -44,4 +44,4 @@ Realtime Database 제한
 	- index불필요
 - write, transaction 이런건 생략함. 난 필터링만 필요하니까
 
-firebase로 어떻게 데이터와 이미지를 갖다쓰고 필터링할 수 있는지 알아보자. [[firebase-learn]]
+firebase로 어떻게 데이터와 이미지를 갖다쓰고 필터링할 수 있는지 알아보자.

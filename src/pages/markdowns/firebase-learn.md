@@ -50,7 +50,6 @@ firebase storage라는 서비스가 있다고 해서 그것을 쓰려고 했으�
 근데!!!!!! 유료다.
 
 다른 동적웹 무료 호스팅 서비스를 찾아보니 Netlify, Heroku, Vercel 등이 된다고 한다. 디지털가든에서 쓰고있는 Vercel로 하자.
-→ [[dynamic-website-hosting-with-vercel]]
 
 
 

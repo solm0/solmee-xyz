@@ -31,7 +31,7 @@ function MyGraphComponent() {
 
         const fontSize = 12 / globalScale;
         ctx.font = `${fontSize}px Sans-Serif`;
-        ctx.fillStyle = 'grey';
+        ctx.fillStyle = 'transparent';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillText(node.name, node.x, node.y + size + fontSize);

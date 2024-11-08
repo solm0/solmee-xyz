@@ -38,8 +38,3 @@ Vercel command-line interface는 명령줄로 프로젝트를 관리할 수 있�
 얘네는 모르겠어서 일단 링크만 첨부해 둔다.
 [Using in a CI/CD environment](https://vercel.com/docs/cli#using-in-a-ci/cd-environment)
 [Available Commands](https://vercel.com/docs/cli#available-commands)
-
-
-
-본격적으로 인터페이스 짜기 시작!
-[[react-home]]

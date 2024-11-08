@@ -10,25 +10,34 @@ const projectNotes = filteredPosts.filter(note => note.projectId?.toLowerCase() 
 projectNotes.sort((a, b) => a.sequence - b.sequence);
 
 const currentIndex = projectNotes.findIndex(note => note.sequence === sequence);
+const currentNote = projectNotes[currentIndex];
 const beforeNote = projectNotes[currentIndex - 1];
 const afterNote = projectNotes[currentIndex + 1];
+const overviewNote = projectNotes[0];
+
 ---
 
 <div class="sequenceNav-container">
-    {beforeNote &&
-            <a href={beforeNote.url}>
-                <div class="sequenceNav-button prev">
-                    <b>Previous</b>
-                    <p>{beforeNote.title}</p>
+    <p>
+        project: <a class="default-link" href={projectId}>{overviewNote.title}</a>
+    </p>
+    <p>{sequence}. {currentNote.title}</p>
+    <div class="sequenceNav-button-container">
+        {beforeNote &&
+                <a href={beforeNote.url}>
+                    <div class="sequenceNav-button prev">
+                        <b>Previous</b>
+                        <p>{sequence - 1}. {beforeNote.title}</p>
+                    </div>
+                </a>
+        }
+        {afterNote &&
+            <a href={afterNote.url}>
+                <div class="sequenceNav-button next">
+                    <b>Next</b>
+                    <p>{sequence + 1}. {afterNote.title}</p>
                 </div>
             </a>
-    }
-    {afterNote &&
-        <a href={afterNote.url}>
-            <div class="sequenceNav-button next">
-                <b>Next</b>
-                <p>{afterNote.title}</p>
-            </div>
-        </a>
-    }
+        }
+    </div>
 </div>

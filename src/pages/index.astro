@@ -3,11 +3,32 @@ import BaseLayout from "../layouts/BaseLayout.astro"
 import Newsletter from "../components/Newsletter"
 import Graph from "../components/Graph"
 
-const pageTitle = 'Home'
+const pageTitle = 'Hello'
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<Graph client:only />
-	<p>I am Solmi. I design. This is my digital garden. Recently—last edited on Oct 30, 2024— I have been learning German, working on Libropia, and have finished Journal Shrine.</p>
+	<h2>About me</h2>
+	<ul>
+		<li>i am Solmi, graphic designer, and i make web ...자기소개.(영/한 버튼)</li>
+		<li>cv, github, behance,(link)</li>
+		<li>instagram, email, linkedin(link)</li>
+	</ul>
+	<h2>About this website</h2>
+	<ul>
+		<li>this is my digital garden. notes, logbooks, works.설명.</li>
+		<li>design of this website(link)</li>
+		<li>development of this website(link)</li>
+	</ul>
+	<h2>News</h2>
+	<ul>
+		<li>I have been learning...(tag link)</li>
+		<li>Working on ...(logbook link)</li>
+		<li>Listening to ...(external link)</li>
+		<li>Reading ...(external link)</li>
+		<li>Watching ...(external link)</li>
+		<li>recent updates ...(link)</li>
+	</ul>
+	<h2>newsletter</h2>
 	<Newsletter client:load />
 </BaseLayout>
