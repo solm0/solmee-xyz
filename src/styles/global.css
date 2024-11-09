@@ -640,6 +640,10 @@ input:checked + .slider:before {
     background-color: var(--gray-color-2);
     top: 500px;
     display: block;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .local-graph-container.hide {
     display: none;

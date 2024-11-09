@@ -3,7 +3,7 @@ title: "Obsidian Digital Garden"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-07-07
-tags: ["web", "Obsidian", "firebase"]
+tags: ["web", "obsidian", "firebase"]
 thumbnail: '/obsidian-website.png'
 
 overview: true

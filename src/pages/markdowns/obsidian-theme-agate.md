@@ -3,7 +3,7 @@ title: "Obsidian theme Agate"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-06-30
-tags: ["web", "Obsidian", "css"]
+tags: ["web", "obsidian", "css"]
 thumbnail: '/img-00.png'
 
 overview: true

@@ -3,7 +3,7 @@ const {id, open} = Astro.props;
 ---
 
 <button onclick={`window.${id}.showModal()`}>
-    <img class={open} src=`/${open}.svg` alt="search icon">
+    <img class={open} src=`/${open}.svg` alt="{open} icon">
 </button>
 <dialog id={id} class={id}>
     <slot name="main" />

@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import TagButton from "../components/TagButton.astro";
+import LocalGraph from "../components/LocalGraph.astro";
+
 const {frontmatter} = Astro.props;
 ---
 <BaseLayout pageTitle = {frontmatter.title}>
@@ -10,4 +12,5 @@ const {frontmatter} = Astro.props;
         <p class="frontmatter">created on: {frontmatter.date.toString().slice(0,10)}</p>
     </div>
     <slot />
+    <LocalGraph />
 </BaseLayout>

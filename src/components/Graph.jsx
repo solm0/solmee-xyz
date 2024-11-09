@@ -1,9 +1,28 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ForceGraph2D from 'react-force-graph-2d';
 import graphData from '../data/graphData.json'
 import { GRAPHSTYLE } from '../scripts/graphStyle';
 
 function MyGraphComponent() {
+  const [dimensions, setDimensions] = useState({
+      width: window.innerWidth,
+      height: window.innerHeight,
+  });
+
+  useEffect(() => {
+      const handleResize = () => {
+          setDimensions({
+              width: window.innerWidth,
+              height: window.innerHeight,
+          });
+      };
+
+      window.addEventListener("resize", handleResize);
+
+      // Cleanup the event listener on component unmount
+      return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const [hoveredNode, setHoveredNode ] = useState(null);
   const [depth1Nodes, setDepth1Nodes] = useState(new Set());
 
@@ -42,8 +61,8 @@ function MyGraphComponent() {
   return (
     <ForceGraph2D
       graphData={graphData}
-      width={1500}
-      height={900}
+      width={dimensions.width}
+      height={dimensions.height}
       minZoom={1}
       maxZoom={5}
 
