@@ -4,23 +4,8 @@ import Graph from "./Graph.jsx"
 import Tags from "./Tags.astro"
 ---
 
-<div class="nav-links side">
-    <a href="/">solmee.xyz</a>
-    <a class="notes" href="/notes/">Notes</a>
-    <a class="logbooks" href="/logbooks/">Logbooks</a>
-    <a class="works" href="/works/">Works</a>
-    <br>
-    
-    <Modal id="pagefind" open="Search">
-        <main slot="main">
-            <div id="search"></div>
-            <script>
-                import "../scripts/sideNav";
-            </script>
-        </main>
-        <button class="close-button" slot="close">Close</button>
-    </Modal>
-    <Modal id="globalGraph" open="Graph">
+<div class="nav-links">
+    <Modal id="globalGraph" open="logo">
         <main class="graph-container" slot="main">
             <Graph client:only />
             <p class="graph-caption">Left-click: rotate, Mouse-wheel/middle-click: zoom, Right-click: pan</p>
@@ -30,4 +15,38 @@ import Tags from "./Tags.astro"
         </main>
         <button class="close-button" slot="close">Close</button>
     </Modal>
+
+    <a href="/">solmee.xyz</a>
+
+    <Modal id="pagefind" open="search">
+        <main slot="main">
+            <div id="search"></div>
+            <script>
+                import "../scripts/sideNav";
+            </script>
+        </main>
+        <button class="close-button" slot="close">Close</button>
+    </Modal>
+
+    <a class="notes" href="/notes/">Notes</a>
+    <a class="logbooks" href="/logbooks/">Logbooks</a>
+    <a class="works" href="/works/">Works</a>
+
+    <div class="toggle-container">
+        <label for="theme" class="switch theme">
+            <input id="theme" type="checkbox">
+            <span class="slider"></span>
+        </label>
+        <span>dark mode</span>
+    </div>
+
+    <div class="toggle-container">
+        <label for="localgraph" class="switch localgraph">
+            <input id="localgraph" type="checkbox">
+            <span class="slider"></span>
+        </label>
+        <span>show local graph</span>
+    </div>
+
+    <br>
 </div>
