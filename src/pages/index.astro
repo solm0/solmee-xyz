@@ -1,13 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
 import Newsletter from "../components/Newsletter"
-import Graph from "../components/Graph"
 
 const pageTitle = 'Hello'
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<Graph client:only />
 	<h2>About me</h2>
 	<ul>
 		<li>i am Solmi, graphic designer, and i make web ...자기소개.(영/한 버튼)</li>

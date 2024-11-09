@@ -1,5 +1,7 @@
 ---
 import Modal from "./Modal.astro"
+import Graph from "./Graph.jsx"
+import Tags from "./tags.astro"
 ---
 
 <div class="nav-links side">
@@ -9,12 +11,21 @@ import Modal from "./Modal.astro"
     <br>
     
     <Modal id="pagefind" open="Search">
-        <main class="dialog-main" slot="main">
-
+        <main slot="main">
             <div id="search"></div>
             <script>
                 import "../scripts/sideNav";
             </script>
+        </main>
+        <button class="close-button" slot="close">Close</button>
+    </Modal>
+    <Modal id="globalGraph" open="Graph">
+        <main class="graph-container" slot="main">
+            <Graph client:only />
+            <p class="graph-caption">Left-click: rotate, Mouse-wheel/middle-click: zoom, Right-click: pan</p>
+            <div class="graph-tags">
+                <Tags />
+            </div>
         </main>
         <button class="close-button" slot="close">Close</button>
     </Modal>

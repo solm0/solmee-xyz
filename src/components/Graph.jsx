@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ForceGraph2D from 'react-force-graph-2d';
 import graphData from '../data/graphData.json'
-import { GRAPHSTYLE } from '../scripts/config';
+import { GRAPHSTYLE } from '../scripts/graphStyle';
 
 function MyGraphComponent() {
   const [hoveredNode, setHoveredNode ] = useState(null);
@@ -42,8 +42,8 @@ function MyGraphComponent() {
   return (
     <ForceGraph2D
       graphData={graphData}
-      width={800}
-      height={600}
+      width={1500}
+      height={900}
       minZoom={1}
       maxZoom={5}
 

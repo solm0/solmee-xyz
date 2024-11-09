@@ -3,7 +3,7 @@ const {id, open} = Astro.props;
 ---
 
 <button onclick={`window.${id}.showModal()`}>{open}</button>
-<dialog id={id}>
+<dialog id={id} class={id}>
     <slot name="main" />
     <form method="dialog">
         <slot name="close" />
