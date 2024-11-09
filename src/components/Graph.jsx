@@ -1,9 +1,8 @@
 import ForceGraph2D from 'react-force-graph-2d';
 import { GRAPHSTYLE } from '../scripts/graphStyle';
 import { useState } from 'react';
-import graphData from '../data/graphData.json'
 
-const Graph = ({ width, height, minZoom, maxZoom, graphData }) => {
+const Graph = ({ width, height, minZoom, maxZoom, graphData, targetNode }) => {
   const [hoveredNode, setHoveredNode ] = useState(null);
   const [depth1Nodes, setDepth1Nodes] = useState(new Set());
 
@@ -11,12 +10,9 @@ const Graph = ({ width, height, minZoom, maxZoom, graphData }) => {
     setHoveredNode(node);
 
     if (node) {
-      // Find depth 1 neighbors of the hovered node
       const neighbors = new Set();
 
-      // Check each link to find neighbors
       graphData.links.forEach((link) => {
-        // Ensure link.source and link.target match the node’s ID format
         const sourceId = typeof link.source === 'object' ? link.source.id : link.source;
         const targetId = typeof link.target === 'object' ? link.target.id : link.target;
 
@@ -70,6 +66,15 @@ const Graph = ({ width, height, minZoom, maxZoom, graphData }) => {
         ctx.beginPath();
         ctx.arc(node.x, node.y, size, 0, 2 * Math.PI, false);
         ctx.fill();
+
+        // Draw highlight if node is the targetNode
+        if (targetNode && node.id === targetNode.id) {
+          ctx.strokeStyle = node.color; // Customize highlight color
+          ctx.lineWidth = 2 / globalScale;
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, size + 4, 0, 2 * Math.PI, false); // Slightly larger circle for highlight
+          ctx.stroke();
+        }
 
         const fontSize = GRAPHSTYLE.fontSize / globalScale;
         ctx.font = `${fontSize}px Sans-Serif`;

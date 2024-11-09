@@ -7,6 +7,7 @@ const LocalGraph = () => {
   const [key, setKey] = useState(Math.random());
   const [fileName, setFileName] = useState('');
   const [filteredGraphData, setFilteredGraphData] = useState({ nodes: [], links: [] });
+  const [targetNode, setTargetNode] = useState(null);
 
   useEffect(() => {
     const handleModalClose = () => {
@@ -23,42 +24,49 @@ const LocalGraph = () => {
 
   useEffect(() => {
     const path = window.location.pathname;
-    setFileName(path.substring(path.lastIndexOf('/') + 1));
+    const newFileName = path.substring(path.lastIndexOf('/') + 1);
+    setFileName(newFileName);
+    console.log("FileName Set:", newFileName);
   }, []);
 
   useEffect(() => {
-    const targetNode = graphData.nodes.find(node => node.id === fileName);
+    if (fileName) {
+      const target = graphData.nodes.find(node => node.id === fileName);
+      setTargetNode(target);
+      setKey(Math.random()); // Trigger re-render on targetNode set
+      console.log("Target Node Set:", target);
+      
+      if (target) {
+        const visibleNodes = new Set([target]);
+        const visibleLinks = [];
+        const queue = [{ nodeId: fileName, depth: 0 }];
 
-    if (targetNode) {
-      const visibleNodes = new Set([targetNode]);
-      const visibleLinks = [];
-      const queue = [{ nodeId: fileName, depth: 0 }];
+        while (queue.length > 0) {
+          const { nodeId, depth } = queue.shift();
 
-      while (queue.length > 0) {
-        const { nodeId, depth } = queue.shift();
+          if (depth < 2) {
+            graphData.links.forEach(link => {
+              if (link.source === nodeId || link.target === nodeId) {
+                const neighborId = link.source === nodeId ? link.target : link.source;
+                const neighborNode = graphData.nodes.find(node => node.id === neighborId);
 
-        if (depth < 2) {
-          graphData.links.forEach(link => {
-            if (link.source === nodeId || link.target === nodeId) {
-              const neighborId = link.source === nodeId ? link.target : link.source;
-              const neighborNode = graphData.nodes.find(node => node.id === neighborId);
-
-              if (neighborNode && !visibleNodes.has(neighborNode)) {
-                visibleNodes.add(neighborNode);
-                queue.push({ nodeId: neighborId, depth: depth + 1 });
+                if (neighborNode && !visibleNodes.has(neighborNode)) {
+                  visibleNodes.add(neighborNode);
+                  queue.push({ nodeId: neighborId, depth: depth + 1 });
+                }
+                visibleLinks.push(link);
               }
-              visibleLinks.push(link);
-            }
-          });
+            });
+          }
         }
-      }
 
-      setFilteredGraphData({
-        nodes: Array.from(visibleNodes),
-        links: visibleLinks
-      });
-    } else {
-      setFilteredGraphData({ nodes: [], links: [] });
+        setFilteredGraphData({
+          nodes: Array.from(visibleNodes),
+          links: visibleLinks
+        });
+      } else {
+        setFilteredGraphData({ nodes: [], links: [] });
+      }
     }
   }, [fileName]);
 
@@ -70,17 +78,27 @@ const LocalGraph = () => {
       minZoom={2}
       maxZoom={2}
       graphData={filteredGraphData}
+      targetNode={targetNode}
       nodeCanvasObject={(node, ctx, globalScale) => {
-        const size = Math.sqrt(node.val) * 2; // Set the size of each node circle
-        ctx.fillStyle = node.color || GRAPHSTYLE.nodeColor; // Set fill color for the node
+        const size = Math.sqrt(node.val) * 2;
+        ctx.fillStyle = node.color || GRAPHSTYLE.nodeColor;
         ctx.beginPath();
         ctx.arc(node.x, node.y, size, 0, 2 * Math.PI, false);
         ctx.fill();
 
-        // Set the text fill color here
+        // Draw extra circle for target node
+        if (targetNode && node.id === targetNode.id) {
+          console.log("Drawing highlight for target node:", targetNode);
+          ctx.strokeStyle = 'red';
+          ctx.lineWidth = 4 / globalScale;
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, size + 10, 0, 2 * Math.PI, false);
+          ctx.stroke();
+        }
+
         const fontSize = GRAPHSTYLE.fontSize / globalScale;
         ctx.font = `${fontSize}px Sans-Serif`;
-        ctx.fillStyle = GRAPHSTYLE.textColor; // Set the text color
+        ctx.fillStyle = GRAPHSTYLE.textColor;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillText(node.name, node.x, node.y + size + fontSize);
