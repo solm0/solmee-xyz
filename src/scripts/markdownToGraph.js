@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import matter from 'gray-matter';
+import matter from 'gray-matter'; 
 
 const inputDir = path.resolve('src/pages/markdowns');
 const outputDir = path.resolve('src/data');

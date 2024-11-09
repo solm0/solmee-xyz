@@ -1,13 +1,13 @@
 ---
-title: "Macro Typography in Obsidian"
+title: Macro Typography in Obsidian
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-07-01
-tags: ["web"]
-
+tags:
+  - web
 overview: false
-projectId: "obsidian-theme-agate"
-sequence: 3
+projectId: obsidian-theme-agate
+sequence: 4
 ---
 단주, 첨자, 각주, 문장부호를 꾸며보자.
 
@@ -40,7 +40,6 @@ for (int i = 0; i < 3; i++){}
 	- ㄹㅇㄹ
 
 이것은 [외부 링크](https://www.reddit.com/r/ObsidianMD/comments/v7tts9/change_color_of_equations_in_obsidian/)입니다  
-이것은 내부 링크 [[obsidian-theme-agate]]입니다.  
 
 > 이것은 blockquote입니다
 

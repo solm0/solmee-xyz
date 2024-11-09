@@ -16,7 +16,7 @@
       "id": "choose-dbms",
       "name": "DBMS 고르기",
       "color": "#00b486",
-      "val": 2
+      "val": 1
     },
     {
       "id": "comixtura-code",
@@ -52,7 +52,7 @@
       "id": "digital-garden-plugin",
       "name": "Digital Garden의 점령",
       "color": "#00b486",
-      "val": 5
+      "val": 4
     },
     {
       "id": "dr-phong",
@@ -64,19 +64,19 @@
       "id": "dynamic-in-static",
       "name": "정적 웹 속 동적 웹",
       "color": "#00b486",
-      "val": 2
+      "val": 1
     },
     {
       "id": "dynamic-website-hosting-with-vercel",
       "name": "Dynamic Website Hosting with Vercel",
       "color": "#00b486",
-      "val": 2
+      "val": 1
     },
     {
       "id": "firebase-learn",
       "name": "Firebase 사용법 익히기",
       "color": "#00b486",
-      "val": 3
+      "val": 2
     },
     {
       "id": "hello-theme-css",
@@ -94,7 +94,7 @@
       "id": "macro-typography-in-obsidian",
       "name": "Macro Typography in Obsidian",
       "color": "#00b486",
-      "val": 3
+      "val": 2
     },
     {
       "id": "micro-typography-in-obsidian",
@@ -124,7 +124,7 @@
       "id": "obsidian-theme-agate",
       "name": "Obsidian theme Agate",
       "color": "#00b486",
-      "val": 6
+      "val": 7
     },
     {
       "id": "porkbun-cloudflaredns-vercel",
@@ -166,7 +166,7 @@
       "id": "static-web",
       "name": "정적 웹에 눈뜨다",
       "color": "#00b486",
-      "val": 2
+      "val": 1
     },
     {
       "id": "submit-your-theme",
@@ -203,10 +203,6 @@
       "target": "create-astro-git-push"
     },
     {
-      "source": "choose-dbms",
-      "target": "firebase-learn"
-    },
-    {
       "source": "comixtura-code",
       "target": "dr-phong"
     },
@@ -231,32 +227,12 @@
       "target": "publish-obsidian-note"
     },
     {
-      "source": "digital-garden-plugin",
-      "target": "dynamic-in-static"
-    },
-    {
-      "source": "dynamic-in-static",
-      "target": "choose-dbms"
-    },
-    {
-      "source": "dynamic-website-hosting-with-vercel",
-      "target": "react-home"
-    },
-    {
       "source": "firebase-learn",
       "target": "use-firebase"
     },
     {
-      "source": "firebase-learn",
-      "target": "dynamic-website-hosting-with-vercel"
-    },
-    {
       "source": "macro-typography-in-obsidian",
       "target": "obsidian-plugins-i-used"
-    },
-    {
-      "source": "macro-typography-in-obsidian",
-      "target": "obsidian-theme-agate"
     },
     {
       "source": "obsidian-digital-garden",
@@ -308,6 +284,10 @@
     },
     {
       "source": "obsidian-theme-agate",
+      "target": "css-custom-properties"
+    },
+    {
+      "source": "obsidian-theme-agate",
       "target": "micro-typography-in-obsidian"
     },
     {
@@ -337,10 +317,6 @@
     {
       "source": "solmee-xyz",
       "target": "compare-ssgs"
-    },
-    {
-      "source": "static-web",
-      "target": "digital-garden-plugin"
     },
     {
       "source": "submit-your-theme",

@@ -1,13 +1,13 @@
 ---
-title: "CSS custom properties"
+title: CSS custom properties
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-07-03
-tags: ["web"]
-
+tags:
+  - web
 overview: false
-projectId: "obsidian-theme-agate"
-sequence:
+projectId: obsidian-theme-agate
+sequence: 2
 ---
 https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 > Custom properties allow a value to be defined in one place, then referenced in multiple other places so that it's easier to work with.

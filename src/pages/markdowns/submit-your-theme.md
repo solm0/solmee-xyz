@@ -1,21 +1,20 @@
 ---
-title: "Submit your theme"
+title: Submit your theme
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-07-02
-tags: ["web"]
-
+tags:
+  - web
 overview: false
-projectId: "obsidian-theme-agate"
-sequence: 5
+projectId: obsidian-theme-agate
+sequence: 6
 ---
 완성한 테마를 커뮤니티 플러그인에 업로드해보자. 옵시디언 팀의 리뷰를 통과하면 다른 사용자들이 나의 테마를 다운로드받을 수 있게 되고, Digital Garden에서도 사용할 수 있게 된다.
 
 ## CSS 정리하기
 이 테마는 계속 업데이트할 것이기 때문에 가독성과 유지보수의 편의를 위해 코드를 깔끔하게 정리해 놓아야 한다.
 
-> [! note]
-사용자가 settings에서 설정한 accent color를 바로 참조할 수 있으면 좋겠지만 그런 기능이 없다고 한다. 그래서 직접 [[css-custom-properties]]을 만들어 쓴다.
+>사용자가 settings에서 설정한 accent color를 바로 참조할 수 있으면 좋겠지만 그런 기능이 없다고 한다. 그래서 직접 [[css-custom-properties]]을 만들어 쓴다.
 
 - docs에 있는 순서대로 CSS variable들을 정리했다.
 - 자주 쓰는 color, border-width, radius는 실제 값이 아닌 CSS variable로 대체했다.

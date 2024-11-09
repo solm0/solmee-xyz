@@ -1,13 +1,13 @@
 ---
-title: "Micro Typography in Obsidian"
+title: Micro Typography in Obsidian
 layout: ../../layouts/LogbooksLayout.astro
 type: logbooks
 date: 2024-07-01
-tags: ["web"]
-
+tags:
+  - web
 overview: false
-projectId: "obsidian-theme-agate"
-sequence: 2
+projectId: obsidian-theme-agate
+sequence: 3
 ---
 본문 타입세팅을 해보자.
 ## 레퍼런스

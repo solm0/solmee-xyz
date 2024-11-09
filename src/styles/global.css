@@ -47,6 +47,7 @@ li {
     font-size: 16px;
     color: #212121;
     text-underline-offset: 0.25em;
+    --step--3: clamp(0.6251rem, 0.6336rem - 0.0435vw, 0.6rem);
     --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
     --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
     --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
@@ -557,4 +558,9 @@ footer {
 }
 .copyright::before {
     content: "© \00a0";
+}
+
+/* canvas */
+canvas {
+    border: 1px solid var(--gray-color-3);
 }

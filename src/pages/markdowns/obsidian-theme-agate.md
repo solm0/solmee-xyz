@@ -14,6 +14,7 @@ sequence: 0
 
 ## 시작하기
 [[hello-theme-css]]
+[[css-custom-properties]]
 ## 디자인하기
 [[micro-typography-in-obsidian]]  
 [[macro-typography-in-obsidian]]  
