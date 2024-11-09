@@ -13,7 +13,7 @@ sequence: 0
 옵시디언 테마를 내맘대로 뜯어고치자.![](../../images/img-00.png)
 
 ## 시작하기
-[[hello-theme-css]]
+[[hello-theme-css]]  
 [[css-custom-properties]]
 ## 디자인하기
 [[micro-typography-in-obsidian]]  

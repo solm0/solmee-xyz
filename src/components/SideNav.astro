@@ -1,20 +1,30 @@
 ---
+// @ts-nocheck
 import Modal from "./Modal.astro"
-import Graph from "./Graph.jsx"
+import GlobalGraph from "./GlobalGraph"
 import Tags from "./Tags.astro"
 ---
 
 <div class="nav-links">
     <Modal id="globalGraph" open="logo">
         <main class="graph-container" slot="main">
-            <Graph client:only />
+            <GlobalGraph client:only />
             <p class="graph-caption">Left-click: rotate, Mouse-wheel/middle-click: zoom, Right-click: pan</p>
             <div class="graph-tags">
                 <Tags />
             </div>
         </main>
-        <button class="close-button" slot="close">Close</button>
+        <button
+            class="close-button"
+            slot="close"
+            onclick="console.log('Close button clicked, dispatching event'); window.dispatchEvent(new Event('close-global-graph'))"
+        >
+            Close
+        </button>
     </Modal>
+    <!-- <a href="/graph/">
+        <img class="logo" src="/logo.svg">
+    </a> -->
 
     <a href="/">solmee.xyz</a>
 
