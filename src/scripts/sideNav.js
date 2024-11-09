@@ -1,3 +1,4 @@
+/* search */
 import { PagefindUI } from "@pagefind/default-ui";
                 
 window.addEventListener("DOMContentLoaded", () => {
@@ -36,5 +37,32 @@ window.addEventListener("DOMContentLoaded", () => {
         const params = new URLSearchParams(url.search);
         params.delete("q");
         window.history.replaceState({}, "", `${url.pathname}`);
+    });
+});
+
+/* local graph toggle */
+const themeToggle = document.getElementById("localgraph");
+const localGraph = document.getElementsByClassName("local-graph-container")
+
+// Load the saved toggle state on page load
+document.addEventListener("DOMContentLoaded", () => {
+    const isChecked = localStorage.getItem("localGraphToggle") === "true";
+    themeToggle.checked = isChecked; // Set the checkbox state based on localStorage
+
+    // Show or hide the local graph container based on the saved state
+    Array.from(localGraph).forEach((element) => {
+        element.classList.toggle("hide", isChecked);
+    });
+});
+
+
+// Add an event listener to save the toggle state on change
+themeToggle.addEventListener("change", (event) => {
+    const isChecked = event.target.checked;
+    localStorage.setItem("localGraphToggle", isChecked); // Save the state to localStorage
+
+    // Toggle the visibility of the local graph container
+    Array.from(localGraph).forEach((element) => {
+        element.classList.toggle("hide", isChecked);
     });
 });

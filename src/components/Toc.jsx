@@ -60,7 +60,7 @@ const TOC = () => {
     
     return (
         <aside>
-            <nav className='nav-links side right'>
+            <nav className='nav-links right'>
                 {tocItems.map((heading) => (
                     <a
                         key={heading.id}

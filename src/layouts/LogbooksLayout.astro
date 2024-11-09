@@ -2,6 +2,7 @@
 import BaseLayout from "./BaseLayout.astro";
 import TagButton from "../components/TagButton.astro";
 import SequenceNav from "../components/SequenceNav.astro";
+import LocalGraph from "../components/LocalGraph.astro";
 
 const {frontmatter} = Astro.props;
 ---
@@ -12,5 +13,6 @@ const {frontmatter} = Astro.props;
         <p class="frontmatter">created on: {frontmatter.date.toString().slice(0,10)}</p>
     </div>
     <slot />
+    <LocalGraph />
     <SequenceNav projectId={frontmatter.projectId} sequence={frontmatter.sequence} />
 </BaseLayout>
