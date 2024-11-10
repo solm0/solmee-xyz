@@ -1,30 +1,19 @@
 ---
 // @ts-nocheck
 import Modal from "./Modal.astro"
-import GlobalGraph from "./GlobalGraph"
-import Tags from "./Tags.astro"
+import Modal2 from "./Modal2.astro"
+import GlobalGraphContainer from "./GlobalGraphContainer"
 ---
 
 <div class="nav-links">
-    <Modal id="globalGraph" open="logo">
+    <Modal2 id="globalGraph" open="logo">
         <main class="graph-container" slot="main">
-            <GlobalGraph client:only />
-            <p class="graph-caption">Left-click: rotate, Mouse-wheel/middle-click: zoom, Right-click: pan</p>
-            <div class="graph-tags">
-                <Tags />
-            </div>
+            <GlobalGraphContainer client:only />
         </main>
-        <button
-            class="close-button"
-            slot="close"
-            onclick="console.log('Close button clicked, dispatching event'); window.dispatchEvent(new Event('close-global-graph'))"
-        >
+        <button class="close-button" slot="close">
             Close
         </button>
-    </Modal>
-    <!-- <a href="/graph/">
-        <img class="logo" src="/logo.svg">
-    </a> -->
+    </Modal2>
 
     <a href="/">solmee.xyz</a>
 

@@ -76,7 +76,7 @@ const LocalGraph = () => {
       width={300}
       height={300}
       minZoom={2}
-      maxZoom={2}
+      maxZoom={4}
       graphData={filteredGraphData}
       targetNode={targetNode}
       nodeCanvasObject={(node, ctx, globalScale) => {

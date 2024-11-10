@@ -35,6 +35,8 @@ const Graph = ({ width, height, minZoom, maxZoom, graphData, targetNode }) => {
     window.location.href = noteUrl;
   };
 
+  
+
   return (
     <ForceGraph2D
       key={`${width}-${height}-${minZoom}-${maxZoom}`}

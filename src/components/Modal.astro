@@ -2,48 +2,13 @@
 const { id, open } = Astro.props;
 ---
 
-<!-- Button to open modal and navigate to homepage with query parameter -->
-<button onclick={`window.location.href='/?openModal=${id}'`}>
-    <img class={open} src={`/${open}.svg`} alt="${open} icon">
+<button onclick={`window.${id}.showModal()`}>
+    <img class={open} src={`/${open}.svg`} alt={`${open} icon`}>
 </button>
 
-<!-- Dialog modal with back navigation on close -->
 <dialog id={id} class={id}>
     <slot name="main" />
     <form method="dialog">
-        <!-- Close button: close modal and go back two pages in history -->
-        <button class="close-button" type="button" onclick={`window.closeModalAndGoBack('${id}')`}>Close</button>
+        <slot name="close" />
     </form>
 </dialog>
-
-<script>
-    // Define the function on the window object to make it accessible globally
-    // @ts-nocheck
-    window.closeModalAndGoBack = function(id) {
-        console.log("Attempting to close modal with id:", id); // Debug log
-        const modal = document.getElementById(id);
-        console.log("Modal element found:", modal); // Debug log to check if modal is found
-        if (modal && modal instanceof HTMLDialogElement) {
-            modal.close();
-            history.go(-1); // Go back two pages in history
-        } else {
-            console.error("Modal not found or not an HTMLDialogElement.");
-        }
-    };
-
-    document.addEventListener('DOMContentLoaded', () => {
-        // Check if the URL has the "openModal" parameter
-        const urlParams = new URLSearchParams(window.location.search);
-        const modalId = urlParams.get('openModal');
-
-        if (modalId) {
-            const modal = document.getElementById(modalId);
-            if (modal instanceof HTMLDialogElement) {
-                setTimeout(() => modal.showModal(), 0); // Add a small delay to ensure it renders
-            }
-
-            // Remove the query parameter after opening the modal
-            history.replaceState(null, '', window.location.pathname);
-        }
-    });
-</script>

@@ -568,6 +568,7 @@ p.graph-caption {
     width: 350px;
     height: 100%;
     padding: 1rem;
+    top: 0
 }
 
 /* toggle switch */
@@ -647,4 +648,9 @@ input:checked + .slider:before {
 }
 .local-graph-container.hide {
     display: none;
+}
+
+/* tag button new */
+.tag-button.active {
+    background-color: var(--gray-color-3);
 }
