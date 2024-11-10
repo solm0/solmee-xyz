@@ -3,7 +3,7 @@ const { id, open } = Astro.props;
 ---
 
 <!-- Button to open modal and navigate to homepage with query parameter -->
-<button onclick={`window.location.href='/?openModal=${id}'`}>
+<button onclick={`window.${id}.showModal()`}>
     <img class={open} src={`/${open}.svg`} alt={`${open} icon`}>
 </button>
 
@@ -12,30 +12,6 @@ const { id, open } = Astro.props;
     <slot name="main" />
     <form method="dialog">
         <!-- Close button: close modal and go back two pages in history -->
-        <button class="close-button" type="button" onclick={`window.closeModalAndGoBack('${id}')`}>Close</button>
+        <slot name="close" />
     </form>
 </dialog>
-
-<script>
-    window.closeModalAndGoBack = function(id) {
-        const modal = document.getElementById(id);
-        if (modal && modal instanceof HTMLDialogElement) {
-            modal.close();
-            history.go(-1); // Go back two pages in history
-        }
-    };
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const modalId = urlParams.get('openModal');
-
-        if (modalId) {
-            const modal = document.getElementById(modalId);
-            if (modal instanceof HTMLDialogElement) {
-                setTimeout(() => modal.showModal(), 0); // Add a small delay to ensure it renders
-            }
-
-            history.replaceState(null, '', window.location.pathname);
-        }
-    });
-</script>
