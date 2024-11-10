@@ -133,6 +133,7 @@ h1 {
 }
 
 /* tag */
+.tag,
 .tag-button {
     position: relative;
     display: inline;
@@ -140,20 +141,16 @@ h1 {
     padding: 0 8px;
     font-size: var(--step--2);
     text-wrap: nowrap;
+    color: var(--gray-color-4);
+}
+.tag-button {
     transition: 0.3s ease-in-out;
 }
 .tag-button:hover {
     background-color: var(--gray-color-2);
 }
-.tag-button a { 
-    text-align: center;
-    text-decoration: none;
-}
-.tag-button a:hover { 
-    background-color: transparent;
-}
 
-.tag-button-container {
+.tag-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

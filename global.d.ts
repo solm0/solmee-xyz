@@ -13,3 +13,11 @@ declare global {
     setHoveredNode: (nodeId: string | null) => void;
   }
 }
+// global.d.ts
+export {};
+
+declare global {
+  interface Window {
+    openModal: () => void;
+  }
+}

@@ -1,13 +1,16 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import NoteTagButton from "../components/NoteTagButton";
 import LocalGraphContainer from "../components/LocalGraphContainer.astro";
 
 const {frontmatter} = Astro.props;
 ---
 <BaseLayout pageTitle = {frontmatter.title}>
     <div class="frontmatter-container">
-        <div class="tag-button-container">{frontmatter.tags.map((tag) => <NoteTagButton client:only tag={tag}/>)}</div>
+        <div class="tag-container">
+            {frontmatter.tags.map((tag) => 
+                <div class="tag">{tag}</div>
+            )}
+        </div>
         <p class="frontmatter">type: {frontmatter.type}</p>
         <p class="frontmatter">created on: {frontmatter.date.toString().slice(0,10)}</p>
     </div>
