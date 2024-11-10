@@ -9,6 +9,9 @@ const LocalGraph = () => {
   const [filteredGraphData, setFilteredGraphData] = useState({ nodes: [], links: [] });
   const [targetNode, setTargetNode] = useState(null);
 
+  // like global graph...
+  const [filteredNodes, setFilteredNodes] = useState([]);
+
   useEffect(() => {
     const handleModalClose = () => {
       console.log("close-global-graph event detected, forcing Graph re-render");
@@ -26,6 +29,7 @@ const LocalGraph = () => {
     const path = window.location.pathname;
     const newFileName = path.substring(path.lastIndexOf('/') + 1);
     setFileName(newFileName);
+    setFilteredNodes(graphData.nodes);
     console.log("FileName Set:", newFileName);
   }, []);
 
@@ -77,6 +81,7 @@ const LocalGraph = () => {
       height={300}
       minZoom={2}
       maxZoom={4}
+      filteredNodes={filteredNodes}
       graphData={filteredGraphData}
       targetNode={targetNode}
       nodeCanvasObject={(node, ctx, globalScale) => {
