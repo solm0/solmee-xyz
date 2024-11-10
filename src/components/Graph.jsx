@@ -35,20 +35,23 @@ const Graph = ({ width, height, minZoom, maxZoom, graphData, targetNode }) => {
     window.location.href = noteUrl;
   };
 
-  // In your React component
-useEffect(() => {
-  window.setHoveredNode = (nodeId) => {
-    setHoveredNode(nodeId);
-    if (nodeId) {
-      console.log("Hovered node ID:", nodeId); // Log only if nodeId is not null
-    } else {
-      console.log("Node hover cleared");
-    }
-  };
-  return () => {
-    delete window.setHoveredNode; // Clean up when component unmounts
-  };
-}, []);
+  useEffect(() => {
+    window.setHoveredNode = (nodeId) => {
+      // Find the node object with matching ID in graphData.nodes
+      const node = graphData.nodes.find((n) => n.id === nodeId);
+  
+      setHoveredNode(node || null); // Set the node object or null if not found
+  
+      if (node) {
+        console.log("Hovered node ID:", node.id);
+      } else {
+        console.log("Node hover cleared");
+      }
+    };
+    return () => {
+      delete window.setHoveredNode; // Clean up when component unmounts
+    };
+  }, [graphData.nodes]); // Ensure graphData.nodes is accessible in the effect
 
 useEffect(() => {
   console.log("Updated hoveredNode:", hoveredNode);
