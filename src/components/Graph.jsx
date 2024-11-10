@@ -2,9 +2,16 @@ import ForceGraph2D from 'react-force-graph-2d';
 import { GRAPHSTYLE } from '../scripts/graphStyle';
 import { useState, useEffect } from 'react';
 
-const Graph = ({ width, height, minZoom, maxZoom, graphData, targetNode }) => {
+const Graph = ({ width, height, minZoom, maxZoom, graphData, targetNode, filteredNodes }) => {
   const [hoveredNode, setHoveredNode ] = useState(null);
   const [depth1Nodes, setDepth1Nodes] = useState(new Set());
+
+  // Create a Set for efficient lookup of filtered nodes
+  const filteredNodeIds = new Set(filteredNodes.map(node => node.id));
+
+  useEffect(() => {
+    console.log("Filtered nodes:", filteredNodes);
+  }, [filteredNodes]);
 
   const handleNodeHover = (node) => {
     setHoveredNode(node);
@@ -23,7 +30,6 @@ const Graph = ({ width, height, minZoom, maxZoom, graphData, targetNode }) => {
         }
       });
 
-      // Update depth1Nodes with neighbors
       setDepth1Nodes(neighbors);
     } else {
       setDepth1Nodes(new Set());
@@ -37,10 +43,8 @@ const Graph = ({ width, height, minZoom, maxZoom, graphData, targetNode }) => {
 
   useEffect(() => {
     window.setHoveredNode = (nodeId) => {
-      // Find the node object with matching ID in graphData.nodes
       const node = graphData.nodes.find((n) => n.id === nodeId);
-  
-      setHoveredNode(node || null); // Set the node object or null if not found
+      setHoveredNode(node || null);
   
       if (node) {
         console.log("Hovered node ID:", node.id);
@@ -55,11 +59,7 @@ const Graph = ({ width, height, minZoom, maxZoom, graphData, targetNode }) => {
 
 useEffect(() => {
   console.log("Updated hoveredNode:", hoveredNode);
-}, [hoveredNode]); // This runs every time hoveredNode is updated
-
-
-
-  
+}, [hoveredNode]);
 
   return (
     <ForceGraph2D
@@ -77,18 +77,22 @@ useEffect(() => {
 
         const size = Math.sqrt(node.val) * 2;
 
-        if (hoveredNode) {
-          if (node === hoveredNode) {
-            ctx.fillStyle = node.color;
-          } else if (depth1Nodes.has(node.id)) {
-            ctx.fillStyle = GRAPHSTYLE.grayColor4;
+        if (filteredNodeIds.has(node.id)) {
+          if (hoveredNode) {
+            if (node === hoveredNode) {
+              ctx.fillStyle = node.color;
+            } else if (depth1Nodes.has(node.id)) {
+              ctx.fillStyle = GRAPHSTYLE.grayColor4;
+            } else {
+              ctx.fillStyle = GRAPHSTYLE.grayColor2;
+            }
           } else {
-            ctx.fillStyle = GRAPHSTYLE.grayColor2;
+            ctx.fillStyle = node.color;
           }
         } else {
-          ctx.fillStyle = node.color;
+          ctx.fillStyle = GRAPHSTYLE.grayColor2;
         }
-
+        
         ctx.beginPath();
         ctx.arc(node.x, node.y, size, 0, 2 * Math.PI, false);
         ctx.fill();
