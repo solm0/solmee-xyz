@@ -1,6 +1,6 @@
 import ForceGraph2D from 'react-force-graph-2d';
 import { GRAPHSTYLE } from '../scripts/graphStyle';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Graph = ({ width, height, minZoom, maxZoom, graphData, targetNode }) => {
   const [hoveredNode, setHoveredNode ] = useState(null);
@@ -34,6 +34,27 @@ const Graph = ({ width, height, minZoom, maxZoom, graphData, targetNode }) => {
     const noteUrl = `/markdowns/${node.id}`;
     window.location.href = noteUrl;
   };
+
+  // In your React component
+useEffect(() => {
+  window.setHoveredNode = (nodeId) => {
+    setHoveredNode(nodeId);
+    if (nodeId) {
+      console.log("Hovered node ID:", nodeId); // Log only if nodeId is not null
+    } else {
+      console.log("Node hover cleared");
+    }
+  };
+  return () => {
+    delete window.setHoveredNode; // Clean up when component unmounts
+  };
+}, []);
+
+useEffect(() => {
+  console.log("Updated hoveredNode:", hoveredNode);
+}, [hoveredNode]); // This runs every time hoveredNode is updated
+
+
 
   
 
