@@ -1,14 +1,13 @@
 ---
 const { url, title, tags, date } = Astro.props;
-import NoteTagButton from "./NoteTagButton";
 ---
 
 <div class="blog-post">
     <a class="blog-post" href={url}>{title}</a>
     <div>
         {tags &&
-            <div class="tag-button-container">
-                {tags.map((tag) => <NoteTagButton client:only tag={tag}/>)}
+            <div class="tag-container">
+                {tags.map((tag) => <div class="tag">{tag}</div>)}
             </div>
         }
         <p class="frontmatter" class="blog-post">{date}</p>
