@@ -2,12 +2,17 @@ import ForceGraph2D from 'react-force-graph-2d';
 import { GRAPHSTYLE } from '../scripts/graphStyle';
 import { useState, useEffect } from 'react';
 
-const Graph = ({ width, height, minZoom, maxZoom, graphData, targetNode, filteredNodes }) => {
+const Graph = ({
+  width,
+  height,
+  minZoom,
+  maxZoom,
+  graphData = { nodes: [], links: [] },
+  targetNode,
+  filteredNodes 
+}) => {
   const [hoveredNode, setHoveredNode ] = useState(null);
   const [depth1Nodes, setDepth1Nodes] = useState(new Set());
-
-  // Create a Set for efficient lookup of filtered nodes
-  const filteredNodeIds = new Set(filteredNodes.map(node => node.id));
 
   useEffect(() => {
     console.log("Filtered nodes:", filteredNodes);
@@ -19,7 +24,7 @@ const Graph = ({ width, height, minZoom, maxZoom, graphData, targetNode, filtere
     if (node) {
       const neighbors = new Set();
 
-      graphData.links.forEach((link) => {
+      graphData.links?.forEach((link) => {
         const sourceId = typeof link.source === 'object' ? link.source.id : link.source;
         const targetId = typeof link.target === 'object' ? link.target.id : link.target;
 
@@ -77,6 +82,8 @@ useEffect(() => {
 
         const size = Math.sqrt(node.val) * 2;
 
+        const filteredNodeIds = new Set(filteredNodes?.map((n) => n.id));
+
         if (filteredNodeIds.has(node.id)) {
           if (hoveredNode) {
             if (node === hoveredNode) {
@@ -97,7 +104,6 @@ useEffect(() => {
         ctx.arc(node.x, node.y, size, 0, 2 * Math.PI, false);
         ctx.fill();
 
-        // Draw highlight if node is the targetNode
         if (targetNode && node.id === targetNode.id) {
           ctx.strokeStyle = node.color; // Customize highlight color
           ctx.lineWidth = 2 / globalScale;
