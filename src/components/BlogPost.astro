@@ -1,6 +1,6 @@
 ---
 const { url, title, tags, date } = Astro.props;
-import TagButton from "./TagButton.astro";
+import NoteTagButton from "./NoteTagButton";
 ---
 
 <div class="blog-post">
@@ -8,7 +8,7 @@ import TagButton from "./TagButton.astro";
     <div>
         {tags &&
             <div class="tag-button-container">
-                {tags.map((tag) => <TagButton tag={tag} url={`/tags/${tag}`}/>)}
+                {tags.map((tag) => <NoteTagButton client:only tag={tag}/>)}
             </div>
         }
         <p class="frontmatter" class="blog-post">{date}</p>

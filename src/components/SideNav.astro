@@ -1,19 +1,10 @@
 ---
-// @ts-nocheck
 import Modal from "./Modal.astro"
-import Modal2 from "./Modal2.astro"
-import GlobalGraphContainer from "./GlobalGraphContainer"
+import GraphModal from "./GraphModal.astro"
 ---
 
 <div class="nav-links">
-    <Modal2 id="globalGraph" open="logo">
-        <main class="graph-container" slot="main">
-            <GlobalGraphContainer client:only />
-        </main>
-        <button class="close-button" slot="close">
-            Close
-        </button>
-    </Modal2>
+    <GraphModal />
 
     <a href="/">solmee.xyz</a>
 
