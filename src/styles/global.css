@@ -163,9 +163,9 @@ aside {
     position: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 100%;
-    padding: var(--grid-gutter) 0
+    padding: var(--grid-gutter) 0;
+    overflow: hidden;
 }
 .nav-links {
     display: flex;
@@ -186,8 +186,8 @@ nav a {
 }
 
 #themeToggle {
-    position: relative;
-    bottom: 0;
+    position: absolute;
+    bottom: var(--grid-gutter);
     left: 0;
     line-height: 0;
 }
@@ -484,6 +484,11 @@ a.pagefind-ui__result-link:hover,
 
 
 /* toc */
+.toc {
+    position: absolute;
+    top: 400px;
+}
+
 .toc-link {
     line-height: 1.8rem;
     color: var(--gray-color-3);
@@ -618,33 +623,28 @@ p.graph-caption {
 
 /* local graph */
 .local-graph-container {
-    position: fixed;
-    width: 300px;
-    height: 300px;
-    top: 500px;
     display: block;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: 5px;
 }
 .local-graph-container.hide .force-graph-container {
-    display: none;
-}
-
-.localgraph-toggle-container {
-    padding: 1rem;
+    opacity: 0;
 }
 
 #localGraphButton {
-    padding: 1rem;
-    width: 50px;
-    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#localGraphButton:hover {
-    background-color: var(--gray-color-1);
+/* graph controller */
+.graph-controller {
+    width: var(--grid-gutter);
+    position: fixed;
+    right: 0;
+    top: var(--grid-gutter);
+}
+
+#localGraphButton img {
+    pointer-events: none;
 }

@@ -111,3 +111,46 @@ for (var i = 0; i < links.length; i++) {
         });
     }
 }
+
+/* Toggle Local Graph */
+document.addEventListener("DOMContentLoaded", () => {
+    const localGraphButton = document.getElementById("localGraphButton");
+    const localGraph = document.querySelectorAll(".local-graph-container");
+    const root = document.documentElement;
+
+    // Retrieve state from localStorage
+    const isHidden = localStorage.getItem("localGraphState") === "hidden";
+
+    // Set the button value and update the visibility of localGraph
+    localGraphButton.value = isHidden ? "hide" : "show";
+    localGraph.forEach((element) => {
+        element.classList.toggle("hide", isHidden);
+    });
+
+    // Event listener for button click
+    localGraphButton.addEventListener("click", () => {
+        const isHidden = localGraphButton.value === "show";
+
+        // Update button value and localStorage
+        localGraphButton.value = isHidden ? "hide" : "show";
+        localStorage.setItem("localGraphState", isHidden ? "hidden" : "visible");
+
+        // Toggle visibility of the graph containers
+        localGraph.forEach((element) => {
+            element.classList.toggle("hide", isHidden);
+        });
+    });
+
+    // Optional: Add hover effect for the graph container
+    localGraphButton.addEventListener("mouseenter", () => {
+        localGraph.forEach((element) => {
+            element.style.border = `1px solid ${getComputedStyle(root).getPropertyValue("--gray-color-2")}`;
+        });
+    });
+
+    localGraphButton.addEventListener("mouseout", () => {
+        localGraph.forEach((element) => {
+            element.style.border = 'none';
+        });
+    });
+});

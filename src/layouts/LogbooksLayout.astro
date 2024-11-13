@@ -1,10 +1,10 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import SequenceNav from "../components/SequenceNav.astro";
-import LocalGraphContainer from "../components/LocalGraphContainer.astro";
  
 const {frontmatter} = Astro.props;
 ---
+
 <BaseLayout pageTitle = {frontmatter.title}>
     <div class="frontmatter-container">
         <p class="frontmatter">created on {frontmatter.date.toString().slice(0,10)}</p>
@@ -15,6 +15,5 @@ const {frontmatter} = Astro.props;
         </div>
     </div>
     <slot />
-    <LocalGraphContainer />
     <SequenceNav projectId={frontmatter.projectId} sequence={frontmatter.sequence} /> 
 </BaseLayout>

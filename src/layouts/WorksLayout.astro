@@ -1,10 +1,9 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import LocalGraphContainer from "../components/LocalGraphContainer.astro";
 
 const {frontmatter} = Astro.props;
-
 ---
+
 <BaseLayout pageTitle = {frontmatter.title}>
     <div class="frontmatter-container">
         <div class="tag-container">
@@ -16,5 +15,4 @@ const {frontmatter} = Astro.props;
         <p class="description">{frontmatter.description}</p>
     </div>
     <slot />
-    <LocalGraphContainer />
 </BaseLayout>

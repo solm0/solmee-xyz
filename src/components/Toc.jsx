@@ -59,7 +59,7 @@ const TOC = () => {
     useIntersectionObserver();
     
     return (
-        <nav className='nav-links'>
+        <nav className='nav-links toc'>
             {tocItems.map((heading) => (
                 <a
                     key={heading.id}
