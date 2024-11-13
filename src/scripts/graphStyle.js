@@ -8,6 +8,7 @@ const calcResponsiveFontSize = () => {
 
 export const GRAPHSTYLE = {
   fontSize: calcResponsiveFontSize(),
+  backgroundColor: '#f8fbf8',
   grayColor1: '#e4e9e1',
   grayColor2: '#d7d7cd',
   grayColor3: '#aaaaa0',

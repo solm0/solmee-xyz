@@ -86,7 +86,7 @@ for (var i = 0; i < links.length; i++) {
             window.open(this.href, 'popupWindow', 'width=800,height=600,scrollbars=yes,resizable=yes');
         });
     } else {
-        // Internal link hover detection
+        // Internal link hover -> node
         links[i].addEventListener('mouseover', (event) => {
             clearTimeout(mouseOutTimeout); // Cancel any pending mouseout
             const link = event.currentTarget; // Use currentTarget to ensure it's the <a> element

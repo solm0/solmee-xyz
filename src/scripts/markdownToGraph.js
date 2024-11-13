@@ -22,9 +22,9 @@ files.forEach(file => {
     const id = file.replace('.md', '').toLowerCase();
     const type = data.type || 'default';
     const typeColors = {
-        notes: '#b9cc42',
-        logbooks: '#00b486',
-        works: '#027bb4',
+        notes: '#9eff00',
+        logbooks: '#00d7a6',
+        works: '#9d00ff',
         default: '#d7d7cd'
     };
     

@@ -45,25 +45,9 @@
     --gray-color-3: #aaaaa0;
     --gray-color-4: #686868;
     --text-color: #212121;
-    --node-notes-color: #b9cc42;
-    --node-logbooks-color: #00b486;
-    --note-works-color: #027bb4;
-    --accent-color: #fff700;
-    --accent-color-opacity: #fff70054;
-}
-
-html.dark {
-    --background-color: #c3c3c3;
-    --gray-color-1: #e4e9e1;
-    --gray-color-2: #d7d7cd;
-    --gray-color-3: #aaaaa0;
-    --gray-color-4: #686868;
-    --text-color: #212121;
-    --node-notes-color: #b9cc42;
-    --node-logbooks-color: #00b486;
-    --note-works-color: #027bb4;
-    --accent-color: #fff700;
-    --accent-color-opacity: #fff70054;
+    --notes-color: #9eff00;
+    --logbooks-color: #00d7a6;
+    --works-color: #9d00ff;
 }
 
 html {
@@ -174,12 +158,9 @@ h1 {
 /* tag */
 .tag,
 .tag-button {
-    position: relative;
     display: inline;
-    background-color: var(--gray-color-1);
-    padding: 0 8px;
+    padding: 0 5px;
     font-size: var(--step--2);
-    text-wrap: nowrap;
     color: var(--gray-color-4);
     font-family: var(--font-family-mono-italic);
 }
@@ -263,6 +244,7 @@ p.description {
 
 /* modal */
 button {
+    position: relative;
     border: none;
     font-size: 0.8rem;
     padding: 0 10px;
@@ -410,9 +392,6 @@ p.pagefind-ui__result-excerpt {
     display: inline;
     padding: 0;
 }
-.pagefind-ui__result-inner mark {
-    background-color: var(--accent-color);
-}
 
 
 
@@ -457,13 +436,31 @@ a,
     transition: 0.2s ease-in-out;
 }
 
-a:hover,
-.nav-links .pagefind-ui__result-link:hover {
+a.external-link:hover,
+a.internal:hover {
+    background-color: var(--gray-color-1);
     color: var(--text-color);
-    background-color: var(--accent-color-opacity);
 }
-a.external-link:hover {
-    background-color: var(--gray-color-2);
+
+a.internal.notes-link:hover,
+a.pagefind-ui__result-link:hover,
+.pagefind-ui__result-inner mark {
+    background-color: var(--notes-color);
+    color: var(--text-color);
+}
+
+a.internal.logbooks-link:hover,
+a.pagefind-ui__result-link:hover,
+.pagefind-ui__result-inner mark {
+    background-color: var(--logbooks-color);
+    color: var(--text-color);
+}
+
+a.internal.works-link:hover,
+a.pagefind-ui__result-link:hover,
+.pagefind-ui__result-inner mark {
+    background-color: var(--works-color);
+    color: var(--text-color);
 }
 
 
@@ -569,10 +566,6 @@ footer {
 }
 
 /* canvas */
-canvas {
-    background-color: var(--gray-color-1);
-}
-
 dialog.globalGraph {
     width: calc(100vw - 4rem);
     height: calc(100vh - 4rem);
@@ -613,7 +606,6 @@ p.graph-caption {
     position: fixed;
     width: 300px;
     height: 300px;
-    background-color: var(--gray-color-2);
     top: 500px;
     display: block;
     overflow: hidden;
@@ -621,8 +613,25 @@ p.graph-caption {
     justify-content: center;
     align-items: center;
 }
-.local-graph-container.hide {
+.local-graph-container.hide .force-graph-container {
     display: none;
+}
+
+.localgraph-toggle-container {
+    padding: 1rem;
+}
+
+#localGraphButton {
+    padding: 1rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#localGraphButton:hover {
+    background-color: var(--gray-color-1);
 }
 
 /* tag button new */

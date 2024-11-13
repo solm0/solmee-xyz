@@ -41,42 +41,62 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 /* toggle */ 
-const themeButton = document.getElementById("theme");
-const htmlElement = document.documentElement;
+const localGraphButton = document.getElementById("localGraphButton");
+const localGraph = document.getElementsByClassName("local-graph-container");
+const localGraphButtonImage = localGraphButton.querySelector("img");
+const root = document.documentElement;
 
 document.addEventListener("DOMContentLoaded", () => {
-    const isChecked = localStorage.getItem("themeToggle") === "true";
-    themeButton.checked = isChecked;
+    const isHidden = localStorage.getItem("localGraphState") === "hidden";
 
-    htmlElement.classList.toggle("dark");
+    if (isHidden) {
+        localGraphButton.value = "hide";
+        Array.from(localGraph).forEach((element) => {
+            element.classList.add("hide");
+        });
+        localGraphButtonImage.src = "/favicon.svg";
+    } else {
+        localGraphButton.value = "show";
+        Array.from(localGraph).forEach((element) => {
+            element.classList.remove("hide");
+        });
+        localGraphButtonImage.src = "/search.svg";
+    }
 });
 
-themeButton.addEventListener("change", (event) => {
-    const isChecked = event.target.checked;
-    localStorage.setItem("themeToggle", isChecked);
+localGraphButton.addEventListener("click", (event) => {
+    const currentValue = event.target.value;
 
-    htmlElement.classList.toggle("dark");
-})
+    if (currentValue === "show") {
+        event.target.value = "hide";
+        localStorage.setItem("localGraphState", "hidden");
 
+        Array.from(localGraph).forEach((element) => {
+            element.classList.add("hide");
+        });
 
+        localGraphButtonImage.src = "/favicon.svg";
+    } else {
+        event.target.value = "show";
+        localStorage.setItem("localGraphState", "visible");
 
-const localgraphButton = document.getElementById("localgraph");
-const localGraph = document.getElementsByClassName("local-graph-container")
+        Array.from(localGraph).forEach((element) => {
+            element.classList.remove("hide");
+        });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const isChecked = localStorage.getItem("localGraphToggle") === "true";
-    localgraphButton.checked = isChecked;
+        localGraphButtonImage.src = "/search.svg";
+    }
+});
 
-    Array.from(localGraph).forEach((element) => {
-        element.classList.toggle("hide", isChecked);
+Array.from(localGraphButton).forEach((container) => {
+    container.addEventListener('mouseenter', () => {
+        Array.from(localGraph).forEach((element) => {
+            element.style.backgroundColor = getComputedStyle(root).getPropertyValue('--gray-color-1');
+        });
     });
-});
-
-localgraphButton.addEventListener("change", (event) => {
-    const isChecked = event.target.checked;
-    localStorage.setItem("localGraphToggle", isChecked);
-
-    Array.from(localGraph).forEach((element) => {
-        element.classList.toggle("hide", isChecked);
+    container.addEventListener('mouseout', () => {
+        Array.from(localGraph).forEach((element) => {
+            element.style.backgroundColor = 'transparent';
+        });
     });
 });

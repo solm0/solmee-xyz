@@ -86,7 +86,7 @@ useEffect(() => {
 
         if (targetNode && node.id === targetNode.id) {
             // Background circle
-          ctx.fillStyle = GRAPHSTYLE.grayColor1;
+          ctx.fillStyle = GRAPHSTYLE.backgroundColor;
           ctx.beginPath();
           ctx.arc(node.x, node.y, size + 2, 0, 2 * Math.PI, false);
           ctx.fill();
