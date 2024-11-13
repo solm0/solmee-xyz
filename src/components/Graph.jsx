@@ -84,6 +84,20 @@ useEffect(() => {
 
         const filteredNodeIds = new Set(filteredNodes?.map((n) => n.id));
 
+        if (targetNode && node.id === targetNode.id) {
+            // Background circle
+          ctx.fillStyle = GRAPHSTYLE.grayColor1;
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, size + 4, 0, 2 * Math.PI, false); // Larger radius for the background circle
+          ctx.fill();
+
+          ctx.strokeStyle = node.color;
+          ctx.lineWidth = 2 / globalScale;
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, size + 4, 0, 2 * Math.PI, false);
+          ctx.stroke();
+        }
+
         if (filteredNodeIds.has(node.id)) {
           if (hoveredNode) {
             if (node === hoveredNode) {
@@ -99,18 +113,10 @@ useEffect(() => {
         } else {
           ctx.fillStyle = GRAPHSTYLE.grayColor2;
         }
-        
+
         ctx.beginPath();
         ctx.arc(node.x, node.y, size, 0, 2 * Math.PI, false);
         ctx.fill();
-
-        if (targetNode && node.id === targetNode.id) {
-          ctx.strokeStyle = node.color; // Customize highlight color
-          ctx.lineWidth = 2 / globalScale;
-          ctx.beginPath();
-          ctx.arc(node.x, node.y, size + 4, 0, 2 * Math.PI, false); // Slightly larger circle for highlight
-          ctx.stroke();
-        }
 
         const fontSize = GRAPHSTYLE.fontSize / globalScale;
         ctx.font = `${fontSize}px Sans-Serif`;

@@ -80,7 +80,7 @@ const LocalGraph = () => {
       width={300}
       height={300}
       minZoom={2}
-      maxZoom={4}
+      maxZoom={2}
       filteredNodes={filteredNodes}
       graphData={filteredGraphData}
       targetNode={targetNode}
@@ -90,16 +90,6 @@ const LocalGraph = () => {
         ctx.beginPath();
         ctx.arc(node.x, node.y, size, 0, 2 * Math.PI, false);
         ctx.fill();
-
-        // Draw extra circle for target node
-        if (targetNode && node.id === targetNode.id) {
-          console.log("Drawing highlight for target node:", targetNode);
-          ctx.strokeStyle = 'red';
-          ctx.lineWidth = 4 / globalScale;
-          ctx.beginPath();
-          ctx.arc(node.x, node.y, size + 10, 0, 2 * Math.PI, false);
-          ctx.stroke();
-        }
 
         const fontSize = GRAPHSTYLE.fontSize / globalScale;
         ctx.font = `${fontSize}px Sans-Serif`;
