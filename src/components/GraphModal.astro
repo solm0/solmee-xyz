@@ -6,8 +6,8 @@ import GlobalGraphContainer from "./GlobalGraphContainer"
     <img class='logo' src='/logo.svg' alt='logo icon'>
 </button>
 
-<dialog id=globalGraph class=globalGraph>
-    <main class="graph-container" slot="main">
+<dialog id="globalGraph" class="globalGraph">
+    <main class="graph-container">
         <GlobalGraphContainer client:only />
     </main>
     <form method="dialog">
@@ -17,7 +17,7 @@ import GlobalGraphContainer from "./GlobalGraphContainer"
             onclick="window.closeModalAndGoBack('globalGraph')"
         >
             Close
-        </button>
+        </button> 
     </form>
 </dialog>
 

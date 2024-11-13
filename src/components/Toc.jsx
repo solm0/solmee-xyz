@@ -59,25 +59,23 @@ const TOC = () => {
     useIntersectionObserver();
     
     return (
-        <aside>
-            <nav className='nav-links right'>
-                {tocItems.map((heading) => (
-                    <a
-                        key={heading.id}
-                        className={heading.id === activeId ? 'toc-link active-toc-link' : 'toc-link'}
-                        href={`#${heading.id}`}
-                        onClick={(e) => {
-                            e.preventDefault();
-                            document.querySelector(`#${heading.id}`).scrollIntoView({
-                                behavior: "smooth"
-                            });
-                        }}
-                    >
-                        {heading.text}
-                    </a>
-                ))}
-            </nav>
-        </aside>
+        <nav className='nav-links'>
+            {tocItems.map((heading) => (
+                <a
+                    key={heading.id}
+                    className={heading.id === activeId ? 'toc-link active-toc-link' : 'toc-link'}
+                    href={`#${heading.id}`}
+                    onClick={(e) => {
+                        e.preventDefault();
+                        document.querySelector(`#${heading.id}`).scrollIntoView({
+                            behavior: "smooth"
+                        });
+                    }}
+                >
+                    {heading.text}
+                </a>
+            ))}
+        </nav>
     );
   };
   

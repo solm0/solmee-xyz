@@ -1,31 +1,16 @@
 ---
-import Modal from "./Modal.astro"
-import GraphModal from "./GraphModal.astro"
-import ThemeIcon from "./ThemeIcon.astro"
+import Modal from "./Modal.astro";
 ---
 
 <div class="nav-links">
-    <GraphModal />
-
-    <a href="/">solmee.xyz</a>
-
-    <Modal id="pagefind" open="search">
-        <main slot="main">
-            <div id="search"></div>
-            <script>
-                import "../scripts/sideNav";
-            </script>
-        </main>
-        <button class="close-button" slot="close">Close</button>
-    </Modal>
-
+    <a href="/" class="solmeexyz">
+        <img src="/logo.svg">
+        solmee.xyz
+    </a>
+    <br>
     <a class="notes" href="/notes/">Notes</a>
     <a class="logbooks" href="/logbooks/">Logbooks</a>
     <a class="works" href="/works/">Works</a>
-
-    <button id="localGraphButton" value="show">
-        <img src="/search.svg" />
-    </button>
-    
-    <ThemeIcon />
+    <br>
+    <Modal />
 </div>

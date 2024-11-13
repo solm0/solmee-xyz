@@ -1,14 +1,23 @@
 ---
-const { id, open } = Astro.props;
+
 ---
 
-<button onclick={`window.${id}.showModal()`}>
-    <img class={open} src={`/${open}.svg`} alt={`${open} icon`}>
-</button>
+<button onclick="document.getElementById('pagefind').showModal()">Search</button>
 
-<dialog id={id} class={id}>
-    <slot name="main" />
+<dialog id="pagefind" class="pagefind">
+    <main>
+        <div id="search"></div>
+        <script>
+            import "../scripts/sideNav";
+        </script>
+    </main>
     <form method="dialog">
-        <slot name="close" />
+        <button></button>
+        <button
+            class="close-button"
+            onclick="document.getElementById('pagefind').close()"
+        >
+            Close
+        </button> 
     </form>
 </dialog>

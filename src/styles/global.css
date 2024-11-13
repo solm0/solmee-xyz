@@ -22,6 +22,9 @@
 :root {
     font-size: 16px;
     text-underline-offset: 0.25em;
+    line-height: 1.8rem;
+    word-break: keep-all;
+    font-family: var(--font-family-serif);
 
     --font-family-serif: "source-han-serif-k";
     --font-family-sans-n: "source-han-sans-k-normal";
@@ -45,48 +48,52 @@
     --gray-color-3: #aaaaa0;
     --gray-color-4: #686868;
     --text-color: #212121;
+    
     --notes-color: #9eff00;
     --logbooks-color: #00d7a6;
     --works-color: #9d00ff;
+
+    --grid-max-width: 100vw;
+    --grid-gutter: var(--space-s-l, clamp(1.125rem, 0.6467rem + 2.3913vw, 2.5rem));
+    --grid-columns: 12;
 }
 
+/* utopia grid system */
+.u-container {
+    max-width: var(--grid-max-width);
+    padding-inline: var(--grid-gutter);
+    margin-inline: auto;
+}
+
+.u-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gutter);
+}
+.grid-item {
+    width: 100%;
+}
+
+/* theme */
 html {
     background-color: var(--background-color);
-    font-family: var(--font-family-serif);
 }
 html.dark {
     --background-color: #212121;
     --text-color: #f8fbf8;
     color: var(--text-color);;
 }
+.light, html.dark .light { fill: var(--text-color); }
+.dark, html.dark .dark { fill: transparent }
 
-#themeToggle {
-    border: 0;
-    background: none;
-}
-.light,
-html.dark .light {
-    fill: var(--text-color);
-}
-.dark,
-html.dark .dark {
-    fill: transparent
-}
-
-body {
-    margin: 0 auto;
-    width: 40rem;
-    max-width: 80ch;
-    padding: 1rem;
-    line-height: 1.8rem;
-    word-break: keep-all;
-    margin-bottom: 200px;
-}
-
+/* general */
 * {
     box-sizing: border-box;
 }
-
+body {
+    margin: 0;
+    padding: 0;
+}
 ol, ul {
     margin: 0;
     padding-left: 1.3rem;
@@ -95,21 +102,20 @@ li {
     padding-left: 1rem;
     line-height: 1.8rem;
 }
-
 .contains-task-list {
     position: relative;
     list-style-type: none;
     left: -1.3rem;
 }
+.contains-task-list li { padding: 0; }
+.task-list-item input { margin-right: 1rem; }
 
-.contains-task-list li {
-    padding: 0;
+h1 {
+    font-size: var(--step-2);
+    line-height: 1.2em;
+    margin-bottom: 1rem;
+    margin-top: 100px;
 }
-
-.task-list-item input {
-    margin-right: 1rem;
-}
-
 
 h2, h3, h4, h5, h6 { 
     font-size: var(--step--1);
@@ -134,25 +140,42 @@ u {
     text-decoration-thickness: 1px;
 }
 
-h1 {
-    font-size: var(--step-2);
-    line-height: 1.2em;
-    margin-bottom: 1rem;
-    margin-top: 100px;
+img {
+    width: 100%;
+    height: auto;
+}
+
+blockquote {
+    background-color: var(--gray-color-1);
+    display: block;
+    padding-block-start: 1em;
+    padding-block-end: 1em;
+    padding-inline-start: 40px;
+    padding-inline-end: 40px;
+    margin: 0;
+}
+blockquote p {
+    margin: 0;
 }
 
 /* nav */
+aside {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: var(--grid-gutter) 0
+}
 .nav-links {
     display: flex;
     flex-direction: column;
-    left: 20px;
-    top: 130px;
-    position: fixed;
 }
 
-.nav-links a {
+nav a {
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: var(--step--2);
+    font-family: var(--font-family-sans-n);
     padding: 0 10px;
 }
 
@@ -161,16 +184,12 @@ h1 {
 .nav-links a.current {
     background-color: var(--gray-color-1);
 }
-.nav-links .logo {
-    width: 64px;
-}
-.nav-links .search {
-    width: 25px;
-    opacity: 50%;
-    transition: 0.2s ease-in-out;
-}
-.nav-links .search:hover {
-    opacity: 100%;
+
+#themeToggle {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    line-height: 0;
 }
 
 /* tag */
@@ -197,9 +216,13 @@ h1 {
     margin: 5px 0;
 }
 
-img {
-    width: 100%;
-    height: auto;
+.tag-button.active {
+    background-color: var(--gray-color-3);
+}
+
+/* frontmatter */
+.frontmatter-container {
+    padding-bottom: 20px;
 }
 
 p.frontmatter,
@@ -211,18 +234,9 @@ p.frontmatter,
     margin: 0;
 }
 
-/* blockquote */
-blockquote {
-    background-color: var(--gray-color-1);
-    display: block;
-    padding-block-start: 1em;
-    padding-block-end: 1em;
-    padding-inline-start: 40px;
-    padding-inline-end: 40px;
-    margin: 0;
-}
-blockquote p {
-    margin: 0;
+p.description {
+    margin-top: 1rem;
+    line-height: 1.5rem;
 }
 
 /* blogCard */
@@ -245,14 +259,35 @@ div.blog-card {
 
 }
 
-p.description {
-    margin-top: 1rem;
-    line-height: 1.5rem;
+/* blogpost */
+a.blog-post {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: var(--step-0);
+    display: inline;
+    padding: 0;
 }
-
-/* frontmatter */
-.frontmatter-container {
-    padding-bottom: 20px;
+a.blog-post:hover {
+    background-color: transparent;
+    opacity: 0.5;
+}
+hr.blog-post {
+    border: 0.5px solid var(--text-color);
+}
+div.blog-post-container {
+    margin-top: 100px;
+    padding: 0;
+}
+div.blog-post {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+div.blog-post > div {
+    width: 200px;
+}
+p.blog-post {
+    margin: 0;
 }
 
 /* modal */
@@ -405,40 +440,11 @@ p.pagefind-ui__result-excerpt {
     display: inline;
     padding: 0;
 }
-
-
-
-/* blogpost */
-a.blog-post {
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: var(--step-0);
-    display: inline;
-    padding: 0;
+.solmeexyz img {
+    position: relative;
+    width: 1rem;
+    top: 5px;
 }
-a.blog-post:hover {
-    background-color: transparent;
-    opacity: 0.5;
-}
-hr.blog-post {
-    border: 0.5px solid var(--text-color);
-}
-div.blog-post-container {
-    margin-top: 100px;
-    padding: 0;
-}
-div.blog-post {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-div.blog-post > div {
-    width: 200px;
-}
-p.blog-post {
-    margin: 0;
-}
-
 
 /* links */
 a,
@@ -485,10 +491,6 @@ a.pagefind-ui__result-link:hover,
 
 .active-toc-link {
     color: var(--text-color);
-}
-
-.right {
-    left: calc(100vw - 320px);
 }
 
 /* link popup */
@@ -645,9 +647,4 @@ p.graph-caption {
 
 #localGraphButton:hover {
     background-color: var(--gray-color-1);
-}
-
-/* tag button new */
-.tag-button.active {
-    background-color: var(--gray-color-3);
 }

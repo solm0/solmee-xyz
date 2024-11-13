@@ -3,6 +3,8 @@ import '../styles/global.css'
 import Side from "../components/Side.astro";
 import Toc from '../components/Toc';
 import Footer from '../components/Footer.astro';
+import GraphModal from "../components/GraphModal.astro"
+import Modal from "../components/Modal.astro"
 
 const { pageTitle } = Astro.props
 ---
@@ -15,13 +17,35 @@ const { pageTitle } = Astro.props
     <title>{pageTitle}</title>
 </head>
 <body>
-    <Side />
-    <h1>{pageTitle}</h1>
-    <main role="main">
-        <slot />
-    </main>
-    <Toc client:load />
-    <Footer />
+    <div class="u-container">
+        <div class="u-grid">
+            <div class="grid-item" style="grid-column: span 2;">
+                <Side />
+            </div>
+            <div class="grid-item" style="grid-column: span 7;">
+                <h1>{pageTitle}</h1>
+                <main role="main">
+                    <slot />
+                </main>
+            </div>
+            <div class="u-grid" style="grid-column: span 3;">
+                <Toc client:load />
+            </div>
+        </div>
+    </div>
+
+    <div class="graph-controller">
+        <GraphModal />
+        <button id="localGraphButton" value="show">
+            <img src="/search.svg" />
+        </button>
+    </div>
+
+    <div class="u-container">
+        <div class="u-grid">
+            <Footer />
+        </div>
+    </div>
 </body>
 <script src="../scripts/baseLayout.js"></script>
 </html>
