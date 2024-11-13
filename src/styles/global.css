@@ -54,6 +54,24 @@ html {
     background-color: var(--background-color);
     font-family: var(--font-family-serif);
 }
+html.dark {
+    --background-color: #212121;
+    --text-color: #f8fbf8;
+    color: var(--text-color);;
+}
+
+#themeToggle {
+    border: 0;
+    background: none;
+}
+.light,
+html.dark .light {
+    fill: var(--text-color);
+}
+.dark,
+html.dark .dark {
+    fill: transparent
+}
 
 body {
     margin: 0 auto;
@@ -182,11 +200,6 @@ h1 {
 img {
     width: 100%;
     height: auto;
-    filter: grayscale();
-    transition: 0.3s ease-in-out;
-}
-img:hover {
-    filter: none;
 }
 
 p.frontmatter,

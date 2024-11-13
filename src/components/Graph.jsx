@@ -155,7 +155,7 @@ useEffect(() => {
         ctx.stroke();
 
         const arrowLength = 2;
-        const arrowRelPos = 0.6;
+        const arrowRelPos = 0.9;
 
         const dx = link.target.x - link.source.x;
         const dy = link.target.y - link.source.y;
