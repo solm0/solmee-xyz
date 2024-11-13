@@ -40,28 +40,42 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-/* local graph toggle */
-const themeToggle = document.getElementById("localgraph");
+/* toggle */ 
+const themeButton = document.getElementById("theme");
+const htmlElement = document.documentElement;
+
+document.addEventListener("DOMContentLoaded", () => {
+    const isChecked = localStorage.getItem("themeToggle") === "true";
+    themeButton.checked = isChecked;
+
+    htmlElement.classList.toggle("dark");
+});
+
+themeButton.addEventListener("change", (event) => {
+    const isChecked = event.target.checked;
+    localStorage.setItem("themeToggle", isChecked);
+
+    htmlElement.classList.toggle("dark");
+})
+
+
+
+const localgraphButton = document.getElementById("localgraph");
 const localGraph = document.getElementsByClassName("local-graph-container")
 
-// Load the saved toggle state on page load
 document.addEventListener("DOMContentLoaded", () => {
     const isChecked = localStorage.getItem("localGraphToggle") === "true";
-    themeToggle.checked = isChecked; // Set the checkbox state based on localStorage
+    localgraphButton.checked = isChecked;
 
-    // Show or hide the local graph container based on the saved state
     Array.from(localGraph).forEach((element) => {
         element.classList.toggle("hide", isChecked);
     });
 });
 
-
-// Add an event listener to save the toggle state on change
-themeToggle.addEventListener("change", (event) => {
+localgraphButton.addEventListener("change", (event) => {
     const isChecked = event.target.checked;
-    localStorage.setItem("localGraphToggle", isChecked); // Save the state to localStorage
+    localStorage.setItem("localGraphToggle", isChecked);
 
-    // Toggle the visibility of the local graph container
     Array.from(localGraph).forEach((element) => {
         element.classList.toggle("hide", isChecked);
     });

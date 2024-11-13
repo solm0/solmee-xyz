@@ -88,13 +88,13 @@ useEffect(() => {
             // Background circle
           ctx.fillStyle = GRAPHSTYLE.grayColor1;
           ctx.beginPath();
-          ctx.arc(node.x, node.y, size + 4, 0, 2 * Math.PI, false); // Larger radius for the background circle
+          ctx.arc(node.x, node.y, size + 2, 0, 2 * Math.PI, false);
           ctx.fill();
 
           ctx.strokeStyle = node.color;
-          ctx.lineWidth = 2 / globalScale;
+          ctx.lineWidth = 1 / globalScale;
           ctx.beginPath();
-          ctx.arc(node.x, node.y, size + 4, 0, 2 * Math.PI, false);
+          ctx.arc(node.x, node.y, size + 2, 0, 2 * Math.PI, false);
           ctx.stroke();
         }
 
@@ -142,7 +142,6 @@ useEffect(() => {
 
           if (isDirectlyConected) {
             ctx.strokeStyle = GRAPHSTYLE.grayColor4;
-            ctx.lineWidth = 1 / globalScale;
           } else {
             ctx.strokeStyle = GRAPHSTYLE.grayColor2;
           }
@@ -156,7 +155,7 @@ useEffect(() => {
         ctx.stroke();
 
         const arrowLength = 2;
-        const arrowRelPos = 0.94;
+        const arrowRelPos = 0.6;
 
         const dx = link.target.x - link.source.x;
         const dy = link.target.y - link.source.y;

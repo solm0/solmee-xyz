@@ -1,8 +1,74 @@
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@font-face {
+    font-family: "source-han-serif-k";
+    src: url("/fonts/source-han-serif-k-medium.otf") format("opentype");
+}
+@font-face {
+    font-family: "source-han-sans-k-normal";
+    src: url("/fonts/source-han-sans-k-normal.otf") format("opentype");
+}
+@font-face {
+    font-family: "source-han-sans-k-bold";
+    src: url("/fonts/source-han-sans-k-bold.otf") format("opentype");
+}
+@font-face {
+    font-family: "ibmplexmono-regular";
+    src: url("/fonts/ibmplexmono-regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ibmplexmono-medium-italic";
+    src: url("/fonts/ibmplexmono-medium-italic.ttf") format("truetype");
+}
+
+:root {
+    font-size: 16px;
+    text-underline-offset: 0.25em;
+
+    --font-family-serif: "source-han-serif-k";
+    --font-family-sans-n: "source-han-sans-k-normal";
+    --font-family-sans-b: "source-han-sans-k-bold";
+    --font-family-mono: "ibmplexmono-regular";
+    --font-family-mono-italic: "ibmplexmono-medium-italic";
+
+    --step--3: clamp(0.6251rem, 0.6336rem - 0.0435vw, 0.6rem);
+    --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+    --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+    --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+    --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+    --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+    --step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+    --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+    --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+
+    --background-color: #f8fbf8;
+    --gray-color-1: #e4e9e1;
+    --gray-color-2: #d7d7cd;
+    --gray-color-3: #aaaaa0;
+    --gray-color-4: #686868;
+    --text-color: #212121;
+    --node-notes-color: #b9cc42;
+    --node-logbooks-color: #00b486;
+    --note-works-color: #027bb4;
+    --accent-color: #fff700;
+    --accent-color-opacity: #fff70054;
+}
+
+html.dark {
+    --background-color: #c3c3c3;
+    --gray-color-1: #e4e9e1;
+    --gray-color-2: #d7d7cd;
+    --gray-color-3: #aaaaa0;
+    --gray-color-4: #686868;
+    --text-color: #212121;
+    --node-notes-color: #b9cc42;
+    --node-logbooks-color: #00b486;
+    --note-works-color: #027bb4;
+    --accent-color: #fff700;
+    --accent-color-opacity: #fff70054;
+}
 
 html {
-    background-color: #f8fbf8;
-    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    background-color: var(--background-color);
+    font-family: var(--font-family-serif);
 }
 
 body {
@@ -40,33 +106,6 @@ li {
 
 .task-list-item input {
     margin-right: 1rem;
-}
-
-
-:root {
-    font-size: 16px;
-    text-underline-offset: 0.25em;
-    --step--3: clamp(0.6251rem, 0.6336rem - 0.0435vw, 0.6rem);
-    --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
-    --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
-    --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
-    --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
-    --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
-    --step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
-    --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
-    --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
-
-    --background-color: #f8fbf8;
-    --gray-color-1: #e4e9e1;
-    --gray-color-2: #d7d7cd;
-    --gray-color-3: #aaaaa0;
-    --gray-color-4: #686868;
-    --text-color: #212121;
-    --node-notes-color: #b9cc42;
-    --node-logbooks-color: #00b486;
-    --note-works-color: #027bb4;
-    --accent-color: #fff700;
-    --accent-color-opacity: #fff70054;
 }
 
 
@@ -142,6 +181,7 @@ h1 {
     font-size: var(--step--2);
     text-wrap: nowrap;
     color: var(--gray-color-4);
+    font-family: var(--font-family-mono-italic);
 }
 .tag-button {
     transition: 0.3s ease-in-out;
@@ -170,7 +210,7 @@ img:hover {
 
 p.frontmatter,
 .sequenceNav-container>p {
-    font-family: monospace;
+    font-family: var(--font-family-sans-n);
     font-size: var(--step--2);
     line-height: 1.2rem;
     color: var(--gray-color-3);
@@ -566,68 +606,6 @@ p.graph-caption {
     height: 100%;
     padding: 1rem;
     top: 0
-}
-
-/* toggle switch */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 42px;
-    height: 25px;
-    margin: 1rem;
-}
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 17px;
-    width: 17px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-input:checked + .slider {
-    background-color: #2196F3;
-}
-
-input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-    -webkit-transform: translateX(17px);
-    -ms-transform: translateX(17px);
-    transform: translateX(17px);
-}
-
-.toggle-container {
-    display: flex;
-    flex-direction: column;
-    font-size: var(--step--3);
-    line-height: var(--step--3);
-    align-items: center;
-    color: var(--gray-color-4);
 }
 
 /* local graph */

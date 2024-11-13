@@ -22,20 +22,14 @@ import GraphModal from "./GraphModal.astro"
     <a class="logbooks" href="/logbooks/">Logbooks</a>
     <a class="works" href="/works/">Works</a>
 
-    <div class="toggle-container">
-        <label for="theme" class="switch theme">
-            <input id="theme" type="checkbox">
-            <span class="slider"></span>
-        </label>
-        <span>dark mode</span>
+    <div>
+        <label for="theme"></label>
+        <input id="theme" type="checkbox" value="light">
     </div>
 
-    <div class="toggle-container">
-        <label for="localgraph" class="switch localgraph">
-            <input id="localgraph" type="checkbox">
-            <span class="slider"></span>
-        </label>
-        <span>hide local graph</span>
+    <div>
+        <label for="localgraph"></label>
+        <input id="localgraph" type="checkbox" value="show">
     </div>
 
     <br>
