@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Graph from './Graph';
+import GraphLocal from './GraphLocal';
 import graphData from '../data/graphData.json';
 import { GRAPHSTYLE } from '../scripts/graphStyle';
 
@@ -48,7 +48,7 @@ const LocalGraph = () => {
         while (queue.length > 0) {
           const { nodeId, depth } = queue.shift();
 
-          if (depth < 2) {
+          if (depth < 3) {
             graphData.links.forEach(link => {
               if (link.source === nodeId || link.target === nodeId) {
                 const neighborId = link.source === nodeId ? link.target : link.source;
@@ -75,7 +75,7 @@ const LocalGraph = () => {
   }, [fileName]);
 
   return (
-    <Graph
+    <GraphLocal
       key={key}
       width={300}
       height={300}
@@ -84,20 +84,6 @@ const LocalGraph = () => {
       filteredNodes={filteredNodes}
       graphData={filteredGraphData}
       targetNode={targetNode}
-      nodeCanvasObject={(node, ctx, globalScale) => {
-        const size = Math.sqrt(node.val) * 2;
-        ctx.fillStyle = node.color || GRAPHSTYLE.nodeColor;
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, size, 0, 2 * Math.PI, false);
-        ctx.fill();
-
-        const fontSize = GRAPHSTYLE.fontSize / globalScale;
-        ctx.font = `${fontSize}px Sans-Serif`;
-        ctx.fillStyle = GRAPHSTYLE.textColor;
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        ctx.fillText(node.name, node.x, node.y + size + fontSize);
-      }}
     />
   );
 };

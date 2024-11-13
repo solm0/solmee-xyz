@@ -2,7 +2,7 @@ import ForceGraph2D from 'react-force-graph-2d';
 import { GRAPHSTYLE } from '../scripts/graphStyle';
 import { useState, useEffect } from 'react';
 
-const Graph = ({
+const GraphLocal = ({
   width,
   height,
   minZoom,
@@ -13,10 +13,6 @@ const Graph = ({
 }) => {
   const [hoveredNode, setHoveredNode ] = useState(null);
   const [depth1Nodes, setDepth1Nodes] = useState(new Set());
-
-  useEffect(() => {
-    console.log("Filtered nodes:", filteredNodes);
-  }, [filteredNodes]);
 
   const handleNodeHover = (node) => {
     setHoveredNode(node);
@@ -98,21 +94,18 @@ useEffect(() => {
           ctx.stroke();
         }
 
-        if (filteredNodeIds.has(node.id)) {
-          if (hoveredNode) {
-            if (node === hoveredNode) {
-              ctx.fillStyle = node.color;
-            } else if (depth1Nodes.has(node.id)) {
-              ctx.fillStyle = GRAPHSTYLE.grayColor4;
-            } else {
-              ctx.fillStyle = GRAPHSTYLE.grayColor2;
-            }
-          } else {
+        if (hoveredNode) {
+        if (node === hoveredNode) {
             ctx.fillStyle = node.color;
-          }
+        } else if (depth1Nodes.has(node.id)) {
+            ctx.fillStyle = GRAPHSTYLE.grayColor4;
         } else {
-          ctx.fillStyle = GRAPHSTYLE.grayColor2;
+            ctx.fillStyle = GRAPHSTYLE.grayColor2;
         }
+        } else {
+        ctx.fillStyle = node.color;
+        }
+ 
 
         ctx.beginPath();
         ctx.arc(node.x, node.y, size, 0, 2 * Math.PI, false);
@@ -180,4 +173,4 @@ useEffect(() => {
   );
 } 
 
-export default Graph;
+export default GraphLocal;

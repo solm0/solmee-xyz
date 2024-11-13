@@ -624,7 +624,6 @@ p.graph-caption {
 /* local graph */
 .local-graph-container {
     display: block;
-    overflow: hidden;
     border-radius: 5px;
 }
 .local-graph-container.hide .force-graph-container {
