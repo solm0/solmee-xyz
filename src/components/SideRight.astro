@@ -1,9 +1,13 @@
 ---
 import Toc from './Toc.jsx'
-import LocalGraphContainer from "../components/LocalGraphContainer.astro";
+import LocalGraph from "./LocalGraph.jsx"
+import GraphController from "../components/GraphController.astro"
 ---
 
 <aside>
-    <LocalGraphContainer />
+    <GraphController />
+    <div class="local-graph-container">
+        <LocalGraph client:only="react" />
+    </div>
     <Toc client:load />
 </aside>

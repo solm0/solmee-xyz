@@ -69,13 +69,13 @@
     width: 100%;
 }
 
-/* theme */
+/* theme, icons */
 html {
     background-color: var(--background-color);
 }
 html.dark {
     --background-color: #1d1f21;
-    --gray-color-1: #474946;
+    --gray-color-1: #3c3e3b;
     --gray-color-2: #52524e;
     --gray-color-3: #7e7e76;
     --gray-color-4: #a4a4a4;
@@ -84,6 +84,9 @@ html.dark {
 }
 .light, html.dark .light { fill: var(--text-color); }
 .dark, html.dark .dark { fill: transparent }
+
+button:has(.light), button:has(.dark) { opacity: 0.5; }
+button:has(.light):hover, button:has(.dark):hover { opacity: 1; }
 
 /* general */
 * {
@@ -135,6 +138,15 @@ h2, h3, h4, h5, h6 {
 p {
     font-size: var(--step--1);
     margin: calc(var(--line-height) /2) 0;
+}
+
+p::selection, li::selection, a::selection,
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection,
+code::selection, pre.astro-code::selection, 
+pre.astro-code span::selection {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border-radius: 5px;
 }
 
 
@@ -202,7 +214,6 @@ aside {
     top: 0;
     height: 100%;
     padding: var(--grid-gutter) 0;
-    overflow: hidden;
 }
 .nav-links {
     display: flex;
@@ -367,6 +378,7 @@ dialog {
 dialog.pagefind {
     width: 800px;
     height: 500px;
+    color: var(--text-color);
 }
 
 dialog::backdrop {
@@ -380,17 +392,19 @@ dialog::backdrop {
 }
 
 input[type="text"] {
+    background-color: var(--background-color);
     width: 100%;
     height: 1.5em;
-    border-radius: 0px;
+    border-radius: 5px;
     border: 1px solid var(--gray-color-2);
     padding: 0.3em;
     font-size: var(--step-5);
+    color: var(--text-color);
+    font-family: var(--font-family-serif);
 }
 input[type="text"]:focus {
-    border-color: var(--accent-color); /* Change border color on focus */
+    border-color: var(--gray-color-4); /* Change border color on focus */
     outline: none; /* Remove default outline for a cleaner look */
-    
 }
 
 .close-button {
@@ -449,7 +463,7 @@ Div pagefind-ui__result-inner 각 목록
 .pagefind-ui li {
     display: block;
     padding: 1rem 0;
-    border-bottom: 1px solid var(--text-color);
+    border-bottom: 0.5px solid var(--gray-color-2);
 }
 .pagefind-ui__result-thumb {
     display: none;
@@ -652,11 +666,13 @@ p.graph-caption {
 
 /* local graph */
 .local-graph-container {
-    position: relative;
+    position: absolute;
     width: 100%;
     display: block;
+    top: var(--grid-gutter);
     border-radius: 5px;
     transition: 0.2s ease-in-out;
+    width: auto;
 }
 .local-graph-container.hide .force-graph-container {
     visibility: hidden;
@@ -673,7 +689,6 @@ p.graph-caption {
     width: var(--grid-gutter);
     position: relative;
     left: calc(var(--grid-gutter) * -1);
-    top: var(--grid-gutter);
 }
 
 #localGraphButton path {

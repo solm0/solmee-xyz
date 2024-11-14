@@ -5,7 +5,6 @@ import SideRight from "../components/SideRight.astro";
 import Toc from '../components/Toc';
 import Footer from '../components/Footer.astro';
 import Modal from "../components/Modal.astro";
-import GraphController from "../components/GraphController.astro"
 const { pageTitle } = Astro.props
 ---
 
@@ -28,8 +27,7 @@ const { pageTitle } = Astro.props
                     <slot />
                 </main>
             </div>
-            <div class="grid-item" style="grid-column: span 3;">
-                <GraphController />
+            <div class="grid-item right" style="grid-column: span 3;">
                 <SideRight />
             </div>
         </div>
@@ -43,6 +41,5 @@ const { pageTitle } = Astro.props
         </div>
     </div>
     <script src="../scripts/baseLayout.js"></script>
-    <script src="../scripts/graphController.js"></script>
 </body>
 </html>
