@@ -76,9 +76,9 @@ html {
 html.dark {
     --background-color: #1d1f21;
     --gray-color-1: #474946;
-    --gray-color-2: #61615c;
+    --gray-color-2: #52524e;
     --gray-color-3: #7e7e76;
-    --gray-color-4: #8f8f8f;
+    --gray-color-4: #a4a4a4;
     --text-color: #c9d3c9;
     color: var(--text-color);;
 }
@@ -199,6 +199,7 @@ aside {
     position: fixed;
     display: flex;
     flex-direction: column;
+    top: 0;
     height: 100%;
     padding: var(--grid-gutter) 0;
     overflow: hidden;
@@ -262,7 +263,7 @@ nav a {
 }
 
 p.frontmatter,
-.sequenceNav-container>p {
+.sequenceNav-container {
     font-family: var(--font-family-sans-n);
     font-size: var(--step--2);
     line-height: 1.2rem;
@@ -281,6 +282,7 @@ main>ul {
 }
 
 main hr {
+    border: 0.5px solid var(--gray-color-2);
     width: calc(100vw - var(--fluid-86-380));
 }
 
@@ -545,17 +547,16 @@ a.pagefind-ui__result-link:hover,
     padding: 4rem 0;
 }
 
-.sequenceNav-container a,
-.sequenceNav-container>p{
-    margin: 0;
+.sequenceNav-container>p {
+    font-size: var(--step--2);
 }
 
 .sequenceNav-button-container {
     position: relative;
-    margin: 1rem 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .sequenceNav-button-container a {
@@ -563,27 +564,23 @@ a.pagefind-ui__result-link:hover,
     text-decoration: none;
     height: auto;
     display: inline-flex;
-    width: 49%;
-}
-
-.sequenceNav-button-container a:hover {
-    background-color: transparent;
+    width: 100%;
 }
 
 .sequenceNav-button {
     width: 100%;
     min-height: 75px;
     border: 1px solid var(--gray-color-2);
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 0.5rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
     position: relative;
 }
 .sequenceNav-button:hover {
-    border: 1px solid var(--gray-color-3);
+    border: 1px solid var(--gray-color-4);
 }
 
 .sequenceNav-button p {
@@ -605,12 +602,11 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 0;
     width: 100%;
     position: relative;
     font-size: var(--step--2);
     margin-bottom: var(--grid-gutter);
-    z-index: -1;
     font-family: var(--font-family-sans-n);
 }
 .copyright::before {
@@ -656,6 +652,8 @@ p.graph-caption {
 
 /* local graph */
 .local-graph-container {
+    position: relative;
+    width: 100%;
     display: block;
     border-radius: 5px;
     transition: 0.2s ease-in-out;
@@ -673,8 +671,8 @@ p.graph-caption {
 /* graph controller */
 .graph-controller {
     width: var(--grid-gutter);
-    position: fixed;
-    right: 0;
+    position: relative;
+    left: calc(var(--grid-gutter) * -1);
     top: var(--grid-gutter);
 }
 

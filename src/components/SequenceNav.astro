@@ -18,10 +18,9 @@ const overviewNote = projectNotes[0];
 ---
 
 <div class="sequenceNav-container">
-    <p>
-        project: <a class="default-link" href={projectId}>{overviewNote.title}</a>
+    <p>Project:
+        <a class="default-link" href={projectId}>{overviewNote.title}</a>
     </p>
-    <p>{currentNote.title}</p>
     <div class="sequenceNav-button-container">
         {beforeNote &&
                 <a href={beforeNote.url}>
