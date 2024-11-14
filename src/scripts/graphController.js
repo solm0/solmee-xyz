@@ -36,3 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+let localgraphButton = 1;
+localgraphButton.addEventListener("change", (event) => {});
