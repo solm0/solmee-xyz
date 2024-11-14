@@ -187,7 +187,7 @@ nav a {
 
 #themeToggle {
     position: absolute;
-    bottom: var(--grid-gutter);
+    bottom: calc(var(--grid-gutter) * 3);
     left: 0;
     line-height: 0;
 }
@@ -440,7 +440,7 @@ p.pagefind-ui__result-excerpt {
     display: inline;
     padding: 0;
 }
-.solmeexyz img {
+.logo {
     position: relative;
     width: 1rem;
     top: 5px;
@@ -579,7 +579,7 @@ footer {
     width: 100%;
     position: relative;
     font-size: var(--step--2);
-    margin-top: 3rem;
+    margin-bottom: var(--grid-gutter);
 }
 .copyright::before {
     content: "© \00a0";
@@ -625,6 +625,7 @@ p.graph-caption {
 .local-graph-container {
     display: block;
     border-radius: 5px;
+    transition: 0.2s ease-in-out;
 }
 .local-graph-container.hide .force-graph-container {
     visibility: hidden;
@@ -644,7 +645,7 @@ p.graph-caption {
     top: var(--grid-gutter);
 }
 
-#localGraphButton img {
+#localGraphButton path {
     pointer-events: none;
 }
 
@@ -657,7 +658,10 @@ p.graph-caption {
     top: 0;
     content: attr(data-tooltip);
     background: var(--text-color);
+    opacity: 0.8;
     color: var(--background-color);
+    font-size: var(--step--2);
     padding: .5rem;
     line-height: 1rem;
+    border-radius: 5px;
   }

@@ -26,13 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     localGraphButton.addEventListener("mouseenter", () => {
         localGraph.forEach((element) => {
-            element.style.border = `1px solid ${getComputedStyle(root).getPropertyValue("--gray-color-2")}`;
+            element.style.background = `${getComputedStyle(root).getPropertyValue("--gray-color-1")}`;
         });
     });
 
     localGraphButton.addEventListener("mouseout", () => {
         localGraph.forEach((element) => {
-            element.style.border = 'none';
+            element.style.background = 'transparent';
         });
     });
 });

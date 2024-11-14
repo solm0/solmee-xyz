@@ -2,8 +2,14 @@
 import GlobalGraphContainer from "./GlobalGraphContainer"
 ---
 
-<button onclick="window.location.href = '/?openModal=globalGraph'">
-    <img src='/expand.svg' alt='graph expand'>
+<button
+    onclick="window.location.href = '/?openModal=globalGraph'"
+    data-tooltip="전체 그래프 보기"
+>
+    <svg width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path class="light" d="M10 1.5 10 2.5 12.79 2.5 8 7.29 3.21 2.5 6 2.5 6 1.5 2 1.5 1.5 2 1.5 6.04 2.5 6.04 2.5 3.21 7.29 8 2.5 12.79 2.5 10 1.5 10 1.5 14.04 2 14.54 6 14.54 6 13.54 3.16 13.54 8 8.71 12.84 13.54 10 13.54 10 14.54 14 14.54 14.5 14.04 14.5 10 13.5 10 13.5 12.79 8.71 8 13.5 3.21 13.5 6.04 14.5 6.04 14.5 2 14 1.5 10 1.5z"/>
+        <path class="dark" d="M10 1.5 10 2.5 12.79 2.5 8 7.29 3.21 2.5 6 2.5 6 1.5 2 1.5 1.5 2 1.5 6.04 2.5 6.04 2.5 3.21 7.29 8 2.5 12.79 2.5 10 1.5 10 1.5 14.04 2 14.54 6 14.54 6 13.54 3.16 13.54 8 8.71 12.84 13.54 10 13.54 10 14.54 14 14.54 14.5 14.04 14.5 10 13.5 10 13.5 12.79 8.71 8 13.5 3.21 13.5 6.04 14.5 6.04 14.5 2 14 1.5 10 1.5z"/>
+    </svg>
 </button>
 
 <dialog id="globalGraph" class="globalGraph">
