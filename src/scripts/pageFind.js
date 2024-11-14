@@ -1,11 +1,10 @@
-/* search */
 import { PagefindUI } from "@pagefind/default-ui";
                 
 window.addEventListener("DOMContentLoaded", () => {
     new PagefindUI({
         element: "#search",
         showSubResults: true,
-        autofocus: true,
+        autofocus: true, 
     });
     const el = document.querySelector(".pagefind-ui");
     const input = el?.querySelector<HTMLInputElement>(`input[type="text"]`);
@@ -39,5 +38,3 @@ window.addEventListener("DOMContentLoaded", () => {
         window.history.replaceState({}, "", `${url.pathname}`);
     });
 });
-
-.

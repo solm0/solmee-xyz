@@ -627,7 +627,7 @@ p.graph-caption {
     border-radius: 5px;
 }
 .local-graph-container.hide .force-graph-container {
-    opacity: 0;
+    visibility: hidden;
 }
 
 #localGraphButton {
