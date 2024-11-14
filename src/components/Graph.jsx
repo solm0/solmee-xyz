@@ -9,7 +9,7 @@ const Graph = ({
   maxZoom,
   graphData = { nodes: [], links: [] },
   targetNode,
-  filteredNodes,
+  filteredNodes
 }) => {
   const [hoveredNode, setHoveredNode ] = useState(null);
   const [depth1Nodes, setDepth1Nodes] = useState(new Set());

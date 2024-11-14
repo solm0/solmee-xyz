@@ -647,3 +647,17 @@ p.graph-caption {
 #localGraphButton img {
     pointer-events: none;
 }
+
+/* tooltip */
+[data-tooltip]:hover::after {
+    display: block;
+    position: absolute;
+    left: -130px;
+    width: 120px;
+    top: 0;
+    content: attr(data-tooltip);
+    background: var(--text-color);
+    color: var(--background-color);
+    padding: .5rem;
+    line-height: 1rem;
+  }

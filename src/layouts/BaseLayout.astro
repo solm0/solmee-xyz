@@ -37,7 +37,10 @@ const { pageTitle } = Astro.props
 
     <div class="graph-controller">
         <GraphModal />
-        <button id="localGraphButton" value="show">
+        <button
+            data-tooltip="현재 local graph의 인터랙션이 제대로 작동하지 않습니다. 관상용으로 놓아 두거나 꺼 두시는 것을 추천합니다."
+            id="localGraphButton"
+            value="show">
             <img src="/eye.svg" />
         </button>
     </div>

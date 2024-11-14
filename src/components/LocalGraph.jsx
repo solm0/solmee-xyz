@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import GraphLocal from './GraphLocal';
+import Graph from './Graph';
 import graphData from '../data/graphData.json';
 import { GRAPHSTYLE } from '../scripts/graphStyle';
 
@@ -75,7 +75,7 @@ const LocalGraph = () => {
   }, [fileName]);
 
   return (
-    <GraphLocal
+    <Graph
       key={key}
       width={300}
       height={300}
