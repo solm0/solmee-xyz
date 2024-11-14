@@ -14,6 +14,7 @@ const {frontmatter} = Astro.props;
             )}
         </div>
     </div>
+    <hr>
     <slot />
     <SequenceNav projectId={frontmatter.projectId} sequence={frontmatter.sequence} /> 
 </BaseLayout>

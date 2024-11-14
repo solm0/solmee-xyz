@@ -9,7 +9,8 @@ overview: false
 projectId: obsidian-theme-agate
 sequence: 3
 ---
-본문 타입세팅을 해보자.
+본문 타입세팅을 해보자.  
+
 ## 레퍼런스
 
 - 세리프 계열:  [Glyphs Learn](https://glyphsapp.com/learn/creating-a-variable-font), [p5.js](https://archive.p5js.org/), [GDP-DA](https://postdigitalgraphicdesign.com/)

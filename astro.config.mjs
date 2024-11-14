@@ -19,6 +19,9 @@ export default defineConfig({
         },
       ],
     ],
+    shikiConfig: {
+      theme: 'ayu-dark',
+    },
   },
   integrations: [react(), pagefind()],
 });
