@@ -20,7 +20,11 @@ export default defineConfig({
       ],
     ],
     shikiConfig: {
-      theme: 'ayu-dark',
+      themes: {
+        light: 'ayu-dark',
+        dark: 'everforest-dark',
+      },
+      defaultColor: false,
     },
   },
   integrations: [react(), pagefind()],

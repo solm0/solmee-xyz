@@ -74,8 +74,12 @@ html {
     background-color: var(--background-color);
 }
 html.dark {
-    --background-color: #212121;
-    --text-color: #f8fbf8;
+    --background-color: #1d1f21;
+    --gray-color-1: #474946;
+    --gray-color-2: #61615c;
+    --gray-color-3: #7e7e76;
+    --gray-color-4: #8f8f8f;
+    --text-color: #c9d3c9;
     color: var(--text-color);;
 }
 .light, html.dark .light { fill: var(--text-color); }
@@ -179,6 +183,14 @@ pre:has(code) {
 
 .astro-code,
 .astro-code span {
+    color: var(--shiki-light) !important;
+    background-color: var(--shiki-light-bg) !important;
+    line-height: 1.4em;
+}
+html.dark .astro-code,
+html.dark .astro-code span {
+    color: var(--shiki-dark) !important;
+    background-color: var(--shiki-dark-bg) !important;
     line-height: 1.4em;
 }
 
@@ -213,7 +225,7 @@ nav a {
 
 #themeToggle {
     position: absolute;
-    bottom: calc(var(--grid-gutter) * 3);
+    bottom: var(--grid-gutter);
     left: 0;
     line-height: 0;
 }
@@ -504,7 +516,7 @@ a.pagefind-ui__result-link:hover,
 /* toc */
 .toc {
     position: absolute;
-    top: 400px;
+    top: calc(400px + var(--grid-gutter));
 }
 
 .toc-link {
@@ -598,6 +610,8 @@ footer {
     position: relative;
     font-size: var(--step--2);
     margin-bottom: var(--grid-gutter);
+    z-index: -1;
+    font-family: var(--font-family-sans-n);
 }
 .copyright::before {
     content: "© \00a0";
@@ -620,6 +634,7 @@ dialog.globalGraph {
 }
 p.graph-caption {
     font-size: var(--step--3);
+    font-family: var(--font-family-sans-n);
     position: absolute;
     bottom: 2rem;
     left: calc(350px + 1rem);
