@@ -38,14 +38,14 @@ export default function TextInput() {
     };
 
     return (
-        <div>
+        <div className='newsletter'>
             <input
                 type="text"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Type your email..."
             />
-            <button className='sendbutton' onClick={handleSubmit}>Send</button>
+            <button className='send-button' onClick={handleSubmit}>Send</button>
         </div>
     );
 }

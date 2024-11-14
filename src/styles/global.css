@@ -420,8 +420,23 @@ input[type="text"]:focus {
     background-color: var(--gray-color-1);
     padding: 3px 20px;
 }
-.close-button:hover {
+.close-button:hover,
+.send-button:hover {
     background-color: var(--gray-color-2);
+}
+
+/* newsletter */
+.newsletter {
+    display: flex;
+    flex-direction: column;
+}
+
+.send-button {
+    position: relative;
+    background-color: var(--gray-color-1);
+    padding: 3px 20px;
+    margin-top: 1rem;
+    align-self: flex-end;
 }
 
 /*
