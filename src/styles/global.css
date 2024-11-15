@@ -153,7 +153,7 @@ p::selection, li::selection, a::selection,
 h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection,
 code::selection, pre.astro-code::selection, 
 pre.astro-code span::selection {
-    background-color: var(--text-color);
+    background-color: var(--gray-color-4);
     color: var(--background-color);
     border-radius: 5px;
 }

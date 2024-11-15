@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const localGraphButton = document.getElementById("localGraphButton");
     const localGraph = document.querySelectorAll(".local-graph-container");
     const svgIcon = document.getElementById("graphIcon");
+    const root = document.documentElement;
 
     if (localGraphButton) {
         // Function to update the SVG based on the button's value
@@ -25,27 +26,34 @@ document.addEventListener("DOMContentLoaded", () => {
         localGraphButton.value = isHidden ? "hide" : "show";
         renderSvg(); // Render the initial SVG based on the state
 
-        // Apply the visibility state to graph containers
+        // button hover -> highlight the localgraph area
+        localGraphButton.addEventListener("mouseenter", () => {
+            localGraph.forEach((element) => {
+                element.style.background = `${getComputedStyle(root).getPropertyValue("--gray-color-1")}`;
+            });
+        });
+        localGraphButton.addEventListener("mouseout", () => {
+            localGraph.forEach((element) => {
+                element.style.background = 'transparent';
+            });
+        });
+
+        // Hide or show the local graph based on the button's value
         localGraph.forEach((element) => {
             element.classList.toggle("hide", isHidden);
         });
 
-        // Add click event to toggle state
         localGraphButton.addEventListener("click", () => {
             const isCurrentlyHidden = localGraphButton.value === "show";
 
-            // Update the button's value
             localGraphButton.value = isCurrentlyHidden ? "hide" : "show";
 
-            // Save state to localStorage
             localStorage.setItem("localGraphState", isCurrentlyHidden ? "hidden" : "visible");
 
-            // Toggle visibility of graph containers
             localGraph.forEach((element) => {
                 element.classList.toggle("hide", isCurrentlyHidden);
             });
 
-            // Immediately update the icon
             renderSvg();
         });
     }
