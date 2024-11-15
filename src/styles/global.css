@@ -105,6 +105,9 @@ body {
 .grid-item.note-content {
     max-width: 42rem;
 }
+.footer-container {
+    grid-column: span 10;
+}
 ol, ul {
     padding-left: 1.3rem;
     margin: calc(var(--line-height) / 2) 0;
@@ -184,7 +187,7 @@ blockquote p {
 }
 
 code {
-    font-family: var(--font-family-mono);
+    font-family: var(--font-family-mono), Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console, monospace;
     font-size: calc(var(--step--1) * 0.9);
 }
 
@@ -253,25 +256,18 @@ nav a {
 .tag-button {
     display: inline;
     font-size: var(--step--2);
-    font-family: var(--font-family-mono);
+    font-family: var(--font-family-mono), Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console, monospace;;
+}
+.tag-button.active {
+    background-color: var(--gray-color-3);
 }
 
-.tag-button {
-    transition: 0.3s ease-in-out;
-}
-.tag-button:hover {
-    background-color: var(--gray-color-2);
-}
 
 .tag-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 15px;
-}
-
-.tag-button.active {
-    background-color: var(--gray-color-3);
 }
 
 /* frontmatter */
@@ -689,10 +685,14 @@ p.graph-caption {
 }
 
 .graph-tags button {
-    background-color: var(--text-color);
-    color: var(--background-color);
+    background-color: var(--gray-color-2);
+    color: var(--text-color);
     border-radius: 5px;
     opacity: 0.7;
+    transition: 0.3s ease-in-out;
+}
+.graph-tags button:hover {
+    background-color: var(--gray-color-3);
 }
 
 /* local graph */
@@ -764,6 +764,10 @@ p.graph-caption {
         top: var(--grid-gutter);
         left: calc(100vw - var(--grid-gutter) * 3);
     }
+
+    .footer-container {
+        grid-column: span 7;
+    }
 }
 
 @media  screen and (max-width: 600px) {
@@ -829,5 +833,9 @@ p.graph-caption {
 
     main hr {
         width: 100%;
+    }
+    
+    .footer-container {
+        grid-column: span 7;
     }
 }
