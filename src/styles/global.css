@@ -726,6 +726,10 @@ p.graph-caption {
     pointer-events: none;
 }
 
+.local-graph-container.hovered {
+    background: var(--gray-color-1);
+}
+
 /* tooltip */
 [data-tooltip]:hover::after {
     display: block;
