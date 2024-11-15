@@ -22,6 +22,10 @@ document.querySelectorAll('a:not(.nav-links a):not(.tag-button a):not(.blog-card
             previewIframe.src = link.href;
             previewIframe.classList.add('link-popup');
 
+            previewIframe.onload = () => {
+                previewIframe.contentWindow.scrollTo(0, 280);
+            };
+
             if ((window.innerHeight - e.pageY) < 400) {
                 {console.log(window.innerHeight, e.pageY, window.innerHeight - e.pageY, 'up')}
                 previewIframe.style.bottom = `${window.innerHeight - e.pageY + 15}px`;
