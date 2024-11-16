@@ -5,7 +5,7 @@ const {frontmatter} = Astro.props;
 ---
 
 <BaseLayout pageTitle = {frontmatter.title}>
-    <div class="frontmatter-container">
+    <div data-layout="works" class="frontmatter-container">
         <div class="tag-container">
             {frontmatter.tags.map((tag) => 
                  <div className={`tag ${tag === 'error' ? 'error' : ''}`}>{tag}</div>
@@ -23,7 +23,7 @@ const {frontmatter} = Astro.props;
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         // Check if this page uses WorksLayout
-        const isWorksLayout = document.querySelector('[data-astro-source-file$="WorksLayout.astro"]');
+        const isWorksLayout = document.querySelector('[data-layout="works"]');
         if (isWorksLayout) {
             console.log('WorksLayout detected via data-astro-source-file.');
 
