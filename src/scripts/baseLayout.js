@@ -9,8 +9,56 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+/* external internal link */
+let mouseOutTimeout;
+
+var links = document.links;
+
+for (var i = 0; i < links.length; i++) {
+    if (links[i].hostname !== window.location.hostname) {
+        links[i].classList.add("external-link");
+        
+        const icon = document.createElement('span');
+        icon.textContent = ' ↗';
+        links[i].appendChild(icon);
+
+        links[i].addEventListener('click', function(event) {
+            event.preventDefault();
+            window.open(this.href, 'popupWindow', 'width=800,height=600,scrollbars=yes,resizable=yes');
+        });
+
+        const span = links[i].appendChild(document.createElement('span'));
+        span.textContent = links[i].href;
+        span.classList.add('tooltip');
+    } else {
+        // Internal link hover -> node
+        links[i].addEventListener('mouseover', (event) => {
+            clearTimeout(mouseOutTimeout); // Cancel any pending mouseout
+            const link = event.currentTarget; // Use currentTarget to ensure it's the <a> element
+                // @ts-ignore
+            const url = new URL(link.getAttribute('href'), window.location.origin);
+            const nodeId = url.pathname.split('/').pop();
+
+            console.log("Hovered link URL:", url.href);
+            console.log("Extracted node ID:", nodeId);
+
+            if (window.setHoveredNode) {
+                window.setHoveredNode(nodeId);
+            }
+        });
+
+        links[i].addEventListener('mouseout', () => {
+            mouseOutTimeout = setTimeout(() => {
+                if (window.setHoveredNode) {
+                    window.setHoveredNode(null);
+                }
+            }, 200); // Adjust delay as needed
+        });
+    }
+}
+
 /* link popup */
-document.querySelectorAll('a:not(.nav-links a):not(.tag-button a):not(.blog-card):not(.blog-post):not(.sequenceNav-container a):not(.sequenceNav-button-container a):not(footer a)').forEach((link) => {
+document.querySelectorAll('a:not(.nav-links a):not(.tag-button a):not(.blog-card):not(.blog-post):not(.sequenceNav-container a):not(.sequenceNav-button-container a):not(footer a):not(.external-link)').forEach((link) => {
     let previewIframe;
     let hoverTimeout;
     let hideTimeout;
@@ -73,45 +121,3 @@ document.querySelectorAll('a:not(.nav-links a):not(.tag-button a):not(.blog-card
         hidePreview();
     });
 });
-
-/* external internal link */
-
-let mouseOutTimeout;
-
-var links = document.links;
-
-for (var i = 0; i < links.length; i++) {
-    if (links[i].hostname !== window.location.hostname) {
-        links[i].classList.add("external-link");
-        links[i].textContent += ' ↗';
-
-        links[i].addEventListener('click', function(event) {
-            event.preventDefault();
-            window.open(this.href, 'popupWindow', 'width=800,height=600,scrollbars=yes,resizable=yes');
-        });
-    } else {
-        // Internal link hover -> node
-        links[i].addEventListener('mouseover', (event) => {
-            clearTimeout(mouseOutTimeout); // Cancel any pending mouseout
-            const link = event.currentTarget; // Use currentTarget to ensure it's the <a> element
-                // @ts-ignore
-            const url = new URL(link.getAttribute('href'), window.location.origin);
-            const nodeId = url.pathname.split('/').pop();
-
-            console.log("Hovered link URL:", url.href);
-            console.log("Extracted node ID:", nodeId);
-
-            if (window.setHoveredNode) {
-                window.setHoveredNode(nodeId);
-            }
-        });
-
-        links[i].addEventListener('mouseout', () => {
-            mouseOutTimeout = setTimeout(() => {
-                if (window.setHoveredNode) {
-                    window.setHoveredNode(null);
-                }
-            }, 200); // Adjust delay as needed
-        });
-    }
-}

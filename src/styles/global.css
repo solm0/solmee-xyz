@@ -745,7 +745,48 @@ p.graph-caption {
     padding: .5rem;
     line-height: 1rem;
     border-radius: 5px;
+}
+
+.external-link {
+    position: relative;
+    display: inline-block;
+}
+
+.external-link .tooltip {
+    visibility: hidden;
+    max-width: 300px;
+    bottom: 110%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: var(--text-color);
+    opacity: 0.8;
+    color: var(--background-color);
+    text-align: center;
+    padding: .5rem;
+    border-radius: 5px;
+
+    position: absolute;
+    z-index: 1;
+
+    font-family: var(--font-family-sans-n);
+    font-size: var(--step--2);
+    line-height: 1rem;
+}
+
+.external-link .tooltip::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--text-color) transparent transparent transparent;
   }
+
+.external-link:hover .tooltip {
+    visibility: visible;
+}
 
 @media screen and (min-width: 600px) and (max-width: 1260px) {
     .local-graph-container,
