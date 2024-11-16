@@ -215,6 +215,43 @@ html.dark .astro-code span {
     line-height: 1.4em;
 }
 
+table {
+    font-family: var(--font-family-serif);
+    font-size: var(--step--2);
+    width: 100%;
+    border-collapse: collapse;
+    line-height: 1.5em;
+}
+
+th, td {
+    padding: .5em;
+    border: 1px solid var(--gray-color-2);
+}
+
+th {
+    border-top: 0;
+    font-family: var(--font-family-sans-n);
+}
+
+tr>td:nth-child(1),
+tr>th:nth-child(1) {
+    border-left: 0;
+    font-family: var(--font-family-sans-n);
+}
+
+tr>td:last-child,
+tr>th:last-child {
+    border-right: 0;
+}
+
+tbody>tr:last-child td {
+    border-bottom: 0;
+}
+
+td {
+    vertical-align: top;
+}
+
 /* nav */
 aside {
     position: fixed;

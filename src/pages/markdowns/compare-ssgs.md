@@ -11,11 +11,11 @@ sequence: 4
 ---
 챗지피티에게 내 markdown 파이프라인에 적합한 SSG를 추천해달라고 하니 다음을 추천해 주었다. 비교해 보면서 선택지를 좁혀보자.
 
-|                       | Eleventy          | Astro                                         | Hugo           | Next.js                                                                               |
-| --------------------- | ----------------- | --------------------------------------------- | -------------- | ------------------------------------------------------------------------------------- |
-| Pros                  | 단순하다,<br>굉장히 빠르다  | React와 합칠<br>수 있다,<br>빠르다                     | 빠르다,<br>기능이 많다 | 기능이 많다,<br>React<br>프레임워크라서<br>동적컨텐츠 많이<br>다룰 수 있다,<br>vercel과 같은<br>회사라 쉽게<br>deploy |
-| Cons                  | 복잡한 SSG<br>기능이 없다 | Eleventy<br>보다 복잡하다                           | Go 배워야됨        | 더 복잡하고<br>더 느리다                                                                       |
-| Markdown<br>→<br>HTML | 곧바로.              | interactive<br>한 컴포넌트와<br>함께 configure<br>가능. | 많은 옵션.         | next-mdx같은<br>플러그인 사용                                                                 |
+|                       | Eleventy          | Astro                                         | Hugo           | Next.js                                                                 |
+| --------------------- | ----------------- | --------------------------------------------- | -------------- | ----------------------------------------------------------------------- |
+| Pros                  | 단순하다,<br>굉장히 빠르다  | React와 합칠<br>수 있다,<br>빠르다                     | 빠르다,<br>기능이 많다 | 기능이 많다,<br>React<br>프레임워크라서<br>동적컨텐츠 많이<br>다룰 수 있다,<br>vercel과 같은<br>회사 |
+| Cons                  | 복잡한 SSG<br>기능이 없다 | Eleventy<br>보다 복잡하다                           | Go 배워야됨        | 더 복잡하고<br>더 느리다                                                         |
+| Markdown<br>→<br>HTML | 곧바로.              | interactive<br>한 컴포넌트와<br>함께 configure<br>가능. | 많은 옵션.         | next-mdx같은<br>플러그인 사용                                                   |
 
 ## is Automatic Rebuilding and Deployment achieveable?
 옵시디언으로 작성해 로컬디렉토리에 저장돼있는 markdown파일의 변경을 감지하고 자동으로 rebuild, Vercel에 deploy하게 할 수 있을까?  
