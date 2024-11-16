@@ -15,5 +15,26 @@ const {frontmatter} = Astro.props;
         <p class="description">{frontmatter.description}</p>
     </div>
     <hr>
-    <slot />
+    <div class="works-container">
+        <slot />
+    </div>
 </BaseLayout>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Check if this page uses WorksLayout
+        const isWorksLayout = document.querySelector('[data-astro-source-file$="WorksLayout.astro"]');
+        if (isWorksLayout) {
+            console.log('WorksLayout detected via data-astro-source-file.');
+
+            // Your logic specific to WorksLayout
+            const gridItemRight = document.querySelector('div#gridItemRight aside');
+            if (gridItemRight) {
+                gridItemRight.style.position = 'relative';
+                console.log('Applied relative style to gridItemRight.');
+            }
+        } else {
+            console.log('WorksLayout not detected. Skipping script execution.');
+        }
+    });
+</script>

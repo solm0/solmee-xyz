@@ -2,7 +2,7 @@
 const { url, title, tags, date, thumbnailUrl, alt } = Astro.props;
 ---
 
-<div class="blog-post card">
+<div class="blog-post logbooks">
     <a href={url}>
         {thumbnailUrl ?
             <img class="logbooks-thumbnail" src={thumbnailUrl} alt={alt} />

@@ -372,13 +372,13 @@ div.blog-post-container {
     border: .5px solid var(--gray-color-2);
 }
 
-.blog-post.card {
+.blog-post.logbooks {
     border-radius: 5px;
     padding: 1rem;
     transition: 0.2s ease-in-out;
 }
 
-.blog-post.card a {
+.blog-post.logbooks a {
     width: 100%;
     text-decoration: none;
     display: flex;
@@ -395,6 +395,39 @@ div.blog-post-container {
     width: 100%;
 }
 
+.blog-post-container:has(.works) {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    width: calc(100vw - var(--fluid-86-380));
+    flex-wrap: wrap;
+}
+
+.blog-post .works-thumbnail {
+    width: 100%;
+}
+
+.blog-post.works {
+    border-radius: 5px;
+    padding: .5rem;
+    transition: 0.2s ease-in-out;
+    max-width: 330px;
+}
+
+.works .blog-post-title {
+    margin-top: 0;
+}
+
+/* works */
+.works-container img {
+    background-color: white;
+    width: calc(100vw - var(--fluid-86-380));
+}
+
+div#gridItemRight aside {
+    position: fixed;
+}
 
 /* modal */
 button {
@@ -689,6 +722,9 @@ footer {
 .copyright::before {
     content: "© \00a0";
 }
+.footer-container a {
+    margin: 0 5px;
+}
 
 /* canvas */
 dialog.globalGraph {
@@ -960,5 +996,15 @@ p.graph-caption {
     
     .footer-container {
         grid-column: span 7;
+    }
+
+    .blog-post-container:has(.works) {
+        position: relative;
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .blog-post.works {
+        max-width: 100%;
     }
 }
