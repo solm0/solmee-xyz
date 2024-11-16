@@ -2,50 +2,71 @@
 import BaseLayout from "../layouts/BaseLayout.astro"
 import Newsletter from "../components/Newsletter"
 
-const pageTitle = 'Hello'
+const pageTitle = '이 웹사이트는...'
+
+import { loadNotes } from '../scripts/loadNotes'
+import LogbooksPost from "../components/LogbooksPost.astro";
+const allPosts = loadNotes();
+
+const filteredPosts = allPosts
+    .filter(post => post.type === 'logbooks' && post.overview === true)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<h2>About me</h2>
+	<ol>
+		<li>
+			<a href="/#AboutMe">나</a>의 디지털 가든이다.
+		</li>
+		<li>위계 없이 서로 연결된 노트들로 구성된다.</li>
+		<li>모든 노트는 다음 세 타입 중 하나에 속한다.
+			<ul>
+				<li><code>Notes</code>에는 프로젝트의 시작이 되는 생각이,
+				<li><code>Logbooks</code>에는 프로젝트의 시작부터 끝까지의 기록이,</li>
+				<li><code>Works</code>에는 완성된 프로젝트의 결과물이 속한다.</li>
+			</ul>
+		</li>
+		<li>이 웹사이트는 세 가지 내비게이션 방법을 제공한다.
+			<ol>
+				<li>좌측의 세 페이지<code>Notes</code>, <code>Logbooks</code>, <code>Works</code>는 각 타입의 노트들을 단순히 시간순으로 나열한다.</li>
+				<li>좌측의 <code>Search...</code>는 노트의 내부 텍스트를 검색한다.</li>
+				<li>우측의 그래프
+					<code>
+					<svg width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<path class="light" d="M10 1.5 10 2.5 12.79 2.5 8 7.29 3.21 2.5 6 2.5 6 1.5 2 1.5 1.5 2 1.5 6.04 2.5 6.04 2.5 3.21 7.29 8 2.5 12.79 2.5 10 1.5 10 1.5 14.04 2 14.54 6 14.54 6 13.54 3.16 13.54 8 8.71 12.84 13.54 10 13.54 10 14.54 14 14.54 14.5 14.04 14.5 10 13.5 10 13.5 12.79 8.71 8 13.5 3.21 13.5 6.04 14.5 6.04 14.5 2 14 1.5 10 1.5z"/>
+						<path class="dark" d="M10 1.5 10 2.5 12.79 2.5 8 7.29 3.21 2.5 6 2.5 6 1.5 2 1.5 1.5 2 1.5 6.04 2.5 6.04 2.5 3.21 7.29 8 2.5 12.79 2.5 10 1.5 10 1.5 14.04 2 14.54 6 14.54 6 13.54 3.16 13.54 8 8.71 12.84 13.54 10 13.54 10 14.54 14 14.54 14.5 14.04 14.5 10 13.5 10 13.5 12.79 8.71 8 13.5 3.21 13.5 6.04 14.5 6.04 14.5 2 14 1.5 10 1.5z"/>
+					</svg>
+					</code>는 노트들의 연결을 시각화하고, 주제별로 필터링한다.
+				</li>
+			</ol>
+		</li>
+		<li>이 웹사이트를 만들게 된 계기와 기획에 영감이 된 개념들은 여기에서,
+			디자인 가이드라인과 레퍼런스는 여기에서,
+			개발 과정과 참고한 사이트는 여기에서 확인할 수 있다.
+		</li>
+	</ol>
+	<h1 id="AboutMe">나는...</h1>
 	<ul>
-		<li>i am Solmi, graphic designer, and i make web ...자기소개.(영/한 버튼)</li>
-		<li>cv, github, behance,(link)</li>
-		<li>instagram, email, linkedin(link)</li>
+		<li>그래픽 디자이너이다</li>
+		<li>이력서</li>
 	</ul>
-	<h2>About this website</h2>
-	<ul>
-		<li>this is my digital garden. notes, logbooks, works.설명.</li>
-		<li>design of this website(link)</li>
-		<li>development of this website(link)</li>
-	</ul>
-	<h2>News</h2>
-	<ul>
-		<li>I have been learning...(tag link)</li>
-		<li>Working on ...(logbook link)</li>
-		<li>Listening to ...(external link)</li>
-		<li>Reading ...(external link)</li>
-		<li>Watching ...(external link)</li>
-		<li>recent updates ...(link)</li>
-	</ul>
-	<h2>newsletter</h2>
+
+	<h1>선별된 페이지</h1>
+	<div class="blog-post-container">
+        {filteredPosts.map((post) =>
+            <LogbooksPost
+                url={post.url}
+                title={post.title}
+                tags={post.tags}
+                date={post.date.toString().slice(0,10)}
+                thumbnailUrl={post.thumbnail}
+                alt={post.alt || "Default alt text"}
+            />
+        )}
+    </div>
+
+	<h1>Newsletter</h1>
 	<Newsletter client:load />
 </BaseLayout>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // Check if URL has the "openModal" parameter
-        const urlParams = new URLSearchParams(window.location.search);
-        const modalId = urlParams.get('openModal');
-
-        if (modalId) {
-            // Open the modal if it exists on the page and cast as HTMLDialogElement
-            const modal = document.getElementById(modalId);
-            if (modal instanceof HTMLDialogElement) {
-                modal.showModal();
-            }
-
-            // Optionally, remove the query parameter from the URL
-            history.replaceState(null, '', window.location.pathname);
-        }
-    });
-</script>
+<script src='../scripts/index.js'></script>
