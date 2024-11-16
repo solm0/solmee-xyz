@@ -36,7 +36,7 @@ const GlobalGraph = ({ filteredPostUrls }) => {
       graphData={graphData}
       width={dimensions.width}
       height={dimensions.height}
-      minZoom={1}
+      minZoom={2}
       maxZoom={5}
       filteredNodes={filteredNodes}
     />

@@ -1,0 +1,18 @@
+---
+const { url, title, tags, date } = Astro.props;
+---
+
+<div class="blog-post">
+    <a href={url}>
+        <p class="blog-post-title">{title}</p>
+        <div class="blog-post-frontmatter">
+            {tags &&
+                <div class="tag-container">
+                    {tags.map((tag) => <div class="tag">{tag}</div>)}
+                </div>
+            }
+            <p class="frontmatter" class="blog-post">{date}</p>
+        </div>
+    </a>
+</div>
+<hr>

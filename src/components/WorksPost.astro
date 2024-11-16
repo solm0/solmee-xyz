@@ -1,0 +1,24 @@
+---
+const { url, title, tags, date, thumbnailUrl, alt } = Astro.props;
+---
+
+<div class="blog-post card">
+    <a href={url}>
+        {thumbnailUrl ?
+            <img class="logbooks-thumbnail" src={thumbnailUrl} alt={alt} />
+        :
+            <div class="logbooks-thumbnail"></div>}
+        <div>
+            <p class="blog-post-title">{title}</p>
+            <div class="blog-post-frontmatter">
+                {tags &&
+                    <div class="tag-container">
+                        {tags.map((tag) => <div class="tag">{tag}</div> )}
+                    </div>
+                }
+                <p class="frontmatter" class="blog-post">{date}</p>
+            </div>
+        </div>
+    </a>
+</div>
+<hr>

@@ -41,6 +41,7 @@ const TagButtonContainer = () => {
     <div>
       <GlobalGraph filteredPostUrls={filteredPostUrls} client:only="react" />
       <p className="graph-caption">Left-click: rotate, Mouse-wheel/middle-click: zoom, Right-click: pan</p>
+      <p className='graph-tags-caption'>Filter by tags</p>
       <div className="graph-tags">
         {tags.map((tag) => (
           <button

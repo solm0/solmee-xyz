@@ -1,9 +1,9 @@
 ---
 import { loadNotes } from '../scripts/loadNotes'
 import BaseLayout from "../layouts/BaseLayout.astro"
-import BlogCard from "../components/BlogCard.astro";
+import WorksPost from "../components/WorksPost.astro";
 
-const pageTitle = 'Latest works'
+const pageTitle = 'Works: Latest'
 const allPosts = loadNotes();
 
 const filteredPosts = allPosts
@@ -12,9 +12,9 @@ const filteredPosts = allPosts
 ---
 
 <BaseLayout pageTitle={ pageTitle }>
-    <div class="blog-card-container">
+    <div class="blog-post-container">
         {filteredPosts.map((post) =>
-            <BlogCard
+            <WorksPost
                 url={post.url}
                 title={post.title}
                 tags={post.tags}

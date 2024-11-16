@@ -293,14 +293,20 @@ nav a {
 .tag-button {
     display: inline;
     font-size: var(--step--2);
-    font-family: var(--font-family-mono), Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console, monospace;;
+    font-family: var(--font-family-sans-n);
+    line-height: 1.6em;
+    border-radius: calc(1.6em / 2);
+    background-color: var(--gray-color-1);
+    color: var(--gray-color-4);
+    padding: 0 .6em .1em .6em;
 }
 
 .tag-container {
+    margin: 5px 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 5px;
 }
 
 .tag.error {
@@ -330,61 +336,65 @@ main>ul {
     width: 100%;
 }
 
-main hr {
+main>hr {
     border: 0.5px solid var(--gray-color-2);
     width: calc(100vw - var(--fluid-86-380));
 }
 
-/* blogCard */
-div.blog-card-container {
-    margin-top: 100px;
-    padding: 0;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: end; 
-    gap: 1rem;
-}
-img.blog-card {
-    filter: none;
-    width: 100%;
-    top: 0;
-}
-div.blog-card {
-    width: 200px;
-    height: auto;
-
-}
-
 /* blogpost */
-a.blog-post {
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: var(--step-0);
-    display: inline;
-    padding: 0;
-}
-a.blog-post:hover {
-    background-color: transparent;
-    opacity: 0.5;
-}
-hr.blog-post {
-    border: 0.5px solid var(--text-color);
-}
 div.blog-post-container {
     margin-top: 100px;
     padding: 0;
 }
-div.blog-post {
+
+.blog-post {
+    width: 100%;
+    border-radius: 5px;
+    padding: 1rem;
+    transition: 0.2s ease-in-out;
+}
+
+.blog-post:hover {
+    background-color: var(--gray-color-1);
+}
+
+.blog-post a {
+    text-decoration: none;
+}
+
+.blog-post-title {
+    color: var(--text-color);
+    font-size: var(--step-0);
+}
+
+.blog-post-container hr {
+    width: 100%;
+    border: .5px solid var(--gray-color-2);
+}
+
+.blog-post.card {
+    border-radius: 5px;
+    padding: 1rem;
+    transition: 0.2s ease-in-out;
+}
+
+.blog-post.card a {
+    width: 100%;
+    text-decoration: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 1rem;
 }
-div.blog-post > div {
-    width: 200px;
+
+.blog-post .logbooks-thumbnail {
+    width: 100px;
+    height: auto;
 }
-p.blog-post {
-    margin: 0;
+
+.blog-post-frontmatter {
+    width: 100%;
 }
+
 
 /* modal */
 button {
@@ -585,7 +595,7 @@ a.pagefind-ui__result-link:hover,
 /* toc */
 .toc {
     position: relative;
-    top: 320px;
+    top: 270px;
 }
 
 .toc-link {
@@ -695,6 +705,7 @@ dialog.globalGraph {
     justify-content: flex-start;
     align-items: center;
 }
+
 p.graph-caption {
     font-size: var(--step--3);
     font-family: var(--font-family-sans-n);
@@ -708,24 +719,33 @@ p.graph-caption {
     color: var(--gray-color-3);
     line-height: 1em;
 }
+
+.graph-tags-caption {
+    position: absolute;
+    top: 0;
+    margin: 1rem;
+    width: auto;
+    font-size: var(--step--2);
+    font-family: var(--font-family-sans-n);
+    color: var(--text-color);
+}
+
 .graph-tags {
     position: absolute;
-    width: 350px;
-    height: 80%;
-    padding: 1rem;
-    top: 0;
-    display: flex;
-    flex-flow: row wrap;
+    width: 250px;
+    height: auto;
+    top: 3rem;
     gap: 5px;
-    backdrop-filter: blur(3px);
+    padding: 1rem;
+    display: flex;
+    flex-flow: wrap row;
 }
 
 .graph-tags button {
     background-color: var(--gray-color-1);
-    color: var(--text-color);
-    border-radius: 5px;
-    opacity: 0.7;
-    transition: 0.3s ease-in-out;
+    border-radius: calc(1.6em / 2);
+    font-size: var(--step--2);
+    transition: 0.2s ease-in-out;
 }
 .graph-tags button.active:hover,
 .graph-tags button.inactive:hover {
@@ -733,26 +753,23 @@ p.graph-caption {
 }
 
 .graph-tags button.active {
-    background-color: var(--gray-color-2);
+    color: var(--text-color);
+    box-shadow:0px 0px 0px 1px var(--text-color);
 }
 
 .tag-button.error {
-    background-color: #ff00005d;
-}
-
-.tag-button.error.active:hover,
-.tag-button.error.inactive:hover {
-    background-color: #ff0000;
+    color: #ff0000;
 }
 
 .tag-button.error.active {
-    background-color: #ff0000c1;
+    box-shadow:0px 0px 0px 1px red;
 }
 
 .clear-button {
     position: absolute;
-    bottom: 1rem;
-    right: 8rem;
+    top: 0;
+    margin: 1rem;
+    margin-left: 100px;
     background-color: var(--background-color);
     padding: 3px 20px;
 }
@@ -933,15 +950,11 @@ p.graph-caption {
         margin-top: var(--grid-gutter);
     }
 
-    .graph-tags {
-        height: 20%;
-    }
-
     iframe {
         display: none;
     }
 
-    main hr {
+    main>hr {
         width: 100%;
     }
     
