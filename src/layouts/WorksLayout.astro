@@ -8,7 +8,7 @@ const {frontmatter} = Astro.props;
     <div class="frontmatter-container">
         <div class="tag-container">
             {frontmatter.tags.map((tag) => 
-                <div class="tag">{tag}</div>
+                 <div className={`tag ${tag === 'error' ? 'error' : ''}`}>{tag}</div>
             )}
         </div>
         <p class="frontmatter">year: {frontmatter.date}</p>

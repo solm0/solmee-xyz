@@ -295,10 +295,6 @@ nav a {
     font-size: var(--step--2);
     font-family: var(--font-family-mono), Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console, monospace;;
 }
-.tag-button.active {
-    background-color: var(--gray-color-3);
-}
-
 
 .tag-container {
     display: flex;
@@ -307,6 +303,9 @@ nav a {
     gap: 15px;
 }
 
+.tag.error {
+    color: rgb(255, 0, 0);
+}
 /* frontmatter */
 .frontmatter-container {
     margin: calc(var(--line-height) * 2) 0 0 0;
@@ -722,14 +721,43 @@ p.graph-caption {
 }
 
 .graph-tags button {
-    background-color: var(--gray-color-2);
+    background-color: var(--gray-color-1);
     color: var(--text-color);
     border-radius: 5px;
     opacity: 0.7;
     transition: 0.3s ease-in-out;
 }
-.graph-tags button:hover {
+.graph-tags button.active:hover,
+.graph-tags button.inactive:hover {
     background-color: var(--gray-color-3);
+}
+
+.graph-tags button.active {
+    background-color: var(--gray-color-2);
+}
+
+.tag-button.error {
+    background-color: #ff00005d;
+}
+
+.tag-button.error.active:hover,
+.tag-button.error.inactive:hover {
+    background-color: #ff0000;
+}
+
+.tag-button.error.active {
+    background-color: #ff0000c1;
+}
+
+.clear-button {
+    position: absolute;
+    bottom: 1rem;
+    right: 8rem;
+    background-color: var(--background-color);
+    padding: 3px 20px;
+}
+.clear-button:hover {
+    background-color: var(--gray-color-1);
 }
 
 /* local graph */

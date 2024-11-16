@@ -5,6 +5,7 @@ type: logbooks
 date: 2024-07-07
 tags:
   - web
+  - error
 overview: false
 projectId: obsidian-digital-garden
 sequence: 9

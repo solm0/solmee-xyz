@@ -16,6 +16,10 @@ const TagButtonContainer = () => {
     );
   };
 
+  const handleClear = () => {
+    setActiveTags([]);
+  };
+
   useEffect(() => {
     if (activeTags.length > 0) {
       const filteredPosts = allPosts.filter(post =>
@@ -33,8 +37,6 @@ const TagButtonContainer = () => {
     }
   }, [activeTags]);
 
-  
-
   return (
     <div>
       <GlobalGraph filteredPostUrls={filteredPostUrls} client:only="react" />
@@ -43,13 +45,21 @@ const TagButtonContainer = () => {
         {tags.map((tag) => (
           <button
             key={tag}
-            className={`tag-button ${activeTags.includes(tag) ? 'active' : 'inactive'}`}
+            className={`tag-button ${activeTags.includes(tag) ? 'active' : 'inactive'} ${tag === 'error' ? 'error' : ''}`}
             onClick={() => handleToggle(tag)}
           >
             <div>{tag}</div> 
           </button>
         ))}
       </div>
+      <button
+        id="clearButton"
+        className="clear-button"
+        type="button"
+        onClick={handleClear}
+      >
+        Clear
+      </button>
     </div>
   );
 };
