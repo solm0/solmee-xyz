@@ -1,7 +1,7 @@
 ---
-title: Initial publish with Vercel
+title: "Initial publish with Vercel"
 layout: ../../layouts/LogbooksLayout.astro
-type: logbooks
+type: "logbooks"
 date: 2024-07-04
 tags:
   - web

@@ -19,6 +19,9 @@ const getGraphStyle = () => {
       grayColor3: '#7e7e76',
       grayColor4: '#a4a4a4',
       textColor: '#c9d3c9',
+      notesColor: '#9eff00',
+      logbooksColor: '#00d7a6',
+      worksColor: '#9d00ff',
     };
   } else {
     return {
@@ -29,6 +32,9 @@ const getGraphStyle = () => {
       grayColor3: '#aaaaa0',
       grayColor4: '#686868',
       textColor: '#212121',
+      notesColor: '#b9cc42',
+      logbooksColor: '#00b486',
+      worksColor: '#8423de',
     };
   }
 };

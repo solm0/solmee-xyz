@@ -47,9 +47,9 @@
     --gray-color-4: #686868;
     --text-color: #212121;
     
-    --notes-color: #9eff00;
-    --logbooks-color: #00d7a6;
-    --works-color: #9d00ff;
+    --notes-color: #b9cc42;
+    --logbooks-color: #00b486;
+    --works-color: #8423de;
 
     --grid-max-width: 100vw;
     --grid-gutter: var(--space-s-l, clamp(1.125rem, 0.6467rem + 2.3913vw, 2.5rem));
@@ -91,6 +91,11 @@ html.dark {
     --gray-color-3: #7e7e76;
     --gray-color-4: #a4a4a4;
     --text-color: #c9d3c9;
+
+    --notes-color: #9eff00;
+    --logbooks-color: #00d7a6;
+    --works-color: #9d00ff;
+
     color: var(--text-color);
 }
 .light, html.dark .light { fill: var(--text-color); }
@@ -304,11 +309,19 @@ nav a {
     color: var(--text-color);
 }
 
-.nav-links a:hover,
+.nav-links a:nth-of-type(2):hover {
+    color: var(--notes-color);
+}
+.nav-links a:nth-of-type(3):hover {
+    color: var(--logbooks-color);
+}
+.nav-links a:nth-of-type(4):hover {
+    color: var(--works-color);
+}
+
 .nav-links a:focus,
 .nav-links a.current {
-    background-color: var(--gray-color-1);
-    border-radius: 5px;
+    color: var(--gray-color-3);
 }
 
 #themeToggle {
@@ -474,8 +487,9 @@ button {
     line-height: 1.8rem;
     transition: 0.2s ease-in-out;
     background-color: transparent;
-    color: var(--gray-color-4);
+    color: var(--text-color);
     text-align: left;
+    border-radius: 5px;
 }
 .tag-button a {
     padding: 0;
@@ -490,6 +504,7 @@ dialog {
     background-color: var(--background-color);
     border: none;
     transition: 0.3s ease;
+    border-radius: 5px;
 }
 
 dialog.pagefind {
@@ -575,7 +590,7 @@ Div pagefind-ui__result-inner 각 목록
     padding: 3px 20px;
 }
 .pagefind-ui__search-clear:hover {
-    background-color: var(--gray-color-1);
+    color: var(--gray-color-3);
 }
 
 .pagefind-ui__drawer {
@@ -847,7 +862,7 @@ p.graph-caption {
     padding: 3px 20px;
 }
 .clear-button:hover {
-    background-color: var(--gray-color-1);
+    color: var(--gray-color-3);
 }
 
 /* local graph */
@@ -904,13 +919,12 @@ p.graph-caption {
 
 .external-link {
     position: relative;
-    display: inline-block;
 }
 
 .external-link .tooltip {
     visibility: hidden;
     max-width: 300px;
-    bottom: 110%;
+    bottom: 130%;
     left: 50%;
     transform: translate(-50%, 0);
     background: var(--text-color);

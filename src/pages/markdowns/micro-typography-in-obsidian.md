@@ -1,7 +1,7 @@
 ---
-title: Micro Typography in Obsidian
+title: "Micro Typography in Obsidian"
 layout: ../../layouts/LogbooksLayout.astro
-type: logbooks
+type: "logbooks"
 date: 2024-07-01
 tags:
   - web

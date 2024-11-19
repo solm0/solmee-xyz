@@ -1,7 +1,7 @@
 ---
-title: 제목에 문자 주의
+title: "제목에 문자 주의"
 layout: ../../layouts/LogbooksLayout.astro
-type: logbooks
+type: "logbooks"
 date: 2024-07-05
 tags:
   - web

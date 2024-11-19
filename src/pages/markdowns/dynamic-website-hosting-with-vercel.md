@@ -1,7 +1,7 @@
 ---
-title: Dynamic Website Hosting with Vercel
+title: "Dynamic Website Hosting with Vercel"
 layout: ../../layouts/LogbooksLayout.astro
-type: logbooks
+type: "logbooks"
 date: 2024-07-07
 tags:
   - web

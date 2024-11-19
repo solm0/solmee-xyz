@@ -20,19 +20,10 @@ files.forEach(file => {
     const { data } = matter(content);
 
     const id = file.replace('.md', '').toLowerCase();
-    const type = data.type || 'default';
-    const typeColors = {
-        notes: '#9eff00',
-        logbooks: '#00d7a6',
-        works: '#9d00ff',
-        default: '#d7d7cd'
-    };
-    
-    const nodeColor = typeColors[type] || typeColors.default;
 
   // Add node if it doesn't already exist
     if (!nodeMap.has(id)) {
-        const node = { id, name: data.title || id, color: nodeColor, val: 1 };
+        const node = { id, name: data.title || id, type: data.type, val: 1 };
         graphData.nodes.push(node);
         nodeMap.set(id, node);
         console.log(`Created node: ${id} from file ${file}`);

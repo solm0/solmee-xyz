@@ -1,7 +1,7 @@
 ---
-title: 정적 웹 속 동적 웹
+title: "정적 웹 속 동적 웹"
 layout: ../../layouts/LogbooksLayout.astro
-type: logbooks
+type: "logbooks"
 date: 2024-07-06
 tags:
   - web

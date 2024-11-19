@@ -1,7 +1,7 @@
 ---
-title: DBMS 고르기
+title: "DBMS 고르기"
 layout: ../../layouts/LogbooksLayout.astro
-type: logbooks
+type: "logbooks"
 date: 2024-07-07
 tags:
   - web

@@ -1,7 +1,7 @@
 ---
-title: portfolio
+title: "portfolio"
 layout: ../../layouts/WorksLayout.astro
-type: works
+type: "works"
 tags:
   - variable
   - font

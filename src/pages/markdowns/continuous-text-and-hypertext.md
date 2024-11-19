@@ -1,7 +1,7 @@
 ---
-title: 줄글과 하이퍼텍스트
+title: "줄글과 하이퍼텍스트"
 layout: ../../layouts/NotesLayout.astro
-type: notes
+type: "notes"
 date: 2024-07-07
 tags:
   - web

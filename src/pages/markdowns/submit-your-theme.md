@@ -1,7 +1,7 @@
 ---
-title: Submit your theme
+title: "Submit your theme"
 layout: ../../layouts/LogbooksLayout.astro
-type: logbooks
+type: "logbooks"
 date: 2024-07-02
 tags:
   - web

@@ -84,6 +84,22 @@ useEffect(() => {
 
         const filteredNodeIds = new Set(filteredNodes?.map((n) => n.id));
 
+        let nodeColor;
+
+        switch (node.type) {
+          case 'notes':
+            nodeColor = GRAPHSTYLE.notesColor;
+            break;
+          case 'logbooks':
+            nodeColor = GRAPHSTYLE.logbooksColor;
+            break;
+          case 'works':
+            nodeColor = GRAPHSTYLE.worksColor;
+            break;
+          default:
+            nodeColor = GRAPHSTYLE.grayColor2;
+        }
+
         if (targetNode && node.id === targetNode.id) {
             // Background circle
           ctx.fillStyle = GRAPHSTYLE.backgroundColor;
@@ -91,7 +107,7 @@ useEffect(() => {
           ctx.arc(node.x, node.y, size + 2, 0, 2 * Math.PI, false);
           ctx.fill();
 
-          ctx.strokeStyle = node.color;
+          ctx.strokeStyle = nodeColor;
           ctx.lineWidth = 1 / globalScale;
           ctx.beginPath();
           ctx.arc(node.x, node.y, size + 2, 0, 2 * Math.PI, false);
@@ -101,14 +117,14 @@ useEffect(() => {
         if (filteredNodeIds.has(node.id)) {
           if (hoveredNode) {
             if (node === hoveredNode) {
-              ctx.fillStyle = node.color;
+              ctx.fillStyle = nodeColor;
             } else if (depth1Nodes.has(node.id)) {
               ctx.fillStyle = GRAPHSTYLE.grayColor4;
             } else {
               ctx.fillStyle = GRAPHSTYLE.grayColor2;
             }
           } else {
-            ctx.fillStyle = node.color;
+            ctx.fillStyle = nodeColor;
           }
         } else {
           ctx.fillStyle = GRAPHSTYLE.grayColor2;

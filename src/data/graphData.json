@@ -3,193 +3,211 @@
     {
       "id": "buy-a-domain",
       "name": "Buy a domain",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 3
     },
     {
       "id": "characteristics-of-ssgs",
       "name": "characteristics of SSGs",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 1
     },
     {
       "id": "choose-dbms",
       "name": "DBMS 고르기",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 1
     },
     {
       "id": "comixtura-code",
       "name": "comixtura code",
-      "color": "#9d00ff",
+      "type": "works",
       "val": 4
     },
     {
       "id": "compare-ssgs",
       "name": "Compare SSGs",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 1
     },
     {
       "id": "continuous-text-and-hypertext",
       "name": "줄글과 하이퍼텍스트",
-      "color": "#9eff00",
+      "type": "notes",
       "val": 1
     },
     {
       "id": "create-astro-git-push",
       "name": "Create astro, Git push",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 1
     },
     {
       "id": "css-custom-properties",
       "name": "CSS custom properties",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 1
     },
     {
       "id": "digital-garden-plugin",
       "name": "Digital Garden의 점령",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 4
     },
     {
       "id": "dr-phong",
       "name": "dr.phong variable font",
-      "color": "#9d00ff",
+      "type": "works",
       "val": 1
     },
     {
       "id": "dynamic-in-static",
       "name": "정적 웹 속 동적 웹",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 1
     },
     {
       "id": "dynamic-website-hosting-with-vercel",
       "name": "Dynamic Website Hosting with Vercel",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 1
     },
     {
       "id": "firebase-learn",
       "name": "Firebase 사용법 익히기",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 2
     },
     {
       "id": "hello-theme-css",
       "name": "Hello, theme.css!",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 1
     },
     {
       "id": "initial-publish-with-vercel",
       "name": "Initial publish with Vercel",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 1
     },
     {
       "id": "macro-typography-in-obsidian",
       "name": "Macro Typography in Obsidian",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 2
     },
     {
       "id": "micro-typography-in-obsidian",
       "name": "Micro Typography in Obsidian",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 1
     },
     {
       "id": "note",
       "name": "안녕하세요",
-      "color": "#9eff00",
+      "type": "notes",
       "val": 1
     },
     {
       "id": "obsidian-digital-garden",
       "name": "Obsidian Digital Garden",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 12
     },
     {
       "id": "obsidian-plugins-i-used",
       "name": "사용한 플러그인들",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 1
     },
     {
       "id": "obsidian-theme-agate",
       "name": "Obsidian theme Agate",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 7
     },
     {
       "id": "porkbun-cloudflaredns-vercel",
       "name": "Porkbun 도메인, cloudflare DNS, Vercel 호스팅",
-      "color": "#00d7a6",
+      "type": "logbooks",
+      "val": 1
+    },
+    {
+      "id": "portfolio 1 1",
+      "name": "portfolio",
+      "type": "works",
+      "val": 1
+    },
+    {
+      "id": "portfolio 1",
+      "name": "portfolio",
+      "type": "works",
+      "val": 1
+    },
+    {
+      "id": "portfolio",
+      "name": "portfolio",
+      "type": "works",
       "val": 1
     },
     {
       "id": "publish-obsidian-note",
       "name": "Publish Obsidian note",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 1
     },
     {
       "id": "react-home",
       "name": "React Home",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 1
     },
     {
       "id": "setting-up-the-markdown-pipeline",
       "name": "Setting up the Markdown Pipeline",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 1
     },
     {
       "id": "slug-error",
       "name": "제목에 문자 주의",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 1
     },
     {
       "id": "solmee-xyz",
       "name": "solmee.xyz",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 5
     },
     {
       "id": "static-web",
       "name": "정적 웹에 눈뜨다",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 1
     },
     {
       "id": "submit-your-theme",
       "name": "Submit your theme",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 2
     },
     {
       "id": "use-firebase",
       "name": "뼈대짜고 더미데이터 넣음",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 1
     },
     {
       "id": "why-i-left-digital-garden",
       "name": "Digital Garden에서 갈아타기로 한 이유",
-      "color": "#00d7a6",
+      "type": "logbooks",
       "val": 1
     },
     {
       "id": "why-obsidian",
       "name": "Obsidian을 시작한 이유",
-      "color": "#9eff00",
+      "type": "notes",
       "val": 1
     }
   ],

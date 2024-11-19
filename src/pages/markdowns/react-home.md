@@ -1,7 +1,7 @@
 ---
-title: React Home
+title: "React Home"
 layout: ../../layouts/LogbooksLayout.astro
-type: logbooks
+type: "logbooks"
 date: 2024-07-07
 tags:
   - web

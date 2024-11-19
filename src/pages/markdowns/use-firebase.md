@@ -1,7 +1,7 @@
 ---
-title: 뼈대짜고 더미데이터 넣음
+title: "뼈대짜고 더미데이터 넣음"
 layout: ../../layouts/LogbooksLayout.astro
-type: logbooks
+type: "logbooks"
 date: 2024-07-08
 tags:
   - web
