@@ -32,8 +32,9 @@ sequence: 0
 ## 기술
 정적웹 부분
 - 정적사이트생성: Obsidian Digital Garden(11ty)
--  배포: Vercel
-동적웹 부분
+-  배포: Vercel  
+
+동적웹 부분  
 - 사용자 인터페이스: React
 - 배포: Vercel
 - 데이터베이스: Firebase

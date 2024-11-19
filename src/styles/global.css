@@ -10,15 +10,20 @@
     font-family: "source-han-sans-k-bold";
     src: url("/fonts/source-han-sans-k-bold.otf") format("opentype");
 }
+@font-face {
+    font-family: "notoserif";
+    src: url("/fonts/notoserif.ttf") format("truetype");
+}
 
 :root {
-    font-size: 16px;
+    font-size: 16.5px;
     text-underline-offset: 0.25em;
     word-break: keep-all;
     font-family: var(--font-family-serif);
     line-height: var(--line-height);
 
-    --font-family-serif: "source-han-serif-k";
+    --font-family-serif: "notoserif";
+    /* --font-family-serif: "source-han-serif-k"; */
     --font-family-sans-n: "source-han-sans-k-normal";
     --font-family-sans-b: "source-han-sans-k-bold";
     --font-family-mono: consolas;
@@ -110,7 +115,7 @@ body {
 }
 ol, ul {
     padding-left: 1.3rem;
-    margin: calc(var(--line-height) / 2) 0;
+    margin: 0;
 }
 
 li {
@@ -135,18 +140,33 @@ h1 {
     font-size: var(--step-3);
     line-height: 1.2em;
     margin-bottom: 1rem;
-    font-family: var(--font-family-sans-b);
+    font-family: var(--font-family-serif);
 }
 
 h2, h3, h4, h5, h6 { 
     font-size: var(--step--1);
     scroll-margin-top: var(--line-height);
-    margin: calc(var(--line-height) * 1.5) 0 calc(var(--line-height) /2) 0;
+    margin: 0;
     font-family: var(--font-family-sans-n);
+    padding-top: var(--line-height);
 }
+
 p, li {
     font-size: var(--step--1);
-    margin: calc(var(--line-height) /2) 0;
+    margin: 0;
+}
+
+p:not(li p) {
+    padding-bottom: var(--line-height);
+}
+
+p:has(+ ul, + ol) {
+    padding-bottom: 0 !important;
+}
+
+ul:not(:is(ul ul, ol ul)),
+ol:not(:is(ul ol, ol ol)) {
+    padding-bottom: var(--line-height);
 }
 
 p::selection, li::selection, a::selection,
