@@ -335,6 +335,10 @@ nav a {
     color: var(--text-color);
 }
 
+.search-button:hover {
+    color: var(--gray-color-3);
+}
+
 #themeToggle {
     position: absolute;
     bottom: var(--grid-gutter);
@@ -519,10 +523,6 @@ button {
 }
 .tag-button a {
     padding: 0;
-}
-
-button:hover {
-    color: var(--text-color);
 }
 
 dialog {

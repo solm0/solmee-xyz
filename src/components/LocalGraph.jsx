@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import Graph from './Graph';
 import graphData from '../data/graphData.json';
-import { GRAPHSTYLE } from '../scripts/graphStyle';
 
 const LocalGraph = () => {
   const [key, setKey] = useState(Math.random());

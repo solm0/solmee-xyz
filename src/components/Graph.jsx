@@ -74,7 +74,7 @@ useEffect(() => {
       height={height}
       minZoom={minZoom}
       maxZoom={maxZoom}
-
+      
       nodeLabel={() => null}
       onNodeClick={handleNodeClick}
       onNodeHover={handleNodeHover}
