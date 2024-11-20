@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import MarkdownImage from "../components/MarkdownImage.astro";
 
 const {frontmatter} = Astro.props;
 ---
@@ -17,7 +16,7 @@ const {frontmatter} = Astro.props;
     </div>
     <hr />
     <div class="works-container">
-        <slot components = {{ img: MarkdownImage }} />
+        <slot />
     </div>
 </BaseLayout>
 
@@ -30,8 +29,6 @@ const {frontmatter} = Astro.props;
             if (gridItemRight) {
                 gridItemRight.style.position = 'relative';
             }
-        } else {
-            console.log('WorksLayout not detected. Skipping script execution.');
         }
     });
 </script>

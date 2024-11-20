@@ -174,7 +174,7 @@ ol:not(:is(ul ol, ol ol)) {
 
 p::selection, li::selection, a::selection, strong::selection, em::selection, del::selection, u::selection, small::selection, table::selection, 
 h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection,
-code::selection, pre.astro-code::selection, 
+code::selection, pre.astro-code::selection, blockquote::selection,
 pre.astro-code span::selection {
     background-color: var(--text-color);
     color: var(--background-color);
@@ -864,6 +864,7 @@ p.graph-caption {
     font-family: var(--font-family-sans-n);
     padding: 0 10px;
     line-height: 0;
+    color: var(--text-color);
 }
 
 .clear-button {
