@@ -566,9 +566,11 @@ input[type="text"]:focus {
     padding: 3px 20px;
 }
 .close-button:hover,
-.send-button:hover,
-.close-button:focus {
+.send-button:hover {
     background-color: var(--gray-color-2);
+}
+
+.close-button:focus {
     outline: none;
 }
 
@@ -858,10 +860,11 @@ p.graph-caption {
     margin: 1rem;
     margin-left: 100px;
     background-color: var(--background-color);
-    padding: 3px 20px;
+    padding: 1px 20px;
+    color: var(--gray-color-3);
 }
 .clear-button:hover {
-    color: var(--gray-color-3);
+    color: var(--text-color);
 }
 
 /* local graph */
