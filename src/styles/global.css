@@ -309,7 +309,7 @@ nav a {
     color: var(--text-color);
 }
 
-.left .nav-links a:hover {
+.left .nav-links a::nth-of-type(1):hover {
     color: var(--gray-color-3);
 }
 
