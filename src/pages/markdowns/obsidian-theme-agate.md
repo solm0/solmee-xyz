@@ -10,7 +10,7 @@ overview: true
 projectId: "obsidian-theme-agate"
 sequence: 0
 ---
-옵시디언 테마를 내맘대로 뜯어고치자.![](../../images/img-00.png)
+옵시디언 테마를 내맘대로 뜯어고치자.![](../../assets/img-00.png)
 
 ## 시작하기
 [[hello-theme-css]]  
