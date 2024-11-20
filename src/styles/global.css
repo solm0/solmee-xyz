@@ -984,6 +984,10 @@ p.graph-caption {
 }
 
 @media  screen and (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+    
     .local-graph-container,
     .toc,
     #localGraphButton {
