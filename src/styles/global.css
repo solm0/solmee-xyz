@@ -342,6 +342,8 @@ a.works.current {
 .toc {
     position: relative;
     top: 270px;
+    padding-top: var(--line-height);
+    width: 100%;
 }
 
 .toc-link {
