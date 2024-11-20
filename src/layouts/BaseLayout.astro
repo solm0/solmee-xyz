@@ -5,6 +5,8 @@ import SideRight from "../components/SideRight.astro";
 import Toc from '../components/Toc';
 import Footer from '../components/Footer.astro';
 import Modal from "../components/Modal.astro";
+import MarkdownImage from "../components/MarkdownImage.astro";
+
 const { pageTitle } = Astro.props
 ---
 
@@ -28,7 +30,7 @@ const { pageTitle } = Astro.props
             <div class="grid-item note-content" style="grid-column: span 7;">
                 <h1>{pageTitle}</h1>
                 <main role="main">
-                    <slot />
+                    <slot components = {{ img: MarkdownImage }} />
                 </main>
             </div>
             <div class="grid-item right" id="gridItemRight" style="grid-column: span 3;">

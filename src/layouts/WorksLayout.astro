@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import MarkdownImage from "../components/MarkdownImage.astro";
 
 const {frontmatter} = Astro.props;
 ---
@@ -14,9 +15,9 @@ const {frontmatter} = Astro.props;
         <p class="frontmatter">year: {frontmatter.date}</p>
         <p class="description">{frontmatter.description}</p>
     </div>
-    <hr>
+    <hr />
     <div class="works-container">
-        <slot />
+        <slot components = {{ img: MarkdownImage }} />
     </div>
 </BaseLayout>
 
@@ -25,13 +26,9 @@ const {frontmatter} = Astro.props;
         // Check if this page uses WorksLayout
         const isWorksLayout = document.querySelector('[data-layout="works"]');
         if (isWorksLayout) {
-            console.log('WorksLayout detected via data-astro-source-file.');
-
-            // Your logic specific to WorksLayout
             const gridItemRight = document.querySelector('div#gridItemRight aside');
             if (gridItemRight) {
                 gridItemRight.style.position = 'relative';
-                console.log('Applied relative style to gridItemRight.');
             }
         } else {
             console.log('WorksLayout not detected. Skipping script execution.');

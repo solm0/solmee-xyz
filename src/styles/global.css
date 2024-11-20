@@ -568,8 +568,10 @@ input[type="text"]:focus {
     padding: 3px 20px;
 }
 .close-button:hover,
-.send-button:hover {
+.send-button:hover,
+.close-button:focus {
     background-color: var(--gray-color-2);
+    outline: none;
 }
 
 /* newsletter */
@@ -1072,5 +1074,11 @@ p.graph-caption {
 
     .blog-post.logbooks a {
         flex-direction: column;
+    }
+
+    .works-container img {
+        width: 100vw;
+        position: relative;
+        left: calc(-1 * var(--grid-gutter));
     }
 }

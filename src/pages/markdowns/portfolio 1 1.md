@@ -2,12 +2,7 @@
 title: "portfolio"
 layout: ../../layouts/WorksLayout.astro
 type: "works"
-tags:
-  - variable
-  - font
-  - computer
-  - graphics
-  - typeface
+tags: ["variable font", "computer graphics", "typeface"]
 thumbnail: 
 date: 2024
 description: this is a font.
