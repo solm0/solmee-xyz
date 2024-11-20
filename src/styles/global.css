@@ -172,11 +172,11 @@ ol:not(:is(ul ol, ol ol)) {
     padding-bottom: var(--line-height);
 }
 
-p::selection, li::selection, a::selection,
+p::selection, li::selection, a::selection, strong::selection, em::selection, del::selection, u::selection, small::selection, table::selection, 
 h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection,
 code::selection, pre.astro-code::selection, 
 pre.astro-code span::selection {
-    background-color: var(--gray-color-4);
+    background-color: var(--text-color);
     color: var(--background-color);
     border-radius: 5px;
 }
@@ -304,34 +304,31 @@ nav a {
     color: var(--text-color);
 }
 
-.left .nav-links a::nth-of-type(1):hover {
-    color: var(--gray-color-3);
+a.home {
+    font-family: var(--font-family-serif);
+    opacity: 1;
 }
 
-.left .nav-links a:focus,
-.left .nav-links a.current {
-    color: var(--gray-color-3);
+a.home:hover,
+a.home.current {
+    opacity: 0.5;
 }
 
-.left .nav-links a:nth-of-type(2):hover,
-.left .nav-links a:nth-of-type(2).current {
+a.notes:hover,
+a.notes.current {
     color: var(--notes-color);
 }
-.left .nav-links a:nth-of-type(3):hover,
-.left .nav-links a:nth-of-type(3).current {
+a.logbooks:hover,
+a.logbooks.current {
     color: var(--logbooks-color);
 }
-.left .nav-links a:nth-of-type(4):hover,
-.left .nav-links a:nth-of-type(4).current {
+a.works:hover,
+a.works.current {
     color: var(--works-color);
 }
 
 .right .nav-links a:hover {
     color: var(--text-color);
-}
-
-.search-button:hover {
-    color: var(--gray-color-3);
 }
 
 #themeToggle {
@@ -408,7 +405,8 @@ main>ul {
 
 main>hr {
     border: 0.5px solid var(--gray-color-2);
-    width: calc(100vw - var(--fluid-86-380));
+    width: 100%;
+    margin-bottom: var(--line-height);
 }
 
 /* blogpost */
@@ -958,7 +956,7 @@ p.graph-caption {
     visibility: visible;
 }
 
-@media screen and (min-width: 600px) and (max-width: 1260px) {
+@media screen and (min-width: 750px) and (max-width: 1260px) {
     .local-graph-container,
     .toc,
     #localGraphButton {
@@ -985,7 +983,7 @@ p.graph-caption {
     }
 }
 
-@media  screen and (max-width: 600px) {
+@media  screen and (max-width: 750px) {
     body {
         overflow-x: hidden;
     }
@@ -1046,10 +1044,6 @@ p.graph-caption {
         display: none;
     }
 
-    main>hr {
-        width: 100%;
-    }
-    
     .footer-container {
         grid-column: span 7;
     }

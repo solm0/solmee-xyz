@@ -21,8 +21,8 @@ export default defineConfig({
     ],
     shikiConfig: {
       themes: {
-        light: 'ayu-dark',
-        dark: 'everforest-dark',
+        light: 'github-light',
+        dark: 'github-dark',
       },
       defaultColor: false,
     },
