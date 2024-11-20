@@ -1,18 +1,14 @@
 @font-face {
-    font-family: "source-han-serif-k";
-    src: url("/fonts/source-han-serif-k-medium.otf") format("opentype");
-}
-@font-face {
-    font-family: "source-han-sans-k-normal";
-    src: url("/fonts/source-han-sans-k-normal.otf") format("opentype");
-}
-@font-face {
-    font-family: "source-han-sans-k-bold";
-    src: url("/fonts/source-han-sans-k-bold.otf") format("opentype");
-}
-@font-face {
     font-family: "notoserif";
     src: url("/fonts/notoserif.ttf") format("truetype");
+}
+@font-face {
+    font-family: "pretendard-r";
+    src: url("/fonts/pretendard-r.otf") format("opentype");
+}
+@font-face {
+    font-family: "pretendard-b";
+    src: url("/fonts/pretendard-b.otf") format("opentype");
 }
 
 :root {
@@ -23,9 +19,8 @@
     line-height: var(--line-height);
 
     --font-family-serif: "notoserif";
-    /* --font-family-serif: "source-han-serif-k"; */
-    --font-family-sans-n: "source-han-sans-k-normal";
-    --font-family-sans-b: "source-han-sans-k-bold";
+    --font-family-sans-n: "pretendard-r";
+    --font-family-sans-b: "pretendard-b";
     --font-family-mono: consolas;
 
     --line-height: 1.8rem;
@@ -772,21 +767,14 @@ a.pagefind-ui__result-link:hover,
 
 /* footer */
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-    width: 100%;
     position: relative;
     font-size: var(--step--2);
-    margin-bottom: var(--grid-gutter);
+    margin-top: 100px;
+    margin-bottom: calc(var(--grid-gutter) + 10px);
     font-family: var(--font-family-sans-n);
 }
 .copyright::before {
     content: "© \00a0";
-}
-.footer-container a {
-    margin: 0 5px;
 }
 
 /* canvas */
