@@ -253,6 +253,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     line-height: 1.5em;
+    margin-bottom: var(--line-height);
 }
 
 th, td {
