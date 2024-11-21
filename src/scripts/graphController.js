@@ -37,7 +37,7 @@ C6.3,3.7,5.1,4,4,4.7L2.6,2.1L1.7,2.6l1.4,2.7C2.9,5.4,2.7,5.6,2.4,5.9L0.7,7.7v0.7
         // button hover -> highlight the localgraph area
         localGraphButton.addEventListener("mouseenter", () => {
             localGraph.forEach((element) => {
-                element.style.background = `${getComputedStyle(root).getPropertyValue("--gray-color-1")}`;
+                element.style.background = `${getComputedStyle(root).getPropertyValue("--gray-color-0")}`;
             });
         });
         localGraphButton.addEventListener("mouseout", () => {

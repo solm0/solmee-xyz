@@ -466,7 +466,7 @@ div.blog-post-container {
 
 .blog-post-container hr {
     width: 100%;
-    border: .5px solid var(--gray-color-2);
+    border: .5px solid var(--gray-color-1);
 }
 
 .blog-post.logbooks a {
@@ -936,10 +936,6 @@ p.graph-caption {
 
 #localGraphButton path {
     pointer-events: none;
-}
-
-.local-graph-container.hovered {
-    background: var(--gray-color-1);
 }
 
 /* tooltip */
