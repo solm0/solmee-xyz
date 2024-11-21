@@ -26,7 +26,10 @@ const LocalGraph = () => {
 
   useEffect(() => {
     const path = window.location.pathname;
-    const newFileName = path.substring(path.lastIndexOf('/') + 1);
+    
+    const normalizedPath = path.endsWith('/') ? path.slice(0, -1) : path;
+    const newFileName = normalizedPath.substring(normalizedPath.lastIndexOf('/') + 1);
+
     setFileName(newFileName);
     setFilteredNodes(graphData.nodes);
     console.log("FileName Set:", newFileName);
