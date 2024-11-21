@@ -9,19 +9,38 @@ const allPosts = loadNotes();
 const filteredPosts = allPosts
     .filter(post => post.type === 'logbooks' && post.overview === true)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+const inProgress = filteredPosts.filter(post => post.finished === false);
+const Finished = filteredPosts.filter(post => post.finished === true);
 ---
 
 <BaseLayout lang="ko" pageTitle={ pageTitle }>
     <div class="blog-post-container">
-        {filteredPosts.map((post) =>
-            <LogbooksPost
-                url={post.url}
-                title={post.title}
-                tags={post.tags}
-                date={post.date.toString().slice(0,10)}
-                thumbnailUrl={post.thumbnail}
-                alt={post.alt || "Default alt text"}
-            />
-        )}
+        <figure>
+            <figcaption>In progress</figcaption>
+            {inProgress.map((post) =>
+                <LogbooksPost
+                    url={post.url}
+                    title={post.title}
+                    tags={post.tags}
+                    date={post.date.toString().slice(0,10)}
+                    thumbnailUrl={post.thumbnail}
+                    alt={post.alt || "Default alt text"}
+                />
+            )}
+        </figure>
+        <figure>
+            <figcaption>Finished</figcaption>
+            {Finished.map((post) =>
+                <LogbooksPost
+                    url={post.url}
+                    title={post.title}
+                    tags={post.tags}
+                    date={post.date.toString().slice(0,10)}
+                    thumbnailUrl={post.thumbnail}
+                    alt={post.alt || "Default alt text"}
+                />
+            )}
+        </figure>
     </div>
 </BaseLayout>

@@ -7,6 +7,7 @@ tags: ["web", "domain"]
 thumbnail: '/porkbun-logo.png'
 
 overview: true
+finished: true
 projectId: "buy-a-domain"
 sequence: 0
 ---

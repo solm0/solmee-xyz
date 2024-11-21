@@ -7,6 +7,7 @@ tags: ["web", "obsidian", "css"]
 thumbnail: '/img-00.png'
 
 overview: true
+finished: true
 projectId: "obsidian-theme-agate"
 sequence: 0
 ---

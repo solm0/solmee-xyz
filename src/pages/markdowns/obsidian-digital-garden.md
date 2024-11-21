@@ -7,6 +7,7 @@ tags: ["web", "obsidian", "firebase"]
 thumbnail: '/obsidian-website.png'
 
 overview: true
+finished: true
 projectId: "obsidian-digital-garden"
 sequence: 0
 ---

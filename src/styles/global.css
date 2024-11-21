@@ -438,15 +438,18 @@ main>ul {
 }
 
 /* blogpost */
-div.blog-post-container {
-    margin-top: 100px;
+.blog-post-container {
+    margin: 100px 0 0 0;
     padding: 0;
+}
+
+.blog-post-container figure {
+    margin: 0;
 }
 
 .blog-post {
     width: 100%;
     border-radius: 5px;
-    padding: 0 1rem;
     transition: 0.2s ease-in-out;
 }
 
@@ -517,6 +520,14 @@ div.blog-post-container {
     display: flex;
     flex-direction: row;
     width: 100%;
+}
+
+.blog-post-container figcaption {
+    font-family: var(--font-family-sans-n);
+    font-size: var(--step--2);
+    color: var(--gray-color-3);
+    line-height: 1em;
+    margin-top: var(--line-height);
 }
 
 /* works */

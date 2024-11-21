@@ -7,6 +7,7 @@ tags: ["web", "obsidian", "astro", "react"]
 thumbnail: 
 
 overview: true
+finished: false
 projectId: "solmee-xyz"
 sequence: 0
 ---

@@ -2,6 +2,7 @@
 const { url, title, tags, date, thumbnailUrl, alt } = Astro.props;
 ---
 
+<hr>
 <div class="blog-post logbooks">
     <a href={url}>
         {thumbnailUrl ?
@@ -22,4 +23,3 @@ const { url, title, tags, date, thumbnailUrl, alt } = Astro.props;
         </div>
     </a>
 </div>
-<hr>
