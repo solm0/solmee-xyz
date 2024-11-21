@@ -20,7 +20,7 @@ const getGraphStyle = () => {
       grayColor4: '#a4a4a4',
       textColor: '#c9d3c9',
       notesColor: '#9eff00',
-      logbooksColor: '#00d7a6',
+      logbooksColor: '#00c899',
       worksColor: '#9d00ff',
     };
   } else {
@@ -32,9 +32,9 @@ const getGraphStyle = () => {
       grayColor3: '#aaaaa0',
       grayColor4: '#686868',
       textColor: '#212121',
-      notesColor: '#b9cc42',
+      notesColor: '#b1cd00',
       logbooksColor: '#00b486',
-      worksColor: '#8423de',
+      worksColor: '#aa4fff',
     };
   }
 };

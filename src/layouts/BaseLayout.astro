@@ -27,9 +27,9 @@ const { pageTitle } = Astro.props
                 <SideLeft />
             </div>
             <div class="grid-item note-content" style="grid-column: span 7;">
-                <h1>{pageTitle}</h1>
+                <h1 lang="ko">{pageTitle}</h1>
                 <main role="main">
-                    <slot components = {{ img: MarkdownImage }} />
+                    <slot lang="ko" components = {{ img: MarkdownImage }} />
                 </main>
             </div>
             <div class="grid-item right" id="gridItemRight" style="grid-column: span 3;">

@@ -21,7 +21,7 @@
     --font-family-serif: "notoserif";
     --font-family-sans-n: "pretendard-r";
     --font-family-sans-b: "pretendard-b";
-    --font-family-mono: consolas;
+    --font-family-mono: menlo, consolas;
 
     --line-height: 1.8rem;
 
@@ -36,15 +36,16 @@
     --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
 
     --background-color: #f8fbf8;
+    --gray-color-0: #eef2ee;
     --gray-color-1: #e4e9e1;
     --gray-color-2: #d7d7cd;
     --gray-color-3: #aaaaa0;
     --gray-color-4: #686868;
     --text-color: #212121;
     
-    --notes-color: #b9cc42;
+    --notes-color: #b1cd00;
     --logbooks-color: #00b486;
-    --works-color: #8423de;
+    --works-color: #aa4fff;
 
     --grid-max-width: 100vw;
     --grid-gutter: var(--space-s-l, clamp(1.125rem, 0.6467rem + 2.3913vw, 2.5rem));
@@ -81,6 +82,7 @@ html {
 }
 html.dark {
     --background-color: #1d1f21;
+    --gray-color-0: #272826;
     --gray-color-1: #3c3e3b;
     --gray-color-2: #52524e;
     --gray-color-3: #7e7e76;
@@ -88,7 +90,7 @@ html.dark {
     --text-color: #c9d3c9;
 
     --notes-color: #9eff00;
-    --logbooks-color: #00d7a6;
+    --logbooks-color: #00c899;
     --works-color: #9d00ff;
 
     color: var(--text-color);
@@ -96,8 +98,8 @@ html.dark {
 .light, html.dark .light { fill: var(--text-color); }
 .dark, html.dark .dark { fill: transparent }
 
-button:has(.light), button:has(.dark) { opacity: 0.5; }
-button:has(.light):hover, button:has(.dark):hover { opacity: 1; }
+button:has(.light):not(.search-button), button:has(.dark):not(.search-button) { opacity: 0.5; }
+button:has(.light):not(.search-button):hover, button:has(.dark):not(.search-button):hover { opacity: 1; }
 
 /* general */
 * {
@@ -215,7 +217,7 @@ blockquote p {
 
 code {
     font-family: var(--font-family-mono), Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console, monospace;
-    font-size: calc(var(--step--1) * 0.9);
+    font-size: 13.5px;
 }
 
 code:not(pre code) {
@@ -235,13 +237,13 @@ pre:has(code) {
 .astro-code,
 .astro-code span {
     color: var(--shiki-light) !important;
-    background-color: var(--shiki-light-bg) !important;
+    background-color: var(--gray-color-0) !important;
     line-height: 1.4em;
 }
 html.dark .astro-code,
 html.dark .astro-code span {
     color: var(--shiki-dark) !important;
-    background-color: var(--shiki-dark-bg) !important;
+    background-color: var(--gray-color-0) !important;
     line-height: 1.4em;
 }
 
@@ -305,30 +307,62 @@ nav a {
 }
 
 a.home {
-    font-family: var(--font-family-serif);
+    font-family: var(--font-family-sans-n);
     opacity: 1;
 }
 
-a.home:hover,
+.nav-links a:hover,
 a.home.current {
-    opacity: 0.5;
+    color: var(--gray-color-3);
 }
 
-a.notes:hover,
-a.notes.current {
-    color: var(--notes-color);
+.notes.current::after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--notes-color);
+    border-radius: 50%;
+    margin-left: 8px;
+    position: relative;
+    top: 1px;
 }
-a.logbooks:hover,
-a.logbooks.current {
-    color: var(--logbooks-color);
+
+.logbooks.current::after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--logbooks-color);
+    border-radius: 50%;
+    margin-left: 8px;
+    position: relative;
+    top: 1px;
 }
-a.works:hover,
-a.works.current {
-    color: var(--works-color);
+
+.works.current::after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--works-color);
+    border-radius: 50%;
+    margin-left: 8px;
+    position: relative;
+    top: 1px;
 }
 
 .right .nav-links a:hover {
     color: var(--text-color);
+}
+
+.search-button {
+    padding-left: 10px;
+    opacity: 1;
+}
+
+.search-button:hover {
+    opacity: .5;
 }
 
 #themeToggle {
@@ -380,7 +414,7 @@ a.works.current {
 
 /* frontmatter */
 .frontmatter-container {
-    margin: calc(var(--line-height) * 2) 0 0 0;
+    margin: 0 0 calc(var(--line-height) * 2) 0;
 }
 
 p.frontmatter,
@@ -400,12 +434,6 @@ main>p,
 main>ul {
     display: inline-block;
     width: 100%;
-}
-
-main>hr {
-    border: 0.5px solid var(--gray-color-2);
-    width: 100%;
-    margin-bottom: var(--line-height);
 }
 
 /* blogpost */
@@ -505,7 +533,7 @@ button {
     position: relative;
     border: none;
     font-size: 0.8rem;
-    padding: 0 10px;
+    padding: 0;
     line-height: 1.8rem;
     transition: 0.2s ease-in-out;
     background-color: transparent;
@@ -796,17 +824,14 @@ dialog.globalGraph {
 }
 
 p.graph-caption {
-    font-size: var(--step--3);
+    font-size: var(--step--2);
     font-family: var(--font-family-sans-n);
     position: absolute;
-    bottom: 1rem;
-    width: 50%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    padding-left: 2rem;
-    text-align: center;
+    bottom: 0;
+    padding-left: 1rem;
     color: var(--gray-color-3);
-    line-height: 1em;
+    display: block;
+    line-height: 1.5em;
 }
 
 .graph-tags-caption {
@@ -922,7 +947,7 @@ p.graph-caption {
     display: block;
     position: absolute;
     left: -130px;
-    width: 120px;
+    width: 100px;
     top: 0;
     content: attr(data-tooltip);
     background: var(--text-color);
@@ -1098,5 +1123,9 @@ p.graph-caption {
         width: 100vw;
         height: 100vh;
         padding: 0;
+    }
+
+    p.graph-caption {
+        display: none;
     }
 }

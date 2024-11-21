@@ -11,7 +11,7 @@ const filteredPosts = allPosts
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 ---
 
-<BaseLayout pageTitle={ pageTitle }>
+<BaseLayout lang="ko" pageTitle={ pageTitle }>
     <div class="blog-post-container">
         {filteredPosts.map((post) =>
             <NotesPost

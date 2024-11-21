@@ -11,7 +11,7 @@ const filteredPosts = allPosts
     .sort((a, b) => b.year - a.year);
 ---
 
-<BaseLayout pageTitle={ pageTitle }>
+<BaseLayout lang="ko" pageTitle={ pageTitle }>
     <div class="blog-post-container">
         {filteredPosts.map((post) =>
             <WorksPost

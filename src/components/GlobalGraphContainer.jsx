@@ -47,7 +47,11 @@ const TagButtonContainer = () => {
   return (
     <div>
       <GlobalGraph filteredPostUrls={filteredPostUrls} client:only="react" />
-      <p className="graph-caption">Left-click: rotate, Mouse-wheel/middle-click: zoom, Right-click: pan</p>
+      <p className="graph-caption">
+        Left-click: rotate<br />
+        Mouse-wheel: zoom<br />
+        Right-click: pan
+      </p>
       <p className='graph-tags-caption'>Filter by tags</p>
       <div className='graph-tags-container'>
         <fieldset className="graph-tags ungrouped">
