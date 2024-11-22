@@ -1,5 +1,6 @@
 ---
 import { loadNotes } from '../../scripts/loadNotes'
+import { paginatePosts } from '../../scripts/paginatePosts'
 import BaseLayout from "../../layouts/BaseLayout.astro"
 import NotesPost from "../../components/NotesPost.astro"
 import Pagination from "../../components/Pagination.astro"
@@ -9,42 +10,28 @@ const pageTitle = 'Recent Notes'
 export const prerender = true;
 
 export async function getStaticPaths() {
-  const postsPerPage = 10; // Number of posts per page
   const allPosts = loadNotes();
-
-  const filteredPosts = allPosts
-    .filter(post => post.type === 'notes')
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-
-  // Calculate total pages
-  const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+  const postsPerPage = 10;
+  
+  const { totalPages } = paginatePosts(allPosts, 'notes', 1, postsPerPage);
 
   // Generate paths for each page
   return Array.from({ length: totalPages }, (_, i) => ({
-    params: { page: (i + 1).toString() }, // Page numbers as strings
+    params: { page: (i + 1).toString() },
   }));
 }
 
-const postsPerPage = 10; // Number of posts per page
-const currentPage = Astro.params.page || 1; // Get the current page number from the URL
-
+const currentPage = parseInt(Astro.params.page || "1", 10);
+const postsPerPage = 10;
 const allPosts = loadNotes();
 
-const filteredPosts = allPosts
-    .filter(post => post.type === 'notes')
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-
-const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
-
-// Slice posts for the current page
-const startIndex = (currentPage - 1) * postsPerPage;
-const endIndex = startIndex + postsPerPage;
-const paginatedNotes = filteredPosts.slice(startIndex, endIndex);
+// Use pagination utility
+const { paginatedPosts, totalPages } = paginatePosts(allPosts, 'notes', currentPage, postsPerPage);
 ---
 
 <BaseLayout lang="ko" pageTitle={ pageTitle }>
     <div class="blog-post-container">
-        {paginatedNotes.map((post) =>
+        {paginatedPosts.map((post) =>
             <NotesPost
                 url={post.url}
                 title={post.title}

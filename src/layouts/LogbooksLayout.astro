@@ -8,12 +8,17 @@ const {frontmatter} = Astro.props;
 <BaseLayout pageTitle = {frontmatter.title}>
     <div class="frontmatter-container">
         <div class="tag-container">
-            {frontmatter.tags.map((tag) => 
+            {frontmatter.tags && frontmatter.tags.map((tag) => 
                 <div className={`tag ${tag === 'error' ? 'error' : ''}`}>{tag}</div>
             )}
         </div>
         <p class="frontmatter">{frontmatter.date.toString().slice(0,10)}</p>
     </div>
     <slot />
-    <SequenceNav projectId={frontmatter.projectId} sequence={frontmatter.sequence} /> 
+    {frontmatter.projectId &&
+        <SequenceNav
+            projectId={frontmatter.projectId}
+            sequence={frontmatter.sequence}
+        />
+    }
 </BaseLayout>
