@@ -2,74 +2,122 @@
 import BaseLayout from "../layouts/BaseLayout.astro"
 import Newsletter from "../components/Newsletter"
 
-const pageTitle = '이 웹사이트는...'
-
-import { loadNotes } from '../scripts/loadNotes'
-import LogbooksPost from "../components/LogbooksPost.astro";
-const allPosts = loadNotes();
-
-const filteredPosts = allPosts
-    .filter(post => post.type === 'logbooks' && post.overview === true)
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+const pageTitle = 'Getting Started'
 ---
 
 <BaseLayout lang="ko" pageTitle={pageTitle}>
-	<ol>
-		<li>
-			<a class="internal" href="/#AboutMe">나</a>의 디지털 가든이다.
-		</li>
-		<li>위계 없이 서로 연결된 노트들로 구성된다.</li>
-		<li>모든 노트는 다음 세 타입 중 하나에 속한다.
+	<section class="getting-started-section">
+		<details>
+			<summary>About Me</summary>
+			<p>
+				정솔미는 이 웹의 <a href="https://justinjackson.ca/webmaster/">웹마스터</a>이자 대한민국 서울 기반의 그래픽 디자이너이다.
+			</p>
+			<p>
+				어린 시절, <a href="https://en.wikipedia.org/wiki/Microsoft_PowerPoint">파워포인트</a> 꾸미기로 타이포그래피를 연마하고 <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%8C%80%EB%AC%B8">나무위키</a>를 읽으며 <a href="https://en.wikipedia.org/wiki/Hyperlink#:~:text=In%20computing%2C%20a%20hyperlink%2C%20or,is%20known%20as%20anchor%20text.">하이퍼링크</a>의 문법을 익혔다.
+			</p>
+			<p>
+				공식을 잘 마련해 놓으면 엄청난 생산성을 발휘한다는 점에서 서체와 웹을 좋아한다. 이제 이 웹을 통해 그 생산성을 실험해 보고자 한다.
+			</p>
+		</details>
+	</section>
+	<section class="getting-started-section">
+		<details>
+			<summary>About Site</summary>
+			<p>이 웹을 뭐라고 정의해야 할지 결정하지 못했다. 그냥 개인웹사이트라고 하자.</p>
+			<p>이 웹은 다음 개념들에 뿌리를 둔다.</p>
 			<ul>
-				<li><code>Notes</code>에는 프로젝트의 시작이 되는 생각이,
-				<li><code>Logbooks</code>에는 프로젝트의 시작부터 끝까지의 기록이,</li>
-				<li><code>Works</code>에는 완성된 프로젝트의 결과물이 속한다.</li>
+				<li><a href="https://en.wikipedia.org/wiki/Zettelkasten">제텔카스텐</a></li>
+				<li><a href="https://maggieappleton.com/garden-history">디지털 가든</a></li>
+				<li><a href="https://indieweb.org/principles">인디 웹 원칙</a></li>
 			</ul>
-		</li>
-		<li>이 웹사이트는 세 가지 내비게이션 방법을 제공한다.
+			<p><a>기획에 대한 자세한 설명은 여기로.</a></p>
+			<p><a>디자인에 대한 자세한 설명은 여기로.</a></p>
+			<p><a>개발에 대한 자세한 설명은 여기로.</a></p>
+			<p>이 웹은 영원히 미완성이다.</p>
+		</details>
+		<details>
+			<summary>Site Instruction</summary>
+			<p>(안 읽어도 사용에 지장은 없다)</p>
+			<p>이 웹사이트는</p>
 			<ol>
-				<li>세 페이지<code>Notes</code>, <code>Logbooks</code>, <code>Works</code>는 각 타입의 노트들을 단순히 시간순으로 나열한다.</li>
-				<li>
-					<code>
-						<svg width="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 14">
-							<path class="light" d="m15,14.11l-4.89-4.89c.64-.82,1.02-1.85,1.02-2.96,0-2.67-2.17-4.84-4.84-4.84S1.45,3.59,1.45,6.25s2.17,4.84,4.84,4.84c1.18,0,2.26-.42,3.1-1.13l4.88,4.88.74-.74ZM2.6,6.25c0-2.04,1.66-3.69,3.69-3.69s3.69,1.66,3.69,3.69-1.66,3.69-3.69,3.69-3.69-1.66-3.69-3.69Z""/>
-							<path class="dark" d="m15,14.11l-4.89-4.89c.64-.82,1.02-1.85,1.02-2.96,0-2.67-2.17-4.84-4.84-4.84S1.45,3.59,1.45,6.25s2.17,4.84,4.84,4.84c1.18,0,2.26-.42,3.1-1.13l4.88,4.88.74-.74ZM2.6,6.25c0-2.04,1.66-3.69,3.69-3.69s3.69,1.66,3.69,3.69-1.66,3.69-3.69,3.69-3.69-1.66-3.69-3.69Z""/>
-						</svg>
-						Search
-					</code>
-					는 노트의 내부 텍스트를 검색한다.</li>
-				<li>그래프
-					<code><svg width="21px" xmlns="http://www.w3.org/2000/svg" viewBox="0 -9 24 24">
-						<path class="light" d="M10 1.5 10 2.5 12.79 2.5 8 7.29 3.21 2.5 6 2.5 6 1.5 2 1.5 1.5 2 1.5 6.04 2.5 6.04 2.5 3.21 7.29 8 2.5 12.79 2.5 10 1.5 10 1.5 14.04 2 14.54 6 14.54 6 13.54 3.16 13.54 8 8.71 12.84 13.54 10 13.54 10 14.54 14 14.54 14.5 14.04 14.5 10 13.5 10 13.5 12.79 8.71 8 13.5 3.21 13.5 6.04 14.5 6.04 14.5 2 14 1.5 10 1.5z"/>
-						<path class="dark" d="M10 1.5 10 2.5 12.79 2.5 8 7.29 3.21 2.5 6 2.5 6 1.5 2 1.5 1.5 2 1.5 6.04 2.5 6.04 2.5 3.21 7.29 8 2.5 12.79 2.5 10 1.5 10 1.5 14.04 2 14.54 6 14.54 6 13.54 3.16 13.54 8 8.71 12.84 13.54 10 13.54 10 14.54 14 14.54 14.5 14.04 14.5 10 13.5 10 13.5 12.79 8.71 8 13.5 3.21 13.5 6.04 14.5 6.04 14.5 2 14 1.5 10 1.5z"/>
-					</svg></code>
-					는 노트들의 연결을 시각화하고, 주제별로 필터링한다.
+				<li>위계 없이 서로 연결된 노트들로 구성된다.</li>
+				<li>모든 노트는 다음 세 타입 중 하나에 속한다.
+					<ul>
+						<li><code>Notes</code>: 프로젝트의 시작이 되는 생각</li>
+						<li><code>Logbooks</code>: 프로젝트의 시작부터 끝까지의 기록</li>
+						<li><code>Works</code>: 프로젝트의 결과물</li>
+					</ul>
+				</li>
+				<li>이 웹사이트는 세 가지 내비게이션 방법을 제공한다.
+					<ol>
+						<li>세 페이지<code>Notes</code>, <code>Logbooks</code>, <code>Works</code>는 각 타입의 노트들을 단순히 시간순으로 나열한다.</li>
+						<li>
+							<code>
+								<svg width="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 14">
+									<path class="light" d="m15,14.11l-4.89-4.89c.64-.82,1.02-1.85,1.02-2.96,0-2.67-2.17-4.84-4.84-4.84S1.45,3.59,1.45,6.25s2.17,4.84,4.84,4.84c1.18,0,2.26-.42,3.1-1.13l4.88,4.88.74-.74ZM2.6,6.25c0-2.04,1.66-3.69,3.69-3.69s3.69,1.66,3.69,3.69-1.66,3.69-3.69,3.69-3.69-1.66-3.69-3.69Z""/>
+									<path class="dark" d="m15,14.11l-4.89-4.89c.64-.82,1.02-1.85,1.02-2.96,0-2.67-2.17-4.84-4.84-4.84S1.45,3.59,1.45,6.25s2.17,4.84,4.84,4.84c1.18,0,2.26-.42,3.1-1.13l4.88,4.88.74-.74ZM2.6,6.25c0-2.04,1.66-3.69,3.69-3.69s3.69,1.66,3.69,3.69-1.66,3.69-3.69,3.69-3.69-1.66-3.69-3.69Z""/>
+								</svg>
+								Search
+							</code>
+							는 노트의 내부 텍스트를 검색한다.</li>
+						<li>그래프
+							<code><svg width="21px" xmlns="http://www.w3.org/2000/svg" viewBox="0 -9 24 24">
+								<path class="light" d="M10 1.5 10 2.5 12.79 2.5 8 7.29 3.21 2.5 6 2.5 6 1.5 2 1.5 1.5 2 1.5 6.04 2.5 6.04 2.5 3.21 7.29 8 2.5 12.79 2.5 10 1.5 10 1.5 14.04 2 14.54 6 14.54 6 13.54 3.16 13.54 8 8.71 12.84 13.54 10 13.54 10 14.54 14 14.54 14.5 14.04 14.5 10 13.5 10 13.5 12.79 8.71 8 13.5 3.21 13.5 6.04 14.5 6.04 14.5 2 14 1.5 10 1.5z"/>
+								<path class="dark" d="M10 1.5 10 2.5 12.79 2.5 8 7.29 3.21 2.5 6 2.5 6 1.5 2 1.5 1.5 2 1.5 6.04 2.5 6.04 2.5 3.21 7.29 8 2.5 12.79 2.5 10 1.5 10 1.5 14.04 2 14.54 6 14.54 6 13.54 3.16 13.54 8 8.71 12.84 13.54 10 13.54 10 14.54 14 14.54 14.5 14.04 14.5 10 13.5 10 13.5 12.79 8.71 8 13.5 3.21 13.5 6.04 14.5 6.04 14.5 2 14 1.5 10 1.5z"/>
+							</svg></code>
+							는 노트들의 연결을 시각화하고, 주제별로 필터링한다.
+						</li>
+					</ol>
 				</li>
 			</ol>
-		</li>
-		<li>이 웹사이트를 만들게 된 계기와 기획에 영감이 된 개념들은 <a>여기에서</a>,
-			디자인 가이드라인과 레퍼런스는 <a>여기에서</a>,
-			개발 과정과 참고한 사이트는 <a>여기에서</a> 확인할 수 있다.
-		</li>
-	</ol>
-	<blockquote>
-		tip! 노트 페이지에서 화면 폭을 넓히면 지역 그래프가 나타난다. 인터랙션이 오작동할 때는 새로고침을 두 번 하면 대부분 고쳐진다.
-	</blockquote>
+			<p>tip!</p>
+			<ul>
+				<li>
+					노트 페이지에서 화면 폭을 넓히면 지역 그래프가 나타난다. 인터랙션이 오작동할 때는 새로고침을 두 번 하면 대부분 고쳐진다.
+				</li>
+			</ul>
+		</details>
+	</section>
+	
+	<section class="getting-started-section">
+		<details>
+			<summary>Contact</summary>
+			<p>
+				<a class="mailto" href="mailto:js5185204@gmail.com?subject=안녕하세요.">js5185204@gmail.com</a>
+			</p>
+			<p>
+				<a href="https://www.instagram.com/s0lrni/">인스타그램</a>
+			</p>
+			<p>
+				<a href="https://github.com/solm0">깃허브</a>
+			</p>
+		</details>
+		<details>
+			<summary>Newsletter</summary>
+			<p>가까운 미래에는 뉴스레터를 보낼 계획이 없지만 그냥 넣어보았다.</p>
+			<Newsletter client:load />
+		</details>
+	</section>
 
-	<h1 id="AboutMe">나는...</h1>
-	<ul>
-		<li>그래픽 디자이너이다.</li>
-		<li>...를 배우고 있다.</li>
-		<li><a class="internal" href="/markdowns/solmee-xyz">Digital Garden</a> 프로젝트를 진행하고 있다.</li>
-		<li>최근 <a class="internal" href="/markdowns/dr-phong">dr.phong</a>을 완성했다.</li>
-		<li>email</li>
-	</ul>
-
-	<h1>뉴스레터</h1>
-	<ul>
-		<li>가까운 미래에는 뉴스레터를 보낼 계획이 없지만 그냥 넣어보았다.</li>
-	</ul>
-	<Newsletter client:load />
+	<section class="getting-started-section">
+		<details>
+			<summary>Changelog</summary>
+			<table>
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Changes</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="width:150px">2024-12-16</td>
+						<td>First release</td>
+					</tr>
+				</tbody>
+			</table>
+		</details>
+	</section>
 </BaseLayout>
 
 <script src='../scripts/index.js'></script>

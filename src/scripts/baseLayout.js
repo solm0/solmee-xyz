@@ -19,7 +19,7 @@ for (var i = 0; i < links.length; i++) {
         links[i].classList.add("external-link");
         
         const icon = document.createElement('span');
-        icon.textContent = ' ↗';
+        icon.textContent = '↗';
         links[i].appendChild(icon);
 
         links[i].addEventListener('click', function(event) {

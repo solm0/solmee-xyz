@@ -623,7 +623,7 @@ input[type="text"]:focus {
     position: relative;
     background-color: var(--gray-color-1);
     padding: 3px 20px;
-    margin-top: 1rem;
+    margin: 1rem 1rem 1rem 0;
     align-self: flex-end;
 }
 
@@ -1007,6 +1007,8 @@ p.graph-caption {
     visibility: visible;
 }
 
+/* pagination */
+
 .pagination {
     margin: 2rem 0;
     display: flex;
@@ -1028,6 +1030,57 @@ p.graph-caption {
 
 .pagination-page.active {
     color: var(--text-color);
+}
+
+/* getting started */
+.getting-started-section {
+    position: relative;
+    flex-direction: row;
+    width: calc(100vw - var(--fluid-86-380));
+    display: flex;
+    justify-content: space-between;
+}
+
+details {
+    width: 49%;
+    border: 1px solid var(--background-color);
+}
+
+details * {
+    user-select: none;
+}
+
+details input[type="text"] {
+    font-size: var(--step-1);
+    position: relative;
+    margin: 0 1rem;
+    width: auto;
+}
+
+details table {
+    position: relative;
+    width: 90%;
+    text-align: left;
+}
+
+details>*:not(summary) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+details[open] {
+    border: 1px solid var(--gray-color-1);
+    margin-bottom: 1rem;
+}
+
+summary {
+    transition: 0.2s ease-in-out;
+    background-color: var(--gray-color-1);
+    margin-bottom: 1rem;
+}
+summary {
+    list-style-type: '→ ';
+    padding-left: .5rem;
 }
 
 @media screen and (min-width: 750px) and (max-width: 1260px) {
@@ -1162,5 +1215,13 @@ p.graph-caption {
 
     .blog-post-title {
         padding: 10px 0;
+    }
+
+    .getting-started-section {
+        flex-direction: column;
+    }
+    
+    details {
+        width: calc(100vw - var(--grid-gutter) * 2);
     }
 }
