@@ -15,6 +15,10 @@ let mouseOutTimeout;
 var links = document.links;
 
 for (var i = 0; i < links.length; i++) {
+    if (links[i].classList.contains('mailto')) {
+        continue;
+    }
+
     if (links[i].hostname !== window.location.hostname) {
         links[i].classList.add("external-link");
         
@@ -58,7 +62,7 @@ for (var i = 0; i < links.length; i++) {
 }
 
 /* link popup */
-document.querySelectorAll('a:not(.nav-links a):not(.tag-button a):not(.blog-card):not(.blog-post a):not(.sequenceNav-container a):not(.sequenceNav-button-container a):not(footer a):not(.external-link):not(.pagination-page)').forEach((link) => {
+document.querySelectorAll('a:not(.nav-links a):not(.tag-button a):not(.blog-card):not(.blog-post a):not(.sequenceNav-container a):not(.sequenceNav-button-container a):not(footer a):not(.external-link):not(.pagination-page):not(.mailto)').forEach((link) => {
     let previewIframe;
     let hoverTimeout;
     let hideTimeout;

@@ -1083,6 +1083,11 @@ summary {
     padding-left: .5rem;
 }
 
+.mailto:hover {
+    color: var(--text-color);
+    background-color: var(--gray-color-1);
+}
+
 @media screen and (min-width: 750px) and (max-width: 1260px) {
     .local-graph-container,
     .toc,
