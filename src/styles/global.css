@@ -1136,4 +1136,8 @@ p.graph-caption {
     p.graph-caption {
         display: none;
     }
+
+    .blog-post-title {
+        padding: 10px 0;
+    }
 }
