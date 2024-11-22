@@ -224,9 +224,9 @@ code:not(pre code) {
     background-color: var(--gray-color-1);
     font-size: var(--step--2);
     border-radius: 3px;
-    padding: 6px 6px 3px 6px;
+    padding: 4px 6px 3px 6px;
     position: relative;
-    bottom: 2px;
+    margin: 0 2px;
 }
 
 pre:has(code) {
