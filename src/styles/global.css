@@ -1077,10 +1077,11 @@ summary {
     transition: 0.2s ease-in-out;
     background-color: var(--gray-color-1);
     margin-bottom: 1rem;
-}
-summary {
     list-style-type: '→ ';
     padding-left: .5rem;
+}
+details[open]>summary {
+    list-style-type: '← ';
 }
 
 .mailto:hover {
