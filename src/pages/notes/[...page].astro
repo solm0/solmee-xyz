@@ -2,6 +2,9 @@
 import { loadNotes } from '../../scripts/loadNotes'
 import BaseLayout from "../../layouts/BaseLayout.astro"
 import NotesPost from "../../components/NotesPost.astro"
+import Pagination from "../../components/Pagination.astro"
+
+const pageTitle = 'Recent Notes'
 
 export const prerender = true;
 
@@ -9,8 +12,12 @@ export async function getStaticPaths() {
   const postsPerPage = 10; // Number of posts per page
   const allPosts = loadNotes();
 
+  const filteredPosts = allPosts
+    .filter(post => post.type === 'notes')
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
   // Calculate total pages
-  const totalPages = Math.ceil(allPosts.length / postsPerPage);
+  const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
 
   // Generate paths for each page
   return Array.from({ length: totalPages }, (_, i) => ({
@@ -21,7 +28,6 @@ export async function getStaticPaths() {
 const postsPerPage = 10; // Number of posts per page
 const currentPage = Astro.params.page || 1; // Get the current page number from the URL
 
-const pageTitle = 'Recent Notes'
 const allPosts = loadNotes();
 
 const filteredPosts = allPosts
@@ -47,27 +53,9 @@ const paginatedNotes = filteredPosts.slice(startIndex, endIndex);
             />
         )}
     </div>
-
-    <nav class="pagination">
-        {currentPage > 1 && (
-          <a href={`/notes/${currentPage - 1}`} class="pagination-prev">
-            Previous
-          </a>
-        )}
-    
-        {Array.from({ length: totalPages }, (_, i) => (
-          <a
-            href={`/notes/${i + 1}`}
-            class={`pagination-page ${i + 1 === currentPage ? "active" : ""}`}
-          >
-            {i + 1}
-          </a>
-        ))}
-    
-        {currentPage < totalPages && (
-          <a href={`/notes/${currentPage + 1}`} class="pagination-next">
-            Next
-          </a>
-        )}
-    </nav>
+    <Pagination
+      type="notes"
+      currentPage={currentPage}
+      totalPages={totalPages}
+    />
 </BaseLayout>

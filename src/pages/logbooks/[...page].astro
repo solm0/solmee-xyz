@@ -1,9 +1,35 @@
 ---
-import { loadNotes } from '../scripts/loadNotes'
-import BaseLayout from "../layouts/BaseLayout.astro"
-import LogbooksPost from "../components/LogbooksPost.astro";
+import { loadNotes } from '../../scripts/loadNotes'
+import BaseLayout from "../../layouts/BaseLayout.astro"
+import LogbooksPost from "../../components/LogbooksPost.astro";
+import Pagination from "../../components/Pagination.astro"
 
 const pageTitle = 'Recent Logbooks'
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const postsPerPage = 10; // Number of posts per page
+  const allPosts = loadNotes();
+
+  const filteredPosts = allPosts
+    .filter(post => post.type === 'logbooks' && post.overview === true)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  const Finished = filteredPosts.filter(post => post.finished === true);
+
+  // Calculate total pages
+  const totalPages = Math.ceil(Finished.length / postsPerPage);
+
+  // Generate paths for each page
+  return Array.from({ length: totalPages }, (_, i) => ({
+    params: { page: (i + 1).toString() }, // Page numbers as strings
+  }));
+}
+
+const postsPerPage = 10; // Number of posts per page
+const currentPage = Astro.params.page || 1; // Get the current page number from the URL
+
 const allPosts = loadNotes();
 
 const filteredPosts = allPosts
@@ -12,6 +38,13 @@ const filteredPosts = allPosts
 
 const inProgress = filteredPosts.filter(post => post.finished === false);
 const Finished = filteredPosts.filter(post => post.finished === true);
+
+const totalPages = Math.ceil(Finished.length / postsPerPage);
+
+// Slice posts for the current page
+const startIndex = (currentPage - 1) * postsPerPage;
+const endIndex = startIndex + postsPerPage;
+const paginatedNotes = Finished.slice(startIndex, endIndex);
 ---
 
 <BaseLayout lang="ko" pageTitle={ pageTitle }>
@@ -43,4 +76,9 @@ const Finished = filteredPosts.filter(post => post.finished === true);
             )}
         </figure>
     </div>
+    <Pagination
+      type="logbooks"
+      currentPage={currentPage}
+      totalPages={totalPages}
+    />
 </BaseLayout>
