@@ -1007,6 +1007,29 @@ p.graph-caption {
     visibility: visible;
 }
 
+.pagination {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pagination-page {
+    display: inline-block;
+    font-size: var(--step--2);
+    color: var(--gray-color-3);
+    height: 100%;
+    border-radius: 5px;
+}
+
+.pagination-page:hover {
+    background-color: var(--gray-color-1);
+}
+
+.pagination-page.active {
+    color: var(--text-color);
+}
+
 @media screen and (min-width: 750px) and (max-width: 1260px) {
     .local-graph-container,
     .toc,
