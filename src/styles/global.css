@@ -112,9 +112,7 @@ body {
 .grid-item.note-content {
     max-width: 42rem;
 }
-.footer-container {
-    grid-column: span 10;
-}
+
 ol, ul {
     padding-left: 1.3rem;
     margin: 0;
@@ -1089,6 +1087,23 @@ details[open]>summary {
     background-color: var(--gray-color-1);
 }
 
+.u-container:has(.works-container) {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.works-container p:nth-child(1) img,
+.note-content>h1,
+.works-container p {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.note-content>h1 {
+    scroll-margin: 200px
+}
+
 @media screen and (min-width: 750px) and (max-width: 1260px) {
     .local-graph-container,
     .toc,
@@ -1109,10 +1124,6 @@ details[open]>summary {
         position: absolute;
         top: var(--grid-gutter);
         left: calc(100vw - var(--grid-gutter) * 3);
-    }
-
-    .footer-container {
-        grid-column: span 7;
     }
 }
 
@@ -1177,10 +1188,6 @@ details[open]>summary {
         display: none;
     }
 
-    .footer-container {
-        grid-column: span 7;
-    }
-
     .blog-post-container:has(.works) {
         position: relative;
         width: 100%;
@@ -1229,5 +1236,20 @@ details[open]>summary {
     
     details {
         width: calc(100vw - var(--grid-gutter) * 2);
+    }
+
+    .u-container:has(.works-container) {
+        scroll-snap-type: none;
+        height: auto;
+    }
+    
+    .works-container p:nth-child(1) img,
+    .note-content>h1 {
+        scroll-snap-align: none;
+        scroll-snap-stop: normal;
+    }
+    
+    .note-content>h1 {
+        scroll-margin: 0;
     }
 }

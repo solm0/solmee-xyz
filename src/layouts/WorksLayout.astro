@@ -21,13 +21,25 @@ const {frontmatter} = Astro.props;
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        // Check if this page uses WorksLayout
-        const isWorksLayout = document.querySelector('[data-layout="works"]');
-        if (isWorksLayout) {
-            const gridItemRight = document.querySelector('div#gridItemRight aside');
-            if (gridItemRight) {
-                gridItemRight.style.position = 'relative';
+        // Function to update the position based on the viewport width
+        const updatePosition = () => {
+            const isWorksLayout = document.querySelector('[data-layout="works"]');
+            if (isWorksLayout) {
+                const gridItemRight = document.querySelector('div#gridItemRight aside');
+                if (gridItemRight) {
+                    if (window.innerWidth < 1260) {
+                        gridItemRight.style.position = 'fixed';
+                    } else {
+                        gridItemRight.style.position = 'relative';
+                    }
+                }
             }
-        }
+        };
+
+        // Initial check
+        updatePosition();
+
+        // Add an event listener to handle window resize
+        window.addEventListener('resize', updatePosition);
     });
 </script>

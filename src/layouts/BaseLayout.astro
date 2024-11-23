@@ -31,17 +31,10 @@ const { pageTitle } = Astro.props
                 <main role="main">
                     <slot lang="ko" components = {{ img: MarkdownImage }} />
                 </main>
+                <Footer />
             </div>
             <div class="grid-item right" id="gridItemRight" style="grid-column: span 3;">
                 <SideRight />
-            </div>
-        </div>
-    </div>
-    <div class="u-container">
-        <div class="u-grid">
-            <div class="grid-item" style="grid-column: span 2;"></div>
-            <div class="grid-item footer-container">
-                <Footer />
             </div>
         </div>
     </div>
