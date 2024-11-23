@@ -425,8 +425,11 @@ p.frontmatter,
 }
 
 p.description {
-    margin-top: 1rem;
-    line-height: 1.5rem;
+    margin-top: 1em;
+    font-size: var(--step--2);
+    font-family: var(--font-family-sans-n);
+    line-height: 1.8em;
+    width: 42em;
 }
 
 main>p,
@@ -442,7 +445,7 @@ main>ul {
 }
 
 .blog-post-container figure {
-    margin: 0;
+    margin: 0 0 5rem 0;
 }
 
 .blog-post {

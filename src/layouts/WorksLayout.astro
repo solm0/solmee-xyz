@@ -8,10 +8,10 @@ const {frontmatter} = Astro.props;
     <div data-layout="works" class="frontmatter-container">
         <div class="tag-container">
             {frontmatter.tags && frontmatter.tags.map((tag) => 
-                 <div className={`tag ${tag === 'error' ? 'error' : ''}`}>{tag}</div>
+                 <div class="tag">{tag}</div>
             )}
         </div>
-        <p class="frontmatter">year: {frontmatter.date}</p>
+        <p class="frontmatter">{frontmatter.date}</p>
         <p class="description">{frontmatter.description}</p>
     </div>
     <div class="works-container">
