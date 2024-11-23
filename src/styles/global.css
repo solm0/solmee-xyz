@@ -65,10 +65,11 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--grid-gutter);
+    row-gap: 0;
 }
-
 .grid-item {
     width: 100%;
+    height: 100%;
 }
 
 .grid-item.left {
@@ -105,12 +106,19 @@ button:has(.light):not(.search-button):hover, button:has(.dark):not(.search-butt
 * {
     box-sizing: border-box;
 }
-body {
+
+html, body {
     margin: 0;
     padding: 0;
-    width: 100vw;
     overflow-x: hidden;
 }
+
+body {
+    min-height: 100vh;
+    height: 100svh;
+    width: 100%;
+}
+
 .grid-item.note-content {
     max-width: 42rem;
 }
