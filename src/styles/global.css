@@ -108,6 +108,8 @@ button:has(.light):not(.search-button):hover, button:has(.dark):not(.search-butt
 body {
     margin: 0;
     padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
 }
 .grid-item.note-content {
     max-width: 42rem;
@@ -429,7 +431,7 @@ p.description {
     font-size: var(--step--2);
     font-family: var(--font-family-sans-n);
     line-height: 1.8em;
-    width: 42em;
+    max-width: 42em;
 }
 
 main>p,
@@ -1131,10 +1133,6 @@ details[open]>summary {
 }
 
 @media  screen and (max-width: 750px) {
-    body {
-        overflow-x: hidden;
-    }
-    
     .local-graph-container,
     .toc,
     #localGraphButton {
