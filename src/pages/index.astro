@@ -8,23 +8,23 @@ const pageTitle = 'Getting Started'
 <BaseLayout lang="ko" pageTitle={pageTitle}>
 	<section class="getting-started-section">
 		<details>
-			<summary>About Me</summary>
+			<summary id="aboutMe">About Me</summary>
 			<p>
-				정솔미는 이 웹의 <a href="https://justinjackson.ca/webmaster/">웹마스터</a>이자 대한민국 서울 기반의 그래픽 디자이너이다.
+				정솔미는 이 웹사이트의 <a href="https://justinjackson.ca/webmaster/">웹마스터</a>이자 대한민국 서울 기반의 그래픽 디자이너이다.
 			</p>
 			<p>
 				어린 시절, <a href="https://en.wikipedia.org/wiki/Microsoft_PowerPoint">파워포인트</a> 꾸미기로 <a href="https://edu.gcfglobal.org/en/powerpoint2007/wordart-and-shapes/1/">타이포그래피</a>를 연마하고 <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%8C%80%EB%AC%B8">나무위키</a>를 읽으며 <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4/%EB%B9%84%ED%8C%90%20%EB%B0%8F%20%EB%AC%B8%EC%A0%9C%EC%A0%90/%EB%AC%B8%EC%84%9C%20%EC%84%9C%EC%88%A0%20%EA%B4%80%EB%A0%A8/%EA%B0%80%EB%8F%85%EC%84%B1#s-9">하이퍼링크</a>의 문법을 익혔다.
 			</p>
 			<p>
-				공식을 잘 마련해 놓으면 엄청난 생산성을 발휘한다는 점에서 서체와 웹을 좋아한다. 이제 이 웹을 통해 그 생산성을 직접 실험해 보고자 한다.
+				공식을 잘 마련해 놓으면 엄청난 생산성을 발휘한다는 점에서 서체와 웹을 좋아한다. 이 웹사이트를 통해 그 생산성을 직접 실험해 보고자 한다.
 			</p>
 		</details>
 	</section>
 	<section class="getting-started-section">
 		<details>
 			<summary>About Site</summary>
-			<p>이 웹을 뭐라고 정의해야 할지 결정하지 못했다. 그냥 개인웹사이트라고 하자.</p>
-			<p>이 웹은 다음 개념들에 뿌리를 둔다.</p>
+			<p>이 웹사이트는 <a href="#aboutMe">나</a>의 기록하는 공간이다.</p>
+			<p>이 웹사이트는 다음 개념들에 뿌리를 둔다.</p>
 			<ul>
 				<li><a href="https://en.wikipedia.org/wiki/Zettelkasten">제텔카스텐</a></li>
 				<li><a href="https://maggieappleton.com/garden-history">디지털 가든</a></li>
@@ -33,7 +33,7 @@ const pageTitle = 'Getting Started'
 			<p><a>기획에 대한 자세한 설명은 여기로.</a></p>
 			<p><a>디자인에 대한 자세한 설명은 여기로.</a></p>
 			<p><a>개발에 대한 자세한 설명은 여기로.</a></p>
-			<p>이 웹은 영원히 미완성이다.</p>
+			<p>이 웹사이트는 영원히 미완성이다.</p>
 		</details>
 		<details>
 			<summary>Site Instruction</summary>
@@ -129,11 +129,17 @@ const pageTitle = 'Getting Started'
 <script>
 	document.addEventListener("DOMContentLoaded", () => {
     const rssLink = document.querySelector('.rss-link');
+	const mailtoLink = document.querySelector('.mailto');
 
     if (rssLink) {
         rssLink.addEventListener('click', (event) => {
             event.preventDefault(); // Block the click
         });
     }
+	if (mailtoLink) {
+		mailtoLink.addEventListener('click', (event) => {
+			event.preventDefault(); // Block the click
+		});
+	}
 });
 </script>

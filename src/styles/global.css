@@ -1016,7 +1016,7 @@ p.graph-caption {
     visibility: visible;
 }
 
-.external-link, .rss-link {
+.external-link, .rss-link, .mailto {
     cursor: not-allowed;
 }
 
