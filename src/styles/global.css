@@ -1016,6 +1016,10 @@ p.graph-caption {
     visibility: visible;
 }
 
+.external-link, .rss-link {
+    cursor: not-allowed;
+}
+
 /* pagination */
 
 .pagination {

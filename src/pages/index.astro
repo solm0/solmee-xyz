@@ -98,7 +98,7 @@ const pageTitle = 'Getting Started'
 			<Newsletter client:load />
 			<ul>
 				<li>
-					<a class="internal" href="/rss.xml" title="RSS Feed" target="_blank" rel="noopener noreferrer">RSS</a>
+					<a class="internal rss-link" href="/rss.xml" title="RSS Feed" target="_blank" rel="noopener noreferrer">RSS</a>
 				</li>
 			</ul>
 		</details>
@@ -126,3 +126,14 @@ const pageTitle = 'Getting Started'
 </BaseLayout>
 
 <script src='../scripts/index.js'></script>
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+    const rssLink = document.querySelector('.rss-link');
+
+    if (rssLink) {
+        rssLink.addEventListener('click', (event) => {
+            event.preventDefault(); // Block the click
+        });
+    }
+});
+</script>

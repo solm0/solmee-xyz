@@ -28,7 +28,7 @@ for (var i = 0; i < links.length; i++) {
 
         links[i].addEventListener('click', function(event) {
             event.preventDefault();
-            window.open(this.href, 'popupWindow', 'width=800,height=600,scrollbars=yes,resizable=yes');
+            // window.open(this.href, 'popupWindow', 'width=800,height=600,scrollbars=yes,resizable=yes');
         });
 
         const span = links[i].appendChild(document.createElement('span'));
@@ -62,7 +62,7 @@ for (var i = 0; i < links.length; i++) {
 }
 
 /* link popup */
-document.querySelectorAll('a:not(.nav-links a):not(.tag-button a):not(.blog-card):not(.blog-post a):not(.sequenceNav-container a):not(.sequenceNav-button-container a):not(.external-link):not(.pagination-page):not(.mailto)').forEach((link) => {
+document.querySelectorAll('a:not(.nav-links a):not(.tag-button a):not(.blog-post a):not(.sequenceNav-container a):not(.sequenceNav-button-container a):not(.external-link):not(.pagination-page):not(.mailto):not(.rss-link)').forEach((link) => {
     let previewIframe;
     let hoverTimeout;
     let hideTimeout;
