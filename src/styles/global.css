@@ -1121,6 +1121,7 @@ p.graph-caption {
 
 /* guestbook */
 .guestbook {
+    display: block;
     font-size: var(--step--1);
     font-family: var(--font-family-mono);
     padding: 1rem 2rem;
@@ -1383,7 +1384,7 @@ p.graph-caption {
         flex-direction: column;
     }
     
-    details {
+    .getting-started-section details {
         width: calc(100vw - var(--grid-gutter) * 2);
     }
 
@@ -1400,5 +1401,9 @@ p.graph-caption {
     
     .note-content>h1 {
         scroll-margin: 0;
+    }
+
+    .guestbook {
+        display: none;
     }
 }
