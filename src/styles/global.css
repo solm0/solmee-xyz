@@ -1135,6 +1135,7 @@ p.graph-caption {
     background-color:rgb(187, 187, 187);
     color: black;
     transition: 0.2s ease-in-out;
+    box-shadow: 0 5px 10px rgba(187, 187, 187, 0.715);
 }
 
 .guestbook[open] {
@@ -1219,7 +1220,7 @@ p.graph-caption {
     background-color: black;
     color: white;
     font-family: var(--font-family-mono);
-    width: 60px;
+    width: 80px;
     padding: 0;
     text-align: center;
     border-radius: 40px;
