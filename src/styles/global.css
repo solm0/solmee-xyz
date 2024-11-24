@@ -1053,46 +1053,46 @@ p.graph-caption {
     justify-content: space-between;
 }
 
-details {
+.getting-started-section details {
     width: 49%;
     border: 1px solid var(--background-color);
 }
 
-details * {
+.getting-started-section details * {
     user-select: none;
 }
 
-details input[type="text"] {
+.getting-started-section details input[type="text"] {
     font-size: var(--step-1);
     position: relative;
     margin: 0 1rem;
     width: auto;
 }
 
-details table {
+.getting-started-section details table {
     position: relative;
     width: 90%;
     text-align: left;
 }
 
-details>*:not(summary) {
+.getting-started-section details>*:not(summary) {
     margin-left: 1rem;
     margin-right: 1rem;
 }
 
-details[open] {
+.getting-started-section details[open] {
     border: 1px solid var(--gray-color-1);
     margin-bottom: 1rem;
 }
 
-summary {
+.getting-started-section summary {
     transition: 0.2s ease-in-out;
     background-color: var(--gray-color-1);
     margin-bottom: 1rem;
     list-style-type: '→ ';
     padding-left: .5rem;
 }
-details[open]>summary {
+.getting-started-section details[open]>summary {
     list-style-type: '← ';
 }
 
@@ -1101,6 +1101,7 @@ details[open]>summary {
     background-color: var(--gray-color-1);
 }
 
+/* works snap */
 .u-container:has(.works-container) {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
@@ -1116,6 +1117,144 @@ details[open]>summary {
 
 .note-content>h1 {
     scroll-margin: 200px
+}
+
+/* guestbook */
+.guestbook {
+    font-size: var(--step--1);
+    font-family: var(--font-family-mono);
+    padding: 1rem 2rem;
+    position: absolute;
+    bottom: var(--grid-gutter);
+    right: var(--grid-gutter);
+    width: 400px;
+    height: 100px;
+    border-radius: 50px;
+    background-color:rgb(187, 187, 187);
+    color: black;
+    transition: 0.2s ease-in-out;
+}
+
+.guestbook[open] {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.guestbook summary {
+    padding: 18px;
+}
+
+.guestbook summary:focus {
+    outline: none;
+}
+
+.guestbook textarea {
+    width: 80%;
+}
+
+.guestbook:not([open]):hover {
+    animation: rotate 0.3s linear;
+    animation-iteration-count: 2;
+}
+
+@keyframes rotate {
+    0%, 50%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+}
+
+.guestbook:not([open]) summary {
+    width: 100%;
+    height: 100%;
+}
+
+.guestbook:not([open]) summary:focus {
+    outline: none;
+}
+
+.guestbook textarea[type="text"] {
+    background-color: transparent;
+    width: 100%;
+    height: 3em;
+    word-break: keep-all;
+    word-wrap: break-word;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 0.3em;
+    font-size: var(--step-1);
+    color: black;
+    font-family: var(--font-family-mono);
+    resize: none;
+}
+.guestbook textarea[type="text"]::placeholder {
+    color: black;
+    opacity: 0.5;
+}
+
+.guestbook textarea[type="text"]:focus {
+    outline: none;
+}
+
+.guestbook-inside {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.guestbook .send-button {
+    background-color: black;
+    color: white;
+    font-family: var(--font-family-mono);
+    width: 60px;
+    padding: 0;
+    text-align: center;
+    border-radius: 40px;
+    margin: 0;
+    position: relative;
+    align-self: flex-end;
+}
+.guestbook .send-button:hover {
+    animation: rotate 0.3s linear;
+    animation-iteration-count: 2;
+}
+
+.guestbook-messages {
+    width: 100%;
+    height: 225px;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: scroll;
+    border-radius: 10px;
+}
+
+.guestbook-messages>div {
+    width: 100%;
+    word-wrap: break-word;
+    background-color: rgba(255, 255, 255, 0.38);
+    border-radius: 10px;
+    margin-top: 5px;
+    padding: 0 1em;
+}
+
+.guestbook .timestamp {
+    font-size: var(--step--2);
+    position: relative;
+    margin-right: 1em;
+    width: 150px;
+    left: 2em;
+}
+
+.guestbook .message {
+    position: relative;
+    word-break: break-all;
 }
 
 @media screen and (min-width: 750px) and (max-width: 1260px) {
