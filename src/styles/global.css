@@ -1151,6 +1151,10 @@ p.graph-caption {
     outline: none;
 }
 
+.guestbook strong {
+    margin-left: 10px;
+}
+
 .guestbook textarea {
     width: 80%;
 }
@@ -1187,7 +1191,7 @@ p.graph-caption {
     height: 3em;
     word-break: keep-all;
     word-wrap: break-word;
-    border-radius: 5px;
+    border-radius: 15px;
     border: 1px solid black;
     padding: 0.3em;
     font-size: var(--step-1);
@@ -1233,14 +1237,14 @@ p.graph-caption {
     display: flex;
     flex-direction: column-reverse;
     overflow: scroll;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .guestbook-messages>div {
     width: 100%;
     word-wrap: break-word;
     background-color: rgba(255, 255, 255, 0.38);
-    border-radius: 10px;
+    border-radius: 15px;
     margin-top: 5px;
     padding: 0 1em;
 }
@@ -1256,6 +1260,7 @@ p.graph-caption {
 .guestbook .message {
     position: relative;
     word-break: break-all;
+    min-height: 30px;
 }
 
 @media screen and (min-width: 750px) and (max-width: 1260px) {
