@@ -107,16 +107,13 @@ button:has(.light):not(.search-button):hover, button:has(.dark):not(.search-butt
     box-sizing: border-box;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
 body {
     min-height: 100vh;
     height: 100svh;
     width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 .grid-item.note-content {
@@ -1125,7 +1122,7 @@ p.graph-caption {
     font-size: var(--step--1);
     font-family: var(--font-family-mono);
     padding: 1rem 2rem;
-    position: absolute;
+    position: fixed;
     bottom: var(--grid-gutter);
     right: var(--grid-gutter);
     width: 400px;
