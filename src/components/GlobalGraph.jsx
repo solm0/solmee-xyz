@@ -10,14 +10,14 @@ const GlobalGraph = ({ filteredPostUrls }) => {
   const [filteredNodes, setFilteredNodes] = useState([]);
 
   useEffect(() => {
-    console.log("Updated filteredPostUrls:", filteredPostUrls);
+    // console.log("Updated filteredPostUrls:", filteredPostUrls);
 
     const filteredNodes = graphData.nodes.filter((node) =>
       filteredPostUrls.includes(node.id)
     );
 
     setFilteredNodes(filteredNodes);
-    console.log("Filtered nodes:", filteredNodes);
+    // console.log("Filtered nodes:", filteredNodes);
   }, [filteredPostUrls, graphData.nodes]);
 
   useEffect(() => {

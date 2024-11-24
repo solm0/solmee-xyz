@@ -35,7 +35,7 @@ const TagButtonContainer = () => {
       });
       
       setFilteredPostUrls(filteredPostUrls);
-      console.log(filteredPostUrls)
+      // console.log(filteredPostUrls);
     } else {
       setFilteredPostUrls(allPosts.map(post => post.url.split('/').pop()));
     }

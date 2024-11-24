@@ -26,7 +26,7 @@ export default function TextInput() {
         // Sign in anonymously, then submit email
         try {
             await signInAnonymously(auth); // Authenticate anonymously
-            console.log("Signed in anonymously");
+            // console.log("Signed in anonymously");
 
             const emailRef = ref(database, 'emails/' + Date.now()); // Generate a unique reference
             await set(emailRef, { content: email }); // Set email in the database

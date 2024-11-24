@@ -1,6 +1,6 @@
 import ForceGraph2D from 'react-force-graph-2d';
 import { GRAPHSTYLE } from '../scripts/graphStyle';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const Graph = ({
   width,
@@ -13,10 +13,22 @@ const Graph = ({
 }) => {
   const [hoveredNode, setHoveredNode ] = useState(null);
   const [depth1Nodes, setDepth1Nodes] = useState(new Set());
+  const graphRef = useRef();
+
+  // useEffect(() => {
+  //   console.log("Filtered nodes:", filteredNodes);
+  // }, [filteredNodes]);
 
   useEffect(() => {
-    console.log("Filtered nodes:", filteredNodes);
-  }, [filteredNodes]);
+    if (graphRef.current && targetNode) {
+      const timeout = setTimeout(() => {
+        // console.log("Centering node using timeout:", targetNode);
+        graphRef.current.centerAt(targetNode.x, targetNode.y, 1000);
+      }, 1000); // Adjust the timeout duration as needed
+  
+      return () => clearTimeout(timeout); // Cleanup timeout on unmount or re-run
+    }
+  }, [targetNode]);
 
   const handleNodeHover = (node) => {
     setHoveredNode(node);
@@ -52,9 +64,9 @@ const Graph = ({
       setHoveredNode(node || null);
   
       if (node) {
-        console.log("Hovered node ID:", node.id);
+        // console.log("Hovered node ID:", node.id);
       } else {
-        console.log("Node hover cleared");
+        // console.log("Node hover cleared");
       }
     };
     return () => {
@@ -63,11 +75,12 @@ const Graph = ({
   }, [graphData.nodes]); // Ensure graphData.nodes is accessible in the effect
 
 useEffect(() => {
-  console.log("Updated hoveredNode:", hoveredNode);
+  // console.log("Updated hoveredNode:", hoveredNode);
 }, [hoveredNode]);
 
   return (
     <ForceGraph2D
+      ref={graphRef}
       key={`${width}-${height}-${minZoom}-${maxZoom}`}
       graphData={graphData}
       width={width}

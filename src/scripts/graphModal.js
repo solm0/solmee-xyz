@@ -1,6 +1,6 @@
 /* close button */
 window.closeModalAndGoBack = function(id) {
-    console.log('close');
+    // console.log('close');
     const modal = document.getElementById(id);
     if (modal && modal instanceof HTMLDialogElement) {
         modal.close();

@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
     document.addEventListener("DOMContentLoaded", () => {
         const input = document.querySelector("input[type='text']");
-        console.log(input); // Check if the element is found
+        // console.log(input);
         input?.addEventListener("input", (e) => {
             const inputElement = e.target;
             const url = new URL(window.location.href);

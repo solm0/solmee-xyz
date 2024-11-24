@@ -43,8 +43,8 @@ for (var i = 0; i < links.length; i++) {
             const url = new URL(link.getAttribute('href'), window.location.origin);
             const nodeId = url.pathname.split('/').pop();
 
-            console.log("Hovered link URL:", url.href);
-            console.log("Extracted node ID:", nodeId);
+            // console.log("Hovered link URL:", url.href);
+            // console.log("Extracted node ID:", nodeId);
 
             if (window.setHoveredNode) {
                 window.setHoveredNode(nodeId);
@@ -79,11 +79,11 @@ document.querySelectorAll('a:not(.nav-links a):not(.tag-button a):not(.blog-card
             };
 
             if ((window.innerHeight - e.pageY) < 400) {
-                {console.log(window.innerHeight, e.pageY, window.innerHeight - e.pageY, 'up')}
+                { /* console.log(window.innerHeight, e.pageY, window.innerHeight - e.pageY, 'up') */}
                 previewIframe.style.bottom = `${window.innerHeight - e.pageY + 15}px`;
                 previewIframe.style.top = '';
             } else {
-                {console.log(window.innerHeight, e.pageY, window.innerHeight - e.pageY, 'down')}
+                { /* console.log(window.innerHeight, e.pageY, window.innerHeight - e.pageY, 'down') */}
                 previewIframe.style.top = `${e.pageY + 10}px`;
                 previewIframe.style.bottom = ''; // Reset bottom
             }

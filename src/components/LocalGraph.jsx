@@ -13,7 +13,7 @@ const LocalGraph = () => {
 
   useEffect(() => {
     const handleModalClose = () => {
-      console.log("close-global-graph event detected, forcing Graph re-render");
+      // console.log("close-global-graph event detected, forcing Graph re-render");
       setKey(Math.random());
     };
     
@@ -32,7 +32,7 @@ const LocalGraph = () => {
 
     setFileName(newFileName);
     setFilteredNodes(graphData.nodes);
-    console.log("FileName Set:", newFileName);
+    // console.log("FileName Set:", newFileName);
   }, []);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const LocalGraph = () => {
       const target = graphData.nodes.find(node => node.id === fileName);
       setTargetNode(target);
       setKey(Math.random()); // Trigger re-render on targetNode set
-      console.log("Target Node Set:", target);
+      // console.log("Target Node Set:", target);
       
       if (target) {
         const visibleNodes = new Set([target]);
