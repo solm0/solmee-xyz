@@ -735,7 +735,8 @@ a,
 }
 
 a.external-link:hover,
-a.internal:hover {
+a.internal:hover,
+.cv-link:hover {
     background-color: var(--gray-color-1);
     color: var(--text-color);
 }
@@ -1016,7 +1017,7 @@ p.graph-caption {
     visibility: visible;
 }
 
-.external-link, .rss-link, .mailto {
+.external-link, .rss-link, .mailto, .cv-link {
     cursor: not-allowed;
 }
 

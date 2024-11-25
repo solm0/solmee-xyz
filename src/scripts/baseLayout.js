@@ -62,7 +62,7 @@ for (var i = 0; i < links.length; i++) {
 }
 
 /* link popup */
-document.querySelectorAll('a:not(.nav-links a):not(.tag-button a):not(.blog-post a):not(.sequenceNav-container a):not(.sequenceNav-button-container a):not(.external-link):not(.pagination-page):not(.mailto):not(.rss-link)').forEach((link) => {
+document.querySelectorAll('a:not(.nav-links a):not(.tag-button a):not(.blog-post a):not(.sequenceNav-container a):not(.sequenceNav-button-container a):not(.external-link):not(.pagination-page):not(.mailto):not(.rss-link):not(.cv-link)').forEach((link) => {
     let previewIframe;
     let hoverTimeout;
     let hideTimeout;
