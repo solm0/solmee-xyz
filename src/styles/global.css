@@ -1317,6 +1317,16 @@ p.graph-caption {
     min-height: 30px;
 }
 
+/* go to top */
+#goToTop {
+    position: fixed;
+    right: var(--grid-gutter);
+    bottom: var(--grid-gutter);
+    width: 25px;
+    height: 25px;
+    display: none;
+}
+
 @media screen and (min-width: 750px) and (max-width: 1260px) {
     .local-graph-container,
     .toc,
@@ -1464,6 +1474,10 @@ p.graph-caption {
     }
 
     .small-screen-toc {
+        display: block;
+    }
+
+    #goToTop {
         display: block;
     }
 }

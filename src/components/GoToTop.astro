@@ -1,0 +1,31 @@
+---
+---
+
+<button id="goToTop" class="go-to-top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+        <rect class="light" x="3" y="3.06" width="10.71" height="1"/>
+        <polygon class="light" points="13.85 10.15 8.5 4.79 3.15 10.15 3.85 10.85 7.85 6.85 7.85 14 8.85 14 8.85 6.56 13.15 10.85 13.85 10.15"/>
+        <rect class="dark" x="3" y="3.06" width="10.71" height="1"/>
+        <polygon class="dark" points="13.85 10.15 8.5 4.79 3.15 10.15 3.85 10.85 7.85 6.85 7.85 14 8.85 14 8.85 6.56 13.15 10.85 13.85 10.15"/>
+      </svg>
+</button>
+
+<script>
+    // Get the button
+    const goToTopButton = document.getElementById('goToTop');
+
+    window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+        goToTopButton.classList.add('show');
+    } else {
+        goToTopButton.classList.remove('show');
+    }
+    });
+
+    goToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+    });
+</script>
