@@ -33,30 +33,32 @@ const note5 = findNote('comixtura code');
 	<section class="getting-started-section">
 		<fieldset class="featured">
 			<legend><h2>Featured Notes</h2></legend>
-			<NotesPost
-				url={note4.url}
-				title={note4.title}
-				tags={note4.tags}
-				date={note4.date.toString().slice(0,10)}
-				thumbnailUrl={note4.thumbnail}
-				alt={note4.alt || "Default alt text"}
-			/>
-			<LogbooksPost
-				url={note3.url}
-				title={note3.title}
-				tags={note3.tags}
-				date={note3.date.toString().slice(0,10)}
-				thumbnailUrl={note3.thumbnail}
-				alt={note3.alt || "Default alt text"}
-			/>
-			<LogbooksPost
-				url={note5.url}
-				title={note5.title}
-				tags={note5.tags}
-				date={note5.date.toString().slice(0,10)}
-				thumbnailUrl={note5.thumbnail}
-				alt={note5.alt || "Default alt text"}
-			/>
+			<div class="blog-post-container">
+				<NotesPost
+					url={note4.url}
+					title={note4.title}
+					tags={note4.tags}
+					date={note4.date.toString().slice(0,10)}
+					thumbnailUrl={note4.thumbnail}
+					alt={note4.alt || "Default alt text"}
+				/>
+				<LogbooksPost
+					url={note3.url}
+					title={note3.title}
+					tags={note3.tags}
+					date={note3.date.toString().slice(0,10)}
+					thumbnailUrl={note3.thumbnail}
+					alt={note3.alt || "Default alt text"}
+				/>
+				<LogbooksPost
+					url={note5.url}
+					title={note5.title}
+					tags={note5.tags}
+					date={note5.date.toString().slice(0,10)}
+					thumbnailUrl={note5.thumbnail}
+					alt={note5.alt || "Default alt text"}
+				/>
+			</div>
 		</fieldset>
 	</section>
 	<section class="getting-started-section">
