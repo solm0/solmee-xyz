@@ -1150,6 +1150,10 @@ p.graph-caption {
     margin-bottom: 1em;
 }
 
+.small-screen-toc {
+    display: none;
+}
+
 /* works snap */
 .u-container:has(.works-container) {
     scroll-snap-type: y mandatory;
@@ -1453,5 +1457,13 @@ p.graph-caption {
 
     .guestbook {
         display: none;
+    }
+
+    .featured {
+        width: 100%;
+    }
+
+    .small-screen-toc {
+        display: block;
     }
 }
