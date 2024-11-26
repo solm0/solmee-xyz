@@ -5,7 +5,7 @@ const { url, title, tags, date } = Astro.props;
 <hr class="blog-post-hr">
 <div class="blog-post">
     <a href={url} class="blog-post-title-frontmatter">
-        <p class="blog-post-title">{title}</p>
+        <p class="blog-post-title notes">{title}</p>
         <div class="blog-post-frontmatter">
             {tags &&
                 <div class="tag-container">

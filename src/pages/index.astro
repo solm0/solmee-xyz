@@ -2,7 +2,10 @@
 import { loadNotes } from '../scripts/loadNotes.js'
 import BaseLayout from "../layouts/BaseLayout.astro"
 import Newsletter from "../components/Newsletter"
+
+import NotesPost from "../components/NotesPost.astro"
 import LogbooksPost from "../components/LogbooksPost.astro"
+import WorksPost from "../components/WorksPost.astro"
 
 const pageTitle = 'solmee.xyz: Home'
 
@@ -12,14 +15,46 @@ const findNote = (url) => allPosts.find((post) => post.title === url);
 const note1 = findNote('Obsidian Digital Garden');
 const note2 = findNote('Buy a domain');
 const note3 = findNote('Obsidian theme Agate');
+
+const note4 = findNote('안녕하세요');
+const note5 = findNote('comixtura code');
 ---
 
 <BaseLayout lang="ko" pageTitle={pageTitle}>
 	<section class="getting-started-section">
+		<fieldset class="featured">
+			<legend><h2>Featured Notes</h2></legend>
+			<NotesPost
+				url={note4.url}
+				title={note4.title}
+				tags={note4.tags}
+				date={note4.date.toString().slice(0,10)}
+				thumbnailUrl={note4.thumbnail}
+				alt={note4.alt || "Default alt text"}
+			/>
+			<LogbooksPost
+				url={note3.url}
+				title={note3.title}
+				tags={note3.tags}
+				date={note3.date.toString().slice(0,10)}
+				thumbnailUrl={note3.thumbnail}
+				alt={note3.alt || "Default alt text"}
+			/>
+			<LogbooksPost
+				url={note5.url}
+				title={note5.title}
+				tags={note5.tags}
+				date={note5.date.toString().slice(0,10)}
+				thumbnailUrl={note5.thumbnail}
+				alt={note5.alt || "Default alt text"}
+			/>
+		</fieldset>
+	</section>
+	<section class="getting-started-section">
 		<hr />
 		<h2>About Site</h2>
 		<section>
-			<p>이 웹사이트는 <a class="me internal" href="#heading-4">나</a>의 개인 웹사이트이다.</p>
+			<p>이 웹사이트는 <a class="me internal" href="#heading-5">나</a>의 개인 웹사이트이다.</p>
 			<p>이 웹사이트는 다음에 뿌리를 두고 디자인되었다.</p>
 			<ul>
 				<li><a href="https://en.wikipedia.org/wiki/Zettelkasten">Zettelkasten</a> 노트들은 위계 없이 서로 연결된 구조를 갖는다.</li>
@@ -31,9 +66,9 @@ const note3 = findNote('Obsidian theme Agate');
 			<h3>Note Types</h3>
 			<p>모든 노트는 다음 중 하나의 타입에 속한다.
 				<ul>
-					<li><code>Notes</code>: 프로젝트의 시작이 되는 생각</li>
-					<li><code>Logbooks</code>: 프로젝트의 시작부터 끝까지의 기록</li>
-					<li><code>Works</code>: 프로젝트의 결과물</li>
+					<li><code>Journal</code> 일반적인 기록</li>
+					<li><code>Logbook</code> 프로젝트 과정 기록</li>
+					<li><code>Work</code> 프로젝트 결과물 전시</li>
 				</ul>
 			</p>
 		</section>
@@ -41,7 +76,7 @@ const note3 = findNote('Obsidian theme Agate');
 			<h3>Navigation</h3>
 			<p>이 웹사이트는 세 가지 방법으로 탐색할 수 있다.
 				<ul>
-					<li>세 페이지<code>Notes</code>, <code>Logbooks</code>, <code>Works</code>는 각 타입의 노트들을 단순히 시간순으로 나열한다.</li>
+					<li>세 페이지<code>Journals</code>, <code>Logbooks</code>, <code>Works</code>는 각 타입의 노트들을 단순히 시간순으로 나열한다.</li>
 					<li>
 						<code>
 							<svg width="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 14">
@@ -56,9 +91,10 @@ const note3 = findNote('Obsidian theme Agate');
 							<path class="light" d="M10 1.5 10 2.5 12.79 2.5 8 7.29 3.21 2.5 6 2.5 6 1.5 2 1.5 1.5 2 1.5 6.04 2.5 6.04 2.5 3.21 7.29 8 2.5 12.79 2.5 10 1.5 10 1.5 14.04 2 14.54 6 14.54 6 13.54 3.16 13.54 8 8.71 12.84 13.54 10 13.54 10 14.54 14 14.54 14.5 14.04 14.5 10 13.5 10 13.5 12.79 8.71 8 13.5 3.21 13.5 6.04 14.5 6.04 14.5 2 14 1.5 10 1.5z"/>
 							<path class="dark" d="M10 1.5 10 2.5 12.79 2.5 8 7.29 3.21 2.5 6 2.5 6 1.5 2 1.5 1.5 2 1.5 6.04 2.5 6.04 2.5 3.21 7.29 8 2.5 12.79 2.5 10 1.5 10 1.5 14.04 2 14.54 6 14.54 6 13.54 3.16 13.54 8 8.71 12.84 13.54 10 13.54 10 14.54 14 14.54 14.5 14.04 14.5 10 13.5 10 13.5 12.79 8.71 8 13.5 3.21 13.5 6.04 14.5 6.04 14.5 2 14 1.5 10 1.5z"/>
 						</svg></code>
-						는 노트들의 연결을 시각화하고, 주제별로 필터링한다.
+						는 노트들 간의 연결을 시각화하고, 태그별로 필터링한다.
 						<ul>
-							<li>노트 페이지에서 화면 폭을 넓히면 지역 그래프가 나타난다. 인터랙션이 오작동할 때는 새로고침을 두 번 하면 대부분 고쳐진다.</li>
+							<li>노트 페이지에서 화면 폭을 넓히면 지역 그래프가 나타난다.</li>
+							<li>인터랙션이 오작동할 때는 새로고침을 두 번 하면 대부분 고쳐진다.</li>
 						</ul>
 					</li>
 				</ul>

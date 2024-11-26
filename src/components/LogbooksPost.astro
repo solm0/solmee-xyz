@@ -8,7 +8,7 @@ const { url, title, tags, date, thumbnailUrl, alt } = Astro.props;
         {thumbnailUrl ?
             <img class="logbooks-thumbnail" src={thumbnailUrl} alt={alt} />
         :
-            <div class="logbooks-thumbnail"></div>
+            <div class="logbooks-thumbnail-placeholder"></div>
         }
         <div class="blog-post-title-frontmatter">
             <p class="blog-post-title">{title}</p>
