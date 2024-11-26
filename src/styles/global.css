@@ -447,7 +447,7 @@ main>ul {
 }
 
 /* blogpost */
-.blog-post-container:not(.featured .blog-post-container) {
+.blog-post-container:not(.getting-started-section .blog-post-container) {
     margin: 100px 0 0 0;
     padding: 0;
 }
