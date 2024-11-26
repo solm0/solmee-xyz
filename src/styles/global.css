@@ -1058,6 +1058,7 @@ p.graph-caption {
     color: var(--gray-color-3);
     height: 100%;
     border-radius: 5px;
+    padding: 0 1em;
 }
 
 .pagination-page:hover {
