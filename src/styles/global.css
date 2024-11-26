@@ -23,7 +23,7 @@
     --font-family-sans-b: "pretendard-b";
     --font-family-mono: menlo, consolas;
 
-    --line-height: 1.8em;
+    --line-height: 1.83em;
 
     --step--3: clamp(0.6251rem, 0.6336rem - 0.0435vw, 0.6rem);
     --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
@@ -418,6 +418,10 @@ a.home.current {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5px;
+}
+
+.toc-h3 {
+    padding-left: 2.5em;
 }
 
 /* frontmatter */

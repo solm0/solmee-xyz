@@ -11,13 +11,15 @@ const TOC = () => {
     };
     
     useEffect(() => {
-      const headings = document.querySelectorAll('h2');
+      const headings = document.querySelectorAll('h2, h3');
+        
       const items = Array.from(headings).map((heading, index) => {
         const id = `heading-${index}`;
         heading.id = id;
         return {
             id,
             text: heading.innerText,
+            isH3: heading.tagName === 'H3',
         };
       });
       setTocItems(items);
@@ -63,7 +65,11 @@ const TOC = () => {
             {tocItems.map((heading) => (
                 <a
                     key={heading.id}
-                    className={heading.id === activeId ? 'toc-link active-toc-link' : 'toc-link'}
+                    className={
+                        `toc-link ${heading.id === activeId ? 'active-toc-link' : ''}
+                        ${heading.isH3 ? 'toc-h3' : ''}
+                        `
+                    }
                     href={`#${heading.id}`}
                     onClick={(e) => {
                         e.preventDefault();
