@@ -310,7 +310,6 @@ nav a {
     text-decoration: none;
     font-size: var(--step--2);
     font-family: var(--font-family-sans-n);
-    padding: 0 10px;
     color: var(--text-color);
 }
 
@@ -365,7 +364,6 @@ a.home.current {
 }
 
 .search-button {
-    padding-left: 10px;
     opacity: 1;
 }
 
@@ -413,7 +411,7 @@ a.home.current {
 .tag-container {
     position: relative;
     margin: 5px 0;
-    left: -5px;
+    left: -7px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -435,6 +433,7 @@ p.frontmatter,
     font-size: var(--step--2);
     line-height: 1.2rem;
     margin: 0;
+    color: var(--text-color);
 }
 
 p.description {
@@ -473,6 +472,7 @@ main>ul {
 
 .blog-post a {
     text-decoration: none;
+    padding: 0 10px 10px 10px;
 }
 
 .blog-post-title {
@@ -493,6 +493,7 @@ main>ul {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    padding: 10px;
 }
 
 .blog-post .logbooks-thumbnail {
@@ -505,6 +506,8 @@ main>ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+    width: 100%;
 }
 
 .blog-post-container:has(.works) {
@@ -518,13 +521,18 @@ main>ul {
 
 .blog-post .works-thumbnail {
     width: 100%;
+    position: relative;
 }
 
 .blog-post.works {
     border-radius: 5px;
-    padding: .5rem;
+    padding: 10px;
     transition: 0.2s ease-in-out;
     max-width: 330px;
+}
+
+.blog-post.works a {
+    padding: 0;
 }
 
 .works .blog-post-title {
@@ -1378,6 +1386,7 @@ p.graph-caption {
 
     .blog-post.logbooks a {
         flex-direction: column;
+        gap: 0;
     }
 
     .works-container img {
