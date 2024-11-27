@@ -200,6 +200,7 @@ small {
 
 img {
     width: 100%;
+    max-width: 1500px;
     height: auto;
     border-radius: 5px;
 }
