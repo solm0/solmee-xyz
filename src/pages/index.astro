@@ -22,33 +22,35 @@ const note5 = findNote('comixtura code');
 
 <BaseLayout lang="ko" pageTitle={pageTitle}>
 	<section class="getting-started-section">
-		<h2>Featured Notes</h2>
-		<div class="blog-post-container">
-			<NotesPost
-				url={note4.url}
-				title={note4.title}
-				tags={note4.tags}
-				date={note4.date.toString().slice(0,10)}
-				thumbnailUrl={note4.thumbnail}
-				alt={note4.alt || "Default alt text"}
-			/>
-			<LogbooksPost
-				url={note3.url}
-				title={note3.title}
-				tags={note3.tags}
-				date={note3.date.toString().slice(0,10)}
-				thumbnailUrl={note3.thumbnail}
-				alt={note3.alt || "Default alt text"}
-			/>
-			<LogbooksPost
-				url={note5.url}
-				title={note5.title}
-				tags={note5.tags}
-				date={note5.date.toString().slice(0,10)}
-				thumbnailUrl={note5.thumbnail}
-				alt={note5.alt || "Default alt text"}
-			/>
-		</div>
+		<figure>
+			<figcaption>Featured Notes</figcaption>
+			<div class="blog-post-container">
+				<NotesPost
+					url={note4.url}
+					title={note4.title}
+					tags={note4.tags}
+					date={note4.date.toString().slice(0,10)}
+					thumbnailUrl={note4.thumbnail}
+					alt={note4.alt || "Default alt text"}
+				/>
+				<LogbooksPost
+					url={note3.url}
+					title={note3.title}
+					tags={note3.tags}
+					date={note3.date.toString().slice(0,10)}
+					thumbnailUrl={note3.thumbnail}
+					alt={note3.alt || "Default alt text"}
+				/>
+				<LogbooksPost
+					url={note5.url}
+					title={note5.title}
+					tags={note5.tags}
+					date={note5.date.toString().slice(0,10)}
+					thumbnailUrl={note5.thumbnail}
+					alt={note5.alt || "Default alt text"}
+				/>
+			</div>
+		</figure>
 	</section>
 
 	<section class="getting-started-section">

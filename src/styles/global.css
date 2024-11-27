@@ -453,7 +453,7 @@ main>ul {
     padding: 0;
 }
 
-.blog-post-container figure {
+figure {
     margin: 0 0 5rem 0;
 }
 
@@ -550,7 +550,7 @@ main>ul {
     width: 100%;
 }
 
-.blog-post-container figcaption {
+figcaption {
     font-family: var(--font-family-sans-n);
     font-size: var(--step--2);
     color: var(--gray-color-3);
@@ -1092,9 +1092,7 @@ dialog.globalGraph {
 }
 
 .getting-started-section details>*:not(summary) {
-    margin-left: 1rem;
-    margin-right: 1.2rem;
-    padding-left: 1rem;
+    margin-left: 2rem;
 }
 
 .getting-started-section details[open] {
@@ -1120,6 +1118,11 @@ dialog.globalGraph {
     display: inline-block;
     transition: transform 0.2s ease-in-out;
     transform-origin: center;
+}
+
+.getting-started-section summary:hover {
+    background-color: var(--gray-color-0);
+    border-radius: 5px;
 }
 
 .getting-started-section details[open]>summary::before {
@@ -1312,7 +1315,7 @@ dialog.globalGraph {
 #goToTop {
     position: fixed;
     right: var(--grid-gutter);
-    bottom: var(--grid-gutter);
+    bottom: calc(var(--grid-gutter) + 10px);
     width: 25px;
     height: 25px;
     display: none;
