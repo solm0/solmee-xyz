@@ -484,10 +484,9 @@ main>ul {
     margin-right: calc(1rem + 100px);
 }
 
-.blog-post-hr,
-.getting-started-section hr {
+.blog-post-hr {
     width: 100%;
-    border: .5px solid var(--gray-color-1);
+    border: 0.5px solid var(--gray-color-1);
 }
 
 .blog-post.logbooks a {
@@ -1063,30 +1062,12 @@ dialog.globalGraph {
 }
 
 /* getting started */
-.featured {
-    width: calc(100% + 2rem);
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    padding: 1rem;
-    margin: 0;
-    border-radius: 5px;
-    border: 1px solid var(--gray-color-2);
-    margin: 100px 0 0 0;
-}
-
-.featured legend {
-    font-size: var(--step-1);
-    height: var(--line-height);
-    padding: 0 .5em;
-}
-.featured legend h2 {
-    margin: 0;
-}
-
 .getting-started-section {
     position: relative;
-    margin: 100px 0 0 0;
+    margin: 0;
+}
+.getting-started-section:first-of-type {
+    margin: 100px 0 3rem 0;
 }
 
 .getting-started-section details {
@@ -1112,7 +1093,8 @@ dialog.globalGraph {
 
 .getting-started-section details>*:not(summary) {
     margin-left: 1rem;
-    margin-right: 1rem;
+    margin-right: 1.2rem;
+    padding-left: 1rem;
 }
 
 .getting-started-section details[open] {
@@ -1120,14 +1102,28 @@ dialog.globalGraph {
 }
 
 .getting-started-section summary {
+    position: relative;
     transition: 0.2s ease-in-out;
-    margin: 1rem 0;
-    list-style-type: '→ ';
+    margin: 0;
+    list-style-type: none;
     font-size: var(--step-1);
-    padding-left: .5rem;
+    cursor: pointer;
 }
+
 .getting-started-section details[open]>summary {
-    list-style-type: '← ';
+    margin-bottom: 1rem;
+}
+
+.getting-started-section summary::before {
+    content: '>';
+    margin-right: .8em;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+    transform-origin: center;
+}
+
+.getting-started-section details[open]>summary::before {
+    transform: rotate(90deg);
 }
 
 .mailto:hover {
@@ -1137,13 +1133,17 @@ dialog.globalGraph {
 
 .getting-started-section h2 {
     font-family: var(--font-family-serif);
-    font-size: var(--step-1);
-    font-weight: 400;
+    font-size: var(--step-2);
+    font-weight: bold;
     margin-bottom: 1em;
+    display: inline;
 }
 
-.small-screen-toc {
-    display: none;
+.getting-started-section h3 {
+    display: inline;
+    font-family: var(--font-family-serif);
+    font-size: var(--step-1);
+    margin: 0;
 }
 
 /* works snap */
@@ -1462,10 +1462,6 @@ dialog.globalGraph {
 
     .featured {
         width: 100%;
-    }
-
-    .small-screen-toc {
-        display: block;
     }
 
     #goToTop {
