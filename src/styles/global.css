@@ -1177,18 +1177,24 @@ p.graph-caption {
 .guestbook {
     display: block;
     font-size: var(--step--1);
-    font-family: var(--font-family-mono);
+    font-family: var(--font-family-sans-n);
     padding: 1rem 2rem;
     position: fixed;
     bottom: var(--grid-gutter);
     right: var(--grid-gutter);
-    width: 400px;
-    height: 100px;
-    border-radius: 50px;
-    background-color:rgb(187, 187, 187);
+    width: 500px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: lime;
     color: black;
     transition: 0.2s ease-in-out;
-    box-shadow: 0 5px 10px rgba(187, 187, 187, 0.715);
+    box-shadow: 0 5px 10px var(--gray-color-3);
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.guestbook strong {
+    font-family: var(--font-family-sans-b);
 }
 
 .guestbook[open] {
@@ -1199,7 +1205,7 @@ p.graph-caption {
 }
 
 .guestbook summary {
-    padding: 18px;
+    margin-bottom: 20px;
 }
 
 .guestbook summary:focus {
@@ -1253,6 +1259,8 @@ p.graph-caption {
     color: black;
     font-family: var(--font-family-mono);
     resize: none;
+    scrollbar-width: none;
+    overflow: hidden;
 }
 .guestbook textarea[type="text"]::placeholder {
     color: black;
@@ -1269,53 +1277,44 @@ p.graph-caption {
     gap: 10px;
 }
 
-.guestbook .send-button {
-    background-color: black;
-    color: white;
-    font-family: var(--font-family-mono);
-    width: 80px;
-    padding: 0;
-    text-align: center;
-    border-radius: 40px;
-    margin: 0;
-    position: relative;
-    align-self: flex-end;
-}
-.guestbook .send-button:hover {
-    animation: rotate 0.3s linear;
-    animation-iteration-count: 2;
-}
-
 .guestbook-messages {
     width: 100%;
-    height: 225px;
+    height: 270px;
     display: flex;
     flex-direction: column-reverse;
     overflow: scroll;
     border-radius: 15px;
+    scrollbar-width: none;
+}
+
+.guestbook-messages::-webkit-scrollbar,
+.guestbook textarea[type="text"]::-webkit-scrollbar {
+    display: none;
 }
 
 .guestbook-messages>div {
     width: 100%;
     word-wrap: break-word;
-    background-color: rgba(255, 255, 255, 0.38);
-    border-radius: 15px;
-    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0.467);
+    border-radius: 20px;
+    margin-top: 7px;
     padding: 0 1em;
 }
 
-.guestbook .timestamp {
-    font-size: var(--step--2);
-    position: relative;
-    margin-right: 1em;
-    width: 150px;
-    left: 2em;
+.guestbook-messages>div:first-child {
+    background-color: rgb(255, 255, 255);
+}
+.guestbook-messages>div:nth-child(2) {
+    background-color: rgba(255, 255, 255, 0.79);
+}
+.guestbook-messages>div:nth-child(3) {
+    background-color: rgba(255, 255, 255, 0.66);
 }
 
 .guestbook .message {
     position: relative;
     word-break: break-all;
-    min-height: 30px;
+    padding: .2em;
 }
 
 /* go to top */

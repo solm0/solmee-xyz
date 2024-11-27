@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 
 export default function Guestbook() {
     const [input, setInput] = useState('');
+    const [isComposing, setIsComposing] = useState(false);
     const [messages, setMessages] = useState([]);
     const [reloadFlag, setReloadFlag] = useState(false);
 
@@ -17,6 +18,11 @@ export default function Guestbook() {
         const hours = String(now.getHours()).padStart(2, '0');
         const minutes = String(now.getMinutes()).padStart(2, '0');
         const currentDateTime = `${month}월 ${day}일 ${hours}:${minutes}`;
+
+        if (!input || input.trim().length === 0) {
+            console.error("Input is empty or invalid.");
+            return;
+        }
 
         try {
             await signInAnonymously(auth); // Authenticate anonymously
@@ -70,8 +76,15 @@ export default function Guestbook() {
                     wrap="soft"
                     onChange={(e) => setInput(e.target.value)}
                     placeholder='감상평이나 피드백을 적어주세요!'
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter' && !isComposing) {
+                            e.preventDefault();
+                            handleSubmit(e);
+                        }
+                    }}
+                    onCompositionStart={() => setIsComposing(true)} // Track IME composition start
+                    onCompositionEnd={() => setIsComposing(false)} // Track IME composition end
                 />
-                <button className='send-button' onClick={handleSubmit}>Send</button>
             </div>
         </details>
     )
