@@ -517,7 +517,6 @@ figure {
 
 .blog-post-container:has(.works) {
     position: relative;
-    width: 100%;
     display: flex;
     flex-direction: row;
     width: calc(100vw - var(--fluid-86-380));
@@ -1410,6 +1409,21 @@ dialog.globalGraph {
     .blog-post-container:has(.works) {
         position: relative;
         flex-direction: column;
+        width: calc(100vw - var(--grid-gutter) * 2);
+    }
+
+    .blog-post.works {
+        position: relative;
+        max-width: calc(100vw - var(--grid-gutter) * 2);
+    }
+
+    .blog-post .works-thumbnail {
+        width: 100%;
+        height: auto;
+    }
+
+    .thumbnail-container {
+        height: auto;
     }
 
     .works-container img {

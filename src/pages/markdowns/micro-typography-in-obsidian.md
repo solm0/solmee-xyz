@@ -30,9 +30,6 @@ sequence: 3
 
 산세리프 서체는 라틴과 한글 모두 커버하는 Pretendard를, 라틴 세리프 서체는 x-height가 높고 contrast가 크지 않은 ITC Slimbach Std를, 한글 세리프 서체는 ITC Slimbach Std와 잘 어울리는 Noto Serif KR을 선택했다.
 
----
-
-
 ## 타입세팅
 밑에 2.Code 까지 하고 난 6월 2일의 최종 사양이다.
 
