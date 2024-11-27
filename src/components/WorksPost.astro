@@ -4,10 +4,12 @@ const { url, title, tags, date, thumbnailUrl, alt } = Astro.props;
 
 <div class="blog-post works">
     <a href={url}>
-        {thumbnailUrl ?
-            <img class="works-thumbnail" src={thumbnailUrl} alt={alt} />
-        :
-            null}
+        <div class="thumbnail-container">
+            {thumbnailUrl ?
+                <img class="works-thumbnail" src={thumbnailUrl} alt={alt} />
+            :
+                null}
+        </div>
         <div>
             <p class="blog-post-title">{title}</p>
             <div class="blog-post-frontmatter">

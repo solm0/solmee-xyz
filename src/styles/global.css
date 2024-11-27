@@ -524,8 +524,19 @@ figure {
     flex-wrap: wrap;
 }
 
-.blog-post .works-thumbnail {
+.thumbnail-container {
+    position: relative;
     width: 100%;
+    height: 230px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.blog-post .works-thumbnail {
+    width: auto;
+    height: 100%;
     position: relative;
 }
 
@@ -541,7 +552,8 @@ figure {
 }
 
 .works .blog-post-title {
-    margin-top: 0;
+    margin-top: .5em;
+    padding: 0;
 }
 
 .blog-post-title-frontmatter {
@@ -647,7 +659,7 @@ input[type="text"]:focus {
     flex-direction: row;
     position: relative;
     justify-content: space-between;
-    margin: 0 0 1em 0;
+    margin: .5em 0 1em 0;
     width: 100%;
 }
 
@@ -926,10 +938,6 @@ dialog.globalGraph {
     color: var(--background-color);
 }
 
-.graph-tags button.active:hover {
-    background-color: var(--text-color);
-}
-
 .clear-button {
     position: absolute;
     top: var(--grid-gutter);
@@ -1067,15 +1075,11 @@ dialog.globalGraph {
     margin: 0;
 }
 .getting-started-section:first-of-type {
-    margin: 100px 0 3rem 0;
+    margin: 100px 0 0 0;
 }
 
 .getting-started-section details {
     width: 100%;
-}
-
-.getting-started-section details * {
-    user-select: none;
 }
 
 .getting-started-section input[type="text"] {
@@ -1113,9 +1117,11 @@ dialog.globalGraph {
 }
 
 .getting-started-section summary::before {
-    content: '>';
+    content: '↱';
     margin-right: .8em;
+    font-size: var(--step--1);
     display: inline-block;
+    transform: scaleY(-1);
     transition: transform 0.2s ease-in-out;
     transform-origin: center;
 }
@@ -1126,7 +1132,7 @@ dialog.globalGraph {
 }
 
 .getting-started-section details[open]>summary::before {
-    transform: rotate(90deg);
+    transform: scaleY(-1) rotate(-90deg);
 }
 
 .mailto:hover {
@@ -1403,12 +1409,7 @@ dialog.globalGraph {
 
     .blog-post-container:has(.works) {
         position: relative;
-        width: 100%;
         flex-direction: column;
-    }
-    
-    .blog-post.works {
-        max-width: 100%;
     }
 
     .works-container img {
@@ -1473,5 +1474,9 @@ dialog.globalGraph {
 
     .graph-tags-container {
         width: 100%;
+    }
+
+    .thumbnail-container {
+        justify-content: flex-start;
     }
 }
