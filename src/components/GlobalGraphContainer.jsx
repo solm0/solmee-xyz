@@ -45,17 +45,11 @@ const TagButtonContainer = () => {
   const ungroupedTags = tags.filter((tag) => !groupA.includes(tag));
 
   return (
-    <div>
+    <>
       <GlobalGraph filteredPostUrls={filteredPostUrls} client:only="react" />
-      <p className="graph-caption">
-        Left-click: rotate<br />
-        Mouse-wheel: zoom<br />
-        Right-click: pan
-      </p>
-      <p className='graph-tags-caption'>Filter by tags</p>
       <div className='graph-tags-container'>
-        <fieldset className="graph-tags ungrouped">
-          <legend>General</legend>
+        <div className='graph-tags-caption'>Filter by tags</div>
+        <div className="graph-tags ungrouped">
           {ungroupedTags.map((tag) => (
             <button
               key={tag}
@@ -65,19 +59,23 @@ const TagButtonContainer = () => {
               <div>{tag}</div> 
             </button>
           ))}
-        </fieldset>
-        <fieldset className="graph-tags group-a">
-        <legend>Tech</legend>
-        {groupATags.map((tag) => (
-          <button
-            key={tag}
-            className={`tag-button ${activeTags.includes(tag) ? 'active' : 'inactive'}`}
-            onClick={() => handleToggle(tag)}
-          >
-            <div>{tag}</div> 
-          </button>
-        ))}
-      </fieldset>
+        </div>
+        <div className="graph-tags group-a">
+          {groupATags.map((tag) => (
+            <button
+              key={tag}
+              className={`tag-button ${activeTags.includes(tag) ? 'active' : 'inactive'}`}
+              onClick={() => handleToggle(tag)}
+            >
+              <div>{tag}</div> 
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="graph-caption">
+        Left-click: pan<br />
+        Mouse-wheel: zoom<br />
       </div>
 
       <button
@@ -88,7 +86,7 @@ const TagButtonContainer = () => {
       >
         Clear
       </button>
-    </div>
+    </>
   );
 };
 
