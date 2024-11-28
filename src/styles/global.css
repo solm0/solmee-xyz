@@ -396,13 +396,13 @@ a.home.current {
 .tag,
 .tag-button {
     display: inline;
-    font-size: var(--step--2);
-    font-family: var(--font-family-sans-n);
+    font-size: 12.5px;
+    font-family: var(--font-family-mono);
     line-height: 1.6em;
     border-radius: calc(1.6em / 2);
     background-color: var(--gray-color-1);
     color: var(--gray-color-4);
-    padding: 0 .6em .1em .6em;
+    padding: 0 .6em 0 .6em;
 }
 
 .tag-container {
@@ -932,8 +932,8 @@ dialog.globalGraph {
 }
 
 .graph-tags button.active {
-    background-color: var(--gray-color-4);
-    color: var(--background-color);
+    background-color: var(--text-color);
+    color: var(--gray-color-1);
 }
 
 .clear-button {

@@ -166,6 +166,8 @@ useEffect(() => {
       linkCanvasObject={(link, ctx, globalScale) => {
         ctx.lineWidth = 0.5 / globalScale;
 
+        const filteredNodeIds = new Set(filteredNodes?.map((n) => n.id));
+
         if (hoveredNode) {
           const isDirectlyConected = (link.source.id === hoveredNode.id || link.target.id === hoveredNode.id);
 
@@ -176,6 +178,12 @@ useEffect(() => {
           }
         } else {
           ctx.strokeStyle = GRAPHSTYLE.grayColor4;
+        }
+
+        if (filteredNodeIds.has(link.source.id) && filteredNodeIds.has(link.target.id)) {
+          ctx.strokeStyle = GRAPHSTYLE.grayColor4;
+        } else {
+          ctx.strokeStyle = GRAPHSTYLE.grayColor2;
         }
 
         ctx.beginPath();
