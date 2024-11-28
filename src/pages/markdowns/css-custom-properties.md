@@ -1,13 +1,13 @@
 ---
-title: CSS custom properties
+title: "CSS custom properties"
 layout: ../../layouts/LogbooksLayout.astro
-type: logbooks
+type: "logbooks"
 date: 2024-07-03
 tags:
   - web
   - css
 overview: false
-projectId: obsidian-theme-agate
+projectId: "obsidian-theme-agate"
 sequence: 2
 ---
 https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties

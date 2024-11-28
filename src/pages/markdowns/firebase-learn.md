@@ -1,13 +1,13 @@
 ---
-title: Firebase 사용법 익히기
+title: "Firebase 사용법 익히기"
 layout: ../../layouts/LogbooksLayout.astro
-type: logbooks
+type: "logbooks"
 date: 2024-07-07
 tags:
   - web
   - firebase
 overview: false
-projectId: obsidian-digital-garden
+projectId: "obsidian-digital-garden"
 sequence: 8
 ---
 Firebase를 사용해보자.

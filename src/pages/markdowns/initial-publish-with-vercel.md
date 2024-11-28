@@ -7,7 +7,7 @@ tags:
   - web
   - vercel
 overview: false
-projectId: obsidian-digital-garden
+projectId: "obsidian-digital-garden"
 sequence: 2
 ---
 Digital Garden 플러그인을 설치 후 다음 과정을 따르면 최초 배포를 할 수 있다.

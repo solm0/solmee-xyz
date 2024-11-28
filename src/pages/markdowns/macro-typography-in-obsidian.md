@@ -1,14 +1,14 @@
 ---
-title: Macro Typography in Obsidian
+title: "Macro Typography in Obsidian"
 layout: ../../layouts/LogbooksLayout.astro
-type: logbooks
+type: "logbooks"
 date: 2024-07-01
 tags:
   - web
   - webTypography
   - obsidian
 overview: false
-projectId: obsidian-theme-agate
+projectId: "obsidian-theme-agate"
 sequence: 4
 ---
 단주, 첨자, 각주, 문장부호를 꾸며보자.

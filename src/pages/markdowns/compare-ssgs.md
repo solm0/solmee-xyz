@@ -1,14 +1,14 @@
 ---
-title: Compare SSGs
+title: "Compare SSGs"
 layout: ../../layouts/LogbooksLayout.astro
-type: logbooks
+type: "logbooks"
 date: 2024-08-08
 tags:
   - web
   - astro
   - ssg
 overview: false
-projectId: solmee-xyz
+projectId: "solmee-xyz"
 sequence: 4
 ---
 챗지피티에게 내 markdown 파이프라인에 적합한 SSG를 추천해달라고 하니 다음을 추천해 주었다. 비교해 보면서 선택지를 좁혀보자.

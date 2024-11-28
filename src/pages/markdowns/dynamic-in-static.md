@@ -6,7 +6,7 @@ date: 2024-07-06
 tags:
   - web
 overview: false
-projectId: obsidian-digital-garden
+projectId: "obsidian-digital-garden"
 sequence: 6
 ---
 ## 동적웹과 정적웹 접붙이기

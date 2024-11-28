@@ -6,7 +6,7 @@ date: 2024-07-07
 tags:
   - web
 overview: false
-projectId: obsidian-digital-garden
+projectId: "obsidian-digital-garden"
 sequence: 4
 ---
 ## 웹사이트를 만들고 싶어요
