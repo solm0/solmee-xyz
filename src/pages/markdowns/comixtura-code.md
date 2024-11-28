@@ -4,7 +4,7 @@ layout: ../../layouts/WorksLayout.astro
 type: "works"
 tags: ["typeface"]
 thumbnail: '/comixtura.png'
-date: 2000
+date: 2024
 description: 'this is a font.'
 ---
 

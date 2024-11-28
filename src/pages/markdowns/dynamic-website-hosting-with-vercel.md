@@ -9,7 +9,7 @@ projectId: "obsidian-digital-garden"
 sequence: 9
 ---
 ## Create React App and deploy to Vercel
-Git repository를 생성하고 거기에 push할 때마다 Vercel에 자동 deploy될 것이다. [여기](https://vercel.com/guides/deploying-react-with-vercel#start-from-a-template)에서 Git repository 생성과 동시에 create-react-app을 할 수 있다. 그리고 그 리포지토리를 깃헙데스크탑에서 클론해 vscode로 작성하면 된다.
+[Git repository 생성과 동시에 create-react-app](https://vercel.com/guides/deploying-react-with-vercel#start-from-a-template)을 할 수 있다. 그 repo를 깃헙데스크탑에서 클론해서 사용했다.
 
 >근데 평소 하던대로 npm start를 하니 `react-scripts: command not found` 라면서 안됐고 Vercel deploy도 안됐다. `Error: Command "pnpm run build"`
 

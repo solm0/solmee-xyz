@@ -6,8 +6,8 @@ date: 2024-10-03
 tags: ["web", "vercel", "porkbun", "cloudflare", "domain"]
 
 overview: false
-projectId: "buy-a-domain"
-sequence: 1
+projectId: "solmee-xyz"
+sequence: 5
 ---
 (아직 웹사이트 만들기도 전이지만) 도메인이라는 것을 사보자!
 

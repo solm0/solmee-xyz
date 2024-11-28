@@ -11,7 +11,8 @@ finished: true
 projectId: "obsidian-theme-agate"
 sequence: 0
 ---
-옵시디언 테마를 내맘대로 뜯어고치자.![](../../assets/img-00.png)
+옵시디언 테마를 내맘대로 뜯어고치자.
+![](../../assets/img-00.png)
 
 ## 시작하기
 [[hello-theme-css]]  
@@ -23,10 +24,6 @@ sequence: 0
 ## 제출하기
 [[submit-your-theme]]
 
-## 추가 하고싶은것
-- 내부링크 달 때 뜨는 창이 투명한거 고치기
-- 다크모드
-- live preview와 reading view 간극 좁히기
-- 합성글꼴 플러그인 개발
-- excalidraw, 데이터베이스 등 플러그인 사용
-- 좀더 재밌게 발전시키기
+## 후일담
+> 제출을 했고 통과했지만? 다운로드 횟수도 1000회를 넘었지만? 어째서인지 언제부턴가 폰트가 적용이 안되고 수정하기도 귀찮아서 방치 상태이다. 내려달라고 해야하나?
+![](../../assets/img-01.png)

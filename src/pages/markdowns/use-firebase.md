@@ -6,11 +6,9 @@ date: 2024-07-08
 tags: ["web", "firebase"]
 overview: false
 projectId: "obsidian-digital-garden"
-sequence: 11
+sequence: 10
 ---
->firebase Realtime Database의 json데이터를 편집하는 법을 알게 되었고, 프로젝트에 데이터를 갖다쓰는 법을 알게 되었다.
-
-아래는 미래의 나를 위해 어떻게했는지 적어놓음
+Firebase Realtime Database의 JSON 데이터를 편집하고, 프로젝트에 갖다 쓴다.
 
 ## firebase.js
 - firebase를 초기화한다. `initializeApp()`
