@@ -1,7 +1,7 @@
 ---
-title: "정적 웹에 눈뜨다"
-layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+title: 정적 웹에 눈뜨다
+layout: ../../layouts/NotesLayout.astro
+type: logbooks
 date: 2024-07-07
 tags:
   - web

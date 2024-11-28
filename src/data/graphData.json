@@ -103,12 +103,6 @@
       "val": 1
     },
     {
-      "id": "note",
-      "name": "안녕하세요",
-      "type": "notes",
-      "val": 1
-    },
-    {
       "id": "obsidian-digital-garden",
       "name": "Obsidian Digital Garden",
       "type": "logbooks",
@@ -130,24 +124,6 @@
       "id": "porkbun-cloudflaredns-vercel",
       "name": "Porkbun 도메인, cloudflare DNS, Vercel 호스팅",
       "type": "logbooks",
-      "val": 1
-    },
-    {
-      "id": "portfolio-1",
-      "name": "portfolio",
-      "type": "works",
-      "val": 1
-    },
-    {
-      "id": "portfolio-2",
-      "name": "portfolio",
-      "type": "works",
-      "val": 1
-    },
-    {
-      "id": "portfolio",
-      "name": "portfolio",
-      "type": "works",
       "val": 1
     },
     {

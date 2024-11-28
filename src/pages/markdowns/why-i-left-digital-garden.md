@@ -1,12 +1,13 @@
 ---
-title: "Digital Garden에서 갈아타기로 한 이유"
+title: Digital Garden에서 갈아타기로 한 이유
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-08-07
-tags: ["web"]
-
+tags:
+  - web
+  - obsidian
 overview: false
-projectId: "solmee-xyz"
+projectId: solmee-xyz
 sequence: 1
 ---
 Digital Garden도 아직 제대로 안 써봤는데 갑자기 옮기고 싶어진 이유는?

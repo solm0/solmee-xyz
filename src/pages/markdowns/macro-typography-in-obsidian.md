@@ -1,10 +1,12 @@
 ---
-title: "Macro Typography in Obsidian"
+title: Macro Typography in Obsidian
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-07-01
 tags:
   - web
+  - webTypography
+  - obsidian
 overview: false
 projectId: obsidian-theme-agate
 sequence: 4

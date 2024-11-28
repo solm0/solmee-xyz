@@ -1,12 +1,13 @@
 ---
-title: "characteristics of SSGs"
+title: characteristics of SSGs
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-08-08
-tags: ["web"]
-
+tags:
+  - web
+  - ssg
 overview: false
-projectId: "solmee-xyz"
+projectId: solmee-xyz
 sequence: 3
 ---
 >SSG(Static Site Generator, 정적 사이트 생성기)란?

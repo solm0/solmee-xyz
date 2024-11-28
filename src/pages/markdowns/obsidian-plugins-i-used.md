@@ -1,10 +1,11 @@
 ---
-title: "사용한 플러그인들"
+title: 사용한 플러그인들
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-07-01
 tags:
   - web
+  - obsidian
 overview: false
 projectId: obsidian-theme-agate
 sequence: 5

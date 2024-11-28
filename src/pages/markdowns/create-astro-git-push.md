@@ -1,12 +1,14 @@
 ---
-title: "Create astro, Git push"
+title: Create astro, Git push
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-10-03
-tags: ["web"]
-
+tags:
+  - web
+  - git
+  - astro
 overview: false
-projectId: "buy-a-domain"
+projectId: buy-a-domain
 sequence: 2
 ---
 주의사항

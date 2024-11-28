@@ -5,7 +5,7 @@ import { loadNotes } from '../scripts/loadNotes';
 const TagButtonContainer = () => {
   const allPosts = loadNotes();
 
-  const groupA = ['domain', 'error', 'css', 'vercel', 'firebase', 'porkbun', 'cloudflare', 'astro', 'react', 'javascript', 'html'];
+  const groupA = ['domain', 'error', 'css', 'vercel', 'firebase', 'porkbun', 'cloudflare', 'astro', 'react', 'javascript', 'html', 'git'];
 
   const tags = [...new Set(allPosts.map((post) => post.tags).flat())];
 

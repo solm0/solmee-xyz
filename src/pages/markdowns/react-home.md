@@ -1,10 +1,11 @@
 ---
-title: "React Home"
+title: React Home
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-07-07
 tags:
   - web
+  - react
 overview: false
 projectId: obsidian-digital-garden
 sequence: 10
