@@ -3,10 +3,7 @@ title: "Submit your theme"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-07-02
-tags:
-  - web
-  - obsidian
-  - css
+tags: ["web", "obsidian", "css"]
 overview: false
 projectId: "obsidian-theme-agate"
 sequence: 6

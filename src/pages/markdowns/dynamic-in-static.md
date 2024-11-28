@@ -3,8 +3,7 @@ title: "정적 웹 속 동적 웹"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-07-06
-tags:
-  - web
+tags: ["web"]
 overview: false
 projectId: "obsidian-digital-garden"
 sequence: 6

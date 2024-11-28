@@ -3,8 +3,7 @@ title: "정적 웹에 눈뜨다"
 layout: ../../layouts/NotesLayout.astro
 type: "notes"
 date: 2024-07-07
-tags:
-  - web
+tags: ["web"]
 overview: false
 projectId: "obsidian-digital-garden"
 sequence: 4

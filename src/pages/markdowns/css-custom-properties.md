@@ -3,9 +3,7 @@ title: "CSS custom properties"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-07-03
-tags:
-  - web
-  - css
+tags: ["web", "css"]
 overview: false
 projectId: "obsidian-theme-agate"
 sequence: 2

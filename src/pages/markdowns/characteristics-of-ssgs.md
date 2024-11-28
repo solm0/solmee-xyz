@@ -3,9 +3,7 @@ title: "characteristics of SSGs"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-08-08
-tags:
-  - web
-  - ssg
+tags: ["web", "ssg"]
 overview: false
 projectId: "solmee-xyz"
 sequence: 3
@@ -21,7 +19,7 @@ sequence: 3
 
 ## 많이 사용되는 SSG들
 - Next.js: React의 framework이다. 가장 기능이 많은듯. 속도도 느린편
-- Gatsby: 위와 비슷하게 react랑 잘맞고 뭐가 많음.
+- Gatsby: 위와 비슷하게 react랑 잘맞고 뭐가 많음.
 - Jekyll: GitHub Pages와 함께 사용될때가 많고 Ruby 사용함. 가장 오래된 편.
 - Hugo: Go 사용함.
 

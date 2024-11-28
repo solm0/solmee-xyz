@@ -3,10 +3,7 @@ title: "Compare SSGs"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-08-08
-tags:
-  - web
-  - astro
-  - ssg
+tags: ["web", "astro", "ssg"]
 overview: false
 projectId: "solmee-xyz"
 sequence: 4

@@ -3,10 +3,7 @@ title: "Create astro, Git push"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-10-03
-tags:
-  - web
-  - git
-  - astro
+tags: ["web", "git", "astro"]
 overview: false
 projectId: "buy-a-domain"
 sequence: 2

@@ -3,9 +3,7 @@ title: "줄글과 하이퍼텍스트"
 layout: ../../layouts/NotesLayout.astro
 type: "notes"
 date: 2024-07-07
-tags:
-  - web
-  - obsidian
+tags: ["web", "obsidian"]
 ---
 ## 못생긴 줄글이 왜 쓰이는거지?
 스크롤압박이란 말도 있잖아.  

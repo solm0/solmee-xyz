@@ -3,10 +3,7 @@ title: "Dynamic Website Hosting with Vercel"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-07-07
-tags:
-  - web
-  - error
-  - vercel
+tags: ["web", "error", "vercel"]
 overview: false
 projectId: "obsidian-digital-garden"
 sequence: 9

@@ -3,12 +3,7 @@ title: "Obsidian Digital Garden"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-07-07
-tags:
-  - web
-  - obsidian
-  - firebase
-  - vercel
-  - react
+tags: ["web", "obsidian", "firebase", "vercel", "react"]
 thumbnail: "/obsidian-website.png"
 overview: true
 finished: true

@@ -3,9 +3,7 @@ title: "Initial publish with Vercel"
 layout: ../../layouts/LogbooksLayout.astro
 type: "logbooks"
 date: 2024-07-04
-tags:
-  - web
-  - vercel
+tags: ["web", "vercel"]
 overview: false
 projectId: "obsidian-digital-garden"
 sequence: 2
