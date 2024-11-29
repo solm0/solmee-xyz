@@ -1,6 +1,5 @@
 ---
-aliases:
-  - Micro Typography in Obsidian
+alias: Micro Typography in Obsidian
 layout: ../../layouts/LogbooksLayout.astro
 type: logbooks
 date: 2024-07-01

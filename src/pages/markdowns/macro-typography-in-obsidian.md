@@ -1,6 +1,5 @@
 ---
-aliases:
-  - Macro Typography in Obsidian
+alias: Macro Typography in Obsidian
 layout: ../../layouts/LogbooksLayout.astro
 type: logbooks
 date: 2024-07-01

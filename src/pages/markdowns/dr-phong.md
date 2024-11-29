@@ -1,6 +1,5 @@
 ---
-aliases:
-  - dr.phong variable font
+alias: dr.phong variable font
 layout: ../../layouts/WorksLayout.astro
 type: works
 tags:
