@@ -1,12 +1,6 @@
 {
   "nodes": [
     {
-      "id": "buy-a-domain",
-      "name": "Buy a domain",
-      "type": "logbooks",
-      "val": 3
-    },
-    {
       "id": "characteristics-of-ssgs",
       "name": "characteristics of SSGs",
       "type": "logbooks",
@@ -37,12 +31,6 @@
       "val": 1
     },
     {
-      "id": "create-astro-git-push",
-      "name": "Create astro, Git push",
-      "type": "logbooks",
-      "val": 1
-    },
-    {
       "id": "css-custom-properties",
       "name": "CSS custom properties",
       "type": "logbooks",
@@ -52,7 +40,7 @@
       "id": "digital-garden-plugin",
       "name": "Digital Garden의 점령",
       "type": "logbooks",
-      "val": 4
+      "val": 2
     },
     {
       "id": "dr-phong",
@@ -76,7 +64,7 @@
       "id": "firebase-learn",
       "name": "Firebase 사용법 익히기",
       "type": "logbooks",
-      "val": 2
+      "val": 1
     },
     {
       "id": "hello-theme-css",
@@ -106,7 +94,7 @@
       "id": "obsidian-digital-garden",
       "name": "Obsidian Digital Garden",
       "type": "logbooks",
-      "val": 12
+      "val": 10
     },
     {
       "id": "obsidian-plugins-i-used",
@@ -133,12 +121,6 @@
       "val": 1
     },
     {
-      "id": "react-home",
-      "name": "React Home",
-      "type": "logbooks",
-      "val": 1
-    },
-    {
       "id": "setting-up-the-markdown-pipeline",
       "name": "Setting up the Markdown Pipeline",
       "type": "logbooks",
@@ -159,7 +141,7 @@
     {
       "id": "static-web",
       "name": "정적 웹에 눈뜨다",
-      "type": "notes",
+      "type": "logbooks",
       "val": 1
     },
     {
@@ -189,14 +171,6 @@
   ],
   "links": [
     {
-      "source": "buy-a-domain",
-      "target": "porkbun-cloudflaredns-vercel"
-    },
-    {
-      "source": "buy-a-domain",
-      "target": "create-astro-git-push"
-    },
-    {
       "source": "comixtura-code",
       "target": "dr-phong"
     },
@@ -213,24 +187,8 @@
       "target": "static-web"
     },
     {
-      "source": "digital-garden-plugin",
-      "target": "obsidian-theme-agate"
-    },
-    {
-      "source": "digital-garden-plugin",
-      "target": "publish-obsidian-note"
-    },
-    {
-      "source": "firebase-learn",
-      "target": "use-firebase"
-    },
-    {
       "source": "macro-typography-in-obsidian",
       "target": "obsidian-plugins-i-used"
-    },
-    {
-      "source": "obsidian-digital-garden",
-      "target": "why-i-left-digital-garden"
     },
     {
       "source": "obsidian-digital-garden",
@@ -263,10 +221,6 @@
     {
       "source": "obsidian-digital-garden",
       "target": "dynamic-website-hosting-with-vercel"
-    },
-    {
-      "source": "obsidian-digital-garden",
-      "target": "react-home"
     },
     {
       "source": "obsidian-digital-garden",

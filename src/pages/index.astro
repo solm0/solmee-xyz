@@ -85,7 +85,7 @@ const note5 = findNote('comixtura code');
 								<li>세 페이지<code>Journals</code>, <code>Logbooks</code>, <code>Works</code>는 각 타입의 노트들을 생성일 기준으로 나열한다.</li>
 								<li>
 									<code>
-										<svg width="18px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+										<svg width="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 14">
 											<path class="light" d="m15,14.11l-4.89-4.89c.64-.82,1.02-1.85,1.02-2.96,0-2.67-2.17-4.84-4.84-4.84S1.45,3.59,1.45,6.25s2.17,4.84,4.84,4.84c1.18,0,2.26-.42,3.1-1.13l4.88,4.88.74-.74ZM2.6,6.25c0-2.04,1.66-3.69,3.69-3.69s3.69,1.66,3.69,3.69-1.66,3.69-3.69,3.69-3.69-1.66-3.69-3.69Z""/>
 											<path class="dark" d="m15,14.11l-4.89-4.89c.64-.82,1.02-1.85,1.02-2.96,0-2.67-2.17-4.84-4.84-4.84S1.45,3.59,1.45,6.25s2.17,4.84,4.84,4.84c1.18,0,2.26-.42,3.1-1.13l4.88,4.88.74-.74ZM2.6,6.25c0-2.04,1.66-3.69,3.69-3.69s3.69,1.66,3.69,3.69-1.66,3.69-3.69,3.69-3.69-1.66-3.69-3.69Z""/>
 										</svg>
@@ -93,7 +93,7 @@ const note5 = findNote('comixtura code');
 									</code>
 									는 노트의 내부 텍스트를 검색한다.</li>
 								<li>그래프
-									<code><svg width="21px" xmlns="http://www.w3.org/2000/svg" viewBox="0 -9 24 24">
+									<code><svg width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 -9 24 24">
 										<polygon class="light" points="2.5,3.2 5.7,6.4 6.4,5.7 3.2,2.5 6,2.5 6,1.5 2,1.5 1.5,2 1.5,6 2.5,6 	"/>
 										<polygon class="light" points="6.4,10.3 5.7,9.6 2.5,12.8 2.5,10 1.5,10 1.5,14 2,14.5 6,14.5 6,13.5 3.2,13.5 	"/>
 										<polygon class="light" points="13.5,12.8 10.3,9.6 9.6,10.3 12.8,13.5 10,13.5 10,14.5 14,14.5 14.5,14 14.5,10 13.5,10 	"/>
@@ -120,7 +120,7 @@ const note5 = findNote('comixtura code');
 						<div class="blog-post-container">
 							<LogbooksPost
 								url={note1.url}
-								title={note1.title}
+								title={note1.aliases[0]}
 								tags={note1.tags}
 								date={note1.date.toString().slice(0,10)}
 								thumbnailUrl={note1.thumbnail}
