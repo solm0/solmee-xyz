@@ -1,11 +1,15 @@
 ---
-title: "Macro Typography in Obsidian"
+aliases:
+  - Macro Typography in Obsidian
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-07-01
-tags: ["web", "webTypography", "obsidian"]
+tags:
+  - web
+  - web_typography
+  - obsidian
 overview: false
-projectId: "obsidian-theme-agate"
+projectId: obsidian-theme-agate
 sequence: 4
 ---
 
@@ -14,7 +18,7 @@ sequence: 4
 ## formatting 단축키 커스터마이징
 1.  기본 Syntax, Hotkey 이용하기
 2.  `Settings`>`Hotkeys`에서 단축키 생성, 편집하기
-3. [[obsidian-plugins-i-used]]을 이용해 HTML 태그로 감싸주는 단축키 생성, 편집하기
+3. [[obsidian-plugins-i-used|사용한 플러그인들]]을 이용해 HTML 태그로 감싸주는 단축키 생성, 편집하기
 4. HTML태그 안에 태그가 들어가는 더 복잡한 컴포넌트도 미리 정의해놨다가 쓰고 싶은데...  
 -> 그건 리액트같은걸 써야지...
 

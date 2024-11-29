@@ -1,11 +1,14 @@
 ---
-title: "Submit your theme"
+alias: Submit your theme
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-07-02
-tags: ["web", "obsidian", "css"]
+tags:
+  - web
+  - obsidian
+  - css
 overview: false
-projectId: "obsidian-theme-agate"
+projectId: obsidian-theme-agate
 sequence: 6
 ---
 완성한 테마를 커뮤니티 플러그인에 업로드해보자. 옵시디언 팀의 리뷰를 통과하면 다른 사용자들이 나의 테마를 다운로드받을 수 있게 되고, Digital Garden에서도 사용할 수 있게 된다.
@@ -13,7 +16,7 @@ sequence: 6
 ## CSS 정리하기
 계속 업데이트할 것을 염두에 둔다면 CSS를 깔끔하게 정리해 놓아야 한다.
 
-- accent color, border-width, radius 같은 여러군데에서 쓰는 값들을 [[css-custom-properties]]로 만들었다.
+- accent color, border-width, radius 같은 여러군데에서 쓰는 값들을 [[css-custom-properties|CSS custom properties]]로 만들었다.
 - Obsidion docs에 있는 순서대로 CSS를 정리했다.
 - 최대한 상위요소인 :root, body, .theme-light에 작성했다.
 - 선택자도 최대한 단순하게 했다.

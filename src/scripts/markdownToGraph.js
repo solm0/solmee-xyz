@@ -23,7 +23,7 @@ files.forEach(file => {
 
   // Add node if it doesn't already exist
     if (!nodeMap.has(id)) {
-        const node = { id, name: data.title || id, type: data.type, val: 1 };
+        const node = { id, name: data.alias || id, type: data.type, val: 1 };
         graphData.nodes.push(node);
         nodeMap.set(id, node);
         console.log(`Created node: ${id} from file ${file}`);
@@ -37,7 +37,7 @@ files.forEach(file => {
     const { content: markdownContent } = matter(content);
 
     const sourceId = file.replace('.md', '').toLowerCase();
-    const linkRegex = /\[\[([^\|\]]+)\]\]/g;
+    const linkRegex = /\[\[\s*([^\|\]]+)\s*(\|[^\]]+)?\]\]/g;
     let match;
 
     while ((match = linkRegex.exec(markdownContent)) !== null) {

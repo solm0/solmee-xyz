@@ -1,11 +1,12 @@
 ---
-title: "정적 웹에 눈뜨다"
+alias: 정적 사이트 생성기
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-07-07
-tags: ["web"]
+tags:
+  - web
 overview: false
-projectId: "obsidian-digital-garden"
+projectId: obsidian-digital-garden
 sequence: 4
 ---
 먼저 내가 만들고자 하는 웹사이트가 무엇인지부터 정의해야 했는데 당시에는 이것저것 하고 싶은 게 많아서 정리가 잘 안됐다. 한 가지 확실한 건 한 번 만들어놓고 계속 글을 써 업데이트할 수 있어야 한다는 것이었다. '템플릿'이 필요했다.

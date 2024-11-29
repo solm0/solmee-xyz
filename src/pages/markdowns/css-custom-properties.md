@@ -1,11 +1,13 @@
 ---
-title: "CSS custom properties"
+alias: CSS custom properties
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-07-03
-tags: ["web", "css"]
+tags:
+  - web
+  - css
 overview: false
-projectId: "obsidian-theme-agate"
+projectId: obsidian-theme-agate
 sequence: 2
 ---
 Custom property는 한번만 정의해 놓으면 다른 곳에서 참조할 수 있어 여러 곳에 적용된 값을 한번에 수정해야 할 때 편하다.

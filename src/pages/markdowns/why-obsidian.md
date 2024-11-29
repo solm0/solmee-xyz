@@ -1,9 +1,10 @@
 ---
-title: "Obsidian을 시작한 이유"
+alias: Obsidian을 시작한 이유
 layout: ../../layouts/NotesLayout.astro
-type: "notes"
+type: notes
 date: 2024-06-30
-tags: ["web"]
+tags:
+  - web
 ---
 ## 나와 옵시디언의 역사
 0. 옛-날에 한번 유튜브에서 보고 깔아봤었음, 그땐 vault 개념이 생소해서 안쓰고 지움.

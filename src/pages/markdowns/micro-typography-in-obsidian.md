@@ -1,11 +1,15 @@
 ---
-title: "Micro Typography in Obsidian"
+aliases:
+  - Micro Typography in Obsidian
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-07-01
-tags: ["web", "webTypography", "obsidian"]
+tags:
+  - web
+  - obsidian
+  - web_typography
 overview: false
-projectId: "obsidian-theme-agate"
+projectId: obsidian-theme-agate
 sequence: 3
 ---
 
@@ -72,5 +76,3 @@ sequence: 3
 내가 하고 싶은건 한줄비우기 다음 첫 단락에서는 들여짜기를 하지 않는다는 간단한 규칙이었는데 이것 역시 자바스크립트로는 됐겠지만 테마파일이라 CSS만 써야해서 못했다. 사실 CSS로도 할 수 있을 것 같긴 한데... 나중에 다시 해보자...
 
 html과 마크다운 사이 엄청난 간극이 있다. 그 중 하나는 enter를 쳤을때 source view에서는 새로운 단락`<div>`가 만들어지는데 reading view에서는 `<br>` 친걸로 간주하고 여전히 같은 `<p>` 안이다. 그래서 들여쓰기가 생겨야 할 곳에 생기지 않는다. reading view에서는 enter를 두 번은 쳐야 새로운 `<div>`가 만들어진다.
-
-[[obsidian-digital-garden|Obsidian Digital Garden]]

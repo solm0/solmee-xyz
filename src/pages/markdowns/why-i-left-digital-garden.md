@@ -1,11 +1,13 @@
 ---
-title: "Digital Garden에서 갈아타기로 한 이유"
+alias: Digital Garden에서 갈아타기로 한 이유
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-08-07
-tags: ["web", "obsidian"]
+tags:
+  - web
+  - obsidian
 overview: false
-projectId: "solmee-xyz"
+projectId: solmee-xyz
 sequence: 1
 ---
 

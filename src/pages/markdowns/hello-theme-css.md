@@ -1,12 +1,13 @@
 ---
-title: "Hello, theme.css!"
+alias: Hello, theme.css!
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-07-01
-tags: ["web", "css"]
+tags:
+  - web
+  - css
 overview: false
-
-projectId: "obsidian-theme-agate"
+projectId: obsidian-theme-agate
 sequence: 1
 ---
 ## CSS로 스타일링 가능한 원리

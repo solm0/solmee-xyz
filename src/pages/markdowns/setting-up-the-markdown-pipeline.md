@@ -1,11 +1,15 @@
 ---
-title: "Setting up the Markdown Pipeline"
+alias: Setting up the Markdown Pipeline
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-08-07
-tags: ["web", "markdown", "obsidian", "ssg"]
+tags:
+  - web
+  - markdown
+  - obsidian
+  - ssg
 overview: false
-projectId: "solmee-xyz"
+projectId: solmee-xyz
 sequence: 2
 ---
 ## plain text 노트 배포하는 법

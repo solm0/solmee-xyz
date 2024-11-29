@@ -1,11 +1,13 @@
 ---
-title: "characteristics of SSGs"
+alias: characteristics of SSGs
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-08-08
-tags: ["web", "ssg"]
+tags:
+  - web
+  - ssg
 overview: false
-projectId: "solmee-xyz"
+projectId: solmee-xyz
 sequence: 3
 ---
 SSG(Static Site Generator, 정적 사이트 생성기)는 HTML을 정해진 템플릿에 맞춰 찍어내는 웹개발 도구이다.

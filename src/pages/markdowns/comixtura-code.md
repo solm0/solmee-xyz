@@ -1,11 +1,12 @@
 ---
-title: "comixtura code"
+alias: comixtura code
 layout: ../../layouts/WorksLayout.astro
-type: "works"
-tags: ["typeface"]
-thumbnail: '/comixtura.png'
+type: works
+tags:
+  - typeface
+thumbnail: /comixtura.png
 date: 2024
-description: 'this is a font.'
+description: this is a font.
 ---
 
 ![comixtura-code_1](../../assets/comixtura_code_1.png)
@@ -17,14 +18,3 @@ description: 'this is a font.'
 ![comixtura-code_7](../../assets/comixtura_code_7.png)
 ![comixtura-code_8](../../assets/comixtura_code_8.png)
 ![comixtura-code_9](../../assets/comixtura_code_9.png)
-
-
-(기타 링크)
-[[dr-phong]]  
-[[porkbun-cloudflaredns-vercel]]  
-[[why-obsidian]]
-ll  
-ll  
-l  
-l  
-l  

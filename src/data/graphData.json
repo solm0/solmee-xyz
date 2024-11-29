@@ -16,7 +16,7 @@
       "id": "comixtura-code",
       "name": "comixtura code",
       "type": "works",
-      "val": 4
+      "val": 1
     },
     {
       "id": "compare-ssgs",
@@ -40,7 +40,7 @@
       "id": "digital-garden-plugin",
       "name": "Digital Garden의 점령",
       "type": "logbooks",
-      "val": 2
+      "val": 4
     },
     {
       "id": "dr-phong",
@@ -64,7 +64,7 @@
       "id": "firebase-learn",
       "name": "Firebase 사용법 익히기",
       "type": "logbooks",
-      "val": 1
+      "val": 2
     },
     {
       "id": "hello-theme-css",
@@ -94,7 +94,7 @@
       "id": "obsidian-digital-garden",
       "name": "Obsidian Digital Garden",
       "type": "logbooks",
-      "val": 10
+      "val": 11
     },
     {
       "id": "obsidian-plugins-i-used",
@@ -118,7 +118,7 @@
       "id": "publish-obsidian-note",
       "name": "Publish Obsidian note",
       "type": "logbooks",
-      "val": 1
+      "val": 2
     },
     {
       "id": "setting-up-the-markdown-pipeline",
@@ -140,7 +140,7 @@
     },
     {
       "id": "static-web",
-      "name": "정적 웹에 눈뜨다",
+      "name": "정적 사이트 생성기",
       "type": "logbooks",
       "val": 1
     },
@@ -171,20 +171,20 @@
   ],
   "links": [
     {
-      "source": "comixtura-code",
-      "target": "dr-phong"
-    },
-    {
-      "source": "comixtura-code",
-      "target": "porkbun-cloudflaredns-vercel"
-    },
-    {
-      "source": "comixtura-code",
-      "target": "why-obsidian"
+      "source": "digital-garden-plugin",
+      "target": "static-web"
     },
     {
       "source": "digital-garden-plugin",
-      "target": "static-web"
+      "target": "obsidian-theme-agate"
+    },
+    {
+      "source": "digital-garden-plugin",
+      "target": "publish-obsidian-note"
+    },
+    {
+      "source": "firebase-learn",
+      "target": "use-firebase"
     },
     {
       "source": "macro-typography-in-obsidian",
@@ -204,7 +204,11 @@
     },
     {
       "source": "obsidian-digital-garden",
-      "target": "digital-garden-plugin"
+      "target": "static-web"
+    },
+    {
+      "source": "obsidian-digital-garden",
+      "target": "obsidian-plugins-i-used"
     },
     {
       "source": "obsidian-digital-garden",
@@ -249,6 +253,10 @@
     {
       "source": "obsidian-theme-agate",
       "target": "submit-your-theme"
+    },
+    {
+      "source": "publish-obsidian-note",
+      "target": "solmee-xyz"
     },
     {
       "source": "solmee-xyz",

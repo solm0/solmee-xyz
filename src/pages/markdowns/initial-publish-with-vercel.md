@@ -1,11 +1,13 @@
 ---
-title: "Initial publish with Vercel"
+alias: Initial publish with Vercel
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-07-04
-tags: ["web", "vercel"]
+tags:
+  - web
+  - vercel
 overview: false
-projectId: "obsidian-digital-garden"
+projectId: obsidian-digital-garden
 sequence: 2
 ---
 Digital Garden 플러그인을 옵시디언 앱에 설치한 후 다음 과정을 따르면 배포를 할 수 있다.

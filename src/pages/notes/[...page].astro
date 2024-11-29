@@ -34,7 +34,7 @@ const { paginatedPosts, totalPages } = paginatePosts(allPosts, 'notes', currentP
         {paginatedPosts.map((post) =>
             <NotesPost
                 url={post.url}
-                title={post.title}
+                title={post.alias}
                 tags={post.tags}
                 date={post.date.toString().slice(0,10)}
             />

@@ -10,7 +10,7 @@ import WorksPost from "../components/WorksPost.astro"
 const pageTitle = 'solmee.xyz: Home'
 
 const allPosts = loadNotes();
-const findNote = (url) => allPosts.find((post) => post.title === url);
+const findNote = (title) => allPosts.find((post) => post.alias === title);
 
 const note1 = findNote('Obsidian Digital Garden');
 const note2 = findNote('solmee.xyz');
@@ -27,7 +27,7 @@ const note5 = findNote('comixtura code');
 			<div class="blog-post-container">
 				<NotesPost
 					url={note4.url}
-					title={note4.title}
+					title={note4.alias}
 					tags={note4.tags}
 					date={note4.date.toString().slice(0,10)}
 					thumbnailUrl={note4.thumbnail}
@@ -35,7 +35,7 @@ const note5 = findNote('comixtura code');
 				/>
 				<LogbooksPost
 					url={note3.url}
-					title={note3.title}
+					title={note3.alias}
 					tags={note3.tags}
 					date={note3.date.toString().slice(0,10)}
 					thumbnailUrl={note3.thumbnail}
@@ -43,7 +43,7 @@ const note5 = findNote('comixtura code');
 				/>
 				<LogbooksPost
 					url={note5.url}
-					title={note5.title}
+					title={note5.alias}
 					tags={note5.tags}
 					date={note5.date.toString().slice(0,10)}
 					thumbnailUrl={note5.thumbnail}
@@ -120,7 +120,7 @@ const note5 = findNote('comixtura code');
 						<div class="blog-post-container">
 							<LogbooksPost
 								url={note1.url}
-								title={note1.aliases[0]}
+								title={note1.alias}
 								tags={note1.tags}
 								date={note1.date.toString().slice(0,10)}
 								thumbnailUrl={note1.thumbnail}
@@ -128,7 +128,7 @@ const note5 = findNote('comixtura code');
 							/>
 							<LogbooksPost
 								url={note2.url}
-								title={note2.title}
+								title={note2.alias}
 								tags={note1.tags}
 								date={note2.date.toString().slice(0,10)}
 								thumbnailUrl={note2.thumbnail}
@@ -136,7 +136,7 @@ const note5 = findNote('comixtura code');
 							/>
 							<LogbooksPost
 								url={note3.url}
-								title={note3.title}
+								title={note3.alias}
 								tags={note3.tags}
 								date={note3.date.toString().slice(0,10)}
 								thumbnailUrl={note3.thumbnail}

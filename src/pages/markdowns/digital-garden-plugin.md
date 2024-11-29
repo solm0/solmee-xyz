@@ -1,14 +1,16 @@
 ---
-title: "Digital Garden의 점령"
+alias: Digital Garden의 점령
 layout: ../../layouts/LogbooksLayout.astro
-type: "logbooks"
+type: logbooks
 date: 2024-07-07
-tags: ["web", "obsidian"]
+tags:
+  - web
+  - obsidian
 overview: false
-projectId: "obsidian-digital-garden"
+projectId: obsidian-digital-garden
 sequence: 5
 ---
-[[static-web]]에서 말했듯이 리액트와 서버로 만드는 신세계 같은 동적웹을 갓 배우고 정적웹생성기에 대해 전혀 모를때는 챗지피티가 아무리 Jekyl, Gatsby, Hugo(왜 다 사람이름인건데. 이것부터 신뢰감이 안들잖아…) 추천해줘도 의심이 가득했다. 그러다가 CSR, SSR의 차이점을 알게되고 블로그 만드는 사람들이 다 정적웹기술에 대해 말하는 걸 보면서 차츰 편견이 허물어져 Gatsby를 중심으로 React를 곁들여서 전체 웹사이트를 짓고, 그것의 일부로서 디지털 가든 플러그인으로 만든 부분을 삽입하려 했으나…
+[[static-web|정적 웹에 눈뜨다]]에서 말했듯이 리액트와 서버로 만드는 신세계 같은 동적웹을 갓 배우고 정적웹생성기에 대해 전혀 모를때는 챗지피티가 아무리 Jekyl, Gatsby, Hugo(왜 다 사람이름인건데. 이것부터 신뢰감이 안들잖아…) 추천해줘도 의심이 가득했다. 그러다가 CSR, SSR의 차이점을 알게되고 블로그 만드는 사람들이 다 정적웹기술에 대해 말하는 걸 보면서 차츰 편견이 허물어져 Gatsby를 중심으로 React를 곁들여서 전체 웹사이트를 짓고, 그것의 일부로서 디지털 가든 플러그인으로 만든 부분을 삽입하려 했으나…
 
 한 주 동안 [[obsidian-theme-agate|옵시디언 테마 개발]],  [[publish-obsidian-note|옵시디언 디지털 가든 배포]]를 해보면서 Obsidian Digital Garden 플러그인이 생각보다 기능이 많다는 것을 알게 되었다. 어쩌면 직접 웹사이트를 짓지 않아도 될 정도로...?
 
