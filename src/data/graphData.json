@@ -44,7 +44,7 @@
     },
     {
       "id": "dr-phong",
-      "name": "dr.phong variable font",
+      "name": "dr-phong",
       "type": "works",
       "val": 1
     },
@@ -80,13 +80,13 @@
     },
     {
       "id": "macro-typography-in-obsidian",
-      "name": "Macro Typography in Obsidian",
+      "name": "macro-typography-in-obsidian",
       "type": "logbooks",
       "val": 2
     },
     {
       "id": "micro-typography-in-obsidian",
-      "name": "Micro Typography in Obsidian",
+      "name": "micro-typography-in-obsidian",
       "type": "logbooks",
       "val": 1
     },

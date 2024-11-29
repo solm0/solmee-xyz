@@ -1,27 +1,16 @@
-import rss, { pagesGlobToRssItems } from '@astrojs/rss';
+import rss from '@astrojs/rss';
+import { getCollection } from 'astro:content';
 
 export async function GET(context) {
-  const markdownFiles = import.meta.glob('./**/*.md');
-  const items = await pagesGlobToRssItems(markdownFiles, {
-    mapFrontmatter(frontmatter, filePath) {
-      const filename = filePath.split('/').pop().replace('.md', '');
-      return {
-        title: frontmatter.alias ? frontmatter.alias : 'Untitled',
-        description: frontmatter.description || 'No description available.',
-        pubDate: frontmatter.date || new Date().toISOString(),
-        link: `/markdowns/${filename}`,
-      };
-    },
-  });
-
-  // Debug the items
-  console.log('RSS items:', items);
-
+  const blog = await getCollection('blog');
   return rss({
-    title: 'solmee.xyz',
-    description: 'Digital garden of Solmee',
+    title: 'solmee-xyz',
+    description: 'solmee-xyz',
     site: context.site,
-    items,
-    customData: `<language>ko</language>`,
+    items: blog.map((post) => ({
+      title: post.data.alias,
+      pubDate: post.data.date,
+      link: `/markdowns/${post.slug}/`,
+    })),
   });
 }
