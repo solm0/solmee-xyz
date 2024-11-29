@@ -375,6 +375,10 @@ a.home.current {
     line-height: 0;
 }
 
+.notes span, .logbooks span, .works span {
+    font-family: var(--font-family-serif)
+}
+
 /* toc */
 .toc {
     position: relative;
