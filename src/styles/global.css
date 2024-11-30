@@ -1432,6 +1432,11 @@ dialog.globalGraph {
         height: auto;
     }
 
+    img {
+        width: 100%;
+        height: auto;
+    }
+
     .works-container img {
         width: 100%;
     }
