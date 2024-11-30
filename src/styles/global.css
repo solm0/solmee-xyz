@@ -563,6 +563,7 @@ figure {
     display: flex;
     flex-direction: row;
     width: 100%;
+    gap: 1rem;
 }
 
 figcaption {
@@ -1437,6 +1438,7 @@ dialog.globalGraph {
 
     .blog-post-title-frontmatter {
         flex-direction: column;
+        gap: 0rem;
     }
 
     .blog-post.logbooks a {
