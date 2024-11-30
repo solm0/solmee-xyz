@@ -62,12 +62,6 @@ const Graph = ({
     window.setHoveredNode = (nodeId) => {
       const node = graphData.nodes.find((n) => n.id === nodeId);
       setHoveredNode(node || null);
-  
-      if (node) {
-        // console.log("Hovered node ID:", node.id);
-      } else {
-        // console.log("Node hover cleared");
-      }
     };
     return () => {
       delete window.setHoveredNode; // Clean up when component unmounts
@@ -75,7 +69,7 @@ const Graph = ({
   }, [graphData.nodes]); // Ensure graphData.nodes is accessible in the effect
 
 useEffect(() => {
-  // console.log("Updated hoveredNode:", hoveredNode);
+  console.log("Updated hoveredNode:", hoveredNode);
 }, [hoveredNode]);
 
   return (
@@ -134,13 +128,13 @@ useEffect(() => {
             } else if (depth1Nodes.has(node.id)) {
               ctx.fillStyle = GRAPHSTYLE.grayColor4;
             } else {
-              ctx.fillStyle = GRAPHSTYLE.grayColor2;
+              ctx.fillStyle = GRAPHSTYLE.grayColor1;
             }
           } else {
             ctx.fillStyle = nodeColor;
           }
         } else {
-          ctx.fillStyle = GRAPHSTYLE.grayColor2;
+          ctx.fillStyle = GRAPHSTYLE.grayColor1;
         }
 
         ctx.beginPath();
@@ -168,22 +162,20 @@ useEffect(() => {
 
         const filteredNodeIds = new Set(filteredNodes?.map((n) => n.id));
 
-        if (hoveredNode) {
-          const isDirectlyConected = (link.source.id === hoveredNode.id || link.target.id === hoveredNode.id);
-
-          if (isDirectlyConected) {
-            ctx.strokeStyle = GRAPHSTYLE.grayColor4;
+        if (filteredNodeIds.has(link.source.id) && filteredNodeIds.has(link.target.id)) {
+          if (hoveredNode) {
+            const isDirectlyConnected = (link.source.id === hoveredNode.id || link.target.id === hoveredNode.id);
+        
+            if (isDirectlyConnected) {
+              ctx.strokeStyle = GRAPHSTYLE.grayColor4; // Direct connection color
+            } else {
+              ctx.strokeStyle = GRAPHSTYLE.grayColor1; // Indirect connection color
+            }
           } else {
-            ctx.strokeStyle = GRAPHSTYLE.grayColor2;
+            ctx.strokeStyle = GRAPHSTYLE.grayColor4; // No hovered node, default color for valid links
           }
         } else {
-          ctx.strokeStyle = GRAPHSTYLE.grayColor4;
-        }
-
-        if (filteredNodeIds.has(link.source.id) && filteredNodeIds.has(link.target.id)) {
-          ctx.strokeStyle = GRAPHSTYLE.grayColor4;
-        } else {
-          ctx.strokeStyle = GRAPHSTYLE.grayColor2;
+          ctx.strokeStyle = GRAPHSTYLE.grayColor1; // Links where one or both nodes are not in filteredNodeIds
         }
 
         ctx.beginPath();
