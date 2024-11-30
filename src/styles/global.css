@@ -6,10 +6,6 @@
     font-family: "pretendard-r";
     src: url("/fonts/pretendard-r.otf") format("opentype");
 }
-@font-face {
-    font-family: "pretendard-b";
-    src: url("/fonts/pretendard-b.otf") format("opentype");
-}
 
 :root {
     font-size: 16.5px;
@@ -20,8 +16,7 @@
 
     --font-family-serif: "notoserif";
     --font-family-sans-n: "pretendard-r";
-    --font-family-sans-b: "pretendard-b";
-    --font-family-mono: menlo, consolas;
+    --font-family-mono: monospace;
 
     --line-height: 1.83em;
 
@@ -1146,7 +1141,7 @@ dialog.globalGraph {
 .getting-started-section h2 {
     font-family: var(--font-family-serif);
     font-size: var(--step-2);
-    font-weight: bold;
+    font-weight: normal;
     margin-bottom: 1em;
     display: inline;
 }
