@@ -1,10 +1,12 @@
 @font-face {
     font-family: "notoserif";
     src: url("/fonts/notoserif.ttf") format("truetype");
+    font-display: swap;
 }
 @font-face {
     font-family: "pretendard-r";
     src: url("/fonts/pretendard-r.otf") format("opentype");
+    font-display: swap;
 }
 
 :root {
