@@ -322,11 +322,11 @@ a.home {
     opacity: 1;
 }
 
-.nav-links a:hover,
-a.home.current {
+.nav-links a:hover {
     color: var(--gray-color-3);
 }
 
+.home.current::after,
 .notes.current::after,
 .logbooks.current::after,
 .works.current::after {
@@ -335,10 +335,12 @@ a.home.current {
     width: 9px;
     height: 9px;
     border-radius: 50%;
-    margin-left: .5em;
+    margin-left: .8em;
     position: relative;
+    top: 0.3px;
 }
 
+.home.current::after { background-color: var(--gray-color-2); }
 .notes.current::after { background-color: var(--notes-color); }
 .logbooks.current::after { background-color: var(--logbooks-color); }
 .works.current::after { background-color: var(--works-color); }
