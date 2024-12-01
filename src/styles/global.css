@@ -1,6 +1,6 @@
 @font-face {
     font-family: "notoserif";
-    src: url("/fonts/notoserif.ttf") format("truetype");
+    src: url("/fonts/notoserif.woff2") format("woff2");
     font-display: swap;
 }
 @font-face {
@@ -10,7 +10,7 @@
 }
 
 :root {
-    font-size: 16.5px;
+    font-size: 16px;
     text-underline-offset: 0.25em;
     word-break: keep-all;
     font-family: var(--font-family-serif);
@@ -79,13 +79,13 @@ html {
     transition: 0.3s ease-in-out;
 }
 html.dark {
-    --background-color: #1d1f21;
-    --gray-color-0: #272826;
+    --background-color: #26292b;
+    --gray-color-0: #303230;
     --gray-color-1: #3c3e3b;
     --gray-color-2: #52524e;
     --gray-color-3: #7e7e76;
     --gray-color-4: #a4a4a4;
-    --text-color: #c9d3c9;
+    --text-color: #d1d5d1;
 
     --notes-color: #9eff00;
     --logbooks-color: #00c899;
@@ -153,6 +153,7 @@ h2, h3, h4, h5, h6 {
     line-height: var(--line-height);
     margin: 0;
     font-family: var(--font-family-sans-n);
+    font-weight: normal;
 }
 
 p, li {
@@ -228,9 +229,10 @@ code:not(pre code) {
     background-color: var(--gray-color-1);
     font-size: var(--step--2);
     border-radius: 3px;
-    padding: 4px 6px 3px 6px;
+    padding: 6px 7px 5px 7px;
     position: relative;
     margin: 0 2px;
+    top: -0.1em;
 }
 
 pre:has(code) {
@@ -305,6 +307,7 @@ aside {
 
 .nav-links span {
     font-family: var(--font-family-sans-n);
+    margin-right: .3em;
 }
 
 nav a {
@@ -324,41 +327,21 @@ a.home.current {
     color: var(--gray-color-3);
 }
 
-.notes.current::after {
-    content: '';
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: var(--notes-color);
-    border-radius: 50%;
-    margin-left: 8px;
-    position: relative;
-    top: 1px;
-}
-
-.logbooks.current::after {
-    content: '';
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: var(--logbooks-color);
-    border-radius: 50%;
-    margin-left: 8px;
-    position: relative;
-    top: 1px;
-}
-
+.notes.current::after,
+.logbooks.current::after,
 .works.current::after {
     content: '';
     display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: var(--works-color);
+    width: 9px;
+    height: 9px;
     border-radius: 50%;
-    margin-left: 8px;
+    margin-left: .5em;
     position: relative;
-    top: 1px;
 }
+
+.notes.current::after { background-color: var(--notes-color); }
+.logbooks.current::after { background-color: var(--logbooks-color); }
+.works.current::after { background-color: var(--works-color); }
 
 .right .nav-links a:hover {
     color: var(--text-color);
@@ -405,7 +388,7 @@ a.home.current {
     line-height: 1.6em;
     border-radius: 5px;
     background-color: var(--gray-color-1);
-    color: var(--gray-color-4);
+    color: var(--text-color);
     padding: 0 .6em 0 .6em;
 }
 
@@ -482,6 +465,7 @@ figure {
     font-size: var(--step-0);
     width: 100%;
     padding-bottom:var(--line-height);
+    font-weight: bold;
 }
 
 .blog-post-title.notes {
@@ -608,7 +592,6 @@ dialog {
     position: fixed;
     background-color: var(--background-color);
     border: none;
-    transition: 0.3s ease;
     border-radius: 5px;
 }
 
@@ -863,7 +846,7 @@ footer {
     position: relative;
     font-size: var(--step--2);
     margin-top: 100px;
-    margin-bottom: calc(var(--grid-gutter) + 10px);
+    margin-bottom: var(--grid-gutter);
     font-family: var(--font-family-sans-n);
 }
 .copyright::before {
@@ -1158,6 +1141,7 @@ dialog.globalGraph {
     font-family: var(--font-family-serif);
     font-size: var(--step-1);
     margin: 0;
+    font-weight: bold;
 }
 
 /* works snap */
@@ -1326,7 +1310,7 @@ dialog.globalGraph {
 #goToTop {
     position: fixed;
     right: var(--grid-gutter);
-    bottom: calc(var(--grid-gutter) + 10px);
+    bottom: var(--grid-gutter);
     width: 25px;
     height: 25px;
     display: none;
