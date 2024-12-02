@@ -75,7 +75,7 @@ document.querySelectorAll('a:not(.nav-links a):not(.tag-button a):not(.blog-post
             previewIframe.classList.add('link-popup');
 
             previewIframe.onload = () => {
-                previewIframe.contentWindow.scrollTo(0, 270);
+                previewIframe.contentWindow.scrollTo(0, 260);
             };
 
             if ((window.innerHeight - e.pageY) < 400) {

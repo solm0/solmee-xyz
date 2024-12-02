@@ -218,7 +218,7 @@ blockquote {
     padding-block-start: 1em;
     padding-block-end: 1em;
     padding-inline-start: 2.3rem;
-    padding-inline-end: calc(100% - 42rem);
+    padding-inline-end: max(2.3rem, calc(100% - 42rem));;
     margin: calc(var(--line-height) /2) 0;
     border-radius: 5px;
 }
