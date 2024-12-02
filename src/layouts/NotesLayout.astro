@@ -14,5 +14,7 @@ const {frontmatter} = Astro.props;
         </div>
         <p class="frontmatter">{frontmatter.date.toString().slice(0,10)}</p>
     </div>
-    <slot/>
+    <section class="body-text">
+        <slot/>
+    </section>
 </BaseLayout>

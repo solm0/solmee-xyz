@@ -1,11 +1,11 @@
 @font-face {
     font-family: "notoserif";
-    src: url("/fonts/notoserif.woff2") format("woff2");
+    src: url("/fonts/notoserif-subset.woff2") format("woff2");
     font-display: swap;
 }
 @font-face {
-    font-family: "pretendard-r";
-    src: url("/fonts/pretendard-r.otf") format("opentype");
+    font-family: "pretendard";
+    src: url("/fonts/pretendard-subset.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -13,11 +13,11 @@
     font-size: 16px;
     text-underline-offset: 0.25em;
     word-break: keep-all;
-    font-family: var(--font-family-serif);
+    font-family: var(--font-family-serif), Georgia, 'Times New Roman', Times, serif;
     line-height: var(--line-height);
 
     --font-family-serif: "notoserif";
-    --font-family-sans-n: "pretendard-r";
+    --font-family-sans-n: "pretendard";
     --font-family-mono: monospace;
 
     --line-height: 1.83em;
@@ -114,6 +114,12 @@ body {
 }
 
 .grid-item.note-content {
+    width: 100%;
+}
+
+.body-text p,
+.body-text ul,
+.body-text ol {
     max-width: 42rem;
 }
 
@@ -211,8 +217,8 @@ blockquote {
     display: block;
     padding-block-start: 1em;
     padding-block-end: 1em;
-    padding-inline-start: 40px;
-    padding-inline-end: 40px;
+    padding-inline-start: 2.3rem;
+    padding-inline-end: calc(100% - 42rem);
     margin: calc(var(--line-height) /2) 0;
     border-radius: 5px;
 }
@@ -368,7 +374,6 @@ a.home {
 .toc {
     position: relative;
     top: 270px;
-    padding-top: var(--line-height);
     width: 100%;
 }
 
@@ -471,7 +476,7 @@ figure {
 }
 
 .blog-post-title.notes {
-    margin-right: calc(1rem + 100px);
+    margin-right: calc(100px - 4rem);
 }
 
 .blog-post-hr {
@@ -497,12 +502,11 @@ figure {
 }
 
 .blog-post-frontmatter {
-    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    width: 100%;
+    width: 300px;
 }
 
 .blog-post-container:has(.works) {
@@ -964,11 +968,15 @@ dialog.globalGraph {
 .graph-controller {
     width: var(--grid-gutter);
     position: relative;
-    left: calc(var(--grid-gutter) * -1);
+    left: calc(var(--grid-gutter) * -0.8);
 }
 
 #localGraphButton path {
     pointer-events: none;
+}
+
+#graphIcon {
+    margin-top: 10px;
 }
 
 /* tooltip */
@@ -1069,6 +1077,10 @@ dialog.globalGraph {
 
 .getting-started-section details {
     width: 100%;
+}
+
+.getting-started-section details p {
+    max-width: 42rem;
 }
 
 .getting-started-section input[type="text"] {
@@ -1454,7 +1466,7 @@ dialog.globalGraph {
     }
 
     .blog-post-title {
-        padding: 10px 0;
+        padding: .5em 0 .2em 0;
     }
 
     .u-container:has(.works-container) {
