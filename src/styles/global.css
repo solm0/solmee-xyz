@@ -1503,4 +1503,8 @@ dialog.globalGraph {
     .thumbnail-container {
         justify-content: flex-start;
     }
+
+    .blog-post-frontmatter {
+        width: 100%;
+    }
 }
