@@ -2,6 +2,14 @@ import ForceGraph2D from 'react-force-graph-2d';
 import { GRAPHSTYLE } from '../scripts/graphStyle';
 import { useState, useEffect, useRef } from 'react';
 
+const loadCustomFont = async () => {
+  const font = new FontFace("IBM", "url(/fonts/ibm-plex.woff2)");
+  await font.load();
+  document.fonts.add(font);
+};
+
+loadCustomFont();
+
 const Graph = ({
   width,
   height,
@@ -142,7 +150,7 @@ useEffect(() => {
         ctx.fill();
 
         const fontSize = GRAPHSTYLE.fontSize / globalScale;
-        ctx.font = `${fontSize}px Sans-Serif`;
+        ctx.font = `${fontSize}px 'IBM', Sans-Serif`;
 
         if (node === hoveredNode) {
           ctx.fillStyle = GRAPHSTYLE.textColor;
