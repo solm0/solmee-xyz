@@ -157,12 +157,12 @@ h2, h3, h4, h5, h6 {
     line-height: var(--line-height);
     margin: 0;
     font-weight: bold;
-    text-indent: -1.7rem;
+    text-indent: -2.3rem;
 }
 
 .body-text h2::before {
     content: '↳';
-    margin-right: 1rem;
+    margin-right: 1.3rem;
     font-family: var(--font-family-serif);
     font-weight: normal;
 }
@@ -1141,12 +1141,11 @@ dialog.globalGraph {
 }
 
 .getting-started-section summary::before {
-    content: '↱';
+    content: '↳';
     font-family: var(--font-family-serif);
     margin-right: .8em;
     font-size: var(--step-1);
     display: inline-block;
-    transform: scaleY(-1);
     transition: transform 0.2s ease-in-out;
     transform-origin: center;
 }
@@ -1157,7 +1156,7 @@ dialog.globalGraph {
 }
 
 .getting-started-section details[open]>summary::before {
-    transform: scaleY(-1) rotate(-90deg);
+    transform: rotate(90deg);
 }
 
 .mailto:hover {
@@ -1537,5 +1536,9 @@ dialog.globalGraph {
 
     .send-button {
         align-self: flex-start;
+    }
+
+    h2 {
+        text-indent: 0;
     }
 }
