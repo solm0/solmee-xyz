@@ -4,8 +4,8 @@
     font-display: swap;
 }
 @font-face {
-    font-family: "pretendard";
-    src: url("/fonts/pretendard-subset.woff2") format("woff2");
+    font-family: "ibm-plex";
+    src: url("/fonts/ibm-plex.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -17,20 +17,18 @@
     line-height: var(--line-height);
 
     --font-family-serif: "notoserif";
-    --font-family-sans-n: "pretendard";
-    --font-family-mono: monospace;
+    --font-family-mono: "ibm-plex";
 
     --line-height: 1.83em;
 
-    --step--3: clamp(0.6251rem, 0.6336rem - 0.0435vw, 0.6rem);
-    --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
-    --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
-    --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
-    --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
-    --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
-    --step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
-    --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
-    --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+    --step--2: clamp(0.64rem, 0.6549rem + -0.0192vw, 0.651rem);
+    --step--1: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+    --step-0: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+    --step-1: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+    --step-2: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+    --step-3: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+    --step-4: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+    --step-5: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
 
     --background-color: #f8fbf8;
     --gray-color-0: #eef2ee;
@@ -147,23 +145,30 @@ ul li::marker {
 
 h1 {
     margin-top: 200px;
-    font-size: var(--step-3);
+    font-size: var(--step-4);
     line-height: 1.2em;
     margin-bottom: 1rem;
     font-family: var(--font-family-serif);
 }
 
 h2, h3, h4, h5, h6 { 
-    font-size: var(--step--1);
+    font-size: var(--step-0);
     scroll-margin-top: var(--line-height);
     line-height: var(--line-height);
     margin: 0;
-    font-family: var(--font-family-sans-n);
+    font-weight: bold;
+    text-indent: -1.7rem;
+}
+
+.body-text h2::before {
+    content: '↳';
+    margin-right: 1rem;
+    font-family: var(--font-family-serif);
     font-weight: normal;
 }
 
 p, li {
-    font-size: var(--step--1);
+    font-size: var(--step-0);
     margin: 0;
 }
 
@@ -199,7 +204,7 @@ u {
 }
 
 small {
-    font-size: var(--step--2);
+    font-size: var(--step--1);
 }
 
 img {
@@ -233,7 +238,7 @@ code {
 
 code:not(pre code) {
     background-color: var(--gray-color-1);
-    font-size: var(--step--2);
+    font-size: var(--step--1);
     border-radius: 3px;
     padding: 6px 7px 5px 7px;
     position: relative;
@@ -261,7 +266,7 @@ html.dark .astro-code span {
 
 table {
     font-family: var(--font-family-serif);
-    font-size: var(--step--2);
+    font-size: var(--step--1);
     width: 100%;
     border-collapse: collapse;
     line-height: 1.5em;
@@ -275,13 +280,13 @@ th, td {
 
 th {
     border-top: 0;
-    font-family: var(--font-family-sans-n);
+    font-family: var(--font-family-mono);
 }
 
 tr>td:nth-child(1),
 tr>th:nth-child(1) {
     border-left: 0;
-    font-family: var(--font-family-sans-n);
+    font-family: var(--font-family-mono);
 }
 
 tr>td:last-child,
@@ -312,19 +317,19 @@ aside {
 }
 
 .nav-links span {
-    font-family: var(--font-family-sans-n);
+    font-family: var(--font-family-serif);
     margin-right: .3em;
 }
 
 nav a {
     text-decoration: none;
-    font-size: var(--step--2);
-    font-family: var(--font-family-sans-n);
+    font-size: var(--step--1);
+    font-family: var(--font-family-mono);
     color: var(--text-color);
 }
 
 a.home {
-    font-family: var(--font-family-sans-n);
+    font-family: var(--font-family-mono);
     opacity: 1;
 }
 
@@ -375,6 +380,7 @@ a.home {
     position: relative;
     top: 270px;
     width: 100%;
+    margin-top: 3rem;
 }
 
 .toc-link {
@@ -386,17 +392,18 @@ a.home {
     color: var(--text-color);
 }
 
+.nav-links.toc a {
+    font-family: var(--font-family-serif);
+}
+
 /* tag */
 .tag,
 .tag-button {
     display: inline;
-    font-size: 12.5px;
+    font-size: var(--step--1);
     font-family: var(--font-family-mono);
     line-height: 1.6em;
-    border-radius: 5px;
-    background-color: var(--gray-color-1);
     color: var(--text-color);
-    padding: 0 .6em 0 .6em;
 }
 
 .tag-container {
@@ -409,6 +416,18 @@ a.home {
     gap: 5px;
 }
 
+.tag-button>div::before,
+.tag::before {
+    content: '(';
+}
+
+.tag-button>div::after,
+.tag::after {
+    content: ')';
+}
+
+
+
 .toc-h3 {
     padding-left: 2.5em;
 }
@@ -420,8 +439,8 @@ a.home {
 
 p.frontmatter,
 .sequenceNav-container {
-    font-family: var(--font-family-sans-n);
-    font-size: var(--step--2);
+    font-family: var(--font-family-mono);
+    font-size: var(--step--1);
     line-height: 1.2rem;
     margin: 0;
     color: var(--text-color);
@@ -429,8 +448,8 @@ p.frontmatter,
 
 p.description {
     margin-top: 1em;
-    font-size: var(--step--2);
-    font-family: var(--font-family-sans-n);
+    font-size: var(--step--1);
+    font-family: var(--font-family-mono);
     line-height: 1.8em;
     max-width: 42em;
 }
@@ -469,7 +488,7 @@ figure {
 .blog-post-title {
     position: relative;
     color: var(--text-color);
-    font-size: var(--step-0);
+    font-size: var(--step-1);
     width: 100%;
     padding-bottom:var(--line-height);
     font-weight: bold;
@@ -557,8 +576,8 @@ figure {
 }
 
 figcaption {
-    font-family: var(--font-family-sans-n);
-    font-size: var(--step--2);
+    font-family: var(--font-family-mono);
+    font-size: var(--step--1);
     color: var(--gray-color-3);
     line-height: 1em;
     margin-top: var(--line-height);
@@ -581,7 +600,8 @@ div#gridItemRight aside {
 button {
     position: relative;
     border: none;
-    font-size: 0.8rem;
+    font-size: var(--step--1);
+    font-family: var(--font-family-mono);
     padding: 0;
     line-height: 1.8rem;
     transition: 0.2s ease-in-out;
@@ -657,6 +677,8 @@ input[type="text"]:focus {
     justify-content: space-between;
     margin: .5em 0 1em 0;
     width: 100%;
+    gap: 1rem;
+    padding-right: 2rem;
 }
 
 .send-button {
@@ -750,6 +772,7 @@ p.pagefind-ui__result-excerpt {
     display: inline;
     padding: 0;
 }
+
 .logo {
     position: relative;
     width: 1rem;
@@ -797,7 +820,7 @@ a.pagefind-ui__result-link:hover,
 }
 
 .sequenceNav-container>p {
-    font-size: var(--step--2);
+    font-size: var(--step--1);
     margin-bottom: 1em;
 }
 
@@ -850,10 +873,10 @@ a.pagefind-ui__result-link:hover,
 /* footer */
 footer {
     position: relative;
-    font-size: var(--step--2);
+    font-size: var(--step--1);
     margin-top: 100px;
     margin-bottom: var(--grid-gutter);
-    font-family: var(--font-family-sans-n);
+    font-family: var(--font-family-mono);
 }
 .copyright::before {
     content: "© \00a0";
@@ -877,8 +900,8 @@ dialog.globalGraph {
 }
 
 .graph-caption {
-    font-size: var(--step--2);
-    font-family: var(--font-family-sans-n);
+    font-size: var(--step--1);
+    font-family: var(--font-family-mono);
     position: absolute;
     bottom: var(--grid-gutter);
     padding-left: var(--grid-gutter);
@@ -890,8 +913,8 @@ dialog.globalGraph {
 .graph-tags-caption {
     position: relative;
     width: auto;
-    font-size: var(--step--2);
-    font-family: var(--font-family-sans-n);
+    font-size: var(--step--1);
+    font-family: var(--font-family-mono);
     color: var(--text-color);
 }
 
@@ -935,7 +958,7 @@ dialog.globalGraph {
     position: absolute;
     top: var(--grid-gutter);
     /* margin: 1rem; */
-    margin-left: calc(var(--grid-gutter) + 80px);
+    margin-left: calc(var(--grid-gutter) + 100px);
     padding: 1px 20px;
     color: var(--gray-color-3);
 }
@@ -990,10 +1013,11 @@ dialog.globalGraph {
     background: var(--text-color);
     opacity: 0.8;
     color: var(--background-color);
-    font-size: var(--step--2);
+    font-size: var(--step--1);
     padding: .5rem;
     line-height: 1rem;
     border-radius: 5px;
+    font-family: var(--font-family-mono);
 }
 
 .external-link {
@@ -1016,8 +1040,8 @@ dialog.globalGraph {
     position: absolute;
     z-index: 1;
 
-    font-family: var(--font-family-sans-n);
-    font-size: var(--step--2);
+    font-family: var(--font-family-mono);
+    font-size: var(--step--1);
     line-height: 1rem;
 }
 
@@ -1051,7 +1075,7 @@ dialog.globalGraph {
 
 .pagination-page {
     display: inline-block;
-    font-size: var(--step--2);
+    font-size: var(--step--1);
     color: var(--gray-color-3);
     height: 100%;
     border-radius: 5px;
@@ -1084,9 +1108,8 @@ dialog.globalGraph {
 }
 
 .getting-started-section input[type="text"] {
-    font-size: var(--step-1);
+    font-size: var(--step-2);
     position: relative;
-    margin-right: 15px;
     width: 100%;
 }
 
@@ -1109,7 +1132,7 @@ dialog.globalGraph {
     transition: 0.2s ease-in-out;
     margin: 0;
     list-style-type: none;
-    font-size: var(--step-1);
+    font-size: var(--step-2);
     cursor: pointer;
 }
 
@@ -1119,9 +1142,9 @@ dialog.globalGraph {
 
 .getting-started-section summary::before {
     content: '↱';
-    font-family: var(--font-family-sans-n);
+    font-family: var(--font-family-serif);
     margin-right: .8em;
-    font-size: var(--step-0);
+    font-size: var(--step-1);
     display: inline-block;
     transform: scaleY(-1);
     transition: transform 0.2s ease-in-out;
@@ -1144,7 +1167,7 @@ dialog.globalGraph {
 
 .getting-started-section h2 {
     font-family: var(--font-family-serif);
-    font-size: var(--step-2);
+    font-size: var(--step-3);
     font-weight: bold;
     margin-bottom: 1em;
     display: inline;
@@ -1153,7 +1176,7 @@ dialog.globalGraph {
 .getting-started-section h3 {
     display: inline;
     font-family: var(--font-family-serif);
-    font-size: var(--step-1);
+    font-size: var(--step-2);
     margin: 0;
     font-weight: bold;
 }
@@ -1179,8 +1202,8 @@ dialog.globalGraph {
 /* guestbook */
 .guestbook {
     display: block;
-    font-size: var(--step--1);
-    font-family: var(--font-family-sans-n);
+    font-size: var(--step-0);
+    font-family: var(--font-family-mono);
     padding: 1rem 2rem;
     position: fixed;
     bottom: var(--grid-gutter);
@@ -1258,7 +1281,7 @@ dialog.globalGraph {
     border-radius: 15px;
     border: 1px solid black;
     padding: 0.3em;
-    font-size: var(--step-1);
+    font-size: var(--step-2);
     color: black;
     font-family: var(--font-family-mono);
     resize: none;
@@ -1506,5 +1529,13 @@ dialog.globalGraph {
 
     .blog-post-frontmatter {
         width: 100%;
+    }
+
+    .newsletter {
+        flex-direction: column;
+    }
+
+    .send-button {
+        align-self: flex-start;
     }
 }
