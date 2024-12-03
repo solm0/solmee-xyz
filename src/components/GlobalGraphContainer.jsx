@@ -74,8 +74,7 @@ const TagButtonContainer = () => {
       </div>
 
       <div className="graph-caption">
-        Left-click: pan<br />
-        Mouse-wheel: zoom<br />
+        Scroll to zoom!
       </div>
 
       <button

@@ -39,10 +39,10 @@ const { paginatedPosts, totalPages } = paginatePosts(allPosts, 'notes', currentP
                 date={post.date.toString().slice(0,10)}
             />
         )}
+        <Pagination
+        type="notes"
+        currentPage={currentPage}
+        totalPages={totalPages}
+      />
     </div>
-    <Pagination
-      type="notes"
-      currentPage={currentPage}
-      totalPages={totalPages}
-    />
 </BaseLayout>

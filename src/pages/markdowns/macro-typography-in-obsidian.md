@@ -50,13 +50,6 @@ for (int i = 0; i < 3; i++){}
 
 > 이것은 blockquote입니다
 
-
-# heading1
-## heading2
-### heading3
-#### heading4
-##### heading5
-###### heading6
 <small>이것은 small입니다.</small>
 
 | first name | last name |

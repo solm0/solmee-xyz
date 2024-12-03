@@ -56,11 +56,11 @@ const { paginatedPosts, totalPages, inProgress } = paginatePosts(allPosts, 'logb
                     alt={post.alt || "Default alt text"}
                 />
             )}
+            <Pagination
+            type="logbooks"
+            currentPage={currentPage}
+            totalPages={totalPages}
+          />
         </figure>
     </div>
-    <Pagination
-      type="logbooks"
-      currentPage={currentPage}
-      totalPages={totalPages}
-    />
 </BaseLayout>

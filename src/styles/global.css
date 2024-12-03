@@ -176,7 +176,7 @@ main p:not(li p):not(blockquote p):not(.blog-post-container p):not(.frontmatter)
     padding-bottom: var(--line-height);
 }
 
-p:has(+ ul, + ol) {
+p:has(+ ul, + ol, + pre, + blockquote, + table) {
     padding-bottom: 0 !important;
 }
 
@@ -270,7 +270,8 @@ table {
     width: 100%;
     border-collapse: collapse;
     line-height: 1.5em;
-    margin-bottom: var(--line-height);
+    margin: calc(var(--line-height) / 2) 0;
+    text-align: left;
 }
 
 th, td {
@@ -280,13 +281,11 @@ th, td {
 
 th {
     border-top: 0;
-    font-family: var(--font-family-mono);
 }
 
 tr>td:nth-child(1),
 tr>th:nth-child(1) {
     border-left: 0;
-    font-family: var(--font-family-mono);
 }
 
 tr>td:last-child,
@@ -468,6 +467,22 @@ main>ul {
 
 figure {
     margin: 0 0 3rem 0;
+    position: relative;
+    height: 100%;
+}
+
+figcaption {
+    font-family: var(--font-family-mono);
+    font-size: var(--step--2);
+    color: var(--text-color);
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    transform-origin: 0;
+    height: 100%;
+    text-align: right;
+    position: absolute;
+    border-left: 1px solid var(--text-color);
+    line-height: var(--line-height);
 }
 
 .blog-post {
@@ -573,14 +588,6 @@ figure {
     flex-direction: row;
     width: 100%;
     gap: 1rem;
-}
-
-figcaption {
-    font-family: var(--font-family-mono);
-    font-size: var(--step--1);
-    color: var(--gray-color-3);
-    line-height: 1em;
-    margin-top: var(--line-height);
 }
 
 /* works */
@@ -897,6 +904,11 @@ dialog.globalGraph {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    cursor: grab;
+}
+
+.graph-container:active {
+    cursor: grabbing;
 }
 
 .graph-caption {
@@ -905,9 +917,21 @@ dialog.globalGraph {
     position: absolute;
     bottom: var(--grid-gutter);
     padding-left: var(--grid-gutter);
-    color: var(--gray-color-3);
+    color: var(--text-color);
     display: block;
     line-height: 1.5em;
+    animation: blink 1s;
+    animation-iteration-count: 3;
+    user-select: none;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
 }
 
 .graph-tags-caption {
@@ -927,6 +951,7 @@ dialog.globalGraph {
     height: auto;
     display: flex;
     flex-direction: column;
+    user-select: none;
 }
 
 .graph-tags {
@@ -1043,6 +1068,9 @@ dialog.globalGraph {
     font-family: var(--font-family-mono);
     font-size: var(--step--1);
     line-height: 1rem;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .external-link .tooltip::after {
@@ -1058,6 +1086,7 @@ dialog.globalGraph {
 
 .external-link:hover .tooltip {
     visibility: visible;
+    text-overflow: ellipsis;
 }
 
 .external-link, .rss-link, .mailto, .cv-link {
@@ -1067,27 +1096,22 @@ dialog.globalGraph {
 /* pagination */
 
 .pagination {
-    margin: 2rem 0;
+    margin: 4rem 0;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
 }
 
 .pagination-page {
     display: inline-block;
     font-size: var(--step--1);
-    color: var(--gray-color-3);
-    height: 100%;
-    border-radius: 5px;
+    color: var(--text-color);
     padding: 0 1em;
+    line-height: 1em;
 }
 
 .pagination-page:hover {
-    background-color: var(--gray-color-1);
-}
-
-.pagination-page.active {
-    color: var(--text-color);
+    color: var(--gray-color-3);
 }
 
 /* getting started */
@@ -1116,7 +1140,6 @@ dialog.globalGraph {
 .getting-started-section details table {
     position: relative;
     width: 90%;
-    text-align: left;
 }
 
 .getting-started-section details>*:not(summary) {
@@ -1372,6 +1395,8 @@ dialog.globalGraph {
         position: absolute;
         top: var(--grid-gutter);
         left: calc(100vw - var(--grid-gutter) * 3);
+        display: flex;
+        justify-content: end;
     }
 }
 
@@ -1483,7 +1508,7 @@ dialog.globalGraph {
         padding: 0;
     }
 
-    p.graph-caption {
+    .graph-caption {
         display: none;
     }
 
@@ -1540,5 +1565,15 @@ dialog.globalGraph {
 
     h2 {
         text-indent: 0;
+    }
+
+    figcaption {
+        writing-mode: horizontal-tb;
+        text-align: left;
+        position: relative;
+        transform: none;
+        height: var(--line-height);
+        border-left: none;
+        border-bottom: 1px solid var(--text-color);
     }
 }
