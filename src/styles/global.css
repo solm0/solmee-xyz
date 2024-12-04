@@ -467,22 +467,14 @@ main>ul {
 
 figure {
     margin: 0 0 3rem 0;
-    position: relative;
-    height: 100%;
 }
 
 figcaption {
     font-family: var(--font-family-mono);
-    font-size: var(--step--2);
-    color: var(--text-color);
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-    transform-origin: 0;
-    height: 100%;
-    text-align: right;
-    position: absolute;
-    border-left: 1px solid var(--text-color);
-    line-height: var(--line-height);
+    font-size: var(--step--1);
+    color: var(--gray-color-3);
+    line-height: 1em;
+    margin-top: var(--line-height);
 }
 
 .blog-post {
@@ -1565,15 +1557,5 @@ dialog.globalGraph {
 
     h2 {
         text-indent: 0;
-    }
-
-    figcaption {
-        writing-mode: horizontal-tb;
-        text-align: left;
-        position: relative;
-        transform: none;
-        height: var(--line-height);
-        border-left: none;
-        border-bottom: 1px solid var(--text-color);
     }
 }
