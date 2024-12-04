@@ -372,6 +372,7 @@ a.home {
     bottom: var(--grid-gutter);
     left: 0;
     line-height: 0;
+    transform: rotate(-225deg);
 }
 
 /* toc */
@@ -480,7 +481,6 @@ figcaption {
 .blog-post {
     width: 100%;
     border-radius: 5px;
-    transition: 0.2s ease-in-out;
 }
 
 .blog-post:hover {
@@ -562,7 +562,6 @@ figcaption {
 .blog-post.works {
     border-radius: 5px;
     padding: 10px;
-    transition: 0.2s ease-in-out;
     max-width: 330px;
 }
 
@@ -603,7 +602,6 @@ button {
     font-family: var(--font-family-mono);
     padding: 0;
     line-height: 1.8rem;
-    transition: 0.2s ease-in-out;
     background-color: transparent;
     color: var(--text-color);
     text-align: left;
@@ -784,7 +782,6 @@ a,
     color: var(--gray-color-4);
     text-decoration: underline dotted var(--text-color);
     text-decoration-thickness: 1.2px;
-    transition: 0.2s ease-in-out;
 }
 
 a.external-link:hover,
@@ -848,7 +845,6 @@ a.pagefind-ui__result-link:hover,
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: 0.2s ease-in-out;
     position: relative;
 }
 .sequenceNav-button:hover {
@@ -958,10 +954,6 @@ dialog.globalGraph {
     user-select: none;
 }
 
-.graph-tags button {
-    transition: 0.2s ease-in-out;
-}
-
 .graph-tags button.inactive:hover {
     background-color: var(--gray-color-2);
 }
@@ -991,7 +983,6 @@ dialog.globalGraph {
     display: block;
     top: var(--grid-gutter);
     border-radius: 5px;
-    transition: 0.2s ease-in-out;
     width: auto;
 }
 .local-graph-container.hide .force-graph-container {
@@ -1039,6 +1030,11 @@ dialog.globalGraph {
 
 .external-link {
     position: relative;
+}
+
+.external-link span {
+    font-family: var(--font-family-mono);
+    vertical-align: middle;
 }
 
 .external-link .tooltip {
@@ -1144,7 +1140,6 @@ dialog.globalGraph {
 
 .getting-started-section summary {
     position: relative;
-    transition: 0.2s ease-in-out;
     margin: 0;
     list-style-type: none;
     font-size: var(--step-2);
@@ -1161,8 +1156,8 @@ dialog.globalGraph {
     margin-right: .8em;
     font-size: var(--step-1);
     display: inline-block;
-    transition: transform 0.2s ease-in-out;
     transform-origin: center;
+    transition: transform 0.1s;
 }
 
 .getting-started-section summary:hover {
@@ -1227,7 +1222,6 @@ dialog.globalGraph {
     border-radius: 20px;
     background-color: lime;
     color: black;
-    transition: 0.2s ease-in-out;
     box-shadow: 0 5px 10px var(--gray-color-3);
     overflow-x: hidden;
     scrollbar-width: none;
