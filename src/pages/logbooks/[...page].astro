@@ -32,7 +32,7 @@ const { paginatedPosts, totalPages, inProgress } = paginatePosts(allPosts, 'logb
 <BaseLayout lang="ko" pageTitle={ pageTitle }>
     <div class="blog-post-container">
         <figure>
-            <figcaption>In progress</figcaption>
+            <figcaption class="in-progress">In progress</figcaption>
             {inProgress.map((post) =>
                 <LogbooksPost
                     url={post.url}

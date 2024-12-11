@@ -28,7 +28,7 @@
       "id": "continuous-text-and-hypertext",
       "name": "줄글과 하이퍼텍스트",
       "type": "notes",
-      "val": 1
+      "val": 2
     },
     {
       "id": "css-custom-properties",
@@ -166,10 +166,14 @@
       "id": "why-obsidian",
       "name": "Obsidian을 시작한 이유",
       "type": "notes",
-      "val": 1
+      "val": 2
     }
   ],
   "links": [
+    {
+      "source": "continuous-text-and-hypertext",
+      "target": "solmee-xyz"
+    },
     {
       "source": "digital-garden-plugin",
       "target": "static-web"
@@ -277,6 +281,10 @@
     {
       "source": "submit-your-theme",
       "target": "css-custom-properties"
+    },
+    {
+      "source": "why-obsidian",
+      "target": "solmee-xyz"
     }
   ]
 }

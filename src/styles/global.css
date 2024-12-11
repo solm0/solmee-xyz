@@ -1,11 +1,21 @@
 @font-face {
     font-family: "notoserif";
-    src: url("/fonts/notoserif-subset.woff2") format("woff2");
+    src: url("/fonts/notoserif-regular.woff2") format("woff2");
+    font-display: swap;
+}
+@font-face {
+    font-family: "notoserif-bold";
+    src: url("/fonts/notoserif-bold.woff2") format("woff2");
     font-display: swap;
 }
 @font-face {
     font-family: "ibm-plex";
     src: url("/fonts/ibm-plex.woff2") format("woff2");
+    font-display: swap;
+}
+@font-face {
+    font-family: "ibm-plex-bold";
+    src: url("/fonts/ibm-plex-bold.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -17,7 +27,9 @@
     line-height: var(--line-height);
 
     --font-family-serif: "notoserif";
+    --font-family-serif-b: "notoserif-bold";
     --font-family-mono: "ibm-plex";
+    --font-family-mono-b: "ibm-plex-bold";
 
     --line-height: 1.83em;
 
@@ -156,7 +168,8 @@ h2, h3, h4, h5, h6 {
     scroll-margin-top: var(--line-height);
     line-height: var(--line-height);
     margin: 0;
-    font-weight: bold;
+    font-family: var(--font-family-serif-b);
+    font-weight: normal;
     text-indent: -2.3rem;
 }
 
@@ -350,6 +363,13 @@ a.home {
     top: 0.3px;
 }
 
+.home.current,
+.notes.current,
+.logbooks.current,
+.works.current {
+    font-family: var(--font-family-mono-b);
+}
+
 .home.current::after { background-color: var(--gray-color-2); }
 .notes.current::after { background-color: var(--notes-color); }
 .logbooks.current::after { background-color: var(--logbooks-color); }
@@ -404,6 +424,9 @@ a.home {
     font-family: var(--font-family-mono);
     line-height: 1.6em;
     color: var(--text-color);
+    padding: 0 .5em;
+    border: 1px solid var(--gray-color-2);
+    border-radius: 5px;
 }
 
 .tag-container {
@@ -414,16 +437,6 @@ a.home {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5px;
-}
-
-.tag-button>div::before,
-.tag::before {
-    content: '(';
-}
-
-.tag-button>div::after,
-.tag::after {
-    content: ')';
 }
 
 
@@ -476,6 +489,10 @@ figcaption {
     color: var(--gray-color-3);
     line-height: 1em;
     margin-top: var(--line-height);
+}
+
+.in-progress {
+    color: var(--text-color);
 }
 
 .blog-post {
