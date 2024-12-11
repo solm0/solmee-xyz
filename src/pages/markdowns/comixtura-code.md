@@ -18,3 +18,5 @@ description: this is a font.
 ![comixtura-code_7](../../assets/comixtura_code_7.png)
 ![comixtura-code_8](../../assets/comixtura_code_8.png)
 ![comixtura-code_9](../../assets/comixtura_code_9.png)
+
+[[dr-phong|dr.phong variable font]]

@@ -173,7 +173,8 @@ h2, h3, h4, h5, h6 {
     text-indent: -2.3rem;
 }
 
-.body-text h2::before {
+.body-text h2::before,
+.works-container h2::before {
     content: '↳';
     margin-right: 1.3rem;
     font-family: var(--font-family-serif);

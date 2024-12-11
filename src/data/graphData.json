@@ -16,7 +16,7 @@
       "id": "comixtura-code",
       "name": "comixtura code",
       "type": "works",
-      "val": 1
+      "val": 2
     },
     {
       "id": "compare-ssgs",
@@ -46,7 +46,7 @@
       "id": "dr-phong",
       "name": "dr.phong variable font",
       "type": "works",
-      "val": 1
+      "val": 2
     },
     {
       "id": "dynamic-in-static",
@@ -136,7 +136,7 @@
       "id": "solmee-xyz",
       "name": "solmee.xyz",
       "type": "logbooks",
-      "val": 5
+      "val": 6
     },
     {
       "id": "static-web",
@@ -171,6 +171,10 @@
   ],
   "links": [
     {
+      "source": "comixtura-code",
+      "target": "dr-phong"
+    },
+    {
       "source": "continuous-text-and-hypertext",
       "target": "solmee-xyz"
     },
@@ -185,6 +189,10 @@
     {
       "source": "digital-garden-plugin",
       "target": "publish-obsidian-note"
+    },
+    {
+      "source": "dr-phong",
+      "target": "comixtura-code"
     },
     {
       "source": "firebase-learn",
@@ -277,6 +285,10 @@
     {
       "source": "solmee-xyz",
       "target": "compare-ssgs"
+    },
+    {
+      "source": "solmee-xyz",
+      "target": "porkbun-cloudflaredns-vercel"
     },
     {
       "source": "submit-your-theme",
