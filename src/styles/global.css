@@ -428,6 +428,7 @@ a.home {
     padding: 0 .5em;
     border: 1px solid var(--gray-color-2);
     border-radius: 5px;
+    backdrop-filter: blur(3px);
 }
 
 .tag-container {
@@ -1545,10 +1546,6 @@ dialog.globalGraph {
 
     #goToTop {
         display: block;
-    }
-
-    .graph-tags-container {
-        width: 100%;
     }
 
     .thumbnail-container {
