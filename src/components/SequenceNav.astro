@@ -19,14 +19,14 @@ const overviewNote = projectNotes[0];
 
 <div class="sequenceNav-container">
     <p>Project:
-        <a class="default-link internal" href={projectId}>{overviewNote.alias}</a>
+        <a class="default-link internal" href={projectId}>{overviewNote.alias || overviewNote.aliases[0]}</a>
     </p>
     <div class="sequenceNav-button-container">
         {beforeNote &&
                 <a href={beforeNote.url}>
                     <div class="sequenceNav-button prev">
                         <b>Prev</b>
-                        <p>{beforeNote.alias}</p>
+                        <p>{beforeNote.alias || beforeNote.aliases[0]}</p>
                     </div>
                 </a>
         }
@@ -34,7 +34,7 @@ const overviewNote = projectNotes[0];
             <a href={afterNote.url}>
                 <div class="sequenceNav-button next">
                     <b>Next</b>
-                    <p>{afterNote.alias}</p>
+                    <p>{afterNote.alias || afterNote.aliases[0]}</p>
                 </div>
             </a>
         }

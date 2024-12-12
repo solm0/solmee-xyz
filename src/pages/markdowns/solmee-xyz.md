@@ -1,5 +1,6 @@
 ---
-alias: solmee.xyz
+aliases:
+  - solmee.xyz 1.0.0 개발 과정
 layout: ../../layouts/LogbooksLayout.astro
 type: logbooks
 date: 2024-11-06
@@ -14,11 +15,11 @@ finished: false
 projectId: solmee-xyz
 sequence: 0
 ---
+## 개요
+12월 16일 공개된 solmee.xyz 1.0.0의 개발 과정 기록이다.
 
-12월 16일 최초 배포된 solmee.xyz 첫 번째 버전의 개발 과정 기록이다.
+## 내용
 
-[[why-i-left-digital-garden|Digital Garden에서 갈아타기로 한 이유]]  
-[[setting-up-the-markdown-pipeline|Setting up the Markdown Pipeline]]  
+[[obsidian-digital-garden|Digital Garden으로 만들었던 개인 웹사이트]]를 [[why-i-left-digital-garden|Digital Garden을 사용하지 않고 다시 만들기로 했다.]] 그러기 위해서 먼저 [[setting-up-the-markdown-pipeline|마크다운 파일을 배포]]하는 여러 가지 방법들을 알아보았다.
 [[characteristics-of-ssgs|characteristics of SSGs]]  
-[[compare-ssgs|Compare SSGs]]  
 [[porkbun-cloudflaredns-vercel|Porkbun 도메인]]

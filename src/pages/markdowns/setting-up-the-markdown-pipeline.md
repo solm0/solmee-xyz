@@ -1,5 +1,6 @@
 ---
-alias: Setting up the Markdown Pipeline
+aliases:
+  - 마크다운 파일 배포하기
 layout: ../../layouts/LogbooksLayout.astro
 type: logbooks
 date: 2024-08-07
@@ -12,11 +13,15 @@ overview: false
 projectId: solmee-xyz
 sequence: 2
 ---
-## plain text 노트 배포하는 법
-[nicole van der hoeven의 영상](https://youtu.be/6s6DT1yN4dw?t=128)에서 이 파이프라인을 보았다.
-1. Obsidian: markdown 생성 (CMS)
-2. _ _ _ : build할때 markdown을 HTML로 변환 (Static Site Generator)
-3. Vercel: 배포
+## 마크다운 파일을 배포하는 법
+옵시디언으로 작성한 글은 마크다운 파일로 저장된다. 이것을 HTML로 바꾸면 웹사이트가 된다.
+
+[How to publish your notes for free with Quartz](https://youtu.be/6s6DT1yN4dw?t=128) 이 영상에서는 Quartz를 사용해 마크다운 파일을 HTML로 변환하고 있다.
+
+각 부분과 그 기능
+1. Obsidian -> markdown 생성 *Content Management System*
+2. ~Quartz~ - build할때 markdown을 HTML로 변환 *Static Site Generator*
+3. Vercel - 배포
 
 1단계랑 3단계는 이전에 쓰던 대로 한다고 치고 2단계에서 Digital Garden 플러그인을 대체할 SSG를 찾아야 한다.
 

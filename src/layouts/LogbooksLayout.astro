@@ -5,7 +5,7 @@ import SequenceNav from "../components/SequenceNav.astro";
 const {frontmatter} = Astro.props;
 ---
 
-<BaseLayout pageTitle = {frontmatter.alias}>
+<BaseLayout pageTitle = {frontmatter.alias || frontmatter.aliases[0]}>
     <div class="frontmatter-container">
         <div class="tag-container">
             {frontmatter.tags && frontmatter.tags.map((tag) => 
