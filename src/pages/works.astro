@@ -16,7 +16,7 @@ const filteredPosts = allPosts
         {filteredPosts.map((post) =>
             <WorksPost
                 url={post.url}
-                title={post.alias}
+                title={post.alias || post.aliases[0]}
                 tags={post.tags}
                 date={post.year}
                 thumbnailUrl={post.thumbnail}

@@ -21,7 +21,7 @@ const Finished = filteredPosts.filter(post => post.finished === true);
             {inProgress.map((post) =>
                 <LogbooksPost
                     url={post.url}
-                    title={post.alias}
+                    title={post.alias || post.aliases[0]}
                     tags={post.tags}
                     date={post.date.toString().slice(0,10)}
                     thumbnailUrl={post.thumbnail}
@@ -34,7 +34,7 @@ const Finished = filteredPosts.filter(post => post.finished === true);
             {Finished.map((post) =>
                 <LogbooksPost
                     url={post.url}
-                    title={post.alias}
+                    title={post.alias || post.aliases[0]}
                     tags={post.tags}
                     date={post.date.toString().slice(0,10)}
                     thumbnailUrl={post.thumbnail}

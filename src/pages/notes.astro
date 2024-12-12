@@ -16,7 +16,7 @@ const filteredPosts = allPosts
         {filteredPosts.map((post) =>
             <NotesPost
                 url={post.url}
-                title={post.alias}
+                title={post.alias || post.aliases[0]}
                 tags={post.tags}
                 date={post.date.toString().slice(0,10)}
             />
