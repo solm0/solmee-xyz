@@ -1,32 +1,17 @@
 ---
-import { loadNotes } from '../../scripts/loadNotes'
-import { paginatePosts } from '../../scripts/paginatePosts'
-import BaseLayout from "../../layouts/BaseLayout.astro"
-import LogbooksPost from "../../components/LogbooksPost.astro";
-import Pagination from "../../components/Pagination.astro"
+import { loadNotes } from '../scripts/loadNotes'
+import BaseLayout from "../layouts/BaseLayout.astro"
+import LogbooksPost from "../components/LogbooksPost.astro";
 
 const pageTitle = 'Recent Logbooks'
-
-export const prerender = true;
-
-export async function getStaticPaths() {
-  const allPosts = loadNotes();
-  const postsPerPage = 10;
-  
-  const { totalPages } = paginatePosts(allPosts, 'logbooks', 1, postsPerPage);
-
-  // Generate paths for each page
-  return Array.from({ length: totalPages }, (_, i) => ({
-    params: { page: (i + 1).toString() },
-  }));
-}
-
-const currentPage = parseInt(Astro.params.page || "1", 10);
-const postsPerPage = 10;
 const allPosts = loadNotes();
 
-// Use pagination utility
-const { paginatedPosts, totalPages, inProgress } = paginatePosts(allPosts, 'logbooks', currentPage, postsPerPage);
+const filteredPosts = allPosts
+    .filter(post => post.type === 'logbooks' && post.overview === true)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+const inProgress = filteredPosts.filter(post => post.finished === false);
+const Finished = filteredPosts.filter(post => post.finished === true);
 ---
 
 <BaseLayout lang="ko" pageTitle={ pageTitle }>
@@ -46,7 +31,7 @@ const { paginatedPosts, totalPages, inProgress } = paginatePosts(allPosts, 'logb
         </figure>
         <figure>
             <figcaption>Finished</figcaption>
-            {paginatedPosts.map((post) =>
+            {Finished.map((post) =>
                 <LogbooksPost
                     url={post.url}
                     title={post.alias}
@@ -56,11 +41,6 @@ const { paginatedPosts, totalPages, inProgress } = paginatePosts(allPosts, 'logb
                     alt={post.alt || "Default alt text"}
                 />
             )}
-            <Pagination
-            type="logbooks"
-            currentPage={currentPage}
-            totalPages={totalPages}
-          />
         </figure>
     </div>
 </BaseLayout>
