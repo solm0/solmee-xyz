@@ -23,7 +23,7 @@ files.forEach(file => {
 
   // Add node if it doesn't already exist
     if (!nodeMap.has(id)) {
-        const node = { id, name: data.alias || id, type: data.type, val: 1 };
+        const node = { id, name: data.alias || data.aliases[0] || id, type: data.type, val: 1 };
         graphData.nodes.push(node);
         nodeMap.set(id, node);
         console.log(`Created node: ${id} from file ${file}`);

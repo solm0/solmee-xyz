@@ -1,12 +1,6 @@
 {
   "nodes": [
     {
-      "id": "characteristics-of-ssgs",
-      "name": "characteristics of SSGs",
-      "type": "logbooks",
-      "val": 1
-    },
-    {
       "id": "choose-dbms",
       "name": "DBMS 고르기",
       "type": "logbooks",
@@ -17,12 +11,6 @@
       "name": "comixtura code",
       "type": "works",
       "val": 2
-    },
-    {
-      "id": "compare-ssgs",
-      "name": "Compare SSGs",
-      "type": "logbooks",
-      "val": 1
     },
     {
       "id": "continuous-text-and-hypertext",
@@ -110,7 +98,13 @@
     },
     {
       "id": "porkbun-cloudflaredns-vercel",
-      "name": "Porkbun 도메인, cloudflare DNS, Vercel 호스팅",
+      "name": "porkbun-cloudflaredns-vercel",
+      "type": "logbooks",
+      "val": 1
+    },
+    {
+      "id": "publish-markdown-files",
+      "name": "publish-markdown-files",
       "type": "logbooks",
       "val": 1
     },
@@ -121,12 +115,6 @@
       "val": 2
     },
     {
-      "id": "setting-up-the-markdown-pipeline",
-      "name": "Setting up the Markdown Pipeline",
-      "type": "logbooks",
-      "val": 1
-    },
-    {
       "id": "slug-error",
       "name": "제목에 문자 주의",
       "type": "logbooks",
@@ -134,9 +122,15 @@
     },
     {
       "id": "solmee-xyz",
-      "name": "solmee.xyz",
+      "name": "solmee-xyz",
       "type": "logbooks",
       "val": 6
+    },
+    {
+      "id": "ssg-framework-selection",
+      "name": "ssg-framework-selection",
+      "type": "logbooks",
+      "val": 1
     },
     {
       "id": "static-web",
@@ -272,19 +266,19 @@
     },
     {
       "source": "solmee-xyz",
+      "target": "obsidian-digital-garden"
+    },
+    {
+      "source": "solmee-xyz",
       "target": "why-i-left-digital-garden"
     },
     {
       "source": "solmee-xyz",
-      "target": "setting-up-the-markdown-pipeline"
+      "target": "publish-markdown-files"
     },
     {
       "source": "solmee-xyz",
-      "target": "characteristics-of-ssgs"
-    },
-    {
-      "source": "solmee-xyz",
-      "target": "compare-ssgs"
+      "target": "ssg-framework-selection"
     },
     {
       "source": "solmee-xyz",
