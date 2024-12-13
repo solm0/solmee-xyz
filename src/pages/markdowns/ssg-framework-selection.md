@@ -27,7 +27,7 @@ SSG들의 빌드 속도가 차이나는 이유
 
 로딩 속도는 HTML만 있으면 다 똑같을거고 이미지나 폰트같이 따로 로드해야 하는 게 있으면 느려지겠지... 이것도 최적화하는 방식이 SSG들마다 제각기 다른 것 같다.
 
-## SSG 후보
+## SSG 후보와 최종 결정
 chatGPT한테 내 조건(Obsidian -> ___ -> Vercel, React 사용 예정)에 적합한 SSG를 추천해달라고 하니 다음을 추천해 주었다.
 
 |                       | Eleventy          | Astro                                         | Hugo    | Next.js                                                                 |
@@ -44,5 +44,5 @@ chatGPT한테 내 조건(Obsidian -> ___ -> Vercel, React 사용 예정)에 적�
 	- Eleventy는 React 지원하지 않아서 패스.
 	- Eleventy에서 React 쓸수는 있는데 추가적인 setup이 필요해 Eleventy의 장점인 단순함이 사라져서 굳이?인듯.
 - Markdown파일이 변경될 때마다 자동으로 웹사이트에 반영되는가
-	- 됨
+	- 다 됨
 - 최종적으로 Astro를 선택했다.

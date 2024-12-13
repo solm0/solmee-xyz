@@ -19,7 +19,7 @@ sequence: 4
 
 ## 사전 조사
 1. [생활코딩 도메인 강의](https://www.inflearn.com/course/%EC%9D%B8%ED%84%B0%EB%84%B7-%EA%B8%B0%EB%B3%B8-%EB%8F%84%EB%A9%94%EC%9D%B8-%ED%98%B8%EC%8A%A4%ED%8A%B8-%ED%8F%AC%EC%9B%8C%EB%94%A9-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0?srsltid=AfmBOoqeouKDI0tDz9vjqYTsc_zwd21a2H8K5v1YKmKfF1_uoZLvnepz "https://www.inflearn.com/course/%EC%9D%B8%ED%84%B0%EB%84%B7-%EA%B8%B0%EB%B3%B8-%EB%8F%84%EB%A9%94%EC%9D%B8-%ED%98%B8%EC%8A%A4%ED%8A%B8-%ED%8F%AC%EC%9B%8C%EB%94%A9-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0?srsltid=AfmBOoqeouKDI0tDz9vjqYTsc_zwd21a2H8K5v1YKmKfF1_uoZLvnepz")
-	- 무려 2012년의 것이지만 무엇을 해야하는지 대략적으로 감 잡을 수는 있다.
+	- 2012년 것이지만 무엇을 해야하는지 대략적으로 감 잡을 수는 있다.
 2. r/webhosting, r/webdev
 	- 도메인 provider들에 대해 알 수 있다.
 	- [best domain provider](https://www.reddit.com/r/webhosting/comments/1dnjqgy/best_domain_provider/ "https://www.reddit.com/r/webhosting/comments/1dnjqgy/best_domain_provider/") , [cloudflare vs porkbun vs namecheap](https://www.reddit.com/r/webdev/comments/1c8xc8p/cloudflare_vs_porkbun_vs_namecheap_an_opinion_if/ "https://www.reddit.com/r/webdev/comments/1c8xc8p/cloudflare_vs_porkbun_vs_namecheap_an_opinion_if/"): 대체적으로 porkbun과 cloudflare에 긍정적이다.
