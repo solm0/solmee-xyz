@@ -33,12 +33,6 @@
       "val": 1
     },
     {
-      "id": "digital-garden-plugin",
-      "name": "Digital Garden의 점령",
-      "type": "logbooks",
-      "val": 4
-    },
-    {
       "id": "dr-phong",
       "name": "dr.phong variable font",
       "type": "works",
@@ -173,18 +167,6 @@
     {
       "source": "continuous-text-and-hypertext",
       "target": "solmee-xyz"
-    },
-    {
-      "source": "digital-garden-plugin",
-      "target": "how-do-i-make-blog-website"
-    },
-    {
-      "source": "digital-garden-plugin",
-      "target": "obsidian-theme-agate"
-    },
-    {
-      "source": "digital-garden-plugin",
-      "target": "publish-obsidian-note"
     },
     {
       "source": "dr-phong",

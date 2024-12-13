@@ -234,6 +234,11 @@ img {
     display: block;
 }
 
+video {
+    width: auto;
+    height: 90vh;
+  }
+
 blockquote {
     background-color: var(--gray-color-1);
     position: relative;
