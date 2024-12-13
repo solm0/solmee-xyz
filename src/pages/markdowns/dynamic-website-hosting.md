@@ -1,5 +1,6 @@
 ---
-alias: Dynamic Website Hosting with Vercel
+aliases:
+  - Vercel로 동적 웹 호스팅하기
 layout: ../../layouts/LogbooksLayout.astro
 type: logbooks
 date: 2024-07-07
@@ -9,10 +10,14 @@ tags:
   - vercel
 overview: false
 projectId: obsidian-digital-garden
-sequence: 9
+sequence: 8
 ---
+지금까지 내가 배포하는데 써왔던 무료 Github Pages는 정적 웹사이트만 호스팅해준다고 한다.  Firebase Hosting도 무료는 정적웹사이트만 되는거같다. 그럼 동적 웹은 어떻게 배포하지?
+
+다른 동적웹사이트 무료 호스팅 서비스를 찾아보니 Netlify, Heroku, Vercel 등이 된다고 한다. 디지털가든 플러그인 웹사이트에서 이미 쓰고있었던 Vercel 쓰기로 했다.
+
 ## Create React App and deploy to Vercel
-[Git repository 생성과 동시에 create-react-app](https://vercel.com/guides/deploying-react-with-vercel#start-from-a-template)을 할 수 있다. 그 repo를 깃헙데스크탑에서 클론해서 사용했다.
+[Git repository 생성과 동시에 create-react-app](https://vercel.com/guides/deploying-react-with-vercel#start-from-a-template)을 할 수 있다.
 
 >근데 평소 하던대로 npm start를 하니 `react-scripts: command not found` 라면서 안됐고 Vercel deploy도 안됐다. `Error: Command "pnpm run build"`
 

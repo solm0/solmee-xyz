@@ -1,5 +1,6 @@
 ---
-alias: 뼈대짜고 더미데이터 넣음
+aliases:
+  - Firebase에서 데이터 읽기
 layout: ../../layouts/LogbooksLayout.astro
 type: logbooks
 date: 2024-07-08
@@ -8,7 +9,7 @@ tags:
   - firebase
 overview: false
 projectId: obsidian-digital-garden
-sequence: 10
+sequence: 9
 ---
 Firebase Realtime Database의 JSON 데이터를 편집하고, 프로젝트에 갖다 쓴다.
 
