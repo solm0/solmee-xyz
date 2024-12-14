@@ -7,6 +7,7 @@ tags:
   - typeface
   - variable_font
   - cyrillic_script
+  - russian
 thumbnail: /zhe_vf_3.png
 date: 2023
 description: 러시아어 수업을 들으며 좌우대칭이 아닌 Ж 여러 개를 그려보다 만든 베리어블 폰트입니다.
