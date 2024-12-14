@@ -642,6 +642,7 @@ figcaption {
     margin-bottom: .3rem;
     font-family: var(--font-family-mono);
     scroll-margin-top: .3rem;
+    line-height: 1.2rem;
 }
 
 div#gridItemRight aside {
@@ -1254,7 +1255,8 @@ dialog.globalGraph {
 .works-container p img,
 .note-content>h1,
 .works-container p,
-.works-container figcaption {
+.works-container figcaption,
+.works-container iframe {
     scroll-snap-align: start;
     scroll-snap-stop: normal;
 }

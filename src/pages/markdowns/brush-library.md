@@ -10,8 +10,6 @@ thumbnail: /brush_library.png
 date: 2023
 description: 화면에 그림을 그릴 수 있는 웹사이트를 제작했습니다. 버튼을 클릭해 브러쉬를 바꿀 수 있습니다.
 ---
-[Brush Library 바로가기](https://solm0.github.io/brush-library/)
-
 <figcaption>사용 화면</figcaption>
 
 <iframe src="https://www.youtube.com/embed/Qq6jz3wIfuE?si=t4q0feIADoNwFymP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -37,3 +35,5 @@ description: 화면에 그림을 그릴 수 있는 웹사이트를 제작했습�
 ![brush_library](../../assets/brush_library_10.png)
 ![brush_library](../../assets/brush_library_11.png)
 ![brush_library](../../assets/brush_library_12.png)
+
+[Brush Library](https://solm0.github.io/brush-library/)
