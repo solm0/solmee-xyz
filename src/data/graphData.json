@@ -36,7 +36,7 @@
       "id": "dr-phong",
       "name": "dr.phong variable font",
       "type": "works",
-      "val": 2
+      "val": 1
     },
     {
       "id": "dynamic-website-hosting",
@@ -96,7 +96,7 @@
       "id": "obsidian-theme-agate",
       "name": "Obsidian 테마 만들기",
       "type": "logbooks",
-      "val": 7
+      "val": 8
     },
     {
       "id": "porkbun-cloudflaredns-vercel",
@@ -169,10 +169,6 @@
       "target": "solmee-xyz"
     },
     {
-      "source": "dr-phong",
-      "target": "comixtura-code"
-    },
-    {
       "source": "macro-typography-in-obsidian",
       "target": "obsidian-plugins-i-used"
     },
@@ -211,6 +207,10 @@
     {
       "source": "obsidian-digital-garden",
       "target": "read-from-firebase"
+    },
+    {
+      "source": "obsidian-theme-agate",
+      "target": "obsidian-digital-garden"
     },
     {
       "source": "obsidian-theme-agate",

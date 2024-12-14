@@ -234,11 +234,6 @@ img {
     display: block;
 }
 
-video {
-    width: auto;
-    height: 90vh;
-  }
-
 blockquote {
     background-color: var(--gray-color-1);
     position: relative;
@@ -611,11 +606,32 @@ figcaption {
 
 /* works */
 .works-container img {
-    background-color: var(--gray-color-0);
-    width: calc(100vw - var(--fluid-86-380));
-    height: auto;
+    background-color: white;
+    height: calc((100vw - var(--fluid-86-380)) / 1.55);
+    width: auto;
     max-width: 1500px;
     margin-bottom: .3rem;
+    scroll-margin-top: .3rem;
+}
+
+.works-container img:hover {
+    box-shadow: 0 0 10px var(--gray-color-2);
+}
+
+.works-image-wrapper {
+    display: flex;
+    flex-direction: row;
+    height: calc((100vw - var(--fluid-86-380)) / 1.55);
+    width: auto;
+    max-width: 1500px;
+    gap: .3rem;
+    scroll-margin-top: .3rem;
+}
+
+.works-container figcaption {
+    margin-bottom: .3rem;
+    font-family: var(--font-family-mono);
+    scroll-margin-top: .3rem;
 }
 
 div#gridItemRight aside {
@@ -1225,11 +1241,12 @@ dialog.globalGraph {
     height: 100vh;
 }
 
-.works-container p:nth-child(1) img,
+.works-container p img,
 .note-content>h1,
-.works-container p {
+.works-container p,
+.works-container figcaption {
     scroll-snap-align: start;
-    scroll-snap-stop: always;
+    scroll-snap-stop: normal;
 }
 
 .note-content>h1 {
@@ -1502,6 +1519,8 @@ dialog.globalGraph {
 
     .works-container img {
         width: 100%;
+        height: auto;
+        border: none;
     }
 
     .blog-post-title-frontmatter {

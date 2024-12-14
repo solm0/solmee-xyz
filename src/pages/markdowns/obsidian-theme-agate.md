@@ -18,7 +18,7 @@ sequence: 0
 ## 개요
 Obsidian 테마를 디자인하고 커뮤니티에 제출한 과정의 기록이다.
 
-Digital Garden 플러그인으로 웹사이트를 배포할 때 내가 디자인한 테마를 쓰고 싶어서 테마를 만들게 되었다. 커뮤니티에 제출한 테마만 Digital Garden에서 사용할 수 있기 때문이다.
+[[obsidian-digital-garden|Digital Garden 플러그인으로 웹사이트를 배포]]할 때 내가 디자인한 테마를 쓰고 싶어서 테마를 만들게 되었다. 커뮤니티에 제출한 테마만 Digital Garden에서 사용할 수 있기 때문이다.
 
 ## 내용
 [[css-style-obsidian|Obsidian은 CSS로 스타일링할 수 있다]].

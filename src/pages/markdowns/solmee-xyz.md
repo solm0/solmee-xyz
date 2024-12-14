@@ -9,7 +9,7 @@ tags:
   - obsidian
   - astro
   - react
-thumbnail: 
+thumbnail: /solmee-xyz-1.png
 overview: true
 finished: false
 projectId: solmee-xyz
