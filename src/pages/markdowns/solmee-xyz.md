@@ -1,6 +1,6 @@
 ---
 aliases:
-  - solmee.xyz 1.0.0
+  - "solmee.xyz 1.0.0: 개인웹사이트 만들기"
 layout: ../../layouts/LogbooksLayout.astro
 type: logbooks
 date: 2024-11-06

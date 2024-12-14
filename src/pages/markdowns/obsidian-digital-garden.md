@@ -1,6 +1,6 @@
 ---
 aliases:
-  - Obsidian Digital Garden 플러그인으로 웹사이트 만들기
+  - "Obsidian Digital Garden: 플러그인으로 Obsidian 노트 배포하기"
 layout: ../../layouts/LogbooksLayout.astro
 type: logbooks
 date: 2024-07-07

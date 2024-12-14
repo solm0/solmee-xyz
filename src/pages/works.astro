@@ -8,7 +8,7 @@ const allPosts = loadNotes();
 
 const filteredPosts = allPosts
     .filter(post => post.type === 'works')
-    .sort((a, b) => b.year - a.year);
+    .sort((a, b) => b.date - a.date);
 ---
 
 <BaseLayout lang="ko" pageTitle={ pageTitle }>
@@ -18,7 +18,7 @@ const filteredPosts = allPosts
                 url={post.url}
                 title={post.alias || post.aliases[0]}
                 tags={post.tags}
-                date={post.year}
+                date={post.date}
                 thumbnailUrl={post.thumbnail}
                 alt={post.alt || "Default alt text"}
             />

@@ -1,6 +1,12 @@
 {
   "nodes": [
     {
+      "id": "brush-library",
+      "name": "Brush Library",
+      "type": "works",
+      "val": 1
+    },
+    {
       "id": "can-i-insert-dynamic-element-in-digital-garden",
       "name": "Digital Garden 웹사이트에 동적요소를 넣을 수 있을까?",
       "type": "logbooks",
@@ -14,7 +20,7 @@
     },
     {
       "id": "comixtura-code",
-      "name": "comixtura code",
+      "name": "Comixtura Code",
       "type": "works",
       "val": 2
     },
@@ -34,7 +40,7 @@
     },
     {
       "id": "dr-phong",
-      "name": "dr.phong variable font",
+      "name": "Dr.phong Variable Font",
       "type": "works",
       "val": 1
     },
@@ -61,6 +67,18 @@
       "name": "Digital Garden으로 Obsidian 노트 배포하기",
       "type": "logbooks",
       "val": 1
+    },
+    {
+      "id": "journal-shrine-development",
+      "name": "로컬 일기 뷰어 만들기",
+      "type": "logbooks",
+      "val": 1
+    },
+    {
+      "id": "journal-shrine",
+      "name": "Journal Shrine",
+      "type": "works",
+      "val": 2
     },
     {
       "id": "macro-typography-in-obsidian",
@@ -130,7 +148,7 @@
     },
     {
       "id": "solmee-xyz",
-      "name": "solmee.xyz 1.0.0",
+      "name": "개인웹사이트 solmee.xyz 1.0.0",
       "type": "logbooks",
       "val": 6
     },
@@ -167,6 +185,10 @@
     {
       "source": "continuous-text-and-hypertext",
       "target": "solmee-xyz"
+    },
+    {
+      "source": "journal-shrine",
+      "target": "journal-shrine-development"
     },
     {
       "source": "macro-typography-in-obsidian",

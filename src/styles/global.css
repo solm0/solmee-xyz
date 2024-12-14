@@ -225,7 +225,7 @@ small {
     font-size: var(--step--1);
 }
 
-img {
+.body-text img {
     position: relative;
     height: 300px;
     width: auto;
@@ -538,6 +538,7 @@ figcaption {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    align-items: start;
 }
 
 .logbooks-thumbnail {
@@ -588,6 +589,10 @@ figcaption {
     max-width: 330px;
 }
 
+.blog-post.works .blog-post-title {
+    margin-bottom: .3rem;
+}
+
 .blog-post.works a {
     padding: 0;
 }
@@ -616,6 +621,11 @@ figcaption {
 
 .works-container img:hover {
     box-shadow: 0 0 10px var(--gray-color-2);
+}
+
+.works-container iframe {
+    height: calc((100vw - var(--fluid-86-380)) / 1.55);
+    width: calc(100vw - var(--fluid-86-380));
 }
 
 .works-image-wrapper {
@@ -1488,7 +1498,7 @@ dialog.globalGraph {
         margin-top: var(--grid-gutter);
     }
 
-    iframe {
+    iframe.link-popup {
         display: none;
     }
 

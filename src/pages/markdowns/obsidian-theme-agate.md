@@ -1,6 +1,6 @@
 ---
 aliases:
-  - Obsidian 테마 만들기
+  - "Agate: Obsidian 테마 만들기"
 layout: ../../layouts/LogbooksLayout.astro
 type: logbooks
 date: 2024-06-30

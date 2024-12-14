@@ -35,7 +35,7 @@ description: Bui Tuong Phong은 Phong Reflection Model을 고안한 컴퓨터그
 
 ![dr_phong_10](../../assets/dr_phong_10.gif)
 
-<figcaption>전시 사진</figcaption>
+<figcaption>국민대학교 시각디자인학과 2024-1 과제전</figcaption>
 
 ![dr_phong_11](../../assets/dr_phong_11.jpg)
 ![dr_phong_12](../../assets/dr_phong_12.jpg)

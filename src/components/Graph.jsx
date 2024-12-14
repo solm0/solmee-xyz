@@ -76,9 +76,9 @@ const Graph = ({
     };
   }, [graphData.nodes]); // Ensure graphData.nodes is accessible in the effect
 
-useEffect(() => {
-  console.log("Updated hoveredNode:", hoveredNode);
-}, [hoveredNode]);
+// useEffect(() => {
+//   console.log("Updated hoveredNode:", hoveredNode);
+// }, [hoveredNode]);
 
   return (
     <ForceGraph2D

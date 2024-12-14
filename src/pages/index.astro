@@ -12,9 +12,9 @@ const pageTitle = 'solmee.xyz: Home'
 const allPosts = loadNotes();
 const findNote = (title) => allPosts.find((post) => (post.alias || post.aliases[0]) === title);
 
-const note1 = findNote('Obsidian Digital Garden 플러그인으로 웹사이트 만들기');
-const note2 = findNote('solmee.xyz 1.0.0');
-const note3 = findNote('Obsidian 테마 만들기');
+const note1 = findNote('Obsidian Digital Garden: 플러그인으로 Obsidian 노트 배포하기');
+const note2 = findNote('solmee.xyz 1.0.0: 개인웹사이트 만들기');
+const note3 = findNote('Agate: Obsidian 테마 만들기');
 
 const note4 = findNote('Obsidian을 시작한 이유');
 const note5 = findNote('Comixtura Code');
@@ -129,7 +129,7 @@ const note5 = findNote('Comixtura Code');
 							<LogbooksPost
 								url={note2.url}
 								title={note2.alias || note2.aliases[0]}
-								tags={note1.tags}
+								tags={note2.tags}
 								date={note2.date.toString().slice(0,10)}
 								thumbnailUrl={note2.thumbnail}
 								alt={note2.alt || "Default alt text"}
