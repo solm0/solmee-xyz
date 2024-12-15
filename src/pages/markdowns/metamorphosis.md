@@ -9,7 +9,7 @@ tags:
   - css
   - variable_font
 thumbnail: /metamorphosis.png
-date: 2023
+date: 2023-12
 description: M.C.Escher의 테셀레이션 방법론 중 ‘평행이동’을 이용해 알파벳의 네거티브 스페이스가 날아가는 새의 포지티브 스페이스로 변형되는 베리어블 폰트를 만들고 웹 애니메이션을 만들었습니다.
 ---
 <figcaption>웹 애니메이션 1</figcaption>

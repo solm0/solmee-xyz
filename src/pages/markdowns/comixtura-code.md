@@ -5,9 +5,13 @@ type: works
 tags:
   - typeface
 thumbnail: /comixtura.png
-date: 2024
+date: 2024-04
 description: Consolas, Comic Sans MS, Gutenberg Textura 3종의 서체를 해체 후 결합하여 새로운 서체 Comixtura Code를 만들고 서체 견본집을 제작했습니다.
 ---
+<figcaption>코딩할맛 나는 폰트죠?</figcaption>
+
+![comixtura-code_10](../../assets/comixtura_code_10.png)
+
 <figcaption>서체 견본집</figcaption>
 
 ![comixtura-code_1](../../assets/comixtura_code_1.png)

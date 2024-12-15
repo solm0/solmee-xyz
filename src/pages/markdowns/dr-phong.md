@@ -7,7 +7,7 @@ tags:
   - computer_graphics
   - typeface
 thumbnail: /phong.jpg
-date: 2024
+date: 2024-06
 description: Bui Tuong Phong은 Phong Reflection Model을 고안한 컴퓨터그래픽스 분야의 선구자입니다. 그의 사망 연도이자 박사 논문 발표 연도 50주년을 기념하는 베리어블 폰트 dr.phong를 제작했습니다. 그리고 서체 개발노트와 서체 견본 포스터를 제작했습니다.
 ---
 <figcaption>베리어블 폰트 영상</figcaption>
@@ -35,7 +35,7 @@ description: Bui Tuong Phong은 Phong Reflection Model을 고안한 컴퓨터그
 
 ![dr_phong_10](../../assets/dr_phong_10.gif)
 
-<figcaption>국민대학교 시각디자인학과 2024-1 과제전</figcaption>
+<figcaption>국민대학교 시각디자인학과 2024-1 과제전 '주-제넘-기 재주-넘기'</figcaption>
 
 ![dr_phong_11](../../assets/dr_phong_11.jpg)
 ![dr_phong_12](../../assets/dr_phong_12.jpg)

@@ -7,7 +7,7 @@ tags:
   - web
   - p5_js
 thumbnail: /brush_library.png
-date: 2023
+date: 2024-03
 description: 화면에 그림을 그릴 수 있는 웹사이트를 제작했습니다. 버튼을 클릭해 브러쉬를 바꿀 수 있습니다.
 ---
 <figcaption>사용 화면</figcaption>
@@ -18,7 +18,7 @@ description: 화면에 그림을 그릴 수 있는 웹사이트를 제작했습�
 
 ![brush_library](/brush_library.png)
 
-<figcaption>2023학년도 국민대학교 시각디자인학과 소모임 연합 전시회 모임모임</figcaption>
+<figcaption>2024 국민대학교 시각디자인학과 소모임 연합 전시회 '모임모임'</figcaption>
 
 ![brush_library](../../assets/brush_library_13.jpg)
 

@@ -1,6 +1,12 @@
 {
   "nodes": [
     {
+      "id": "babylonian-number",
+      "name": "Babylonian Number",
+      "type": "works",
+      "val": 1
+    },
+    {
       "id": "brush-library",
       "name": "Brush Library",
       "type": "works",
@@ -31,11 +37,29 @@
       "val": 2
     },
     {
+      "id": "crime-and-punishment-characters",
+      "name": "죄와 벌 등장인물 관계도",
+      "type": "works",
+      "val": 1
+    },
+    {
       "id": "css-style-obsidian",
       "name": [
         "Obsidian을 CSS로 스타일링할 수 있는 원리"
       ],
       "type": "logbooks",
+      "val": 1
+    },
+    {
+      "id": "cyberia",
+      "name": "Cyberia",
+      "type": "works",
+      "val": 2
+    },
+    {
+      "id": "dead-souls",
+      "name": "죽은 혼 등장인물 소개",
+      "type": "works",
       "val": 1
     },
     {
@@ -70,7 +94,7 @@
     },
     {
       "id": "journal-shrine-development",
-      "name": "로컬 일기 뷰어 만들기",
+      "name": "Journal Shrine: 로컬 일기 뷰어 만들기",
       "type": "logbooks",
       "val": 1
     },
@@ -87,10 +111,28 @@
       "val": 2
     },
     {
+      "id": "metamorphosis",
+      "name": "Metamorphosis",
+      "type": "works",
+      "val": 1
+    },
+    {
       "id": "micro-typography-in-obsidian",
       "name": "Obsidian 테마 마이크로 타이포그래피",
       "type": "logbooks",
       "val": 1
+    },
+    {
+      "id": "mirrorroom-busstop",
+      "name": "거울 방/기약 없는 기다림",
+      "type": "works",
+      "val": 1
+    },
+    {
+      "id": "no-matter-where-you-are",
+      "name": "No Matter Where You Are",
+      "type": "works",
+      "val": 2
     },
     {
       "id": "obsidian-css-variable",
@@ -100,7 +142,7 @@
     },
     {
       "id": "obsidian-digital-garden",
-      "name": "Obsidian Digital Garden 플러그인으로 웹사이트 만들기",
+      "name": "Obsidian Digital Garden: 플러그인으로 Obsidian 노트 배포하기",
       "type": "logbooks",
       "val": 10
     },
@@ -112,9 +154,15 @@
     },
     {
       "id": "obsidian-theme-agate",
-      "name": "Obsidian 테마 만들기",
+      "name": "Agate: Obsidian 테마 만들기",
       "type": "logbooks",
       "val": 8
+    },
+    {
+      "id": "playground",
+      "name": "놀이터",
+      "type": "works",
+      "val": 1
     },
     {
       "id": "porkbun-cloudflaredns-vercel",
@@ -148,7 +196,7 @@
     },
     {
       "id": "solmee-xyz",
-      "name": "개인웹사이트 solmee.xyz 1.0.0",
+      "name": "solmee.xyz 1.0.0: 개인웹사이트 만들기",
       "type": "logbooks",
       "val": 6
     },
@@ -175,6 +223,12 @@
       "name": "Obsidian을 시작한 이유",
       "type": "notes",
       "val": 2
+    },
+    {
+      "id": "zhe-variable",
+      "name": "Ж Variable",
+      "type": "works",
+      "val": 1
     }
   ],
   "links": [
@@ -187,12 +241,20 @@
       "target": "solmee-xyz"
     },
     {
+      "source": "cyberia",
+      "target": "no-matter-where-you-are"
+    },
+    {
       "source": "journal-shrine",
       "target": "journal-shrine-development"
     },
     {
       "source": "macro-typography-in-obsidian",
       "target": "obsidian-plugins-i-used"
+    },
+    {
+      "source": "no-matter-where-you-are",
+      "target": "cyberia"
     },
     {
       "source": "obsidian-digital-garden",

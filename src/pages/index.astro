@@ -12,7 +12,6 @@ const pageTitle = 'solmee.xyz: Home'
 const allPosts = loadNotes();
 const findNote = (title) => allPosts.find((post) => (post.alias || post.aliases[0]) === title);
 
-const note1 = findNote('Obsidian Digital Garden: 플러그인으로 Obsidian 노트 배포하기');
 const note2 = findNote('solmee.xyz 1.0.0: 개인웹사이트 만들기');
 const note3 = findNote('Agate: Obsidian 테마 만들기');
 
@@ -117,15 +116,8 @@ const note5 = findNote('Comixtura Code');
 				<details>
 					<summary><h3>Documentation</h3></summary>
 					<section>
+						<p>자세한 기획, 디자인, 개발 과정은 이곳에서 볼 수 있다.</p>
 						<div class="blog-post-container">
-							<LogbooksPost
-								url={note1.url}
-								title={note1.alias || note1.aliases[0]}
-								tags={note1.tags}
-								date={note1.date.toString().slice(0,10)}
-								thumbnailUrl={note1.thumbnail}
-								alt={note1.alt || "Default alt text"}
-							/>
 							<LogbooksPost
 								url={note2.url}
 								title={note2.alias || note2.aliases[0]}
@@ -133,14 +125,6 @@ const note5 = findNote('Comixtura Code');
 								date={note2.date.toString().slice(0,10)}
 								thumbnailUrl={note2.thumbnail}
 								alt={note2.alt || "Default alt text"}
-							/>
-							<LogbooksPost
-								url={note3.url}
-								title={note3.alias || note3.aliases[0]}
-								tags={note3.tags}
-								date={note3.date.toString().slice(0,10)}
-								thumbnailUrl={note3.thumbnail}
-								alt={note3.alt || "Default alt text"}
 							/>
 						</div>
 					</section>
