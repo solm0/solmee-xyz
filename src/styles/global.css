@@ -1524,9 +1524,14 @@ dialog.globalGraph {
         height: auto;
     }
 
-    img {
+    img, .body-text img,
+    .works-image-wrapper {
         width: 100%;
         height: auto;
+    }
+
+    .works-image-wrapper {
+        flex-direction: column;
     }
 
     .works-container img {
@@ -1545,8 +1550,10 @@ dialog.globalGraph {
         gap: 0;
     }
 
-    .works-container img {
+    .works-container img,
+    .works-container iframe {
         width: 100vw;
+        height: auto;
         position: relative;
         left: calc(-1 * var(--grid-gutter));
     }

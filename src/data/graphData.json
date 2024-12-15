@@ -1,6 +1,12 @@
 {
   "nodes": [
     {
+      "id": "a-for-archive",
+      "name": "Aa for Archive",
+      "type": "works",
+      "val": 1
+    },
+    {
       "id": "babylonian-number",
       "name": "Babylonian Number",
       "type": "works",
@@ -23,6 +29,12 @@
       "name": "필터링 기능을 위한 DBMS 고르기",
       "type": "logbooks",
       "val": 1
+    },
+    {
+      "id": "citadel-of-ricks",
+      "name": "Citadel of Ricks",
+      "type": "works",
+      "val": 2
     },
     {
       "id": "comixtura-code",
@@ -93,6 +105,12 @@
       "val": 1
     },
     {
+      "id": "it-wasnt-you",
+      "name": "Я не тебе поклонился...",
+      "type": "works",
+      "val": 1
+    },
+    {
       "id": "journal-shrine-development",
       "name": "Journal Shrine: 로컬 일기 뷰어 만들기",
       "type": "logbooks",
@@ -105,9 +123,21 @@
       "val": 2
     },
     {
+      "id": "labrouste",
+      "name": "Labrouste",
+      "type": "works",
+      "val": 1
+    },
+    {
       "id": "macro-typography-in-obsidian",
       "name": "Obsidian 테마 매크로 타이포그래피",
       "type": "logbooks",
+      "val": 2
+    },
+    {
+      "id": "meeseeks-and-destroy",
+      "name": "Meeseeks and Destroy/Shoney's",
+      "type": "works",
       "val": 2
     },
     {
@@ -171,6 +201,12 @@
       "val": 1
     },
     {
+      "id": "poster-everyday",
+      "name": "Poster Everyday",
+      "type": "works",
+      "val": 1
+    },
+    {
       "id": "publish-markdown-files",
       "name": "마크다운 파일 배포하기",
       "type": "logbooks",
@@ -186,6 +222,12 @@
       "id": "read-from-firebase",
       "name": "Firebase에서 데이터 읽기",
       "type": "logbooks",
+      "val": 1
+    },
+    {
+      "id": "shred-and-throw",
+      "name": "Shred and Throw away",
+      "type": "works",
       "val": 1
     },
     {
@@ -213,6 +255,12 @@
       "val": 2
     },
     {
+      "id": "the-steps-of-the-sea",
+      "name": "바다의 층계",
+      "type": "works",
+      "val": 1
+    },
+    {
       "id": "why-i-left-digital-garden",
       "name": "Digital Garden에서 갈아타기로 한 이유",
       "type": "logbooks",
@@ -233,6 +281,10 @@
   ],
   "links": [
     {
+      "source": "citadel-of-ricks",
+      "target": "meeseeks-and-destroy"
+    },
+    {
       "source": "comixtura-code",
       "target": "dr-phong"
     },
@@ -251,6 +303,10 @@
     {
       "source": "macro-typography-in-obsidian",
       "target": "obsidian-plugins-i-used"
+    },
+    {
+      "source": "meeseeks-and-destroy",
+      "target": "citadel-of-ricks"
     },
     {
       "source": "no-matter-where-you-are",

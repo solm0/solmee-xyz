@@ -8,8 +8,6 @@ tags:
   - obsidian
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RW3ItR4LPMY?si=FR83wMtF0l7o7boK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ## 못생긴 줄글이 왜 쓰이는거지?
 스크롤압박이란 말도 있잖아.  
 줄글은 결국 텍스쳐가 되어 다 똑같아지고,  
