@@ -1553,7 +1553,7 @@ dialog.globalGraph {
     .works-container img,
     .works-container iframe {
         width: 100vw;
-        height: auto;
+        height: calc(100vw / 1.55);
         position: relative;
         left: calc(-1 * var(--grid-gutter));
     }
