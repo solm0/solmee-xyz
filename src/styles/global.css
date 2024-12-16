@@ -611,7 +611,7 @@ figcaption {
 
 /* works */
 .works-container img {
-    background-color: white;
+    background-color: var(--background-color);
     height: calc((100vw - var(--fluid-86-380)) / 1.7);
     width: auto;
     max-width: 1500px;
