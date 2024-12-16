@@ -612,7 +612,7 @@ figcaption {
 /* works */
 .works-container img {
     background-color: white;
-    height: calc((100vw - var(--fluid-86-380)) / 1.55);
+    height: calc((100vw - var(--fluid-86-380)) / 1.7);
     width: auto;
     max-width: 1500px;
     margin-bottom: .3rem;
@@ -624,14 +624,14 @@ figcaption {
 }
 
 .works-container iframe {
-    height: calc((100vw - var(--fluid-86-380)) / 1.55);
+    height: calc((100vw - var(--fluid-86-380)) / 1.7);
     width: calc(100vw - var(--fluid-86-380));
 }
 
 .works-image-wrapper {
     display: flex;
     flex-direction: row;
-    height: calc((100vw - var(--fluid-86-380)) / 1.55);
+    height: calc((100vw - var(--fluid-86-380)) / 1.7);
     width: auto;
     max-width: 1500px;
     gap: .3rem;
@@ -1559,7 +1559,7 @@ dialog.globalGraph {
     }
 
     .works-container iframe {
-        height: calc(100vw / 1.55);
+        height: calc(100vw / 1.7);
     }
 
     dialog.globalGraph {
