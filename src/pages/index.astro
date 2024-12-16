@@ -15,7 +15,7 @@ const findNote = (title) => allPosts.find((post) => (post.alias || post.aliases[
 const note2 = findNote('solmee.xyz 1.0.0: 개인웹사이트 만들기');
 const note3 = findNote('Agate: Obsidian 테마 만들기');
 
-const note4 = findNote('Obsidian을 시작한 이유');
+const note4 = findNote('Journal Shrine');
 const note5 = findNote('Comixtura Code');
 ---
 
@@ -24,7 +24,7 @@ const note5 = findNote('Comixtura Code');
 		<figure>
 			<figcaption>Featured Notes</figcaption>
 			<div class="blog-post-container">
-				<NotesPost
+				<LogbooksPost
 					url={note4.url}
 					title={note4.alias || note4.aliases[0]}
 					tags={note4.tags}
