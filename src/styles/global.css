@@ -650,7 +650,8 @@ figcaption {
 }
 
 #gridItemRight .local-graph-container,
-#gridItemRight .nav-links.toc {
+#gridItemRight .nav-links.toc,
+#gridItemRight .graph-controller {
     pointer-events: all;
 }
 
