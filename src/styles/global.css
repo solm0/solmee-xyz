@@ -645,6 +645,15 @@ figcaption {
     line-height: 1.2rem;
 }
 
+#gridItemRight {
+    pointer-events: none;
+}
+
+#gridItemRight .local-graph-container,
+#gridItemRight .nav-links.toc {
+    pointer-events: all;
+}
+
 div#gridItemRight aside {
     position: fixed;
 }
