@@ -1142,10 +1142,6 @@ dialog.globalGraph {
     text-overflow: ellipsis;
 }
 
-.external-link, .rss-link, .mailto, .cv-link {
-    cursor: not-allowed;
-}
-
 /* pagination */
 
 .pagination {

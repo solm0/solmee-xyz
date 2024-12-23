@@ -28,7 +28,12 @@ for (var i = 0; i < links.length; i++) {
 
         links[i].addEventListener('click', function(event) {
             event.preventDefault();
-            // window.open(this.href, 'popupWindow', 'width=800,height=600,scrollbars=yes,resizable=yes');
+            const newTab = window.open(this.href, '_blank');
+            if (newTab) {
+                newTab.focus();
+            } else {
+                console.error("Failed to open external link:", this.href);
+            }
         });
 
         const span = links[i].appendChild(document.createElement('span'));
