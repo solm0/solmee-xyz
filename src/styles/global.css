@@ -38,7 +38,7 @@
     --gray-color-4: #686868;
     --text-color: #212121;
     
-    --notes-color: #b1cd00;
+    --journals-color: #b1cd00;
     --logbooks-color: #00b486;
     --works-color: #aa4fff;
 
@@ -85,7 +85,7 @@ html.dark {
     --gray-color-4: #a4a4a4;
     --text-color: #d1d5d1;
 
-    --notes-color: #9eff00;
+    --journals-color: #9eff00;
     --logbooks-color: #00c899;
     --works-color: #9d00ff;
 
@@ -343,7 +343,7 @@ a.home {
 }
 
 .home.current::after,
-.notes.current::after,
+.journals.current::after,
 .logbooks.current::after,
 .works.current::after {
     content: '';
@@ -357,14 +357,14 @@ a.home {
 }
 
 .home.current,
-.notes.current,
+.journals.current,
 .logbooks.current,
 .works.current {
     font-family: var(--font-family-mono);
 }
 
 .home.current::after { background-color: var(--gray-color-2); }
-.notes.current::after { background-color: var(--notes-color); }
+.journals.current::after { background-color: var(--journals-color); }
 .logbooks.current::after { background-color: var(--logbooks-color); }
 .works.current::after { background-color: var(--works-color); }
 
@@ -512,7 +512,7 @@ figcaption {
     font-weight: bold;
 }
 
-.blog-post-title.notes {
+.blog-post-title.journals {
     margin-right: calc(100px - 4rem);
 }
 

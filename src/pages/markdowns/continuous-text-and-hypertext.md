@@ -1,7 +1,7 @@
 ---
 alias: 줄글과 하이퍼텍스트
-layout: ../../layouts/NotesLayout.astro
-type: notes
+layout: ../../layouts/JournalsLayout.astro
+type: journals
 date: 2024-07-07
 tags:
   - web

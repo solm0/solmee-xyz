@@ -102,8 +102,8 @@ const Graph = ({
         let nodeColor;
 
         switch (node.type) {
-          case 'notes':
-            nodeColor = GRAPHSTYLE.notesColor;
+          case 'journals':
+            nodeColor = GRAPHSTYLE.journalsColor;
             break;
           case 'logbooks':
             nodeColor = GRAPHSTYLE.logbooksColor;

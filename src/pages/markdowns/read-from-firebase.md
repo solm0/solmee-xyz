@@ -88,7 +88,7 @@ Firebase Realtime Database의 JSON 데이터를 편집하고, React 컴포넌트
 	function Cards({cardData}) {
 		const {type, img, name, name_link, note, note_link, tags } = cardData;
 	```
-- 변수 ‘type’이 work인지 notes인지 논리연산자로 구분해 `<Work />` 또는 `<Notes />`컴포넌트를 만들고 인자로 값을 넘겨준다.
+- 변수 ‘type’이 work인지 notes인지 논리연산자로 구분해 `<Work />` 또는 `<Notes />`컴포넌트를 만들고 인자로 값을 넘겨준다.
 - 위에서 사용한 메서드와 접근연산자를 잘 응용해 Work, Notes 컴포넌트에 데이터를 채워넣는다.
 
 

@@ -1,20 +1,20 @@
 ---
 import { loadNotes } from '../scripts/loadNotes'
 import BaseLayout from "../layouts/BaseLayout.astro"
-import NotesPost from "../components/NotesPost.astro"
+import JournalsPost from "../components/JournalsPost.astro"
 
 const pageTitle = 'Recent Journals'
 const allPosts = loadNotes();
 
 const filteredPosts = allPosts
-    .filter(post => post.type === 'notes')
+    .filter(post => post.type === 'journals')
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 ---
 
 <BaseLayout lang="ko" pageTitle={ pageTitle }>
     <div class="blog-post-container">
         {filteredPosts.map((post) =>
-            <NotesPost
+            <JournalsPost
                 url={post.url}
                 title={post.alias || post.aliases[0]}
                 tags={post.tags}

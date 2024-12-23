@@ -45,7 +45,7 @@
     {
       "id": "continuous-text-and-hypertext",
       "name": "줄글과 하이퍼텍스트",
-      "type": "notes",
+      "type": "journals",
       "val": 2
     },
     {
@@ -56,9 +56,7 @@
     },
     {
       "id": "css-style-obsidian",
-      "name": [
-        "Obsidian을 CSS로 스타일링할 수 있는 원리"
-      ],
+      "name": "Obsidian을 CSS로 스타일링할 수 있는 원리",
       "type": "logbooks",
       "val": 1
     },
@@ -269,7 +267,7 @@
     {
       "id": "why-obsidian",
       "name": "Obsidian을 시작한 이유",
-      "type": "notes",
+      "type": "journals",
       "val": 2
     },
     {

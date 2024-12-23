@@ -1,7 +1,7 @@
 ---
 alias: Obsidian을 시작한 이유
-layout: ../../layouts/NotesLayout.astro
-type: notes
+layout: ../../layouts/JournalsLayout.astro
+type: journals
 date: 2024-06-30
 tags:
   - web
