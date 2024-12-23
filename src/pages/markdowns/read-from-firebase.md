@@ -7,11 +7,12 @@ date: 2024-07-08
 tags:
   - web
   - firebase
+  - react
 overview: false
 projectId: obsidian-digital-garden
 sequence: 9
 ---
-Firebase Realtime Database의 JSON 데이터를 편집하고, 프로젝트에 갖다 쓴다.
+Firebase Realtime Database의 JSON 데이터를 편집하고, React 컴포넌트에 갖다 쓴다.
 
 ## firebase.js
 - firebase를 초기화한다. `initializeApp()`

@@ -1,5 +1,5 @@
 ---
-alias:
+aliases:
   - Obsidian을 CSS로 스타일링할 수 있는 원리
 layout: ../../layouts/LogbooksLayout.astro
 type: logbooks
@@ -7,6 +7,8 @@ date: 2024-07-01
 tags:
   - web
   - css
+  - markdown
+  - obsidian
 overview: false
 projectId: obsidian-theme-agate
 sequence: 1

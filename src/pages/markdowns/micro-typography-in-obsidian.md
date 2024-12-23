@@ -8,6 +8,7 @@ tags:
   - web
   - obsidian
   - web_typography
+  - css
 overview: false
 projectId: obsidian-theme-agate
 sequence: 3

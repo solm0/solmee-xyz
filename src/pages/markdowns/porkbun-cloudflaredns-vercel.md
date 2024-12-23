@@ -7,8 +7,6 @@ date: 2024-10-03
 tags:
   - web
   - vercel
-  - porkbun
-  - cloudflare
   - domain
   - error
 overview: false

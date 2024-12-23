@@ -23,7 +23,7 @@ Obsidian 테마를 디자인하고 커뮤니티에 제출한 과정의 기록이
 ## 내용
 [[css-style-obsidian|Obsidian은 CSS로 스타일링할 수 있다]].
 
-[[obsidian-css-variable|Obsidian의 CSS variable]]을 사용해 디자인을 편집하고, [[micro-typography-in-obsidian|마이크로 타이포그래피]]를 하고, [[macro-typography-in-obsidian|매크로 타이포그래피]]를 했다. [[obsidian-plugins-i-used|플러그인]]도 사용해 보았다.
+[[obsidian-css-variable|Obsidian의 CSS variable]]을 사용해 디자인을 편집하고, [[micro-typography-in-obsidian|마이크로 타이포그래피]]를 하고, [[macro-typography-in-obsidian|매크로 타이포그래피]]를 했다. [[obsidian-plugins-i-used|플러그인]]도 사용해 보았다.
 
 그리고 [[submit-your-theme|Obsidian 커뮤니티에 제출]] 했다.
 

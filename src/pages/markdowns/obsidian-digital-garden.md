@@ -27,7 +27,7 @@ sequence: 0
 
 그렇게 만든 웹사이트에 동적 요소를 넣고 싶어졌다. 하지만 어떻게 끼워넣을지 몰라서 [[can-i-insert-dynamic-element-in-digital-garden|일단 대충 iframe으로 끼워넣기로 했다]].
 
-iframe으로 넣을 또다른 웹사이트를 만들기 시작했다. [[choose-dbms|DBMS는 Firebase로 하기로 했다]]. 어떻게 쓰는지 [[firebase-initialize-and-how-to-store-img|공부]]했다. [[dynamic-website-hosting|React앱을 초기화하고 배포]]한 뒤 필터링 컴포넌트를 React로 만들고 [[read-from-firebase|firebase에서 데이터를 읽어서]] 컴포넌트에 넣어 보았다.
+iframe으로 넣을 또다른 웹사이트를 만들기 시작했다. [[choose-dbms|DBMS는 Firebase로 하기로 했다]]. 어떻게 쓰는지 [[firebase-initialize-and-how-to-store-img|공부]]했다. [[dynamic-website-hosting|React앱을 초기화하고 배포]]한 뒤 필터링 컴포넌트를 React로 만들고 [[read-from-firebase|firebase에서 데이터를 읽어서 컴포넌트에 넣어]] 보았다.
 
 ## 쓴거 정리
 - 본체

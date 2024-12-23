@@ -4,18 +4,8 @@
     font-display: swap;
 }
 @font-face {
-    font-family: "notoserif-bold";
-    src: url("/fonts/notoserif-bold.woff2") format("woff2");
-    font-display: swap;
-}
-@font-face {
     font-family: "ibm-plex";
     src: url("/fonts/ibm-plex.woff2") format("woff2");
-    font-display: swap;
-}
-@font-face {
-    font-family: "ibm-plex-bold";
-    src: url("/fonts/ibm-plex-bold.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -27,9 +17,7 @@
     line-height: var(--line-height);
 
     --font-family-serif: "notoserif";
-    --font-family-serif-b: "notoserif-bold";
     --font-family-mono: "ibm-plex";
-    --font-family-mono-b: "ibm-plex-bold";
 
     --line-height: 1.83em;
 
@@ -168,7 +156,7 @@ h2, h3, h4, h5, h6 {
     scroll-margin-top: var(--line-height);
     line-height: var(--line-height);
     margin: 0;
-    font-family: var(--font-family-serif-b);
+    font-family: var(--font-family-serif);
     font-weight: normal;
     text-indent: -2.3rem;
 }
@@ -372,7 +360,7 @@ a.home {
 .notes.current,
 .logbooks.current,
 .works.current {
-    font-family: var(--font-family-mono-b);
+    font-family: var(--font-family-mono);
 }
 
 .home.current::after { background-color: var(--gray-color-2); }
@@ -1295,7 +1283,7 @@ dialog.globalGraph {
 }
 
 .guestbook strong {
-    font-family: var(--font-family-sans-b);
+    font-family: var(--font-family-sans);
 }
 
 .guestbook[open] {

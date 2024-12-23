@@ -7,6 +7,7 @@ date: 2024-07-07
 tags:
   - web
   - firebase
+  - json
 overview: false
 projectId: obsidian-digital-garden
 sequence: 6

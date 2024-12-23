@@ -6,7 +6,7 @@ type: logbooks
 date: 2024-07-04
 tags:
   - web
-  - vercel
+  - obsidian
 overview: false
 projectId: obsidian-digital-garden
 sequence: 3
