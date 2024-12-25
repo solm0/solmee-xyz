@@ -50,7 +50,7 @@ const LocalGraph = () => {
         while (queue.length > 0) {
           const { nodeId, depth } = queue.shift();
 
-          if (depth < 3) {
+          if (depth < 2) {
             graphData.links.forEach(link => {
               if (link.source === nodeId || link.target === nodeId) {
                 const neighborId = link.source === nodeId ? link.target : link.source;

@@ -43,10 +43,10 @@
       "val": 2
     },
     {
-      "id": "continuous-text-and-hypertext",
-      "name": "줄글과 하이퍼텍스트",
+      "id": "continuous-text",
+      "name": "줄글의 존재 이유는 문법요소에 있고 줄글의 단점은 하이퍼텍스트가 보완한다",
       "type": "journals",
-      "val": 2
+      "val": 1
     },
     {
       "id": "crime-and-punishment-characters",
@@ -73,6 +73,12 @@
       "val": 1
     },
     {
+      "id": "defying-timeline",
+      "name": "시간의 흐름에 저항하려면 시간의 좌표계를 제거하면 된다",
+      "type": "journals",
+      "val": 1
+    },
+    {
       "id": "dr-phong",
       "name": "Dr.phong Variable Font",
       "type": "works",
@@ -94,6 +100,12 @@
       "id": "how-do-i-make-blog-website",
       "name": "블로그 웹사이트는 어떻게 만드는 걸까",
       "type": "logbooks",
+      "val": 1
+    },
+    {
+      "id": "i-and-chatgpt",
+      "name": "나는 chatGPT의 클라이언트다",
+      "type": "journals",
       "val": 1
     },
     {
@@ -235,15 +247,21 @@
       "val": 1
     },
     {
-      "id": "solmee-xyz",
+      "id": "solmee-xyz-1-0-0",
       "name": "solmee.xyz 1.0.0: 개인웹사이트 만들기",
       "type": "logbooks",
-      "val": 6
+      "val": 11
     },
     {
       "id": "ssg-framework-selection",
       "name": "SSG 프레임워크 선택하기",
       "type": "logbooks",
+      "val": 1
+    },
+    {
+      "id": "structure-by-induction-not-by-deduction",
+      "name": "연역이 아닌 귀납으로 구조를 형성하자",
+      "type": "journals",
       "val": 1
     },
     {
@@ -259,16 +277,16 @@
       "val": 1
     },
     {
+      "id": "time-to-enter-orbit",
+      "name": "궤도에 진입하기까지의 과정을 감내해야만 한다",
+      "type": "journals",
+      "val": 4
+    },
+    {
       "id": "why-i-left-digital-garden",
       "name": "Digital Garden에서 갈아타기로 한 이유",
       "type": "logbooks",
       "val": 1
-    },
-    {
-      "id": "why-obsidian",
-      "name": "Obsidian을 시작한 이유",
-      "type": "journals",
-      "val": 2
     },
     {
       "id": "zhe-variable",
@@ -285,10 +303,6 @@
     {
       "source": "comixtura-code",
       "target": "dr-phong"
-    },
-    {
-      "source": "continuous-text-and-hypertext",
-      "target": "solmee-xyz"
     },
     {
       "source": "cyberia",
@@ -376,35 +390,63 @@
     },
     {
       "source": "publish-obsidian-note",
-      "target": "solmee-xyz"
+      "target": "solmee-xyz-1-0-0"
     },
     {
-      "source": "solmee-xyz",
+      "source": "solmee-xyz-1-0-0",
+      "target": "continuous-text"
+    },
+    {
+      "source": "solmee-xyz-1-0-0",
+      "target": "defying-timeline"
+    },
+    {
+      "source": "solmee-xyz-1-0-0",
+      "target": "structure-by-induction-not-by-deduction"
+    },
+    {
+      "source": "solmee-xyz-1-0-0",
       "target": "obsidian-digital-garden"
     },
     {
-      "source": "solmee-xyz",
+      "source": "solmee-xyz-1-0-0",
       "target": "why-i-left-digital-garden"
     },
     {
-      "source": "solmee-xyz",
+      "source": "solmee-xyz-1-0-0",
       "target": "publish-markdown-files"
     },
     {
-      "source": "solmee-xyz",
+      "source": "solmee-xyz-1-0-0",
       "target": "ssg-framework-selection"
     },
     {
-      "source": "solmee-xyz",
+      "source": "solmee-xyz-1-0-0",
       "target": "porkbun-cloudflaredns-vercel"
+    },
+    {
+      "source": "solmee-xyz-1-0-0",
+      "target": "time-to-enter-orbit"
+    },
+    {
+      "source": "solmee-xyz-1-0-0",
+      "target": "i-and-chatgpt"
     },
     {
       "source": "submit-your-theme",
       "target": "obsidian-css-variable"
     },
     {
-      "source": "why-obsidian",
-      "target": "solmee-xyz"
+      "source": "time-to-enter-orbit",
+      "target": "structure-by-induction-not-by-deduction"
+    },
+    {
+      "source": "time-to-enter-orbit",
+      "target": "obsidian-theme-agate"
+    },
+    {
+      "source": "time-to-enter-orbit",
+      "target": "obsidian-digital-garden"
     }
   ]
 }

@@ -10,7 +10,7 @@
 }
 
 :root {
-    font-size: 16px;
+    font-size: 15.8px;
     text-underline-offset: 0.25em;
     word-break: keep-all;
     font-family: var(--font-family-serif), Georgia, 'Times New Roman', Times, serif;
@@ -30,7 +30,7 @@
     --step-4: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
     --step-5: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
 
-    --background-color: #f8fbf8;
+    --background-color: #f5f5f5;
     --gray-color-0: #eef2ee;
     --gray-color-1: #e4e9e1;
     --gray-color-2: #d7d7cd;
@@ -77,7 +77,7 @@ html {
     transition: 0.3s ease-in-out;
 }
 html.dark {
-    --background-color: #26292b;
+    --background-color: #242729;
     --gray-color-0: #303230;
     --gray-color-1: #3c3e3b;
     --gray-color-2: #52524e;
@@ -158,19 +158,14 @@ h2, h3, h4, h5, h6 {
     margin: 0;
     font-family: var(--font-family-serif);
     font-weight: normal;
-    text-indent: -2.3rem;
 }
 
-.body-text h2::before,
-.works-container h2::before {
-    content: '↳';
-    margin-right: 1.3rem;
-    font-family: var(--font-family-serif);
-    font-weight: normal;
+.body-text h2 {
+    font-size: var(--step-2);
 }
 
 .body-text h3 {
-    text-indent: 0;
+    font-size: var(--step-1);
 }
 
 p, li {

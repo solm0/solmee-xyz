@@ -16,11 +16,11 @@ finished: true
 projectId: obsidian-digital-garden
 sequence: 0
 ---
-## 개요
+## Overview
 개인웹사이트를 Astro로 직접 만들기 전, [Obsidian Digital Garden](https://dg-docs.ole.dev/) 이라는 플러그인을 사용해서 웹사이트를 만들고 거기에 동적 컨텐츠를 iframe으로 심으려고 했던 기록이다.
 - [결과물](https://my-digital-garden-j85qme5ny-solmis-projects-683e2410.vercel.app/)
 
-## 내용
+## Development
 한번 만들면 끝나는 웹사이트가 아닌 내가 쓰는 글이 여러 날에 걸쳐 쌓이는 웹사이트, 즉 블로그 웹사이트를 만들려면 어떻게 해야 할지 [[how-do-i-make-blog-website|고민]]했다.
 
 그러다가 Obsidian을 사용하게 되어서 [[publish-obsidian-note|Obsidian 노트를 그대로 배포]]할 수 있으면 좋겠다는 생각을 했다. Obsidian Digital Garden이라는 플러그인으로 웹사이트를 만들 수 있다길래 [[initial-publish-with-vercel|만들어봤다]]. 이때 [[slugify-deploy-error|파일제목에 문자 잘못 쓰면 배포할때 에러가 난다.]]
