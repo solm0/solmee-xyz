@@ -146,7 +146,7 @@ const note5 = findNote('Comixtura Code');
 				<p>
 					유한한 규칙으로 무한한 확장이 가능한 언어, 서체, 웹을 좋아한다.
 				</p>
-				<p><a class="cv-link" href="/cv.pdf" target="_blank" rel="noopener noreferrer">이력서 보기↗</a></p>
+				<p><a class="cv-link" href="/cv.pdf" target="_blank" rel="noopener noreferrer">이력서↗(준비중)</a></p>
 				<details>
 					<summary><h3>Contact</h3></summary>
 					<section>
@@ -156,9 +156,6 @@ const note5 = findNote('Comixtura Code');
 							</li>
 							<li>
 								Instagram <a href="https://www.instagram.com/s0lrni/">s0lrni</a>
-							</li>
-							<li>
-								GitHub <a href="https://github.com/solm0">solm0</a>
 							</li>
 						</ul>
 					</section>
@@ -216,26 +213,3 @@ const note5 = findNote('Comixtura Code');
 </BaseLayout>
 
 <script src='../scripts/index.js'></script>
-<script>
-	document.addEventListener("DOMContentLoaded", () => {
-    const rssLink = document.querySelector('.rss-link');
-	const mailtoLink = document.querySelector('.mailto');
-	const cvLink = document.querySelector('.cv-link');
-
-    if (rssLink) {
-        rssLink.addEventListener('click', (event) => {
-            event.preventDefault(); // Block the click
-        });
-    }
-	if (mailtoLink) {
-		mailtoLink.addEventListener('click', (event) => {
-			event.preventDefault(); // Block the click
-		});
-	}
-	if (cvLink) {
-		cvLink.addEventListener('click', (event) => {
-			event.preventDefault(); // Block the click
-		});
-	}
-});
-</script>

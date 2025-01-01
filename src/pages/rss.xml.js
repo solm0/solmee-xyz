@@ -1,16 +1,29 @@
 import rss from '@astrojs/rss';
-import { getCollection } from 'astro:content';
 
 export async function GET(context) {
-  const blog = await getCollection('blog');
+  const posts = import.meta.glob('/src/pages/markdowns/*.md', { eager: true });
+
+  const items = Object.entries(posts).map(([path, post]) => {
+    const slug = path
+      .replace('/src/pages/markdowns/', '')
+      .replace('.md', '');
+
+    const pubDate = new Date(post.frontmatter.date);
+    if (isNaN(pubDate)) {
+      throw new Error(`Invalid date for post at ${slug}`);
+    }
+
+    return {
+      title: post.frontmatter.alias || post.frontmatter.aliases[0] || 'Untitled',
+      pubDate: pubDate.toUTCString(),
+      link: `/markdowns/${slug}/`,
+    };
+  });
+
   return rss({
     title: 'solmee-xyz',
     description: 'solmee-xyz',
     site: context.site,
-    items: blog.map((post) => ({
-      title: post.data.alias || post.data.aliases[0],
-      pubDate: post.data.date,
-      link: `/markdowns/${post.slug}/`,
-    })),
+    items,
   });
 }
