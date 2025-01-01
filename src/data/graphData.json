@@ -1,10 +1,22 @@
 {
   "nodes": [
     {
+      "id": "untitled",
+      "name": "쓰는 대화의 특징-평행세계의 대화",
+      "type": "logbooks",
+      "val": 1
+    },
+    {
       "id": "a-for-archive",
       "name": "Aa for Archive",
       "type": "works",
       "val": 1
+    },
+    {
+      "id": "a-year-of-crappy-articles",
+      "name": "A Year of Crappy Articles",
+      "type": "journals",
+      "val": 2
     },
     {
       "id": "babylonian-number",
@@ -88,6 +100,12 @@
       "id": "dynamic-website-hosting",
       "name": "Vercel로 동적 웹 호스팅하기",
       "type": "logbooks",
+      "val": 1
+    },
+    {
+      "id": "english-or-korean",
+      "name": "무슨 언어로 글을 쓸까?",
+      "type": "journals",
       "val": 1
     },
     {
@@ -199,6 +217,12 @@
       "val": 8
     },
     {
+      "id": "origin-of-clannad",
+      "name": "klh -> klānos -> clann -> clannad -> クラナド -> 클라나드",
+      "type": "journals",
+      "val": 1
+    },
+    {
       "id": "playground",
       "name": "놀이터",
       "type": "works",
@@ -250,7 +274,7 @@
       "id": "solmee-xyz-1-0-0",
       "name": "solmee.xyz 1.0.0: 개인웹사이트 만들기",
       "type": "logbooks",
-      "val": 11
+      "val": 12
     },
     {
       "id": "ssg-framework-selection",
@@ -296,6 +320,10 @@
     }
   ],
   "links": [
+    {
+      "source": "a-year-of-crappy-articles",
+      "target": "english-or-korean"
+    },
     {
       "source": "citadel-of-ricks",
       "target": "meeseeks-and-destroy"
@@ -411,6 +439,10 @@
     {
       "source": "solmee-xyz-1-0-0",
       "target": "why-i-left-digital-garden"
+    },
+    {
+      "source": "solmee-xyz-1-0-0",
+      "target": "journal-shrine-development"
     },
     {
       "source": "solmee-xyz-1-0-0",

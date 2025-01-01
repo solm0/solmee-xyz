@@ -56,7 +56,6 @@ documenting
 - 디자인 영감
 - digital garden
 - indieweb
-- [자신을 위해 쓰기](https://matthiasott.com/notes/you-a-million-times)
 
 ## Future Plans
 아직 타이포그래피 체계가 부족한 것 같다. 책 한 권을 엮어내는 데도 많은 규칙이 필요하다. 내가 이 시스템을 사용하면 사용할수록 사용 양상은 복잡해져 갈 텐데, 그 내용의 복잡함에 맞는 디자인 시스템이 필요하다. 지금보다 더욱 확장되어야 한다. 위키 사이트들이 어떻게 콘텐츠들을 정리하고 접근을 돕고 있는지 참고하면 좋을 것 같다.
