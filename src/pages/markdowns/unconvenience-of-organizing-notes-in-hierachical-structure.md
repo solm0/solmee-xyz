@@ -3,7 +3,7 @@ aliases:
   - 계층적 구조로 노트를 정리할 때 불편한 점
 layout: ../../layouts/JournalsLayout.astro
 type: journals
-date: 2024-01-02
+date: 2025-01-02
 tags:
   - note_taking
   - linguistics
