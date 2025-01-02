@@ -7,6 +7,7 @@
     "start": "astro dev",
     "preview": "astro preview",
     "astro": "astro",
+    "pagefind": "npx pagefind --site dist",
     "generate-graph": "node src/scripts/markdownToGraph.js",
     "build": "npm run generate-graph && astro build"
   },

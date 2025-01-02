@@ -8,7 +8,7 @@ tags:
   - web
   - ssg
 overview: false
-projectId: solmee-xyz
+projectId: solmee-xyz-1-0-0
 sequence: 3
 ---
 > SSG(Static Site Generator, 정적 사이트 생성기)는 HTML을 정해진 템플릿에 맞춰 찍어내는 도구이다.

@@ -10,7 +10,7 @@ tags:
   - domain
   - error
 overview: false
-projectId: solmee-xyz
+projectId: solmee-xyz-1-0-0
 sequence: 4
 ---
 (아직 웹사이트 만들기도 전이지만) 도메인이란걸 사보자!

@@ -7,7 +7,7 @@ date: 2025-01-01
 tags:
   - chat_gpt
   - web
-  - journaling
+  - note_taking
 ---
 ## overthinking about formatting
 이 웹사이트에 쓸 글에 대해 참 여러가지 고민을 했다.

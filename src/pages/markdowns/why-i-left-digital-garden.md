@@ -7,7 +7,7 @@ date: 2024-08-07
 tags:
   - web
 overview: false
-projectId: solmee-xyz
+projectId: solmee-xyz-1-0-0
 sequence: 1
 ---
 1. 내 웹사이트인 느낌이 안 든다.

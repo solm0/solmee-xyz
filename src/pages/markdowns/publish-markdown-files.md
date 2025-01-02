@@ -10,7 +10,7 @@ tags:
   - obsidian
   - ssg
 overview: false
-projectId: solmee-xyz
+projectId: solmee-xyz-1-0-0
 sequence: 2
 ---
 ## 마크다운 파일을 배포하는 법
