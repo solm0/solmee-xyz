@@ -1,6 +1,6 @@
 ---
 aliases:
-  - 계층적 구조로 노트를 정리할 때 불편한 점
+  - prescribe된 계층적 구조로 노트를 정리할 때 불편한 점
 layout: ../../layouts/JournalsLayout.astro
 type: journals
 date: 2025-01-02
