@@ -7,6 +7,8 @@ tags:
   - web
   - russian
   - reading
+  - html
+  - css
 thumbnail: /crime-and-punishment.png
 date: 2023-10
 description: 러시아 소설은 캐릭터의 이름이 여러 가지로 불려 어려울 때가 있습니다. 도스토옙스키의 소설 ‘죄와 벌' 등장인물의 풀네임, 모든 애칭, 그리고 간단한 설명을 포함한 등장인물 관계도를 정리하면서 동시에 CSS의 sticky position을 익혔습니다.

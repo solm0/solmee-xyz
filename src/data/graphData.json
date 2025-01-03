@@ -1,12 +1,6 @@
 {
   "nodes": [
     {
-      "id": "untitled",
-      "name": "쓰는 대화의 특징-평행세계의 대화",
-      "type": "logbooks",
-      "val": 1
-    },
-    {
       "id": "a-for-archive",
       "name": "Aa for Archive",
       "type": "works",
@@ -277,15 +271,15 @@
       "val": 12
     },
     {
+      "id": "solmeexyz-1-0-0",
+      "name": "solmee.xyz 1.0.0",
+      "type": "works",
+      "val": 2
+    },
+    {
       "id": "ssg-framework-selection",
       "name": "SSG 프레임워크 선택하기",
       "type": "logbooks",
-      "val": 1
-    },
-    {
-      "id": "structure-by-induction-not-by-deduction",
-      "name": "연역이 아닌 귀납으로 구조를 형성하자",
-      "type": "journals",
       "val": 1
     },
     {
@@ -305,6 +299,12 @@
       "name": "궤도에 진입하기까지의 과정을 감내해야만 한다",
       "type": "journals",
       "val": 4
+    },
+    {
+      "id": "unconvenience-of-organizing-notes-in-hierachical-structure",
+      "name": "prescribe된 계층적 구조로 노트를 정리할 때 불편한 점",
+      "type": "journals",
+      "val": 2
     },
     {
       "id": "why-i-left-digital-garden",
@@ -430,7 +430,7 @@
     },
     {
       "source": "solmee-xyz-1-0-0",
-      "target": "structure-by-induction-not-by-deduction"
+      "target": "unconvenience-of-organizing-notes-in-hierachical-structure"
     },
     {
       "source": "solmee-xyz-1-0-0",
@@ -465,12 +465,16 @@
       "target": "i-and-chatgpt"
     },
     {
+      "source": "solmeexyz-1-0-0",
+      "target": "solmee-xyz-1-0-0"
+    },
+    {
       "source": "submit-your-theme",
       "target": "obsidian-css-variable"
     },
     {
       "source": "time-to-enter-orbit",
-      "target": "structure-by-induction-not-by-deduction"
+      "target": "unconvenience-of-organizing-notes-in-hierachical-structure"
     },
     {
       "source": "time-to-enter-orbit",
@@ -479,6 +483,10 @@
     {
       "source": "time-to-enter-orbit",
       "target": "obsidian-digital-garden"
+    },
+    {
+      "source": "unconvenience-of-organizing-notes-in-hierachical-structure",
+      "target": "defying-timeline"
     }
   ]
 }

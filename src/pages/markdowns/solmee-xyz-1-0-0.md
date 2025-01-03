@@ -25,7 +25,7 @@ sequence: 0
 번아웃으로 기말고사 공부를 세상 끝까지 미루던 24년 6월, 나는 공부를 하는 대신 내가 왜 공부를 하지 않는지에 대해 생각하는 것을 택했다. 비효율적인 기록 저장 시스템이 문제라고 생각했다.
 - [[continuous-text|줄글의 존재 이유는 문법요소에 있고 줄글의 단점은 하이퍼텍스트가 보완한다]]
 - [[defying-timeline|시간의 흐름에 저항하려면 시간의 좌표계를 제거하면 된다]]
-- [[unconvenience-of-organizing-notes-in-hierachical-structure|연역이 아닌 귀납으로 구조를 형성하자]]
+- [[unconvenience-of-organizing-notes-in-hierachical-structure|prescribe된 계층적 구조로 노트를 정리할 때 불편한 점]]
 
 시간 순서가 아닌 노트 간의 연결을 통해 구조가 귀납적으로 형성되는 도구인 Obsidian을 쓰게 되었다. 노트들은 여기저기 발산되어 있는데 막상 정리된 뭔가를 하려 하면 밑바닥부터 쌓아올려야 하는 막막함에 좌절하고 있었던 나에게, 글쓰기는 선형적이지 않으며 지금까지 해놓은 생각을 엮는 것일 뿐이라는 Zettelkasten의 가르침이 와 닿았다.
 
